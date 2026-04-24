@@ -1,0 +1,202 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "PayL8r",
+            "heading_size": "title-xl tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Apply for Payl8r here and spread your payments over <strong>6-24 month terms</strong> with <strong>0% interest periods available!</strong></p><p>Select the product you wish to finance from the dropdown below. Please note only one item can be purchased at a time currently, however you can apply for multiple payment plans.</p><p>Customers are <strong>encouraged</strong> to check the site for the latest stock availability and to review the <strong>pre-order dates listed</strong> on each product page. Both pre orders and instock items can be purchased!</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#ffffff",
+        "color_background": "#2d1b4e",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "custom_liquid_PbYfjK": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "liquid": "<iframe src=\"https://1wavedirect.payl8r.com/checkout\" style=\"width:100%; height: 800px\"></iframe>\n\n<iframe src=\"https://payl8r.com/retailers/payment-detail?retailer=wavedirec1022nx2yg26\"width=\"100%\" height=\"800\"></iframe>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "rich-text-1": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "FAQ's",
+            "text": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cTbCTp": {
+          "type": "question",
+          "settings": {
+            "title": "How do we assess your affordability?",
+            "text": "<p>If you fail a traditional credit check, rather than rejecting your application we may give you the option to submit your affordability through Open Banking.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_PTY8wf": {
+          "type": "question",
+          "settings": {
+            "title": "What will it cost me?",
+            "text": "<p>You can repay in full within 30 days at 0% interest or choose an interest bearing plan. Interest rates vary subject to status and start at 0.8% per month.</p><p>Missed payments may affect your credit file, future borrowing and incur fees.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_c3x4na": {
+          "type": "question",
+          "settings": {
+            "title": "Representative Example:",
+            "text": "<p>If you borrow £440.00 over 12 months at a fixed monthly interest rate of 2.50% and an annual rate of 30.00% and a representative APR of 65.5%, you will pay: Monthly payment: £47.67. Total repayments: £572.04. Total charge for credit: £132.04.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Need more information on finance?",
+            "text": "<p>Don't hestitate to contact us</p>",
+            "show_phone": false,
+            "avatar_height": 60,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "rich-text-1",
+        "question_cTbCTp",
+        "question_PTY8wf",
+        "question_c3x4na",
+        "contact"
+      ],
+      "settings": {
+        "style": "with-border",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 0,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": false,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "custom_liquid_PbYfjK",
+    "faq"
+  ]
+}

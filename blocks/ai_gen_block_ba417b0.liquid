@@ -1,0 +1,338 @@
+{% doc %}
+  @prompt
+    A search bar, make it central on the page and narrow
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-search-bar-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ai-search-bar-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .ai-search-bar-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: {{ block.settings.max_width }}px;
+  }
+
+  .ai-search-bar-form-{{ ai_gen_id }} {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ai-search-bar-input-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.input_padding }}px;
+    padding-left: {% if block.settings.show_search_icon %}{{ block.settings.input_padding | plus: 40 }}px{% else %}{{ block.settings.input_padding }}px{% endif %};
+    padding-right: {% if block.settings.show_clear_button %}{{ block.settings.input_padding | plus: 40 }}px{% else %}{{ block.settings.input_padding }}px{% endif %};
+    font-size: {{ block.settings.input_font_size }}px;
+    border: {{ block.settings.border_thickness }}px solid {{ block.settings.border_color }};
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-search-bar-input-{{ ai_gen_id }}::placeholder {
+    color: {{ block.settings.placeholder_color }};
+    opacity: 1;
+  }
+
+  .ai-search-bar-input-{{ ai_gen_id }}:focus {
+    border-color: {{ block.settings.focus_border_color }};
+    box-shadow: 0 0 0 3px {{ block.settings.focus_border_color | color_modify: 'alpha', 0.2 }};
+  }
+
+  .ai-search-bar-icon-{{ ai_gen_id }} {
+    position: absolute;
+    left: {{ block.settings.input_padding }}px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: {{ block.settings.icon_color }};
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-search-bar-icon-{{ ai_gen_id }} svg {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+  }
+
+  .ai-search-bar-clear-{{ ai_gen_id }} {
+    position: absolute;
+    right: {{ block.settings.input_padding }}px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: {{ block.settings.icon_color }};
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .ai-search-bar-clear-{{ ai_gen_id }}:hover {
+    opacity: 1;
+  }
+
+  .ai-search-bar-clear-{{ ai_gen_id }}.active {
+    display: flex;
+  }
+
+  .ai-search-bar-clear-{{ ai_gen_id }} svg {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-search-bar-container-{{ ai_gen_id }} {
+      max-width: 100%;
+    }
+
+    .ai-search-bar-input-{{ ai_gen_id }} {
+      font-size: {{ block.settings.input_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<search-bar-{{ ai_gen_id }} class="ai-search-bar-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-search-bar-wrapper-{{ ai_gen_id }}">
+    <div class="ai-search-bar-container-{{ ai_gen_id }}">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="ai-search-bar-form-{{ ai_gen_id }}">
+        {% if block.settings.show_search_icon %}
+          <span class="ai-search-bar-icon-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </span>
+        {% endif %}
+
+        <input
+          type="search"
+          name="q"
+          class="ai-search-bar-input-{{ ai_gen_id }}"
+          placeholder="{{ block.settings.placeholder_text }}"
+          value="{{ search.terms | escape }}"
+          aria-label="{{ block.settings.placeholder_text }}"
+          autocomplete="off"
+        >
+
+        {% if block.settings.show_clear_button %}
+          <button
+            type="button"
+            class="ai-search-bar-clear-{{ ai_gen_id }}"
+            aria-label="Clear search"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        {% endif %}
+      </form>
+    </div>
+  </div>
+</search-bar-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class SearchBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.input = this.querySelector('.ai-search-bar-input-{{ ai_gen_id }}');
+        this.clearButton = this.querySelector('.ai-search-bar-clear-{{ ai_gen_id }}');
+
+        if (this.input && this.clearButton) {
+          this.setupEventListeners();
+          this.updateClearButton();
+        }
+      }
+
+      setupEventListeners() {
+        this.input.addEventListener('input', () => {
+          this.updateClearButton();
+        });
+
+        this.clearButton.addEventListener('click', () => {
+          this.input.value = '';
+          this.input.focus();
+          this.updateClearButton();
+        });
+      }
+
+      updateClearButton() {
+        if (this.input.value.length > 0) {
+          this.clearButton.classList.add('active');
+        } else {
+          this.clearButton.classList.remove('active');
+        }
+      }
+    }
+
+    customElements.define('search-bar-{{ ai_gen_id }}', SearchBar{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Search bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Placeholder text",
+      "default": "Search products..."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search_icon",
+      "label": "Show search icon",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_clear_button",
+      "label": "Show clear button",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 300,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "default": 600
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "input_padding",
+      "label": "Input padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "input_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_thickness",
+      "label": "Border thickness",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color",
+      "label": "Placeholder",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#e5e5e5"
+    },
+    {
+      "type": "color",
+      "id": "focus_border_color",
+      "label": "Focus border",
+      "default": "#0b61cd"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#171717"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Search bar"
+    }
+  ]
+}
+{% endschema %}

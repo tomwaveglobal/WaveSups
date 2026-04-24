@@ -1,0 +1,225 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.footer-group.name",
+  "sections": {
+    "multicolumn-with-icons": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "icon": "support",
+            "custom_icon": "",
+            "heading": "Customer Support",
+            "text": "<p>Our trained team are standing by</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "icon": "box",
+            "custom_icon": "",
+            "heading": "Fast Free Shipping",
+            "text": "<p>All orders dispatched same day</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "icon": "map_pin",
+            "custom_icon": "",
+            "heading": "Designed in Newcastle",
+            "text": "<p>Designed in the North East, UK</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "icon": "shield",
+            "custom_icon": "",
+            "heading": "Secure Payment",
+            "text": "<p>We offer multiple secure options</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ],
+      "custom_css": [],
+      "settings": {
+        "style": "with-border",
+        "columns": 4,
+        "text_alignment": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": true,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "logo_social": {
+          "type": "logo_social",
+          "disabled": true,
+          "settings": {
+            "logo": "shopify://shop_images/wave_logo_white_a5500e52-9bb8-45d5-b202-da5e6581bfcd_430x_1.png",
+            "logo_height": 50,
+            "show_social": false,
+            "enable_follow_on_shop": false
+          }
+        },
+        "link_list-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "footer-shop",
+            "container_width": 30,
+            "opened": true
+          }
+        },
+        "link_list_HBRTnx": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help Centre",
+            "menu": "footer-help",
+            "container_width": 30,
+            "opened": false
+          }
+        },
+        "link_list_PhCpjg": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About Wave",
+            "menu": "footer-about",
+            "container_width": 30,
+            "opened": false
+          }
+        },
+        "text_YmNC7V": {
+          "type": "text",
+          "settings": {
+            "heading": "Information",
+            "text": "{{ metaobjects.address[\"uk-address\"].description | metafield_tag }}",
+            "container_width": 95,
+            "opened": false
+          }
+        },
+        "brand_information": {
+          "type": "brand_information",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "button_label_1": "+21 (0) 987654321",
+            "button_link_1": "tel:+21(0)987654321",
+            "button_label_2": "hello@domain.com",
+            "button_link_2": "mailto:hello@domain.com",
+            "button_label_3": "",
+            "button_link_3": "",
+            "button_label_4": "",
+            "button_link_4": "",
+            "container_width": 95,
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "logo_social",
+        "link_list-1",
+        "link_list_HBRTnx",
+        "link_list_PhCpjg",
+        "text_YmNC7V",
+        "brand_information"
+      ],
+      "settings": {
+        "invert_newsletter_others": true,
+        "enable_newsletter": true,
+        "newsletter_heading": "Stay in the loop with our weekly newsletter",
+        "newsletter_heading_size": "md:title-md",
+        "newsletter_text": "",
+        "newsletter_logo": "shopify://shop_images/wave_logo_white_a5500e52-9bb8-45d5-b202-da5e6581bfcd_430x_1.png",
+        "newsletter_logo_height": 50,
+        "show_social": true,
+        "enable_follow_on_shop": false,
+        "color_text": "#ffffff",
+        "color_background": "#1f1f1f",
+        "gradient_background": "",
+        "color_button_text": "#000000",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true
+      }
+    },
+    "footer-copyright": {
+      "type": "footer-copyright",
+      "settings": {
+        "enable_language_selector": true,
+        "enable_country_selector": true,
+        "show_policy": true,
+        "show_payment_icons": false,
+        "monochrome_payment_icons": false,
+        "show_copyright": true,
+        "copyright_text": "",
+        "color_text": "#ffffff",
+        "color_background": "#171717",
+        "gradient_background": "",
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true
+      }
+    }
+  },
+  "order": [
+    "multicolumn-with-icons",
+    "footer",
+    "footer-copyright"
+  ]
+}

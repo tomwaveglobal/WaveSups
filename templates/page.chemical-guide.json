@@ -1,0 +1,350 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_Kdq8zY": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_R3emVf": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Hot Tub Chemical Guide",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_3WgAGq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Master your spa's chemistry for a perfect soak.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_R3emVf",
+        "heading_3WgAGq"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Casto_Garda_1.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#ffa300",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_UxcAqE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aTekJ9": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hot Tub Chemical Guide",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_pAbThL": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wondering how to keep your inflatable hot tub clean? Having the right routine and using the best chemicals will help. What hot tub chemicals do I need? Follow these simple steps to ensure you’re always soaking in sparkling clean water! </p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aTekJ9",
+        "text_pAbThL"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 20,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_mhcUtm": {
+      "type": "faq",
+      "blocks": {
+        "question_rcthQW": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Step One: Add Chlorine Granules</strong>",
+            "text": "<p>To avoid a tub full of green algae, you must add <a href=\"/products/chlorine-granules-1kg\" title=\"Chlorine Granules | 1KG\">Chlorine Granules</a> to your water. This chemical works to sanitize and keep your water clean. The most ideal chlorine level is between 3-5 ppm. If the chlorine level is below 3, you should add more chlorine granules to your water. You can test your spas chlorine level with our <a href=\"/products/water-test-strips-50\" title=\"3-in-1 Test Strips | Chlorine, pH and Total Alkalinity | 50 Pack\">3-in-1 Test Strips</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_RRPpEh": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How much chlorine should I add to my Hot Tub? </strong>",
+            "text": "<p>Generally, to chlorinate your water, you will need to add approximately 3g of granules for each part per million.</p><ul><li>For a 4 Person Hot Tub add 6g/ 0.2 oz (3/4 tsp) at setup. To keep your chlorine level maintained, you should add a further 1.5g/ 0.05 oz (just under 1/4 of a teaspoon) each day.</li><li>For a 6 Person Hot Tub add 8g/ 0.3 oz (1 tsp) at setup. To keep your chlorine level maintained, you should add a further 2g/ 0.07 oz (1/4 of a tsp) each day.</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_C3z7QJ": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How do I safely add Chlorine to my Hot Tub?</strong>",
+            "text": "<ul><li>Fill a clean plastic bucket with warm water and dissolve the correct amount of granules into the water. Stir the water until all granules have completely dissolved. </li><li>Turn on your spa circulation pump and pour the content of the bucket into the spa water.</li><li>Leave the pump running for 20 minutes.</li><li>After 20 minutes, test your spa water with a Testing Strip. If the chlorine level is still too low, repeat the previous three steps. </li><li>Wait another 20 minutes before you use your hot tub. </li></ul><p><a href=\"/products/hot-tub-algaecide-1l\" title=\"Algaecide | Pool or Spa Chemicals | 1L\">Algaecide</a> can be added alongside chlorine to prevent the growth of algae further. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_ChMPT7": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Step Two: Test the pH Level</strong>",
+            "text": "<p>You will also need to use your <a href=\"/products/water-test-strips-50\" title=\"3-in-1 Test Strips | Chlorine, pH and Total Alkalinity | 50 Pack\">3-in-1 Water Test Strips</a> for this next step. Simply dip the test strip into your water, shake off the excess and compare the colour to the chart provided. You should test the water at least twice a week and always just before you use your spa. An inflatable hot tub’s pH level should be between 7.2 and 7.8 pH. To correct your pH level, add the appropriate chemicals from the following list.</p><ul><li><a href=\"/products/ph-increaser-1l\" title=\"pH Increaser | Pool and Spa | 1 KG\">pH Reducer</a></li><li><a href=\"/products/ph-reducer-1kg\" title=\"pH Reducer | Pool and Spa | 1 KG\">pH Increaser</a></li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_ANyURf": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How much pH Reducer/ Increaser should I add to my hot tub? </strong>",
+            "text": "<p>You should add 10g/ 3.5 oz of pH reducer/ increaser into 1000 litres of water. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_mF4nLc": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How do I safely add pH Reducer/ Increaser to my hot tub?</strong>",
+            "text": "<ul><li>Fill a clean plastic bucket with warm water and add the correct amount of pH Reducer/ Increaser to your water.</li><li>Turn on your spa circulation pump and pour the content of the bucket into the spa water.</li><li>Leave the pump running for 20 minutes.</li><li>After 20 minutes, test your spa water with a Testing Strip. If the pH level isn’t between 7.2 and 7.8 repeat the previous three steps until the correct level is reached. </li><li>Wait another 20 minutes before you use your hot tub. </li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_P3bpmX": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Step Three: Test the Alkalinity Level</strong>",
+            "text": "<p>As well as testing pH levels, you should also check your spa’s alkalinity levels. Again, you can achieve this by using the 3-1 Water Test Strips. You should test the water at least twice a week and always just before you use your spa. An inflatable hot tub’s total alkalinity level should be between 80 and 120 ppm. To correct your alkalinity level, add the appropriate chemicals from the following list.</p><ul><li><a href=\"/products/alkalinity-increaser-1kg-test-strips-50\" title=\"Alkalinity Increaser 1KG + 50 Water Test Strips\">Alkalinity Increaser</a></li><li><a href=\"/products/ph-reducer-1kg\" title=\"pH Reducer | Pool and Spa | 1 KG\">pH Reducer</a></li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_4jJ3K3": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How do I safely add Alkalinity Increaser to my hot tub?</strong>",
+            "text": "<ul><li>Fill a clean plastic bucket with warm water and add the correct amount of Alkalinity Increaser to your water. (1.5-2 tsp)</li><li>Turn on your spa circulation pump and pour the content of the bucket into the spa water.</li><li>Leave the pump running for 20 minutes.</li><li>After 20 minutes, test your spa water with a Testing Strip. If the Alkalinity level isn’t between 80 and 120 repeat the previous three steps until the correct level is reached. </li><li>Wait another 20 minutes before you use your hot tub. </li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_pfcgkF": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Step Four: Remove and Prevent Foam </strong>",
+            "text": "<p>Foam (caused by soaps, detergents, oils and cosmetics) can sometimes build up in your spa. Excessive foam should always be removed by using <a href=\"/products/hot-tub-no-foam-1l\" title=\"No Foam | Pool and Spa Foam Remover | 1L\">No Foam</a>.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_9f9yNb": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>How do I add No Foam to my hot tub?</strong>",
+            "text": "<ul><li>Shake the No Foam bottle before use. </li><li>Turn on your spa circulation pump and pour the correct dose into your water. (10ml-20ml) </li><li>Leave the pump running for 20 minutes.</li><li>After 20 minutes, if the foam has not completely disappeared, repeat the previous three steps. </li><li>Add a further 25ml per week to keep the foam at bay. </li><li>We recommend showering before entering your spa. </li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_mLLtxn": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Additional Safety Information</strong>",
+            "text": "<ul><li>Before you add any water treatment chemicals to your spa, please read the instructions on the label.</li><li>Do not add chemicals to your spa when it is occupied by anyone.</li><li>Only add chemicals to your spa when water is being circulated.</li><li>Only add dissolved chemicals to your spa.</li><li>Make sure you do not mix chemicals together as some chemicals can explode or create poisonous gases if mixed together. Water treatment chemicals are highly concentrated.</li><li>Water treatment chemicals should be handled carefully in a well-ventilated area and your hands should be thoroughly cleaned after using chemicals.</li><li>Water treatment chemicals should always be stored in a cool, dry, secure area- well out of the reach of children.</li><li>You should always use correct spa products whilst cleaning any areas around your hot tub. Do not use household cleaners as they can contain phosphates that allow algae to grow. Do not use household detergents as they can cause foaming.</li><li>Wave Spa produces an exclusive range of Wave Spa chemicals and these can also be used on any other makes of hot tub's water treatment.</li></ul>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_rcthQW",
+        "question_RRPpEh",
+        "question_C3z7QJ",
+        "question_ChMPT7",
+        "question_ANyURf",
+        "question_mF4nLc",
+        "question_P3bpmX",
+        "question_4jJ3K3",
+        "question_pfcgkF",
+        "question_9f9yNb",
+        "question_mLLtxn"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "style": "with-border",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich_text_bET7jy": {
+      "type": "rich-text",
+      "blocks": {
+        "text_MYzJpF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Regularly following this routine will keep your inflatable hot tub running better for longer and it will save your water bill. It is recommended to drain and refill your tub every four weeks but if your water is kept clean, you will not need to drain it that often. When the water is drained, surfaces can be wiped with mild soap and water. (<strong>Do not </strong>use harsh chemicals, like bleach, or scrub brushes that can damage the inflatable hot tub.)</p><p>If you need any further information, please contact <a href=\"/pages/contact-us\" title=\"Customer Service\">Customer Support</a></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text_MYzJpF"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "image_with_text_overlay_Kdq8zY",
+    "rich_text_UxcAqE",
+    "faq_mhcUtm",
+    "rich_text_bET7jy"
+  ]
+}

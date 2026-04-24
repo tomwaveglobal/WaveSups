@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_F7Xmrt": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_hbFKkq": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Troubleshooting: Foam Spas",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_igVK44": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Your Hot Tub Back to Bliss",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_hbFKkq",
+        "heading_igVK44"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/GardaHomePage_1_1_1_1.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#ffa300",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_wYwDXA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_c9xtRq": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Troubleshooting: Foam Spas",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_tU4gQk": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In an effort to meet Wave's sustainability pledge, all of our products are 'Designed For Repair'. The user can resolve most issues with some basic troubleshooting or spare parts provided. We ask you to work with our customer support team via live chat or email for any questions you have and follow the troubleshooting guides below for common problems with rigid eco foam spas:</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c9xtRq",
+        "text_tU4gQk"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 20,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "faq_zGh7ry": {
+      "type": "faq",
+      "blocks": {
+        "question_hJh6Cb": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>The spa is leaking when first installed</strong>",
+            "text": "<p><strong>Causes</strong><br/>The dual inlet pipe isn't tight enough</p><p><strong>Solution</strong><br/>See <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/Inspect_Before_Use_-_Dual_Inlet_Connector.pdf?v=1742400442\">Diagram</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_K9z947": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Bubble Jet system is not operating</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A)</strong> Air pump is too hot<br/><strong>(B) </strong>Something is wrong with the heater unit<br/><strong>(C) </strong>Air Pump is in cooling mode</p><p><strong>Solutions</strong><br/><strong>(A)</strong> Unplug the system. After the air pump has cooled, insert the plug and press the bubble button to activate<br/><strong>(B) </strong>Contact <a href=\"/pages/contact\" title=\"Contact\">Customer Support</a> if it does not reset<br/><strong>(C)</strong> The Bubble Jet system can run for 20 minutes, it will stop automatically and cool down for 10 minutes before it can restart again</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_3XEbHz": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Heating system does not operate</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A)</strong> Water is too hot/above sensor maximum<br/><strong>(B)</strong> Temperature is set too low<br/><strong>(C)</strong> Dirty filter cartridge<br/><strong>(D)</strong> Improper water levels<br/><strong>(E)</strong> Heating element failure<br/><strong>(F)</strong> Power voltage is too low or incorrect frequency</p><p><strong>Solutions</strong><br/><strong>(A) </strong>Unplug the spa and allow the water to cool<br/><strong>(B) </strong>Set to a higher temperature (20°C/68°F to 40°C/104°F) than the current water temperature<br/><strong>(C) </strong>Replace the filter cartridge<br/><strong>(D) </strong>Add water to the specified levels<br/><strong>(E) </strong>Contact <a href=\"/pages/contact\" title=\"Contact\">Customer Support</a> for advice<br/><strong>(F) </strong>Contact a qualified electrician</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_Wd3PV7": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Filtering system does not operate OR rattling noise when switching filter on</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A)</strong> Dirty filter cartridge<br/><strong>(B)</strong> Water level is too low<br/><strong>(C)</strong> Something is wrong with the heater unit<br/><strong>(D)</strong> Exposure to sunlight can soften spa materials</p><p><strong>Solutions</strong><br/><strong>(A) </strong>Replace the filter cartridge<br/><strong>(B) </strong>Top up the water<br/><strong>(C) </strong>Contact <a href=\"/pages/contact\" title=\"Contact\">Customer Support</a> if it does not reset<br/><strong>(D) </strong>Ensure spa is not in direct sunlight</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_6peyJ7": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Spa leakage</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A)</strong> Inner liner is torn or punctured<br/><strong>(B)</strong> Air valve cap is loose<br/><strong>(C)</strong> Drain plug is loose</p><p><strong>Solutions</strong><br/>Follow these steps to locate the source of the puncture.<br/>1. Drain the water in your Spa and then fully inflate it.<br/>2. You should hear hissing sounds from the source of the leak, and these can guide you to the location of the puncture.<br/>3. If no sound can be heard however, please wipe or spray the Spa with soapy water. This will create large air bubbles at the source of the leak.<br/>4. If you are still unable to locate the puncture, please repeat the steps but in the inside of the Spa itself, as well as around the base and along the seams.<br/>- If you have one of our integrated heater Spas, the liner’s warranty is 1 year, and 6 months for our other models. Once you have located the source of the leak, and your Spa is in warranty, please send us a clear photo or video of the puncture and we can then proceed with resolving the issue for you. If your Spa is out of warranty, please use the repair patch provided to repair the puncture.<strong>(B) </strong>Tighten the air valve<br/><strong>(C) </strong>Clean the plug and push tightly into drain<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_Lrq8h3": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Spa Dripping Water from, or around Heater</strong>",
+            "text": "<p>There are four places on the heater where water could leak from apart from damage to the liner.<br/><strong>(1)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\">Filter Inlet</a><br/><strong>(2)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\">Filter Outlet</a><br/><strong>(3)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/FoamUK_2_240x240.jpg?v=1713356181\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/FoamUK_2_240x240.jpg?v=1713356181\">Air Bubble Blower Connector</a><br/><strong>(4)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/FoamUK_2_240x240.jpg?v=1713356181\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/FoamUK_2_240x240.jpg?v=1713356181\">The Inflation Connector Cap</a></p><p>1. With the spa filled with water, use the key/tool provided to hand-tighten the filter inlet <strong>(1)</strong> and outlet <strong>(2)</strong>. Ensure it is well-tightened. You can also tighten the inflation Connector Cap <strong>(4)</strong></p><p>2. If the leak continues, empty and unplug the spa. Unzip the inner and outer liner. Disconnect the spa controller and fold over the heater inside the spa.</p><p>3. Tighten/ensure the blower connector clip <strong>(3)</strong> is as tight as possible. Do not use a pipe wrench to over tighten.<br/>Please re-fill your spa and check for any water leaks.</p><p><br/>In the event that your spa continues leaking contact <a href=\"/pages/contact\" title=\"Contact\">Customer Support</a> for advice</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_rGaqrx": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Heater Exchange Steps | Warranty</strong>",
+            "text": "<p>There are four places where the heater connects to the liner.<br/><strong>(1)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\">Filter Inlet</a><br/><strong>(2)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/InflatableUK_1_240x240.jpg?v=1713353188\">Filter Outlet</a><br/><strong>(3)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/heater-exchange-1_240x240.jpg?v=1713868120\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/heater-exchange-1_240x240.jpg?v=1713868120\">Wired Controller</a><br/><strong>(4)</strong> <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/Heater-Exchnge-2_240x240.jpg?v=1713868147\" target=\"_blank\" title=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/Heater-Exchnge-2_240x240.jpg?v=1713868147\">Air Bubble Blower Connector</a></p><p>1. Empty the spa of water.<br/>2. Use the key/tool provided to unscrew the Filter Inlet <strong>(1)</strong> and Filter Outlet <strong>(2)</strong> from within the spa.<br/>3. Unscrew and disconnect the Wired Controller <strong>(3)</strong>.<br/>4. Unzip the inner and outer liner of the spa.<br/>5. Underneath the heater you will find the Air Bubble Blower Connector <strong>(4)</strong>, this should be hand tight and easily removed.<br/>6. Your spa heater will now be disconnected from the liner and can be taken out of the foam structure by threading the lead and RCD through the access hole.<br/>7. Exchange the heater and thread the new lead and RCD through the access hole.<br/>8. Reattach the Air Bubble Blower Connector <strong>(4)</strong> and the Wired Controller <strong>(3)</strong>.<br/>9. Zip the inner and outer liner of the spa back together.<br/>10. Use the key/tool provided to screw the Filter Inlet <strong>(1)</strong> and Filter Outlet <strong>(2) </strong>from within the spa.<br/>11. The new heater will now be connected to the liner. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_kXGRex": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Water is not clean</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A) </strong>Insufficient filtering time<br/><strong>(B) </strong>Dirty filter cartridge<br/><strong>(C) </strong>Improper water maintenance</p><p><strong>Solutions</strong><br/><strong>(A) </strong>Increase filtration time<br/><strong>(B) </strong>Replace the filter cartridge<br/><strong>(C) </strong>Refer to the chemical manufacturer’s instructions</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_hYzkpp": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Display temperature is higher than 40°C/104°F, after stopping heating function</strong>",
+            "text": "<p><strong>Causes</strong><br/><strong>(A) </strong>Residual water in the Wave spa will continue to be heated by residual temperature<br/><strong>(B) </strong>Water inlet through the filter system may be blocked</p><p><strong>Solutions</strong><br/><strong>(A) </strong>Unplug from mains and wait. The temperature will start to reduce and return to normal<strong><br/>(B) </strong>Clean the inlet</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_RyWRTn": {
+          "type": "question",
+          "settings": {
+            "title": "<strong>Manual Reset</strong>",
+            "text": "<p>When the temperature of the heating element in the motor block exceeds 47°C, the device will stop and the manual reset button will be activated to stop over-heating. If this happens, wait 15-20 minutes before pressing the reset button. You will hear a ‘click’ sound and the device will restart.<br/><br/>If no ‘click’ sound is heard, or the device fails to reset, please contact our <a href=\"/pages/contact\" title=\"Contact\">Customer Support</a> team.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_hJh6Cb",
+        "question_K9z947",
+        "question_3XEbHz",
+        "question_Wd3PV7",
+        "question_6peyJ7",
+        "question_Lrq8h3",
+        "question_rGaqrx",
+        "question_kXGRex",
+        "question_hYzkpp",
+        "question_RyWRTn"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "style": "with-border",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 20,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_F7Xmrt",
+    "rich_text_wYwDXA",
+    "faq_zGh7ry",
+    "main-page"
+  ]
+}

@@ -1,0 +1,303 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "multicolumn_gi6QAb": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_wrQXdD": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "square",
+            "heading": "Already a partner?",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Sign in below to place an order</p>",
+            "button_label": "Sign In",
+            "button_link": "https://account.waveglobal.com",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_wLzne6": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "square",
+            "heading": "Interested in becoming a partner?",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Fill in the request form below and someone will get back to you</p>",
+            "button_label": "Sign Up",
+            "button_link": "#shopify-section-template--24940647645561__1748514030878f99db",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_wrQXdD",
+        "column_wLzne6"
+      ],
+      "settings": {
+        "gap": "medium",
+        "columns": 2,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "image_with_text_iLrfcR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YbKq7G": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Spas Brochure</em>",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_aLPLfz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Download the Wave Spas Brochure for our 2025 range, featuring Inflatable, Foam, Drop Stitch and Frame Spas.</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_7BWaaA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0684/2325/4296/files/spas_brochure_USA.pdf?v=1703852099",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_YbKq7G",
+        "text_aLPLfz",
+        "button_7BWaaA"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/1-white_1.jpg",
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "#052c31",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_K8XG7e": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_PaTz9M": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Water Sports Brochure</em>",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_kQRBj6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Download the Wave Water Sports Brochure her for our 2025 range, featuring Paddleboards, Kayaks & Robes.</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_NwfHnY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download",
+            "button_link": "https://cdn.shopify.com/s/files/1/0684/2325/4296/files/brochure_SUP.pdf?v=1748508978",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_PaTz9M",
+        "text_kQRBj6",
+        "button_NwfHnY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Free_Binded_Book_Mockup_Sups.jpg",
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "right",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "center",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "contact_form_PNRFkW": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "heading": "Contact Us",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#fafafa",
+        "color_background": "",
+        "gradient_background": "radial-gradient(rgba(5, 123, 142, 1), rgba(5, 44, 49, 1) 100%)",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": true
+      }
+    },
+    "1748514030878f99db": {
+      "type": "apps",
+      "settings": {
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "#052c31",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "multicolumn_gi6QAb",
+    "image_with_text_iLrfcR",
+    "image_with_text_K8XG7e",
+    "contact_form_PNRFkW",
+    "1748514030878f99db"
+  ]
+}

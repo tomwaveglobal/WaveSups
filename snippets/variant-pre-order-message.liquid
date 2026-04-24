@@ -1,0 +1,33 @@
+{% for variant in product.variants %}
+    {% if block.settings.color_background == '#ffffff' %}
+        {%- capture offer_class -%}pre-order-message-block hide-padding {% if variant.id == product.selected_or_first_available_variant.id %}active{% endif %}{%- endcapture -%}
+    {% else %}
+        {%- capture offer_class -%}pre-order-message-block {% if variant.id == product.selected_or_first_available_variant.id %}active{% endif %}{%- endcapture -%}
+    {% endif %}
+
+    {% if localization.market.metafields.country.code == "EU" %}
+        {% if variant.metafields.custom.pre_order_date_eu != blank %}
+            <div data-pre-order="{{ variant.id }}" {% render 'surface', class: offer_class, background: block.settings.color_background, text_color: block.settings.color_text, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+                <div class="pre-order-message-container {% unless block.settings.color_background == blank or block.settings.color_background == 'transparent' %} pre-order-message-container-padding {% endunless %} {{ block.settings.text_size }}">
+                    {{ variant.metafields.custom.pre_order_date_eu }}
+                </div>
+            </div>
+        {% endif %}
+    {% elsif localization.market.metafields.country.code == "UK" %}
+        {% if variant.metafields.custom.pre_order_date_uk != blank %}
+            <div data-pre-order="{{ variant.id }}" {% render 'surface', class: offer_class, background: block.settings.color_background, text_color: block.settings.color_text, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+                <div class="pre-order-message-container {% unless block.settings.color_background == blank or block.settings.color_background == 'transparent' %} pre-order-message-container-padding {% endunless %} {{ block.settings.text_size }}">
+                    {{ variant.metafields.custom.pre_order_date_uk }}
+                </div>
+            </div>
+        {% endif %}
+    {% elsif localization.market.metafields.country.code == "US" %}
+        {% if variant.metafields.custom.pre_order_date_usa != blank %}
+            <div data-pre-order="{{ variant.id }}" {% render 'surface', class: offer_class, background: block.settings.color_background, text_color: block.settings.color_text, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+                <div class="pre-order-message-container {% unless block.settings.color_background == blank or block.settings.color_background == 'transparent' %} pre-order-message-container-padding {% endunless %} {{ block.settings.text_size }}">
+                    {{ variant.metafields.custom.pre_order_date_usa }}
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}

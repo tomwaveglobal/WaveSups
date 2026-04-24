@@ -1,0 +1,466 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_DQAXW6": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_LGa9N6": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Everything you need for your Spa, SUP, and Kayak in one place.",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_MchwLb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to the Wave Support Center",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_7UABJr": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_LGa9N6",
+        "heading_MchwLb",
+        "text_7UABJr"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": true,
+        "image": "shopify://shop_images/Carousel_Home_Mothers_Day.jpg",
+        "image_height": "650px",
+        "content_width": "large",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 70,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_qTKdyq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Daf8cQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to the<em>Wave Support Centre</em>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline"
+          }
+        },
+        "text_zqtFqW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From mastering the art of water care to seamless SUP inflation, our goal is to ensure your experience is nothing short of restorative. Browse our jargon-free guides and expert tips - curated to help you maintain your oasis and get back to the water faster.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Daf8cQ",
+        "text_zqtFqW"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "medium",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 32,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "multicolumn_Hja3AQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AkjqBb": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/Blog_image_Mothers_Day2.png",
+            "image_ratio": "landscape",
+            "heading": "Spa Troubleshooting",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Fix error codes with our step-by-step reset guides.</p>",
+            "button_label": "",
+            "button_link": "https://wavespas.com/blogs/knowledge-base/tagged/troubleshooting",
+            "button_style": "link",
+            "button_external": false,
+            "button_icon": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_WRhyWd": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/Media_Hero_1.png",
+            "image_ratio": "landscape",
+            "heading": "SUP & Kayak Care",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Expert tips on inflation, fin setups, and puncture repairs.</p>",
+            "button_label": "",
+            "button_link": "https://wavespas.com/blogs/knowledge-base/tagged/sup-kayak-care",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_h6Fww9": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/Como_Bubbles.png",
+            "image_ratio": "landscape",
+            "heading": "Water Maintenance",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Simple guides for crystal-clear water and filter longevity.</p>",
+            "button_label": "",
+            "button_link": "https://wavespas.com/blogs/knowledge-base/tagged/water-maintenance",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_4DmcLr": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image": "shopify://shop_images/Premium_Setup.png",
+            "image_ratio": "landscape",
+            "heading": "Shipping, Returns & Warranty Support",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>A seamless experience from order to doorstep</p>",
+            "button_label": "",
+            "button_link": "https://wavespas.com/pages/shipping-and-returns",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_AkjqBb",
+        "column_WRhyWd",
+        "column_h6Fww9",
+        "column_4DmcLr"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "gap": "large",
+        "columns": 4,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "17726329719e1087e3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ba417b0_EDQXUC": {
+          "type": "ai_gen_block_ba417b0",
+          "settings": {
+            "placeholder_text": "Search...",
+            "show_search_icon": true,
+            "show_clear_button": true,
+            "max_width": 600,
+            "input_padding": 14,
+            "input_font_size": 16,
+            "border_radius": 8,
+            "border_thickness": 1,
+            "icon_size": 20,
+            "background_color": "#ffffff",
+            "text_color": "#171717",
+            "placeholder_color": "#999999",
+            "border_color": "#1f1f1f",
+            "focus_border_color": "#0b61cd",
+            "icon_color": "#171717"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ba417b0_EDQXUC"
+      ],
+      "settings": {}
+    },
+    "1772549226876255a5": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_41310e1_9k6H6q": {
+          "type": "ai_gen_block_41310e1",
+          "settings": {
+            "title": "",
+            "subtitle": "",
+            "text_alignment": "center",
+            "title_size": 48,
+            "subtitle_size": 18,
+            "desktop_width_percent": 100,
+            "grid_gap": 20,
+            "section_padding": 40,
+            "header_spacing": 40,
+            "grid_spacing": 40,
+            "image_border_radius": 12,
+            "overlay_opacity": 70,
+            "image_title_size": 20,
+            "title_color": "#171717",
+            "subtitle_color": "#171717",
+            "image_title_color": "#ffffff",
+            "nav_button_background": "#ffffff",
+            "nav_button_hover_background": "#f4f4f4",
+            "nav_button_color": "#171717",
+            "image_1": "shopify://shop_images/mobile_02.jpg",
+            "title_1": "FAQs",
+            "url_1": "shopify://pages/faqs",
+            "image_2": "shopify://shop_images/Hero3.png",
+            "title_2": "Videos",
+            "url_2": "shopify://pages/hot-tub-spa-how-to-guide",
+            "image_3": "shopify://shop_images/Como_Bubbles.png",
+            "title_3": "How To's",
+            "url_3": "https://wavespas.com/blogs/knowledge-base/tagged/how-tos",
+            "image_4": "shopify://shop_images/Controller_lifestyle.jpg",
+            "title_4": "Error Codes",
+            "url_4": "https://wavespas.com/blogs/knowledge-base/tagged/error-codes",
+            "image_5": "shopify://shop_images/signing-shipping-forms-for-large-box.jpg",
+            "title_5": "Shipping & Returns",
+            "url_5": "shopify://pages/shipping-and-returns",
+            "image_6": "shopify://shop_images/Tahoe_lifestyle_1.png",
+            "title_6": "Comparison Guide",
+            "url_6": "https://wavespas.com/pages/spa-comparison-guide",
+            "image_7": "shopify://shop_images/mobile_01.jpg",
+            "title_7": "Running Cost Calculator",
+            "url_7": "https://wavespas.com/pages/hot-tub-running-cost-calculator-estimate-your-monthly-bill",
+            "image_8": "shopify://shop_images/Tahoe-8.jpg",
+            "title_8": "Ambassadors",
+            "url_8": "https://wavespas.com/pages/ambassador-program",
+            "title_9": "",
+            "url_9": "",
+            "title_10": "",
+            "url_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_41310e1_9k6H6q"
+      ],
+      "settings": {}
+    },
+    "main-blog": {
+      "type": "main-blog",
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center justify-center",
+        "heading_tag": "h1",
+        "subheading": "",
+        "description": "<p>Explore our comprehensive knowledge base for expert advice on water maintenance, technical troubleshooting, and product care. From chemical guides to warranty details, everything you need to enjoy your Wave experience is right here.</p>",
+        "show_tag_filter": true,
+        "per_page": 9,
+        "layout": "grid",
+        "image_ratio": "landscape",
+        "show_tags": false,
+        "show_date": false,
+        "show_comments": false,
+        "show_author": false,
+        "show_excerpt": true,
+        "padding_top": 72,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "rich_text_c8pR63": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AA4Bef": {
+          "type": "heading",
+          "settings": {
+            "heading": "Got a Question? We’re here to help.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_gMrEL9": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning Waveflow systems, we'll get you back to relaxing in no time.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_Ane9Rz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Speak Now",
+            "button_link": "shopify://pages/contact-us",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_AA4Bef",
+        "text_gMrEL9",
+        "button_Ane9Rz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#ffffff",
+        "color_background": "#1f1f1f",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#1f1f1f",
+        "color_button_background": "#fafafa",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_DQAXW6",
+    "rich_text_qTKdyq",
+    "multicolumn_Hja3AQ",
+    "17726329719e1087e3",
+    "1772549226876255a5",
+    "main-blog",
+    "rich_text_c8pR63"
+  ]
+}

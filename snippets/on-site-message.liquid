@@ -1,0 +1,73 @@
+{%- comment -%}
+----------------------------------------------------------------------------------------------------------------------
+ON SITE MESSAGE COMPONENT
+----------------------------------------------------------------------------------------------------------------------
+
+This component is used to create on site messages (mainly used for payment messages
+
+********************************************
+Supported variables
+********************************************
+
+* Message: The on site message content (richtext editor)
+* custom_icon: an image of an optional icon (if any)
+* icon_width: the width of the icon
+* background: an optional background that would override existing color
+* text_color: an optional text color that would override existing color
+{%- endcomment -%}
+{% if block.settings.message_background == '#ffffff' %}
+    {%- capture offer_class -%}on-site-messages-block hide-padding{%- endcapture -%}
+  {% else %}
+    {%- capture offer_class -%}on-site-messages-block{%- endcapture -%}
+  {% endif %}
+  {% assign productPrice = product.selected_or_first_available_variant.price | amount_without_currency %}
+  {% assign price_range = block.settings.message_price_range | times: 100 | amount_without_currency %}
+  {% assign limit = block.settings.message_limit_amount | times: 100 | amount_without_currency %}
+  {%- if limit > productPrice and productPrice > price_range -%}
+    
+    {%- comment -%} Finance Schema Markup {%- endcomment -%}
+    {% assign divide = block.settings.message_divide_amount %}
+    {% assign installment_amount = product.selected_or_first_available_variant.price | divided_by: divide %}
+    {% assign currency_code = cart.currency.iso_code | default: 'GBP' %}
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PaymentMethod",
+      "name": "{{ block.settings.payment_method_name | default: 'Installment Payment' }}",
+      "description": "Pay in {{ divide }} installments",
+      "paymentMethodId": "installment-payment",
+      "feesAndCommissionsSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "0",
+        "priceCurrency": "{{ currency_code }}",
+        "name": "0% APR"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "{{ installment_amount | money_without_currency }}",
+        "priceCurrency": "{{ currency_code }}",
+        "billingDuration": "P1M",
+        "billingIncrement": {{ divide }},
+        "name": "Monthly installment amount"
+      },
+      "acceptedPaymentMethod": {
+        "@type": "PaymentCard",
+        "name": "Credit/Debit Card"
+      }
+    }
+    </script>
+
+    <div {% render 'surface', class: offer_class, background: block.settings.message_background, text_color: block.settings.message_text_color, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
+      {% assign amount = product.selected_or_first_available_variant.price | divided_by: divide | money_without_trailing_zeros %}
+      {% assign message = block.settings.message %}
+      <div class="on-site-container {% unless block.settings.message_background == blank or block.settings.message_background == 'transparent' %} on-site-container-padding {% endunless %}" style="display: flex; align-items: center; justify-content: space-between;">
+          <p class="bold text-sm" style="margin: 0; text-align: left;">{{ message | replace: "#divid", divide | replace: "#amount", amount }}</p>
+          {%- if block.settings.message_image_checkbox -%}
+          <div class="on-site-container__icon" style="max-width:{{ block.settings.message_icon_width }}px; margin-left: 12px; flex-shrink: 0;">
+              {{ block.settings.message_custom_icon | img_url: 'master' | img_tag }}
+          </div>
+          {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}

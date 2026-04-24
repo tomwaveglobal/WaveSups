@@ -1,0 +1,1343 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "image_e6Nny7": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Carousel_Home_page_f6cc11a3-c68c-462d-957c-db5e2548441b.jpg",
+            "image_mobile": "shopify://shop_images/Roamer-Mobile.jpg",
+            "heading": "<span style=\"color: #F59E0B;\">Get water-ready for less. </span> <p> In Stock: The Roamer<br>for Just £249.99 </p>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "button_label": "Shop Roamer",
+            "button_link": "shopify://products/roamer-inflatable-kayak",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_rC3mcC": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Carousel_Home_page_V2.jpg",
+            "image_mobile": "shopify://shop_images/Mobile_a025a721-971f-4108-b50a-90e3190b2cef.jpg",
+            "heading": "Sun's Out, Paddles Out!<br> <span style=\"color: #F59E0B;\">20% Off </span>to Kickstart Your Summer.<br><span style=\"color: #F59E0B;\">1 Week Only!</span>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "button_label": "Shop With Code SUN20",
+            "button_link": "shopify://collections/sup-range",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_UPWkm3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3.0_header_shopify_V5.webp",
+            "image_mobile": "shopify://shop_images/mobile_11.png",
+            "heading": "`",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "button_label": "Shop 3.0",
+            "button_link": "shopify://collections/sup-range",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": true
+          }
+        },
+        "slide-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Carousel_Home_Tourer_3.0.png",
+            "image_mobile": "shopify://shop_images/Mobile_Tourer_3.0.png",
+            "heading": "Strength Redefined. <br>Weight Reduced. <br>Adventure Unleashed. <br> The all-new <span style=\"color: #F59E0B;\"> Tourer 3.0</span>",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/tourer-3",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": false
+          }
+        },
+        "image_bAHz74": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Trailblazer-Carousel.jpg",
+            "image_mobile": "shopify://shop_images/Trailblazer-Mobile.jpg",
+            "heading": "<span style=\"color: #F59E0B;\">NEW for 2026</span> <br> Rugged Versatility. Shared Discovery. Boundaries Broken.",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "button_label": "Buy Trailblazer 3.0",
+            "button_link": "shopify://products/trailblazer-3",
+            "button_style": "primary",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "image_e6Nny7",
+        "image_rC3mcC",
+        "image_UPWkm3",
+        "slide-2",
+        "image_bAHz74"
+      ],
+      "custom_css": [
+        ".slideshow {background: #ffffff !important;}",
+        ".slideshow img {mix-blend-mode: normal !important; background-color: #ffffff !important;}",
+        ".banner__media {background-color: #ffffff !important;}"
+      ],
+      "settings": {
+        "autoplay": false,
+        "autoplay_speed": 7,
+        "show_navigation": true,
+        "image_height": "650px",
+        "content_width": "small",
+        "image_height_mobile": "500px",
+        "accessibility_info": "Slideshow about our brand",
+        "color_text": "#ffffff",
+        "color_background": "#ffffff",
+        "gradient_background": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich-text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wave makes adventure effortless. From high-performance <a href=\"/collections/sup-range\" title=\"SUP Range | Inflatable Paddle Boards\">paddleboards (SUPs)</a> <a href=\"/collections/kayak-and-canoe-range\" title=\"Kayak & Canoe Range | Inflatable Kayaks & Canoes\">kayaks and canoes</a> to <a href=\"/products/wave-3-in-1-robe\" title=\"3 in 1 Changing Robe | Unisex\">premium robes</a>, everything is built for the outdoors. Our paddleboards feature the world’s safest quick-release leash for maximum safety and control. Whether you're out solo or with family, Wave gear is made to perform. Easy setup guides and a responsive team mean you're ready to go, wherever the water takes you.<br/><br/>Need help? Our friendly team and easy setup guides have you covered. Float, soak, switch off, <strong>Wave’s got you.</strong></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "We believe in the spirit of <em>Adventure</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "Our Story",
+        "button_link": "shopify://pages/about-us",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": true
+      }
+    },
+    "collection-list": {
+      "type": "collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "image": "shopify://shop_images/Media_Hero_1_942e3297-403f-4014-8952-f119a013e811.png",
+            "title": "All products",
+            "description": "Check out all our products",
+            "overlay_content": true,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-range",
+            "image": "shopify://shop_images/New_SUPs_Homepage.png",
+            "title": "Paddleboards (Sups)",
+            "description": "Unleash your surfing spirit",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        },
+        "collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "kayak-and-canoe-range",
+            "image": "shopify://shop_images/Kayaks_Homepage.png",
+            "title": "Kayaks & Canoes",
+            "description": "The ultimate water adventure",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 40
+          }
+        },
+        "collection_HkK9Ei": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-accessories",
+            "image": "shopify://shop_images/Recon_Package_Collage_3.png",
+            "title": "SUP Accessories",
+            "description": "Sup up on essentials",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_UV6q3m": {
+          "type": "collection",
+          "settings": {
+            "collection": "robes",
+            "image": "shopify://shop_images/robes_1.png",
+            "title": "Changing Robes",
+            "description": "Waterproof, windproof, adventure ready",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-5",
+        "collection_HkK9Ei",
+        "collection_UV6q3m"
+      ],
+      "settings": {
+        "card_style": "card",
+        "image_type": "collection",
+        "image_ratio": "square",
+        "show_products_count": false,
+        "show_view_all": false,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "video-with-text-overlay": {
+      "type": "video-with-text-overlay",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Recon 3.0",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Rugged Durability. Unmatched Stability. Adventure Reinvented.</h4><p><br/>The all-new Wave Recon 3.0 is our most resilient board yet, engineered for the explorer who ventures off the beaten path. Featuring a heavy-duty Triple-Layer Military-Grade PVC construction that offers a rock-solid base for gear-heavy expeditions, or navigating unpredictable waters.<br/></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Pre Order Now",
+            "button_link": "shopify://products/recon-3",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "video": "shopify://files/videos/Paddle_boarders_paddling_202601071610_fm93o.mp4",
+        "video_url": "",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "image_height": "750px",
+        "content_width": "medium",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "video_url_mobile": "",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#000000",
+        "overlay_opacity": 50,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-sm",
+            "title_tag": "h2",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "text_3ag4iM": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "{{ section.settings.product.metafields.custom.description_snippet.value }}",
+            "text_size": "text-base"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "text_size": "text-base"
+          }
+        },
+        "countdown": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#e11d48",
+            "color_background": "#fff1f2",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": false,
+            "picker_type": "button",
+            "enable_color_swatches": true,
+            "color_swatch_type": "variant",
+            "size_chart": ""
+          }
+        },
+        "variant_pre_order_6BnqBd": {
+          "type": "variant_pre_order",
+          "settings": {
+            "text_size": "text-base",
+            "color_text": "#ffffff",
+            "color_background": "#1f1f1f"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_price": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "disabled": true,
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share",
+            "show_help_desk": true,
+            "help_label": "Need help?",
+            "help_page": "",
+            "help_page_external": false
+          }
+        },
+        "read_more": {
+          "type": "read_more",
+          "disabled": true,
+          "settings": {}
+        },
+        "spinning_text": {
+          "type": "spinning_text",
+          "settings": {
+            "text": "Best Seller"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "text_3ag4iM",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_6BnqBd",
+        "inventory",
+        "buy_buttons",
+        "pickup_availability",
+        "share",
+        "read_more",
+        "spinning_text"
+      ],
+      "settings": {
+        "product": "recon-3",
+        "enable_sticky_info": true,
+        "media_size": 64,
+        "gallery_layout": "thumbnail",
+        "thumbnail_position": "below",
+        "image_ratio": "square",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "partial",
+        "image_ratio_mobile": "adapt",
+        "mobile_thumbnail": true,
+        "padding_top": 100,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "rich-text-2": {
+      "type": "rich-text",
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 1536px) and (max-width: 1920px) {.collage, .collage .title-wrapper {padding-inline: 0; }}",
+        "@media screen and (min-width: 1920px) {.collage, .collage .title-wrapper {padding-inline: var(--grid-gap); }}"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "Build your <em>Bundle</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "large",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>The choice is yours. With our bundle builder, you can select any combination from our range of products. The easiest way to keep everyone happy.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "squiggle-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 120,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "floating_product_bundle_RcQhp6": {
+      "type": "floating-product-bundle",
+      "blocks": {
+        "heading_QnrQzz": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Everything</em> you need to get out on the water...",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_jkcC7c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Begin your SUP adventure with a Wave starter bundle containing all your SUP'ing essentials. <em><strong>Just add water!</strong></em></p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QnrQzz",
+        "text_jkcC7c"
+      ],
+      "disabled": true,
+      "settings": {
+        "collection": "",
+        "products": [
+          "woody-sup",
+          "buoyancy-aid-black",
+          "waterproof-pvc-dry-bag",
+          "waterproof-phone-cover"
+        ],
+        "product_limit": 4,
+        "image": "shopify://shop_images/Woody_Global2.jpg",
+        "image_height": "900px",
+        "layout": "image_first",
+        "content_position": "md:items-end",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Mobile_Woody2.jpg",
+        "image_height_mobile": "600px",
+        "content_position_mobile": "items-end",
+        "text_alignment_mobile": "center",
+        "swipe_on_mobile": true,
+        "show_variant_labels": true,
+        "picker_type": "button",
+        "enable_color_swatches": true,
+        "color_swatch_type": "variant",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#ffa300",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 15,
+        "padding_top": 0,
+        "padding_bottom": 32,
+        "divider": true,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image-comparison": {
+      "type": "image-comparison",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "subheading": "Portable, durable, and effortlessly relaxing",
+            "heading": "Inflatable Spa",
+            "content_position": "end",
+            "color_text": "#ffffff"
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "subheading": "Built to last premium comfort and  performance",
+            "heading": "Eco Foam Spa",
+            "content_position": "end",
+            "color_text": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "horizontal",
+        "image_height": "850px",
+        "image_height_mobile": "300px",
+        "heading": "<em>Inflatable or Eco Foam?</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "Relax your way",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "text",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(90deg, rgba(8, 57, 64, 1) 25%, rgba(23, 23, 23, 1) 100%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 100,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "scrolling-text-1": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<em><strong>Revolutionise Your Relaxation</strong></em>",
+            "text_size": 160,
+            "text_font": "body",
+            "highlighted_text": "stencil",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "direction": "left",
+        "speed": 20,
+        "grid_horizontal": 70,
+        "enable_twin": false,
+        "enable_parallax": true,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 120,
+        "padding_bottom": 120,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "countdown-timer": {
+      "type": "countdown-timer",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Countdown timer</p>",
+            "text_font": "body",
+            "text_size": "subtext-custom",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "spacing": {
+          "type": "spacing",
+          "settings": {
+            "height": 24,
+            "height_mobile": 16
+          }
+        },
+        "timer": {
+          "type": "timer",
+          "settings": {
+            "year": "2026",
+            "month": "01",
+            "day": "1",
+            "hour": "03",
+            "minute": "00",
+            "text_font": "heading",
+            "text_size": "title-lg tracking-heading",
+            "message": ""
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "text",
+        "spacing",
+        "timer",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": false,
+        "image_height": "750px",
+        "content_width": "medium",
+        "content_position": "md:items-center md:justify-center",
+        "text_alignment": "center",
+        "image_height_mobile": "500px",
+        "content_position_mobile": "items-center justify-center",
+        "text_alignment_mobile": "center",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#fcd34d",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#000000",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "shop-the-look": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product-1": {
+          "type": "product",
+          "settings": {
+            "product": "woody-sup",
+            "color_text": "#ffffff",
+            "vertical": 80,
+            "horizontal": 25,
+            "vertical_mobile": 25,
+            "horizontal_mobile": 25
+          }
+        },
+        "product-2": {
+          "type": "product",
+          "settings": {
+            "product": "buoyancy-aid-black",
+            "color_text": "#ffffff",
+            "vertical": 40,
+            "horizontal": 70,
+            "vertical_mobile": 75,
+            "horizontal_mobile": 65
+          }
+        },
+        "product-3": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "",
+            "color_text": "#ffffff",
+            "vertical": 50,
+            "horizontal": 62,
+            "vertical_mobile": 50,
+            "horizontal_mobile": 50
+          }
+        }
+      },
+      "block_order": [
+        "product-1",
+        "product-2",
+        "product-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Woody_Lifestyle.jpg",
+        "heading": "Shop The <em>Look</em>",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 40,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "testimonials-banner": {
+      "type": "testimonials-banner",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>I'm very pleased with the wave name and company.  The hot tub works wonders w/ my arthritis.  They didn't hesitate to send me a replacement when my original one had an issue.  Thank you Wave!</p>",
+            "author": "Ron M",
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "adapt",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "testimonial_KPERUr": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
+            "author": "Author's name",
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "testimonial-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>Customer service for sale of replacement cover was second to none.  They always strive to help you out with your query. I wouldn't hesitate to buy off them again. Their products are excellent.</p>",
+            "author": "Stephen O",
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "adapt",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "testimonial-3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "quote",
+            "text": "<p>Very good company very reliable delivered on time would recommend</p>",
+            "author": "Elaine E",
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "adapt",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "testimonial_KPERUr",
+        "testimonial-2",
+        "testimonial-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Hero_Large_2.jpg",
+        "image_height": "750px",
+        "content_position": "md:items-center md:justify-center",
+        "image_mobile": "shopify://shop_images/Hero_Mobile_3_1.jpg",
+        "image_height_mobile": "500px",
+        "content_position_mobile": "items-center justify-center",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-range",
+            "products": [],
+            "title": "Paddleboards"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "kayak-and-canoe-range",
+            "products": [],
+            "title": "Kayaks"
+          }
+        },
+        "collection_DNjp8F": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-accessories",
+            "products": [],
+            "title": "Accessories"
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "robes",
+            "products": [],
+            "title": "Robes"
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection_DNjp8F",
+        "collection-3"
+      ],
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Best Sellers",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "scrolling-text-2": {
+      "type": "scrolling-text",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-5": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-6": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        },
+        "image-7": {
+          "type": "image",
+          "settings": {
+            "height": 60,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4",
+        "image-5",
+        "image-6",
+        "image-7"
+      ],
+      "disabled": true,
+      "settings": {
+        "direction": "right",
+        "speed": 5,
+        "grid_horizontal": 140,
+        "enable_twin": true,
+        "enable_parallax": true,
+        "color_text": "",
+        "color_background": "#fde68a",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "blog-posts-collage": {
+      "type": "blog-posts-collage",
+      "settings": {
+        "blog": "blogs",
+        "post_limit": 3,
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_tags": false,
+        "show_date": true,
+        "show_comments": false,
+        "show_author": false,
+        "show_excerpt": true,
+        "heading": "Latest Stories",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "rich_text_PLVJHh": {
+      "type": "rich-text",
+      "blocks": {
+        "image_dzKHj4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Trustpilot_SUPs.png",
+            "image_width": "custom",
+            "image_max_width": 400,
+            "image_max_width_mobile": 300
+          }
+        },
+        "heading_cgV4md": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Our reviews speak for themselves",
+            "heading_size": "title-sm",
+            "heading_tag": "h6",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_8WLft8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Rated <em>4.8 / 5</em> Based on <em>3449 Reviews</em> with Reviews.io</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_BE7GeT": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "image_dzKHj4",
+        "heading_cgV4md",
+        "text_8WLft8",
+        "button_BE7GeT"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "heading": "",
+        "heading_size": "title-sm",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#f59e0b",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "1752500797e295154e": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_card_carousel_nJMANE": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-card-carousel/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#00b67b",
+            "review_type": "company",
+            "reviews_shown": 20,
+            "header_bg_colour": "#000000",
+            "header_colour": "#ffffff",
+            "header_star_colour": "#00b67b",
+            "heading_text_colour": "#0e1311",
+            "heading_font": "inter_n4",
+            "body_text_colour": "#0e1311",
+            "badge_icon_colour": "#0e1311",
+            "badge_text_colour": "#0e1311",
+            "bg_start_colour": "#ffffff",
+            "bg_end_colour": "#ffffff",
+            "item_border_width": "0px",
+            "item_border_colour": "#f2f2f2",
+            "item_border_radius": "0px",
+            "item_shadow_size": "10px",
+            "item_shadow_colour": "#f2f2f2",
+            "enable_rich_snippets": false,
+            "disable_same_customer": false,
+            "logo_colour": "var(--logo-inverted)"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_card_carousel_nJMANE"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "rich-text-1",
+    "collection-list",
+    "video-with-text-overlay",
+    "featured-product",
+    "rich-text-2",
+    "floating_product_bundle_RcQhp6",
+    "image-comparison",
+    "scrolling-text-1",
+    "countdown-timer",
+    "shop-the-look",
+    "testimonials-banner",
+    "featured-collections",
+    "scrolling-text-2",
+    "blog-posts-collage",
+    "rich_text_PLVJHh",
+    "1752500797e295154e"
+  ]
+}

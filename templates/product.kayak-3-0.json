@@ -1,0 +1,1686 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "vendor_aTdrrh": {
+          "type": "vendor",
+          "settings": {
+            "show_product_vendor": true,
+            "text_size": "text-sm",
+            "text_color": "",
+            "background_color": "",
+            "background_height": 0,
+            "alignment": "left"
+          }
+        },
+        "breadcrumb_rcrAce": {
+          "type": "breadcrumb",
+          "disabled": true,
+          "settings": {
+            "show_collections_link": true,
+            "show_product_title": true
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "product-title-md",
+            "title_size_mobile": "product-title-md",
+            "title_tag": "h2",
+            "show_price": true,
+            "show_rating": true
+          }
+        },
+        "reviews_io_reviewsio_rating_output_XtJhKf": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-output/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {}
+        },
+        "text_4JQyhw": {
+          "type": "text",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 20,
+            "text": "{{ product.metafields.custom.description_snippet.value }}",
+            "text_size": "text-sm"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "text_size": "text-sm"
+          }
+        },
+        "countdown": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "heading": "Hurry up!",
+            "subheading": "Sale end in:",
+            "color_text": "#e11d48",
+            "color_background": "#fff1f2",
+            "gradient_background": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "enable_dynamic_variants": true,
+            "show_variant_labels": false,
+            "picker_type": "button",
+            "show_colour_buttons": true,
+            "enable_color_swatches": true,
+            "color_swatch_type": "variant",
+            "size_chart": ""
+          }
+        },
+        "variant_pre_order_nkaMyt": {
+          "type": "variant_pre_order",
+          "settings": {
+            "text_size": "text-base",
+            "color_text": "#ffffff",
+            "color_background": "#1f1f1f"
+          }
+        },
+        "on_site_message_EFzeYN": {
+          "type": "on_site_message",
+          "settings": {
+            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
+            "message_icon_width": 100,
+            "message_image_checkbox": true,
+            "message": "<p>Starting at #amount* per month</p>",
+            "message_divide_amount": "24",
+            "message_price_range": "100",
+            "message_limit_amount": "100000",
+            "message_background": "#fafafa",
+            "message_text_color": "#00a341"
+          }
+        },
+        "text_ceUtLU": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "sale",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Use code <strong>SUN15</strong> for 15% off | Limited Time Only!",
+            "text_size": "text-sm"
+          }
+        },
+        "product_bundle_tWCDMV": {
+          "type": "product_bundle",
+          "settings": {
+            "opened": true,
+            "clickable": true,
+            "variant_selection": false,
+            "icon": "box",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "heading": "Popular Add Ons",
+            "products": "{{ product.metafields.custom.popular_upgrades.value }}",
+            "metafield": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "enable_back_in_stock": true,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "show_help_desk": true,
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": "contact",
+            "help_page_external": false
+          }
+        },
+        "text_3PYKCi": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Klarna's Pay in 3 / Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only. Subject to status. Ts&Cs and late fees apply.",
+            "text_size": "text-sm"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 15,
+            "show_inventory_transfer": true,
+            "show_inventory_quantity": "low",
+            "color_scheme": "accent-1"
+          }
+        },
+        "pickup_availability": {
+          "type": "pickup_availability",
+          "disabled": true,
+          "settings": {}
+        },
+        "complementary": {
+          "type": "complementary",
+          "disabled": true,
+          "settings": {
+            "heading": "Pairs well with",
+            "product_limit": 4,
+            "show_vendor": false,
+            "show_price": true
+          }
+        },
+        "sticky_buy_button": {
+          "type": "sticky_buy_button",
+          "settings": {}
+        },
+        "icon_list_4xTkbm": {
+          "type": "icon_list",
+          "repeater": "{{ product.metafields.custom.product_icons.value }}",
+          "settings": {
+            "heading": "Product Highlights",
+            "enable_carousel": false,
+            "show_below_media": true
+          }
+        },
+        "text_7bqpGD": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "icon_image": "shopify://shop_images/delivery.svg",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "<strong>Free Next Day Delivery (Order by 2pm)</strong>",
+            "text_size": "text-sm"
+          }
+        },
+        "text_LiCrpH": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "sale",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "<strong>Running Cost - From £2 a day</strong>",
+            "text_size": "text-sm"
+          }
+        },
+        "text_kfKeDi": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "award",
+            "icon_image": "shopify://shop_images/warranty.svg",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "<strong>24 Month Guarantee</strong>",
+            "text_size": "text-sm"
+          }
+        },
+        "text_9JnzcB": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "wrench",
+            "icon_image": "shopify://shop_images/CS_key_point.png",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "<strong>UK-based 7-Day Customer Support</strong>",
+            "text_size": "text-sm"
+          }
+        }
+      },
+      "block_order": [
+        "vendor_aTdrrh",
+        "breadcrumb_rcrAce",
+        "title",
+        "reviews_io_reviewsio_rating_output_XtJhKf",
+        "text_4JQyhw",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_nkaMyt",
+        "on_site_message_EFzeYN",
+        "text_ceUtLU",
+        "product_bundle_tWCDMV",
+        "buy_buttons",
+        "share",
+        "text_3PYKCi",
+        "inventory",
+        "pickup_availability",
+        "complementary",
+        "sticky_buy_button",
+        "icon_list_4xTkbm",
+        "text_7bqpGD",
+        "text_LiCrpH",
+        "text_kfKeDi",
+        "text_9JnzcB"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "media_size": 66,
+        "gallery_layout": "scroll",
+        "thumbnail_position": "beside",
+        "image_ratio": "square",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "mobile_layout": "full_width",
+        "image_ratio_mobile": "square",
+        "mobile_thumbnail": true,
+        "padding_top": 0,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "ss_product_videos_4_xnGnjw": {
+      "type": "ss-product-videos-4",
+      "blocks": {
+        "video_aEUV9h": {
+          "type": "video",
+          "settings": {
+            "video": "{{ product.metafields.custom.ugc_1.value }}",
+            "title": ""
+          }
+        },
+        "video_4yxc3z": {
+          "type": "video",
+          "settings": {
+            "video": "{{ product.metafields.custom.ugc_2.value }}",
+            "title": ""
+          }
+        },
+        "video_JfLnmR": {
+          "type": "video",
+          "settings": {
+            "video": "{{ product.metafields.custom.ugc_3.value }}",
+            "title": ""
+          }
+        },
+        "video_UrBifC": {
+          "type": "video",
+          "settings": {
+            "video": "{{ product.metafields.custom.ugc_4.value }}",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_aEUV9h",
+        "video_4yxc3z",
+        "video_JfLnmR",
+        "video_UrBifC"
+      ],
+      "name": "SS - Product videos #4",
+      "settings": {
+        "videos_position": "below_buy",
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "system_ui_n4",
+        "heading_size": 15,
+        "heading_size_mobile": 15,
+        "heading_height": 130,
+        "heading_align": "left",
+        "heading_align_mobile": "left",
+        "slider_view": 4.6,
+        "slider_view_mobile": 3.6,
+        "slider_gap": 16,
+        "slider_gap_mobile": 12,
+        "slider_mt": 4,
+        "slider_mt_mobile": 4,
+        "card_padding": 3,
+        "card_radius": 300,
+        "card_border_thickness": 3,
+        "card_hover": true,
+        "card_first_animation": true,
+        "video_ratio": "square",
+        "video_ratio_mobile": "square",
+        "video_overlay": 0,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 14,
+        "title_size_mobile": 12,
+        "title_height": 130,
+        "title_mt": 10,
+        "title_mt_mobile": 10,
+        "title_align": "center",
+        "title_align_mobile": "center",
+        "arrow_size": 32,
+        "arrow_size_mobile": 28,
+        "arrow_border_thickness": 0,
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "dots_size": 10,
+        "dots_size_mobile": 10,
+        "dots_mt": 0,
+        "dots_mt_mobile": 8,
+        "dots_show_desktop": false,
+        "dots_show_mobile": false,
+        "modal_width": 300,
+        "modal_width_mobile": 260,
+        "modal_padding_vertical": 0,
+        "modal_padding_vertical_mobile": 0,
+        "modal_padding_horizontal": 0,
+        "modal_padding_horizontal_mobile": 0,
+        "modal_radius": 16,
+        "modal_border_thickness": 0,
+        "modal_overlay": 0.3,
+        "modal_video_radius": 0,
+        "modal_video_border_thickness": 0,
+        "modal_video_ratio": "portrait",
+        "modal_video_ratio_mobile": "portrait",
+        "use_progress": true,
+        "action_size": 28,
+        "action_size_mobile": 36,
+        "action_border_thickness": 0,
+        "buttons_size": 32,
+        "buttons_size_mobile": 36,
+        "buttons_border_thickness": 0,
+        "card_bg_color": "#ffffff",
+        "card_bg_gradient": "",
+        "card_border_color": "#137c8f",
+        "video_overlay_color": "#000000",
+        "card_animation_color": "#137c8f",
+        "play_button_color": "#ffffff",
+        "title_color": "#000000",
+        "arrow_color": "#ffffff",
+        "arrow_hover_color": "#ffffff",
+        "arrow_bg_color": "#000000",
+        "arrow_bg_hover_color": "#555555",
+        "arrow_border_color": "#000000",
+        "arrow_border_hover_color": "#555555",
+        "dots_color": "#000000",
+        "modal_overlay_color": "#242424",
+        "modal_bg_color": "#ffffff",
+        "modal_border_color": "#000000",
+        "modal_video_border_color": "#000000",
+        "action_icon_color": "#ffffff",
+        "action_bg_color": "#000000",
+        "action_border_color": "#000000",
+        "buttons_icon_color": "#000000",
+        "buttons_bg_color": "#ffffff",
+        "buttons_border_color": "#000000",
+        "heading_color": "#000000",
+        "background_color": "#ffffff",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "help-drawer": {
+      "type": "help-drawer",
+      "blocks": {
+        "content-1": {
+          "type": "content",
+          "settings": {
+            "icon": "truck",
+            "heading": "Shipping Information",
+            "text": "<p>Free next-day tracked delivery for all spas, SUPs and kayaks via DPD, with an option for Saturday delivery available for an extra £9.99. Upon dispatch, DPD will provide you with a one-hour tracking window.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#171717",
+            "color_background": "#fafafa",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-2": {
+          "type": "content",
+          "settings": {
+            "icon": "headphone",
+            "heading": "Customer Support",
+            "text": "<p>Our target response time for tickets is 24 hours, Monday to Friday 9.00 - 4.30. <br/>Email us At: <a href=\"mailto:support@wavespas.com\" title=\"mailto:support@wavespas.com\">support@wavespas.com</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#171717",
+            "color_background": "#fafafa",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-3": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "FAQ’s",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#be123c",
+            "color_background": "#fff1f2",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        },
+        "content-4": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "icon": "phone",
+            "heading": "Contact Us",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "color_text": "#4d7c0f",
+            "color_background": "#f7fee7",
+            "gradient_background": "",
+            "color_highlight": "#ffddbf",
+            "gradient_highlight": ""
+          }
+        }
+      },
+      "block_order": [
+        "content-1",
+        "content-2",
+        "content-3",
+        "content-4"
+      ],
+      "settings": {
+        "heading": "Need help?",
+        "description": "<p>If you have any questions, you are always welcome to contact us. We'll get back to you as soon as possible.</p>"
+      }
+    },
+    "multicolumn_with_icons_kcwtKw": {
+      "type": "multicolumn-with-icons",
+      "blocks": {
+        "column_KzpfUk": {
+          "type": "column",
+          "settings": {
+            "icon": "box",
+            "custom_icon": "",
+            "heading": "<em>Fast Free Shipping</em>",
+            "text": "<p>All orders are shipped next working day tracked<br/>(order by 2pm)</p>",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_6TUtdq": {
+          "type": "column",
+          "settings": {
+            "icon": "shield",
+            "custom_icon": "",
+            "heading": "<em>Extensive Warranty</em>",
+            "text": "<p>All our SUPs & kayaks are backed by a 24 month guarantee</p>",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_aWzaER": {
+          "type": "column",
+          "settings": {
+            "icon": "support",
+            "custom_icon": "",
+            "heading": "<em>Dedicated Support Team</em>",
+            "text": "<p>Our fully trained team are available 7 days a week</p>",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_KzpfUk",
+        "column_6TUtdq",
+        "column_aWzaER"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn-with-icons.presets.name",
+      "settings": {
+        "style": "with-border",
+        "columns": 3,
+        "text_alignment": "center",
+        "heading": "<em>Why Buy From Wave?</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "text",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "#171717",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "scroll_spy_UixBmq": {
+      "type": "scroll-spy",
+      "blocks": {
+        "back_to_top_a9jNUA": {
+          "type": "back_to_top",
+          "settings": {}
+        },
+        "nav_item_XKNDwP": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Description",
+            "target_id": "shopify-section-template--28814748975491__collage"
+          }
+        },
+        "nav_item_KrVxkG": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Tech Specs",
+            "target_id": "shopify-section-template--28814748975491__product-details"
+          }
+        },
+        "nav_item_mUKW9M": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Comparison Table",
+            "target_id": "shopify-section-template--28814748975491__comparison_table_rB8zXC"
+          }
+        },
+        "nav_item_k9LzJe": {
+          "type": "nav_item",
+          "settings": {
+            "title": "FAQs",
+            "target_id": "shopify-section-template--28814748975491__faq"
+          }
+        },
+        "nav_item_FyGbwJ": {
+          "type": "nav_item",
+          "settings": {
+            "title": "Reviews",
+            "target_id": "shopify-section-template--28814748975491__rich_text_kbbtYn"
+          }
+        }
+      },
+      "block_order": [
+        "back_to_top_a9jNUA",
+        "nav_item_XKNDwP",
+        "nav_item_KrVxkG",
+        "nav_item_mUKW9M",
+        "nav_item_k9LzJe",
+        "nav_item_FyGbwJ"
+      ],
+      "name": "t:sections.scroll-spy.name",
+      "settings": {
+        "show_highlight": true,
+        "text_alignment": "center",
+        "text_alignment_mobile": "center",
+        "color_text": "#171717",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "full_width": false
+      }
+    },
+    "video-hero": {
+      "type": "video-hero",
+      "blocks": {
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "heading": "{{ product.metafields.custom.video_text_1.value }}",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "heading": "{{ product.metafields.custom.video_text_2.value }}",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "slide-3": {
+          "type": "slide",
+          "settings": {
+            "heading": "{{ product.metafields.custom.video_text_3.value }}",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "slide-4": {
+          "type": "slide",
+          "settings": {
+            "heading": "{{ product.metafields.custom.video_text_4.value }}",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        }
+      },
+      "block_order": [
+        "slide-2",
+        "slide-1",
+        "slide-3",
+        "slide-4"
+      ],
+      "settings": {
+        "transparent_header": false,
+        "video": "{{ product.metafields.custom.product_video.value.product_video.value }}",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "content_width": "medium",
+        "video_url_mobile": "",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_overlay": "#000000",
+        "overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "image-1": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em><strong>{{ product.metafields.custom.product_collage_image_1_subtitle.value }}</strong></em>",
+            "heading": "{{ product.metafields.custom.product_collage_image_1_title.value }}",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "{{ product.metafields.custom.product_image_1.value }}",
+            "image_ratio": "landscape",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "image_ratio_mobile": "landscape",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fafafa",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20
+          }
+        },
+        "image-2": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em><strong>{{ product.metafields.custom.product_collage_image_3_subtitle.value }}</strong></em>",
+            "heading": "{{ product.metafields.custom.product_collage_image_3_title.value }}",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "{{ product.metafields.custom.product_image_3.value }}",
+            "image_ratio": "portrait",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "image_ratio_mobile": "portrait",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#083940",
+            "color_highlight": "#057b8e",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20
+          }
+        },
+        "image-3": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em><strong>{{ product.metafields.custom.product_collage_image_2_subtitle.value }}</strong></em>",
+            "heading": "{{ product.metafields.custom.product_collage_image_2_title.value }}",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "{{ product.metafields.custom.product_image_2.value }}",
+            "image_ratio": "portrait",
+            "content_position": "md:items-end md:justify-end",
+            "text_alignment": "right",
+            "image_ratio_mobile": "portrait",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fafafa",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20
+          }
+        },
+        "image-4": {
+          "type": "image",
+          "settings": {
+            "subheading": "<em><strong>{{ product.metafields.custom.product_collage_image_4_subtitle.value }}</strong></em>",
+            "heading": "{{ product.metafields.custom.product_collage_image_4_title.value }}",
+            "link": "",
+            "invert_subheading_heading": false,
+            "image": "{{ product.metafields.custom.product_image_4.value }}",
+            "image_ratio": "landscape",
+            "content_position": "md:items-end md:justify-start",
+            "text_alignment": "left",
+            "image_ratio_mobile": "landscape",
+            "content_position_mobile": "items-end justify-start",
+            "text_alignment_mobile": "left",
+            "highlighted_text": "text",
+            "highlighted_scribble": "circle",
+            "color_text": "#ffffff",
+            "color_highlight": "#fafafa",
+            "gradient_highlight": "",
+            "color_overlay": "#000000",
+            "overlay_opacity": 20
+          }
+        }
+      },
+      "block_order": [
+        "image-1",
+        "image-2",
+        "image-3",
+        "image-4"
+      ],
+      "settings": {
+        "heading": "Unleash your adventuring <em>spirit</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "{{ product.description }}",
+        "button_label": "View Tech Spec",
+        "button_link": "#shopify-section-template--25521091477891__product-details",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true
+      }
+    },
+    "image-with-text-1": {
+      "type": "image-with-text",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_width": "custom",
+            "image_max_width": 60,
+            "image_max_width_mobile": 60
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_hero_image_1_title.value }}",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline",
+            "highlighted_reveal": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_hero_image_1_description | metafield_tag }}",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.product_image_5.value }}",
+        "image_height": "600px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "300px",
+        "text_alignment_mobile": "center",
+        "color_text": "#171717",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "#fafafa",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "scrolling-text": {
+      "type": "scrolling-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<em><strong>Unleash Your Adventuring Spirit</strong></em>",
+            "text_size": 160,
+            "text_font": "body",
+            "highlighted_text": "stencil",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "direction": "left",
+        "speed": 20,
+        "grid_horizontal": 70,
+        "enable_twin": false,
+        "enable_parallax": true,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "divider": false,
+        "rounded": false
+      }
+    },
+    "image-with-text-2": {
+      "type": "image-with-text",
+      "blocks": {
+        "image": {
+          "type": "image",
+          "settings": {
+            "image_width": "custom",
+            "image_max_width": 60,
+            "image_max_width_mobile": 60
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.product_hero_image_2_title.value }}",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline",
+            "highlighted_reveal": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.product_hero_image_2_description | metafield_tag }}",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "image",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image": "{{ product.metafields.custom.product_image_6.value }}",
+        "image_height": "600px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "300px",
+        "text_alignment_mobile": "center",
+        "color_text": "#171717",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "#fafafa",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": false,
+        "parallax_direction": "vertical"
+      }
+    },
+    "product-details": {
+      "type": "product-details",
+      "blocks": {
+        "specification_g7Fp6A": {
+          "type": "specification",
+          "repeater": "{{ product.metafields.custom.in_the_box.value }}",
+          "settings": {
+            "icon": "{{ block.repeater.icon.value }}",
+            "heading": "{{ block.repeater.label.value }}",
+            "text_size": "text-sm"
+          }
+        },
+        "collapsible_tab_VJ49Qd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "heading": "Key Features",
+            "content": "{{ product.metafields.custom.key_features | metafield_tag }}",
+            "metafields": "",
+            "text_size": "text-base"
+          }
+        },
+        "collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "heading": "Dimensions",
+            "content": "{{ product.metafields.custom.dimensions | metafield_tag }}",
+            "metafields": "",
+            "text_size": "text-base"
+          }
+        },
+        "collapsible_tab-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "heading": "Technical Specs",
+            "content": "{{ product.metafields.custom.tech_specs | metafield_tag }}",
+            "metafields": "",
+            "text_size": "text-base"
+          }
+        },
+        "collapsible_tab-3": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "heading": "Collapsible row 3",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "metafields": "",
+            "text_size": "text-base"
+          }
+        },
+        "collapsible_tab-4": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "heading": "Collapsible row 4",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "metafields": "",
+            "text_size": "text-base"
+          }
+        }
+      },
+      "block_order": [
+        "specification_g7Fp6A",
+        "collapsible_tab_VJ49Qd",
+        "collapsible_tab-1",
+        "collapsible_tab-2",
+        "collapsible_tab-3",
+        "collapsible_tab-4"
+      ],
+      "custom_css": [],
+      "settings": {
+        "style": "with-border",
+        "open_first_row": true,
+        "specifications_heading": "Included In The Box",
+        "heading": "Product details",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "#171717",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "comparison_table_rB8zXC": {
+      "type": "comparison-table",
+      "blocks": {
+        "headings_MCi3JR": {
+          "type": "headings",
+          "settings": {
+            "heading_1": "Dimensions",
+            "heading_2": "Skill Level",
+            "heading_3": "Rider Style",
+            "heading_4": "Kayak Weight",
+            "heading_5": "",
+            "heading_6": "",
+            "heading_7": "",
+            "heading_8": "",
+            "heading_9": "",
+            "heading_10": "",
+            "heading_11": "",
+            "heading_12": "",
+            "heading_13": "",
+            "heading_14": "",
+            "heading_15": "",
+            "heading_16": "",
+            "heading_17": "",
+            "heading_18": "",
+            "heading_19": "",
+            "heading_20": "",
+            "heading_21": "",
+            "heading_22": "",
+            "heading_23": "",
+            "heading_24": "",
+            "heading_25": ""
+          }
+        },
+        "values_T78tqT": {
+          "type": "values",
+          "settings": {
+            "product": "navigator-3",
+            "value_1": "<p><strong>1-2 Seater<br/></strong>420x82x35cm | 165x32x14\"</p><p><strong>2-3 Seater<br/></strong>464x82x35cm | 183x32x14\"</p>",
+            "value_2": "<p>Intermediate or group kayaking</p>",
+            "value_3": "<p>Thrill-seeking performance</p>",
+            "value_4": "<p><strong>1 Seater | </strong>15.1kg | 33.2lbs<br/><strong>2 Seater | </strong>16.8kg | 37lbs<br/><strong>3 Seater | </strong>8.4kg | 40.5lbs</p><h6><strong>Max Capacity</strong></h6><p><strong>1 Seater | </strong>120 kg | 264lbs<br/><strong>2 Seater | </strong>220 kg | 485lbs<br/><strong>3 Seater | </strong>260kg | 573lbs</p>",
+            "value_5": "<h6><strong>1 Seater</strong></h6><p>120 kg | 264lbs</p><h6><strong>2 Seater</strong></h6><p>220 kg | 485lbs</p><h6><strong>3 Seater</strong></h6><p>260kg | 573lbs</p>",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "value_21": "",
+            "value_22": "",
+            "value_23": "",
+            "value_24": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        },
+        "values_fRFWPx": {
+          "type": "values",
+          "settings": {
+            "product": "trailblazer-3",
+            "value_1": "<p><strong>1 Seater<br/></strong>426x24x38cm | 167.7x9.4x14.9\"</p><p><strong>2 Seater<br/></strong>466x24x38cm | 183x9.4x14.9\"</p>",
+            "value_2": "<p>Beginners and casual explorers</p>",
+            "value_3": "<p>Easy kayaking, effortless fun</p>",
+            "value_4": "<p><strong>1 Seater | </strong>14.8kg | 32.6lbs<br/><strong>2 Seater | </strong>16.5kg | 36.3lbs<br/><strong>3 Seater | </strong>18.2kg | 40.1lbs</p><h6><strong>Max Capacity</strong></h6><p><strong>1 Seater | </strong>120kg | 264lbs<br/><strong>2 Seater | </strong>220kg | 485lbs<br/><strong>3 Seater | </strong>260kg | 573lbs</p>",
+            "value_5": "",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "value_21": "",
+            "value_22": "",
+            "value_23": "",
+            "value_24": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        },
+        "values_LgxeQU": {
+          "type": "values",
+          "settings": {
+            "product": "venturer-inflatable-canoe",
+            "value_1": "<p>470x75x50cm | 185x29.5x19.5\"</p>",
+            "value_2": "<p>Entry level</p>",
+            "value_3": "<p>Gentle paddling to river-running</p>",
+            "value_4": "<p>23.5kg | 51.8lbs</p><h6><strong>Max Capacity</strong></h6><p>190kg | 418.8lbs</p>",
+            "value_5": "<p>190kg | 418.8lbs</p>",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "value_21": "",
+            "value_22": "",
+            "value_23": "",
+            "value_24": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        },
+        "values_paFAXn": {
+          "type": "values",
+          "settings": {
+            "product": "voyager-kayak",
+            "value_1": "<p>340x95x39cm | 134x37x15\"</p>",
+            "value_2": "<p>Beginners and casual explorers</p>",
+            "value_3": "<p>Easy kayaking, effortless fun</p>",
+            "value_4": "<p>15.15kg | 33.4lbs</p><h6><strong>Max Capacity</strong></h6><p>190 kg | 418lbs</p>",
+            "value_5": "<p>190 kg | 418lbs</p>",
+            "value_6": "",
+            "value_7": "",
+            "value_8": "",
+            "value_9": "",
+            "value_10": "",
+            "value_11": "",
+            "value_12": "",
+            "value_13": "",
+            "value_14": "",
+            "value_15": "",
+            "value_16": "",
+            "value_17": "",
+            "value_18": "",
+            "value_19": "",
+            "value_20": "",
+            "value_21": "",
+            "value_22": "",
+            "value_23": "",
+            "value_24": "",
+            "value_25": "",
+            "text_size": "text-sm"
+          }
+        }
+      },
+      "block_order": [
+        "headings_MCi3JR",
+        "values_T78tqT",
+        "values_fRFWPx",
+        "values_LgxeQU",
+        "values_paFAXn"
+      ],
+      "name": "t:sections.comparison-table.name",
+      "settings": {
+        "sticky_product_info": false,
+        "first_available_variant": false,
+        "show_vendor": false,
+        "show_price": true,
+        "show_rating": true,
+        "heading": "Compare Kayaks",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "question-1": {
+          "type": "question",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_question_1.value }}",
+            "text": "{{ product.metafields.custom.faq_answer_1 | metafield_tag }}",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_question_2.value }}",
+            "text": "{{ product.metafields.custom.faq_answer_2 | metafield_tag }}",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-3": {
+          "type": "question",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_question_3.value }}",
+            "text": "{{ product.metafields.custom.faq_answer_3 | metafield_tag }}",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_question_4.value }}",
+            "text": "{{ product.metafields.custom.faq_answer_4 | metafield_tag }}",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "settings": {
+            "title": "{{ product.metafields.custom.faq_question_5.value }}",
+            "text": "{{ product.metafields.custom.faq_answer_5 | metafield_tag }}",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Didn’t find your answer?",
+            "text": "<p>Don't hestitate to contact us</p>",
+            "show_phone": false,
+            "avatar_height": 60,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question-1",
+        "question-2",
+        "question-3",
+        "question-4",
+        "question-5",
+        "contact"
+      ],
+      "settings": {
+        "style": "with-background",
+        "heading": "FAQs",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Please read our <a href=\"/pages/faqs\" title=\"Frequently Asked Questions\">FAQs</a> page to find out more.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "#171717",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 84,
+        "padding_bottom": 84,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "rich_text_kbbtYn": {
+      "type": "rich-text",
+      "blocks": {
+        "image_i3BEMC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Trustpilot_SUPs.png",
+            "image_width": "custom",
+            "image_max_width": 400,
+            "image_max_width_mobile": 300
+          }
+        }
+      },
+      "block_order": [
+        "image_i3BEMC"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "1746539419d28b4d16": {
+      "type": "apps",
+      "blocks": {
+        "reviews_io_reviewsio_polaris_gEgAjd": {
+          "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
+          "settings": {
+            "star": "#00b67b",
+            "review_type": "product_review",
+            "per_page": 8,
+            "primary_btn_bg_color": "#000000",
+            "primary_btn_border_color": "#000000",
+            "primary_btn_text_color": "#ffffff",
+            "secondary_btn_border_color": "#000000",
+            "secondary_btn_text_color": "#000000",
+            "border_color": "#d9d9d9",
+            "heading_text_color": "#000000",
+            "heading_font": "inter_n4",
+            "body_text_color": "#000000",
+            "badge_icon_color": "#000000",
+            "badge_text_color": "#000000",
+            "enable_rich_snippets": true,
+            "show_location": true,
+            "show_tab_selector": false,
+            "show_dates": true,
+            "show_avatar": true,
+            "enable_sentiment_analysis": false,
+            "enable_replies": false,
+            "widget_spacing": 0,
+            "capitalise_headers_and_buttons": false,
+            "show_review_title": true,
+            "default_sort": "date_desc"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_io_reviewsio_polaris_gEgAjd"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "featured_collection_9MGYUa": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "collection": "kayak-and-canoe-range",
+        "products": [],
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "You May Also Like",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "heading": "You may also like",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "product_limit": 6,
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Recently Viewed",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "ss_product_videos_4_xnGnjw",
+    "help-drawer",
+    "multicolumn_with_icons_kcwtKw",
+    "scroll_spy_UixBmq",
+    "video-hero",
+    "collage",
+    "image-with-text-1",
+    "scrolling-text",
+    "image-with-text-2",
+    "product-details",
+    "comparison_table_rB8zXC",
+    "faq",
+    "rich_text_kbbtYn",
+    "1746539419d28b4d16",
+    "featured_collection_9MGYUa",
+    "product-recommendations",
+    "recently-viewed"
+  ]
+}

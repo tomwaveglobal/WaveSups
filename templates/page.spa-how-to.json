@@ -1,0 +1,380 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_9NxtLD": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_84aMtw": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Instruction Manuals",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_AVhxFf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Seamless Hot Tub Setup Starts Here.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_84aMtw",
+        "heading_AVhxFf"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Adriatic_Hero_SPA_Grade.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Adriatic_Hero_SPA_Grade.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#f59e0b",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "portfolio_6RDUDR": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_Fj7DGg": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Como-Pebble-White-Product-Slide-1-New-Shadow.jpg",
+            "heading": "The Como",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_jNcfHJ": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Garda-Charcoal-Black-Product-Slide-1-New-Shadow.jpg",
+            "heading": "The Garda",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_EBXzeq": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Tahoe-Flint-Grey-Product-Slide-1-New-Shadow.jpg",
+            "heading": "The Tahoe",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_Fj7DGg",
+        "profile_jNcfHJ",
+        "profile_EBXzeq"
+      ],
+      "name": "Portfolio",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Rigid <em>Eco-Foam</em> Spas",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>View step-by-step guidance for everything you need to know, including:<br/>• <strong>Easy Setup and Assembly:</strong> Get your tub ready quickly and correctly.<br/>• <strong>Safe Operation and Controls:</strong> Learn how to use the pump, heater, jets, and filter system efficiently.<br/>• <strong>Essential Maintenance:</strong> Detailed instructions on cleaning, chemical balancing, and winterization to keep your tub in top condition.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_QzDnFd": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_C6F8UR": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Product_Aegean_Grey.jpg",
+            "heading": "The Aegean",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_F6UaeG": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Product_Atlantic_rattan.jpg",
+            "heading": "The Atlantic",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_RRmjC7": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Product-Pacific-Navy.jpg",
+            "heading": "The Pacific",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_mRmkTD": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Drop-Stitch-Spa-1.jpg",
+            "heading": "The Ontario",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_C6F8UR",
+        "profile_F6UaeG",
+        "profile_RRmjC7",
+        "profile_mRmkTD"
+      ],
+      "name": "Portfolio",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Portable <em>Inflatable</em> Spas",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Our comprehensive guides offer simple, clear instructions on:<br/>• <strong>Quick and Easy Inflation:</strong> Steps to safely set up and fill your tub in minutes.<br/>• <strong>Controlling the Fun:</strong> How to operate the pump, heater, bubble jets, and filtration system.<br/>• <strong>Trouble-Free Maintenance:</strong> Best practices for water treatment, cleaning, storage, and minor repairs.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_B8GQD6": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_pzeVn3": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Frame-Spa-Product-slide-1.jpg",
+            "heading": "The Adriatic",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_pzeVn3"
+      ],
+      "name": "Portfolio",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Luxury <em>Frame</em> Spas",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>These manuals are your essential resource  on:<br/>• <strong>Professional Installation:</strong> Step-by-step instructions for site preparation and structural setup.<br/>• <strong>Advanced Control System Operation:</strong> Mastering the digital interface for jets, lighting, heating schedules, and therapy modes.<br/>• <strong>Premium Care & Maintenance:</strong> Schedules and techniques for water chemistry, filter cleaning, and frame care.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_WphP6T": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_TiTt4R": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/foam_spa_setup.jpg",
+            "heading": "Eco-Foam Spas",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_rTxtJP": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Inflatable_spa_set_up.jpg",
+            "heading": "Inflatable Spas",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_tf9dmp": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Heater_Exchange.jpg",
+            "heading": "Heater Exchange",
+            "text": "",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_TiTt4R",
+        "profile_rTxtJP",
+        "profile_tf9dmp"
+      ],
+      "name": "Portfolio",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Setup <em>Videos</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Our setup videos offer visual, step-by-step instructions that complement your instruction manual, covering:<br/>• <strong>Unboxing to Inflation/Assembly:</strong> See the entire process, from opening the box to getting the tub structure ready.<br/>•<strong>Connecting the Pump/Heater:</strong> Clear demonstrations on securely attaching and priming the essential components.<br/>•<strong>Filling and First Start-Up:</strong> Tips on correct water levels and initial activation of the heater and jets.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "image_with_text_overlay_9NxtLD",
+    "portfolio_6RDUDR",
+    "portfolio_QzDnFd",
+    "portfolio_B8GQD6",
+    "portfolio_WphP6T"
+  ]
+}

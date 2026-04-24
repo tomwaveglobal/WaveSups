@@ -1,0 +1,462 @@
+{%- comment -%}
+  Shared look for (1) optional custom subscription widget and (2) Shopify Subscriptions app block.
+  Uses the same tokens and patterns as subscription-widget-styles.liquid purchase-type options.
+{%- endcomment -%}
+<style>
+  /* --- Custom subscription widget (when snippet HTML is enabled) --- */
+  .custom-subscription-widget {
+    margin: var(--sp-4) 0;
+    background: rgb(var(--color-background));
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+  }
+
+  .custom-subscription-widget--pending {
+    display: none !important;
+  }
+
+  .purchase-type-selector {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-4);
+    width: 100%;
+  }
+
+  .purchase-type-option {
+    width: 100%;
+    position: relative;
+  }
+
+  .purchase-type-option input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .purchase-type-option label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--sp-3) var(--sp-4);
+    background: rgb(var(--color-background));
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: var(--text-sm);
+    font-family: var(--font-body-family);
+    color: rgb(var(--color-foreground));
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .purchase-type-option input[type='radio']:not(:checked) + label {
+    background: rgb(var(--color-foreground) / 0.08);
+  }
+
+  .purchase-type-option input[type='radio']:not(:checked) + label:hover {
+    background: rgb(var(--color-foreground) / 0.12);
+    border-color: rgb(var(--color-foreground));
+  }
+
+  .purchase-type-option input[type='radio']:checked + label {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+    border-color: rgb(var(--color-foreground));
+    box-shadow: 0 2px 8px rgb(var(--color-foreground) / 0.15);
+  }
+
+  .purchase-type-option input[type='radio']:checked + label:hover {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+  }
+
+  .purchase-type-option input[type='radio']:focus-visible + label {
+    outline: 2px solid rgb(var(--color-keyboard-focus));
+    outline-offset: 2px;
+  }
+
+  .subscription-frequency-container {
+    display: none;
+    margin-top: var(--sp-3);
+  }
+
+  .subscription-frequency-container.active {
+    display: block;
+  }
+
+  .custom-subscription-widget .field {
+    width: 100%;
+  }
+
+  .custom-subscription-widget .field .label.is-floating {
+    width: calc(100% - 2px);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .shopify_subscriptions_app_block_purchase_options {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    .custom-subscription-widget {
+      padding: var(--sp-3);
+    }
+
+    .purchase-type-selector {
+      gap: var(--sp-2);
+    }
+
+    .purchase-type-option label {
+      font-size: var(--text-sm);
+      padding: var(--sp-2d5) var(--sp-3);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .purchase-type-selector {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .purchase-type-option {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto;
+    }
+
+    .purchase-type-option label {
+      width: 100%;
+      font-size: var(--text-base);
+    }
+  }
+
+  /* --- Shopify Subscriptions app block: same visual language as above --- */
+  .shopify_subscriptions_app_container {
+    margin: var(--sp-4) 0;
+    font-family: var(--font-body-family);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    color: rgb(var(--color-foreground));
+  }
+
+  .shopify_subscriptions_app_container .shopify_subscriptions_fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  .shopify_subscriptions_app_container .plan_card {
+    margin: 0;
+    padding: var(--sp-3);
+    box-sizing: border-box;
+    background: rgb(var(--color-background));
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+    color: rgb(var(--color-foreground));
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+
+  .shopify_subscriptions_app_container .subscription_group {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .shopify_subscriptions_app_container .subscription_group ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .shopify_subscriptions_app_container .group_name {
+    margin: 0 0 var(--sp-1);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: rgb(var(--color-foreground));
+  }
+
+  /* Header row (Subscribe and save) — not a selectable tile */
+  .shopify_subscriptions_app_container .subscription_group > .title_and_price_wrapper:not(label) {
+    display: block;
+    padding: 0 var(--sp-1);
+  }
+
+  /* One-time outer label */
+  .shopify_subscriptions_app_container label.title_and_price_wrapper:has(.one_time_purchase_option_app_block) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--sp-3) var(--sp-4);
+    margin: 0;
+    text-align: center;
+    background: rgb(var(--color-foreground) / 0.08);
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block):hover:has(input:not(:checked)) {
+    background: rgb(var(--color-foreground) / 0.12);
+    border-color: rgb(var(--color-foreground));
+  }
+
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked) {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+    border-color: rgb(var(--color-foreground));
+    box-shadow: 0 2px 8px rgb(var(--color-foreground) / 0.15);
+  }
+
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked)
+    .group_list_item
+    span,
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked)
+    .in_widget_price,
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked)
+    .in_widget_price
+    .money {
+    color: inherit;
+  }
+
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:focus-visible) {
+    outline: 2px solid rgb(var(--color-keyboard-focus));
+    outline-offset: 2px;
+  }
+
+  .shopify_subscriptions_app_container label.title_and_price_wrapper .group_list_item.one_time_purchase_option_app_block {
+    margin: 0;
+    align-items: center;
+  }
+
+  .shopify_subscriptions_app_container label.title_and_price_wrapper .in_widget_price {
+    padding-left: 0;
+    margin-top: var(--sp-1);
+    font-weight: 600;
+    color: rgb(var(--color-price));
+  }
+
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked)
+    .in_widget_price {
+    color: rgb(var(--color-background));
+    opacity: 0.9;
+  }
+
+  /* Selling plan rows */
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--sp-3) var(--sp-4);
+    margin: 0;
+    background: rgb(var(--color-foreground) / 0.08);
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:hover:has(input:not(:checked)) {
+    background: rgb(var(--color-foreground) / 0.12);
+    border-color: rgb(var(--color-foreground));
+  }
+
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:has(input:checked) {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+    border-color: rgb(var(--color-foreground));
+    box-shadow: 0 2px 8px rgb(var(--color-foreground) / 0.15);
+  }
+
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:has(input:checked) .title_and_price_wrapper span,
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:has(input:checked) .in_widget_price,
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:has(input:checked) .money {
+    color: inherit;
+  }
+
+  .shopify_subscriptions_app_container label.group_list_item.custom_radio_button:has(input:focus-visible) {
+    outline: 2px solid rgb(var(--color-keyboard-focus));
+    outline-offset: 2px;
+  }
+
+  .shopify_subscriptions_app_container label.group_list_item .title_and_price_wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .shopify_subscriptions_app_container .group_list_item {
+    margin-bottom: 0;
+  }
+
+  /* Radio dot: neutral ring; inverted when row is selected */
+  .shopify_subscriptions_app_container .custom_radio_button:before {
+    box-shadow: 0 0 0 1px rgb(var(--color-foreground) / 0.35);
+  }
+
+  .shopify_subscriptions_app_container .custom_radio_button:has(input[type='radio']:checked):before {
+    border: 2px solid rgb(var(--color-background));
+    background: rgb(var(--color-foreground));
+  }
+
+  /* Selected row uses dark fill — invert the faux radio dot (label or inner wrapper) */
+  .shopify_subscriptions_app_container
+    label.group_list_item.custom_radio_button:has(input:checked):before,
+  .shopify_subscriptions_app_container
+    label.title_and_price_wrapper:has(.one_time_purchase_option_app_block input:checked)
+    .custom_radio_button:before {
+    box-shadow: 0 0 0 1px rgb(var(--color-background) / 0.5);
+    border: 2px solid rgb(var(--color-background));
+    background: rgb(var(--color-background));
+  }
+
+  .shopify_subscriptions_app_container .in_widget_price {
+    font-weight: 600;
+    color: rgb(var(--color-price));
+  }
+
+  .shopify_subscriptions_app_container .shopify_subscriptions_app_policy {
+    margin: var(--sp-3) 0 0;
+    padding: 0 var(--sp-1);
+    font-size: var(--text-sm);
+    color: rgb(var(--color-foreground) / 0.75);
+  }
+
+  @media screen and (min-width: 768px) {
+    .shopify_subscriptions_app_container {
+      font-size: var(--text-base);
+    }
+
+    .shopify_subscriptions_app_container .plan_card {
+      padding: var(--sp-4);
+    }
+  }
+
+  /* --- Tab + dropdown mode (subscription-app-tabs.liquid) --- */
+  .shopify_subscriptions_app_container[data-tabs-enhanced] section.shopify_subscriptions_app_block .plan_card {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  .subscription-app-tabs-ui {
+    margin: 0 0 var(--sp-3);
+    width: 100%;
+  }
+
+  .subscription-app-tabs-ui__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    width: 100%;
+  }
+
+  .subscription-app-tabs-ui__tab {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    padding: var(--sp-3) var(--sp-4);
+    box-sizing: border-box;
+    width: 100%;
+    font-family: var(--font-body-family);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    cursor: pointer;
+    border: var(--inputs-border-width) solid rgb(var(--color-foreground) / var(--inputs-border-opacity));
+    border-radius: var(--inputs-radius);
+    background: rgb(var(--color-foreground) / 0.08);
+    color: rgb(var(--color-foreground));
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .subscription-app-tabs-ui__tab:hover:not([aria-selected='true']) {
+    background: rgb(var(--color-foreground) / 0.12);
+    border-color: rgb(var(--color-foreground));
+  }
+
+  .subscription-app-tabs-ui__tab[aria-selected='true'] {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+    border-color: rgb(var(--color-foreground));
+    box-shadow: 0 2px 8px rgb(var(--color-foreground) / 0.15);
+  }
+
+  .subscription-app-tabs-ui__tab:focus-visible {
+    outline: 2px solid rgb(var(--color-keyboard-focus));
+    outline-offset: 2px;
+  }
+
+  .subscription-app-tabs-ui__dropdown {
+    margin-top: var(--sp-3);
+  }
+
+  .subscription-app-tabs-ui__dropdown[hidden] {
+    display: none !important;
+  }
+
+  .subscription-app-tabs-ui__dropdown .field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    width: 100%;
+  }
+
+  .subscription-app-tabs-ui__dropdown .field > .label:not(.is-floating) {
+    margin-block-end: 0;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+
+  .subscription-app-tabs-ui__dropdown .select {
+    width: 100%;
+    height: var(--input-height);
+    padding-block: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .subscription-app-tabs-ui__tabs {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    .subscription-app-tabs-ui__tab {
+      font-size: var(--text-base);
+    }
+  }
+
+  .shopify_subscriptions_app_container[data-tabs-enhanced] .shopify_subscriptions_app_policy {
+    margin-top: var(--sp-2);
+  }
+</style>

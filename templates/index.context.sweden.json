@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "sweden"
+  },
+  "parent": "index.json",
+  "sections": {
+    "slideshow": {
+      "settings": {},
+      "blocks": {
+        "image_e6Nny7": {
+          "settings": {
+            "heading": "Get water-ready for less.<p> In Stock: The Roamer <br>for Just €449.95 </p>"
+          }
+        }
+      }
+    }
+  }
+}

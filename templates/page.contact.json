@@ -1,0 +1,329 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-lg md:text-2xl",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_TX7a8X": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_6wWJhi": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Contact Us",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_N7YArR": {
+          "type": "heading",
+          "settings": {
+            "heading": "Have a question? We'd love to hear from you.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_6wWJhi",
+        "heading_N7YArR"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Recon_Homepage_Carousel.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#ffa300",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "empty_space_JDcX4K": {
+      "type": "empty-space",
+      "name": "Empty space",
+      "settings": {
+        "desktop_height": 40,
+        "mobile_height": 28,
+        "color_background": "",
+        "gradient_background": ""
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "title-xl tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>We'd love to hear from you. Our team is here to help. <br/>The best way to contact us to is to use our automated chat, which you can find in the bottom corner of every page on this site.<br/><br/></p>",
+            "text_font": "body",
+            "text_size": "subtext-lg",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "disabled": true,
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "blocks": {
+        "contact-2": {
+          "type": "contact",
+          "settings": {
+            "heading": "Email",
+            "text": "<p><a href=\"mailto:support@wavesupboards.com\" target=\"_blank\" title=\"mailto:support@wavesupboards.com\">support@wavesupboards.com</a></p>"
+          }
+        },
+        "media": {
+          "type": "media",
+          "settings": {
+            "heading": "Follow us"
+          }
+        },
+        "contact_nfdiVF": {
+          "type": "contact",
+          "settings": {
+            "heading": "Marketing",
+            "text": "<p><a href=\"mailto:marketing@waveglobal.com\" target=\"_blank\" title=\"mailto:marketing@waveglobal.com\">marketing@waveglobal.com</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "contact-2",
+        "media",
+        "contact_nfdiVF"
+      ],
+      "settings": {
+        "heading": "Contact Us",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>We'd love to hear from you. Our team is here to help. <br/>The best way to contact us to is to use our automated chat, which you can find in the bottom corner of every page on this site.<br/><br/></p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "#171717",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "rgba(0,0,0,0)",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": true
+      }
+    },
+    "multicolumn_PUdCbp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_CGAwDJ": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Returns",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Thinking of making a return? We're here to help.</p><p>Whether you've changed your mind or have an issue with a faulty or damaged item, the first step is to contact our support team.</p><ul><li><strong>For \"Change of Mind\":</strong> You have 14 days from the day after delivery to notify us.</li><li><strong>For Faulty/Damaged Items:</strong> Please contact us as soon as you discover an issue.</li></ul><p>To start a return and receive instructions, please email us at <a href=\"mailto:support@supboards.com \" title=\"mailto:support@supboards.com \"><strong>support@wavesupboards.com</strong></a>. For complete details on all procedures, timeframes, and our warranty policy, please read our full return policy <a href=\"https://wavesupboards.com/pages/shipping-and-returns\" target=\"_blank\" title=\"https://wavesupboards.com/pages/shipping-and-returns\">here.</a></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_K6QLCM": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Warranty Claims",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>All of our new (2.0, 3.0) SUPs, Kayaks and Canoes come with a 2 Year warranty for manufacturing faults/generic damage from the date in which you receive the product.<br/><br/>In the unlikely event that you do have issues with your Wave Spa, we will try to help you with troubleshooting in the first instance followed by repairs. If we are unsuccessful, we will move to replacing any damaged parts or the whole spa.</p><p>For support and to receive instructions, please email us at<a href=\"mailto:support@supboards.com\" title=\"mailto:support@supboards.com\"> support@supboards.com.</a></p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_mLUFyQ": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "image_ratio": "adapt",
+            "heading": "Press & Marketing",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>For all press, marketing & affiliate enquiries please contact <a href=\"mailto:marketing@waveglobal.com\" title=\"mailto:marketing@waveglobal.com\">Wave marketing,</a> we are always keen to further develop relationships with affiliate businesses so please don't hesitate to get in contact if you have any queries.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_CGAwDJ",
+        "column_K6QLCM",
+        "column_mLUFyQ"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "gap": "medium",
+        "columns": 3,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_TX7a8X",
+    "empty_space_JDcX4K",
+    "rich-text",
+    "contact-form",
+    "multicolumn_PUdCbp"
+  ]
+}

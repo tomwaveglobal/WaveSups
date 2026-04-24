@@ -1,0 +1,192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "comparison_Mr94Vq": {
+      "type": "comparison",
+      "blocks": {
+        "product_3LWYPB": {
+          "type": "product",
+          "settings": {
+            "product": "como-hot-tub-ukca",
+            "custom_title": "",
+            "review_rating": "0",
+            "review_count": "0",
+            "dimensions": "",
+            "shape": "",
+            "material": "",
+            "massage_system": "",
+            "split_payment": "",
+            "heater_filter": "",
+            "flow_rate": "",
+            "certification": "",
+            "power_cable": "",
+            "accessories": ""
+          }
+        },
+        "product_d8aDmn": {
+          "type": "product",
+          "settings": {
+            "product": "garda-hot-tub-ukca",
+            "custom_title": "",
+            "review_rating": "0",
+            "review_count": "0",
+            "dimensions": "",
+            "shape": "",
+            "material": "",
+            "massage_system": "",
+            "split_payment": "",
+            "heater_filter": "",
+            "flow_rate": "",
+            "certification": "",
+            "power_cable": "",
+            "accessories": ""
+          }
+        },
+        "product_bmqExx": {
+          "type": "product",
+          "settings": {
+            "product": "tahoe-hot-tub-ukca",
+            "custom_title": "",
+            "review_rating": "0",
+            "review_count": "0",
+            "dimensions": "",
+            "shape": "",
+            "material": "",
+            "massage_system": "",
+            "split_payment": "",
+            "heater_filter": "",
+            "flow_rate": "",
+            "certification": "",
+            "power_cable": "",
+            "accessories": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_3LWYPB",
+        "product_d8aDmn",
+        "product_bmqExx"
+      ],
+      "disabled": true,
+      "name": "Product Comparison Table",
+      "settings": {
+        "heading": "Compare Products",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "product_image_background": "#f8f8f8",
+        "product_image_backdrop": "#f8f8f8",
+        "product_image_padding": 12,
+        "product_image_border_radius": 6,
+        "product_image_size_desktop": 140,
+        "product_image_size_mobile": 120,
+        "product_card_padding": 20,
+        "image_title_spacing": 16,
+        "title_price_spacing": 12,
+        "price_content_spacing": 12,
+        "initial_rows": 5,
+        "show_more_text": "Show more",
+        "show_less_text": "Show less",
+        "show_variant_thumbnails": true,
+        "variant_display_type": "images",
+        "swatch_shape": "circle",
+        "swatch_size": 24,
+        "swatch_border_radius": 4,
+        "swatch_border_width": 2,
+        "swatch_border_color": "#dddddd",
+        "swatch_gap": 4,
+        "show_buy_buttons": true,
+        "buy_button_text": "Buy Now",
+        "buy_button_alignment": "center",
+        "table_background": "#fafafa",
+        "border_color": "#ffffff",
+        "header_background": "#f8f9fa",
+        "product_card_background": "#ffffff",
+        "spec_label_background": "#f8f9fa",
+        "spec_value_background": "#ffffff",
+        "footer_background": "#f8f9fa",
+        "product_title_color": "#333333",
+        "product_title_size": 14,
+        "price_color": "#333333",
+        "price_from_color": "#666666",
+        "original_price_color": "#999999",
+        "price_size": 18,
+        "review_text_color": "#666666",
+        "star_filled_color": "#171717",
+        "star_empty_color": "#dddddd",
+        "spec_label_color": "#333333",
+        "spec_label_size": 14,
+        "spec_value_color": "#555555",
+        "spec_value_size": 13,
+        "button_color": "#171717",
+        "buy_button_background": "#000000",
+        "buy_button_text_color": "#ffffff",
+        "buy_button_hover_background": "#333333",
+        "buy_button_hover_text_color": "#ffffff",
+        "buy_button_radius": 25,
+        "buy_button_padding_vertical": 12,
+        "buy_button_padding_horizontal": 20,
+        "buy_button_font_size": 14,
+        "buy_button_font_weight": "600",
+        "buy_button_width": "auto",
+        "buy_button_text_transform": "none",
+        "buy_button_letter_spacing": 0,
+        "buy_button_border_width": 0,
+        "buy_button_border_color": "rgba(0,0,0,0)",
+        "buy_button_hover_border_color": "rgba(0,0,0,0)",
+        "buy_button_transition_duration": 0.2,
+        "buy_button_shadow": "none",
+        "buy_button_hover_shadow": "none",
+        "buy_button_hover_transform": "none",
+        "buy_button_active_transform": "scale(0.98)",
+        "variant_border_color": "#dddddd",
+        "placeholder_background": "#f9f9f9",
+        "placeholder_border": "#dddddd",
+        "placeholder_text_color": "#999999",
+        "dimensions_label": "Dimensions",
+        "shape_label": "Shape",
+        "material_label": "Material",
+        "massage_system_label": "Massage System",
+        "split_payment_label": "Split the Payment",
+        "heater_filter_label": "Heater/Filter",
+        "flow_rate_label": "Flow Rate",
+        "certification_label": "Certification",
+        "power_cable_label": "Power Cable",
+        "accessories_label": "Accessories",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "comparison_Mr94Vq"
+  ]
+}

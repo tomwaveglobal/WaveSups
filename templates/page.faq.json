@@ -1,0 +1,469 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_D9TU7w": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_zEjntr": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "FAQs",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_VXDpQi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Everything You Need to Know in One Place.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_zEjntr",
+        "heading_VXDpQi"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Trustpilot-Blog.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#f59e0b",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We've tried to answer the most common questions about our products<br/>If you still don't find the answer you're looking for get in touch!</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 0,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
+    "empty-space": {
+      "type": "empty-space",
+      "settings": {
+        "desktop_height": 52,
+        "mobile_height": 44,
+        "color_background": "",
+        "gradient_background": ""
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "rich-text-1": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "heading": "Spas",
+            "text": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_cTbCTp": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What's the difference between foam spas and inflatable?",
+            "text": "<p>The foam hot tubs, such as the Como, Garda, and Tahoe models, are not inflatable. They are part of Wave's range of rigid eco foam spas, which feature an integrated heater and are designed to be more thermally efficient. If you are looking for inflatable options, Wave also offers inflatable hot tubs like the Pacific, Aegean, and Atlantic models<br/><br/>You can also check out our <a href=\"/pages/spa-comparison-guide\" title=\"Spa Comparison Guide\">comparison guide</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_jXYajx": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What is CEC certified?",
+            "text": "<p>CEC certification refers to the California Energy Commission's standards for energy efficiency. Products with this certification meet specific energy-saving criteria, ensuring they are environmentally friendly and cost-effective. This certification helps consumers identify products that can reduce energy consumption and lower utility bills<br/></p><p>Our CEC spa bundles come with a thermal cover and foam mat to ensure they comply with CA regulations</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-1": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Are Wave Spas easy to set up?",
+            "text": "<p>The Eco Foam hot tubs can be put together by anyone without tools in about 30 minutes. Tool Free.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-2": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What is an integrated system?",
+            "text": "<p>Our spa heaters are integrated within the spa liner for a super slick design, space saving convenience and quieter running noise</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-4": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "text": "<p>Free next-day tracked delivery for all foam and inflatable spas via DPD, with an option for Saturday delivery available for an extra £9.99. <br/>Upon dispatch, DPD will provide you with a one-hour tracking window.</p><p>For accessories and chemicals, a £4.99 delivery fee applies to orders under £50, whereas orders over £50 enjoy free shipping through Royal Mail.</p><p>To track your order and receive regular SMS updates, create your <a href=\"https://www.dpd.co.uk/lp/yourdpd/index.html\">personal DPD account here</a>.</p><p>Offshore Hot tubs & Accessories Orders £13.99, (Excluded from Free Shipping Offer) | All Highlands and Islands Addresses | DPD 2 Working Day Offshore Shipping Service</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-5": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What does my hot tub arrive with?",
+            "text": "<p>Your hot tub arrives with a heater unit, cover, filter, filter housing, inflation hose and ground sheet, which is everything you need to set up your new hot tub.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_7eLJhY": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "How much does it cost to run a foam spa?",
+            "text": "<p>The average cost of powering all of our heater units is £0.23 per hour.<br/><br/>Our Rigid Foam Hot Tubs take approximately 27 hours to get to maximum temperature of 40°C - meaning that the total cost to reach maximum temperature is £6.21 - approximately £3.00 less than the inflatable counterparts.<br/><br/>Our Inflatable Hot Tubs take approximately 40 hours to get to maximum temperature of 40°C - meaning that the total cost to reach maximum temperature is £9.20<br/><br/>The average cost of bubble function is £0.35 per hour. However, the bubble function cannot be run simultaneously with the heater function, therefore we recommend sporadic use in order to retain optimal water temperature.<br/><br/>The cost of maintaining heat is approximately the same as the cost to heat up (£0.23 per hour), but this does differ depending on the ambient temperature. Where you are located will impact water temperature, if you frequently experience low temperatures, we would recommend insulating your tub sufficiently with our Inflatable Hot Tub Covers and Bubble Mat Liners.<br/><br/>*Please note, these calculation are based around the average UK cost of cents per kWh. These prices will vary depending on your electricity provider. Please check for an updated price with your electrical supply company if you need to calculate more detailed usage costs.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_PkkncR": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Can I use my spa all year round?",
+            "text": "<p>Yes! As Wave foam hot tubs are insulated and reinforced with a protective rattan/leather finish, you can definitely use your spa all year round. Our tubs can sit comfortably outdoors in most weather conditions. However, to ensure the protection of your heater unit, we recommend moving your hot tub indoors when temperatures drop lower than 4°C (40°F) - or ensuring your heater unit is protected from the elements. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_7PgiUC": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Does the spa come with a cover?",
+            "text": "<p>Yes, the inflatable cover includes a 6mm foam core and internal foil lining to ensure maximum thermal efficiency for your hot tub all year round.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_WjeWBL": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What filters do I need?",
+            "text": "<p>All Wave spas with integrated heaters, including rigid eco foam models from 2020 onwards and inflatable spas from 2022, use screw-on/threaded filters. Spas from earlier years with external heaters will require cartridge/non-threaded filters. <br/><br/><a href=\"/collections/hot-tub-accessories-filters\" title=\"Hot Tub | Filters\">Shop all filters</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_XW79Vm": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "I'm having issues with my spa",
+            "text": "<p>Please see our troubleshooting guides:</p><p><a href=\"/pages/troubleshooting-rigid-eco-foam-spas\" title=\"Troubleshooting: Rigid Eco Foam Spas\">Foam Spa Troubleshooting</a><br/><a href=\"/pages/troubleshooting-inflatable-spas\" title=\"Troubleshooting: Inflatable Spas\">Inflatable Spa Troubleshooting</a></p><p>Or get in <a href=\"/pages/contact\" title=\"Contact\">contact</a> with our team</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "rich-text-2": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "Orders",
+            "text": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-6": {
+          "type": "question",
+          "settings": {
+            "title": "What payment options do you offer?",
+            "text": "<p>We provide a selection of payment options including: Card payment (including Apple Pay, Google Pay and Shop Pay), PayPal, Klarna, DivideBuy and Super.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-7": {
+          "type": "question",
+          "settings": {
+            "title": "What does pre order mean?",
+            "text": "<p>This item is currently out of stock, but it is still available to order. As soon as your spa is ready it will be shipped out to you. More information on when your chosen spa will arrive is provided in your basket before checkout.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-8": {
+          "type": "question",
+          "settings": {
+            "title": "What are your shipping costs?",
+            "text": "<p>We offer free shipping on orders over £100</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-9": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "text": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_c3x4na": {
+          "type": "question",
+          "settings": {
+            "title": "Where are your products from?",
+            "text": "<p>Wave products are designed in Newcastle in the North East of England and are shipped from our UK warehouse</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "rich-text-3": {
+          "type": "rich-text",
+          "settings": {
+            "heading": "SUPs & Kayaks",
+            "text": "",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-10": {
+          "type": "question",
+          "settings": {
+            "title": "How long does it take to inflate?",
+            "text": "<p>All of our paddle boards come with an inflation pump, on average the first time you pump the board it will take longer so you are looking at around 15-20 minutes. Purchase the <a href=\"https://wavesupboards.com/products/battery-pump-20-psi\" title=\"Battery Pump | Inflatable Paddleboard & Kayak | 20 PSI\">electric pump</a> for 5 minute inflation!</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-11": {
+          "type": "question",
+          "settings": {
+            "title": "Which SUP is right for me?",
+            "text": "<p>Our iSUP collections here at Wave are split into 4 key categories, covering beginner boards, family friendly all-rounders, intermediate skill level boards and our Pro range of professional performance paddle boards. Use our Board Comparison tool to find the perfect board just for you. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question-12": {
+          "type": "question",
+          "settings": {
+            "title": "Can I take my SUP on a flight?",
+            "text": "<p>Yes! The paddle board can be packed in the backpack/carry case provided in the kit for travel. Please check flight carry on luggage dimensions to see if the bag qualifies as a carry on.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_tQGT7W": {
+          "type": "question",
+          "settings": {
+            "title": "What does my SUP package come with?",
+            "text": "<p>Paddle, pump, storage and carry backpack, coiled ankle leash, detachable fin and a repair kit.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_geVGeB": {
+          "type": "question",
+          "settings": {
+            "title": "What PSI should I inflate to?",
+            "text": "<p>Although our Classic, Cruiser, Tourer and Woody paddle boards can be inflated to 15 PSI maximum, we advise inflating the iSUP to 12 PSI to allow some room for air expansion. Pro paddle boards can be inflated to 20 PSI, we advise inflating the iSUP to 15PSI.</p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_epdYar": {
+          "type": "question",
+          "settings": {
+            "title": "Can I take my dog on my SUP?",
+            "text": "<p>Yes, most of our boards can take weight up to 130kg/285 lbs. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_kpHzwM": {
+          "type": "question",
+          "settings": {
+            "title": "Do I need to wax my board?",
+            "text": "<p>No, unlike surfboards iSUPS have EVA non-slip deck that provides grip, comfort and stability. </p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "settings": {
+            "heading": "Didn’t find your answer?",
+            "text": "<p>Don't hestitate to contact us</p>",
+            "show_phone": false,
+            "avatar_height": 60,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "rich-text-1",
+        "question_cTbCTp",
+        "question_jXYajx",
+        "question-1",
+        "question-2",
+        "question-4",
+        "question-5",
+        "question_7eLJhY",
+        "question_PkkncR",
+        "question_7PgiUC",
+        "question_WjeWBL",
+        "question_XW79Vm",
+        "rich-text-2",
+        "question-6",
+        "question-7",
+        "question-8",
+        "question-9",
+        "question_c3x4na",
+        "rich-text-3",
+        "question-10",
+        "question-11",
+        "question-12",
+        "question_tQGT7W",
+        "question_geVGeB",
+        "question_epdYar",
+        "question_kpHzwM",
+        "contact"
+      ],
+      "settings": {
+        "style": "with-border",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "rgba(0,0,0,0)",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 0,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": false,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_D9TU7w",
+    "rich-text",
+    "empty-space",
+    "faq"
+  ]
+}

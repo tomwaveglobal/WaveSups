@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.accessories.json",
+  "context": {
+    "market": "usa"
+  },
+  "sections": {
+    "images-with-text-overlay": {
+      "settings": {
+        "image_height": "700px"
+      },
+      "blocks": {
+        "text": {
+          "disabled": true,
+          "settings": {}
+        },
+        "text_tEGBrF": {
+          "disabled": false,
+          "settings": {
+            "text_size": "subtext-sm",
+            "text_max_size": 128
+          }
+        }
+      }
+    }
+  }
+}

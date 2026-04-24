@@ -1,0 +1,457 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "image_with_text_overlay_9NxtLD": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_84aMtw": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Instruction Manuals",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_AVhxFf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unpack, Assemble, Explore: Quick-Start Guides for Your Kayak & SUP.",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_84aMtw",
+        "heading_AVhxFf"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Carousel_Home_page.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "#f59e0b",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "portfolio_6RDUDR": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_Fj7DGg": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/cruiser-20-sup-inflatable-paddleboard-109ft-wave-sups-3766964.jpg",
+            "heading": "The Cruiser",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/WAVE_SUP_IM_2024.pdf?v=1707737446",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_jNcfHJ": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/tourer-20-sup-inflatable-paddleboard-103113ft-wave-sups-214450.jpg",
+            "heading": "The Tourer",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2023_Final_WAVE_SUP_IM_Outline_Compressed.pdf?v=1719219502",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_EBXzeq": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/woody-20-sup-inflatable-paddleboard-109ft-aqua-wave-sups-8832478.jpg",
+            "heading": "The Woody",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2023_Final_WAVE_SUP_IM_Outline_Compressed.pdf?v=1719219502",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_gyJ3rt": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/pro-20-sup-inflatable-paddleboard-126ft-wave-sups-9226264.jpg",
+            "heading": "The Pro",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2023_Final_WAVE_SUP_IM_Outline_Compressed.pdf?v=1719219502",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_VUnHqm": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/recon-sup-inflatable-paddleboard-104ft-wave-sups-4383786.jpg",
+            "heading": "The Recon",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2023_Final_WAVE_SUP_IM_Outline_Compressed.pdf?v=1719219502",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_qqF8eb": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/wildcat-sup-inflatable-stand-up-paddleboard-surf-sup-package-86ft-wave-sups-1693782.jpg",
+            "heading": "The Wildcat",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/WAVE_SUP_IM.pdf?v=1704794946",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_Fj7DGg",
+        "profile_jNcfHJ",
+        "profile_EBXzeq",
+        "profile_gyJ3rt",
+        "profile_VUnHqm",
+        "profile_qqF8eb"
+      ],
+      "name": "t:sections.portfolio.presets.name",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Inflatable <em>SUPs 2.0</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p><strong>Everything you need to know</strong> about your paddleboard, all in one place. These official instruction manuals cover <strong>setup, assembly, safety, and care</strong> to help you get on the water quickly and confidently.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_RwdeCJ": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_RTqhbN": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Cruiser3.0IceBlue4000px.png",
+            "heading": "The Cruiser",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_KeRV4i": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Tourer_3.0_Midnight_4000px.png",
+            "heading": "The Tourer",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_RKpJVH": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Woody3.0Navy4000px.png",
+            "heading": "The Woody",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_kJM3HF": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Pro_3.0_4000px.png",
+            "heading": "The Pro",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_VWmhjr": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Recon3.0Green4000px.png",
+            "heading": "The Recon",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_7j9DHX": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/WildcatSurf3.0Navy4000px.png",
+            "heading": "The Wildcat",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_WAVE_SUPs_IM_QR_Fin.pdf?v=1767707792",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_RTqhbN",
+        "profile_KeRV4i",
+        "profile_RKpJVH",
+        "profile_kJM3HF",
+        "profile_VWmhjr",
+        "profile_7j9DHX"
+      ],
+      "name": "t:sections.portfolio.presets.name",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Inflatable <em>SUPs 3.0</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p><strong>Everything you need to know</strong> about your paddleboard, all in one place. These official instruction manuals cover <strong>setup, assembly, safety, and care</strong> to help you get on the water quickly and confidently.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_QzDnFd": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_C6F8UR": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/navigator-inflatable-kayak-drop-stitch-1-22-3-seater-wave-sups-2436905.jpg",
+            "heading": "The Navigator",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/Navigator_IM.pdf?v=1774959196",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_F6UaeG": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/venturer-inflatable-canoe-2-3-person-wave-sups-3590448.jpg",
+            "heading": "The Venturer",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2024_Canoe_IM_v.2.pdf?v=1747911453",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_C6F8UR",
+        "profile_F6UaeG"
+      ],
+      "name": "t:sections.portfolio.presets.name",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Inflatable Kayaks & <em>Canoes 2.0</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Navigate with confidence. This resource contains official instruction manuals for <strong>kayaks and canoes</strong>, providing detailed guidance on <strong>assembly, outfitting, safe operation, and long-term storage</strong>. Essential knowledge for every paddler.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    },
+    "portfolio_RMRkKE": {
+      "type": "portfolio",
+      "blocks": {
+        "profile_ETwcFA": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Navigator3.03PersonNavy4000px.png",
+            "heading": "The Navigator",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/2025_dropstitch_kayak_IM_compressed.pdf?v=1767781459",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        },
+        "profile_JmtHtX": {
+          "type": "profile",
+          "settings": {
+            "image": "shopify://shop_images/Trailblazer_Recon_1_person_4000px.png",
+            "heading": "The Trailblazer",
+            "text": "",
+            "pdf_link": "https://cdn.shopify.com/s/files/1/0569/4842/4883/files/Wave_Trailblazer_IM.pdf?v=1767880751",
+            "color_text": "#ffffff",
+            "color_background": "#171717"
+          }
+        }
+      },
+      "block_order": [
+        "profile_ETwcFA",
+        "profile_JmtHtX"
+      ],
+      "name": "t:sections.portfolio.presets.name",
+      "settings": {
+        "columns": 4,
+        "carousel_on_desktop": true,
+        "layout": "grid",
+        "image_ratio": "adapt",
+        "image_ratio_mobile": "adapt",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "Inflatable Kayaks & <em>Canoes 3.0</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left justify-start",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Navigate with confidence. This resource contains official instruction manuals for <strong>kayaks and canoes</strong>, providing detailed guidance on <strong>assembly, outfitting, safe operation, and long-term storage</strong>. Essential knowledge for every paddler.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "scribble",
+        "highlighted_scribble": "basic-underline",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "divider": false,
+        "full_width": true,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main-page",
+    "image_with_text_overlay_9NxtLD",
+    "portfolio_6RDUDR",
+    "portfolio_RwdeCJ",
+    "portfolio_QzDnFd",
+    "portfolio_RMRkKE"
+  ]
+}

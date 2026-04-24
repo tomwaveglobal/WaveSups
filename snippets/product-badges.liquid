@@ -1,0 +1,46 @@
+{%- assign current_country = localization.country.iso_code | upcase -%}
+<div class="badges{% if class != blank %} {{ class }}{% endif %} pointer-events-none">
+  {%- assign label_value = product.metafields.theme.label.value -%}
+  {%- if label_value != blank -%}
+    {%- capture styles -%}
+      {%- if product.metafields.theme.label_color.value != blank -%}
+        --badge-background: {{ product.metafields.theme.label_color.value }}; --badge-foreground: #ffffff;
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- assign label_entries = label_value | split: ';' -%}
+    {%- for entry in label_entries -%}
+      {%- assign entry_trimmed = entry | strip -%}
+      {%- if entry_trimmed == blank -%}
+        {%- continue -%}
+      {%- endif -%}
+
+      {%- assign show_label = false -%}
+      {%- assign label_text = '' -%}
+
+      {%- if entry_trimmed contains ':' -%}
+        {%- assign colon_parts = entry_trimmed | split: ':' -%}
+        {%- assign countries_raw = colon_parts.first | strip | upcase -%}
+        {%- assign text_parts = colon_parts | slice: 1, 999 -%}
+        {%- assign label_text = text_parts | join: ':' | strip -%}
+        {%- assign country_list = countries_raw | split: ',' -%}
+        {%- for cc in country_list -%}
+          {%- assign cc_trimmed = cc | strip -%}
+          {%- if cc_trimmed == current_country -%}
+            {%- assign show_label = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- assign label_text = entry_trimmed -%}
+        {%- assign show_label = true -%}
+      {%- endif -%}
+
+      {%- if show_label and label_text != blank -%}
+        <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+          {{- label_text | escape -}}
+        </span>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+</div>

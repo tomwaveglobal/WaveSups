@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.faq.json",
+  "context": {
+    "market": "usa"
+  },
+  "sections": {
+    "faq": {
+      "settings": {},
+      "blocks": {
+        "question_jXYajx": {
+          "disabled": false,
+          "settings": {}
+        },
+        "question-4": {
+          "settings": {
+            "text": "<p>5 Business Days Delivery Service with UPS Ground from our US Warehouse.</p><p>Rigid Foam Spas will be delivered using LTL with tailgate service. <br/>Rest assured, we will reach out to you to confirm the delivery date, ensuring a seamless experience. Tracking will be provided within 5 business days also. </p><p>For orders up to $99.99, the postage fee is $19.99.</p><p>FREE postage on orders $100 and over.</p>"
+          }
+        },
+        "question_c3x4na": {
+          "settings": {
+            "text": "<p>Wave products are designed in Newcastle in the North East of England and are shipped from our US warehouse</p>"
+          }
+        }
+      }
+    }
+  }
+}

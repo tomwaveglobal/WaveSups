@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "comparison_table_rB8zXC": {
+      "settings": {},
+      "blocks": {
+        "values_T78tqT": {
+          "settings": {
+            "product": "cruiser-sup"
+          }
+        },
+        "values_fRFWPx": {
+          "settings": {
+            "product": "tourer-sup"
+          }
+        },
+        "values_LgxeQU": {
+          "disabled": true,
+          "settings": {}
+        },
+        "values_paFAXn": {
+          "disabled": true,
+          "settings": {}
+        },
+        "values_8HAY6x": {
+          "settings": {
+            "product": "pro-sup"
+          }
+        },
+        "values_e9xTFx": {
+          "settings": {
+            "product": "wildcat-kids-sup"
+          }
+        }
+      }
+    }
+  },
+  "context": {
+    "market": "usa"
+  },
+  "parent": "product.sup-3-0.json"
+}

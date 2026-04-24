@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "gb"
+  },
+  "parent": "header-group.json",
+  "sections": {
+    "announcement-bar": {
+      "settings": {},
+      "blocks": {
+        "announcement-2": {
+          "disabled": true,
+          "settings": {
+            "text": "<em><strong>SALE ALERT:  </strong></em>20% Off with SUN20",
+            "text_mobile": "<em><strong>SALE ALERT:  </strong></em>20% Off with SUN20"
+          }
+        }
+      }
+    }
+  }
+}

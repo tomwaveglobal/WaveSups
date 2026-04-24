@@ -1,0 +1,500 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "rich-text-1": {
+      "type": "rich-text",
+      "blocks": {
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wave isn’t just a brand—it's a <strong>lifestyle</strong> that celebrates both adventure on the water and ultimate relaxation. With a strong foundation in creating <strong>high-performance</strong> water sports equipment and luxurious, <strong>high-quality</strong> spas, we’re committed to delivering the best of both worlds. Whether you’re riding the waves or unwinding after a long day, Wave products are designed to enhance your experience with style, comfort, and performance.</p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text-1"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "<em>Why Choose Wave?</em>",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "text",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "linear-gradient(90deg, rgba(5, 44, 49, 1), rgba(5, 123, 142, 1) 100%)",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 120,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": false,
+        "rounded": true
+      }
+    },
+    "image_with_text_KfQeV6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RVke4b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wave Water Sports",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_gtwVEn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From <strong>paddleboards</strong> and <strong>kayaks</strong> to a full range of <strong>water sports accessories</strong>, Wave is passionate about helping you connect with the water. Our boards are designed for all skill levels, from first-timers to experts, and are crafted with cutting-edge materials that offer unmatched durability, comfort, and performance.</p><p><strong>Innovative Design:</strong> Our boards and gear are built with the latest technology to ensure top-notch performance on the water.</p><p><strong>Durability & Quality:</strong> Wave products are engineered for maximum durability, allowing you to enjoy your favorite water sports year-round.</p><p><strong>Sustainability:</strong> We care about the environment, using eco-friendly materials and production methods to minimize our environmental impact.</p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_hEixYE": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Water Sports",
+            "button_link": "shopify://collections/water-sports-full-range",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_RVke4b",
+        "text_gtwVEn",
+        "button_hEixYE"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Product_Hero_Image_2.png",
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_JMdQKB": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_h8nGcD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wave Spas",
+            "heading_size": "title-sm",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_3btemM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>After a day of thrilling water sports, there's nothing like sinking into a <strong>Wave Spa</strong> to unwind. Our spas offer an unparalleled experience in relaxation and luxury. Designed with advanced integrated heaters and energy efficient materials, Wave Spas deliver therapeutic benefits while providing a comfortable and aesthetically pleasing addition to your home or outdoor space.</p><p><strong>Advanced Hydrotherapy:</strong> Each spa is equipped with adjustable jets and massage features to target muscle tension and stress.</p><p><strong>Energy Efficient: </strong>Wave Spas are designed to be eco-friendly and energy-efficient, ensuring a sustainable and cost-effective experience.</p><p><strong>Luxury Design:</strong> The elegant, modern design of each spa provides both comfort and style, making it a perfect addition to any home or backyard.</p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_U4FCD7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Spas",
+            "button_link": "shopify://collections/hot-tub-full-range",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_h8nGcD",
+        "text_3btemM",
+        "button_U4FCD7"
+      ],
+      "disabled": true,
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Como_Lifestyle_1.webp",
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "text_first",
+        "text_alignment": "right",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "multicolumn_8dUEp8": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jKwEyr": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "adapt",
+            "heading": "Innovation",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>We continuously push the boundaries of design and technology to create products that perform at the highest level.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_DUKkT3": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "adapt",
+            "heading": "Quality",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>We use only the finest materials to ensure that our products deliver the best possible experience.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_xBUy7x": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "adapt",
+            "heading": "Community",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>We strive to build a strong, inclusive community of water sports enthusiasts and relaxation seekers.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "column_fJxcem": {
+          "type": "column",
+          "settings": {
+            "show_border": true,
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "image_ratio": "adapt",
+            "heading": "Sustainability",
+            "heading_size": "text-lg-2xl",
+            "text": "<p>Our commitment to sustainability extends through every part of our process, from product creation to packaging.</p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "secondary",
+            "button_external": false,
+            "button_icon": true,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "column_jKwEyr",
+        "column_DUKkT3",
+        "column_xBUy7x",
+        "column_fJxcem"
+      ],
+      "name": "Multicolumn",
+      "settings": {
+        "gap": "large",
+        "columns": 4,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "A Passion for Water, Adventure, and Relaxation",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>Born from a love for both adventure and relaxation, Wave has become a leader in the world of water sports and luxury spas. Whether it’s the thrill of carving through the waves or the serene experience of soaking in a hot tub, we’re committed to creating the best products for all your water-related needs.</p><p>Our journey began with the simple idea of bringing high-quality, innovative products to those who share our passion for water sports and wellness. Today, we continue to build on that vision by offering <strong>premium paddleboards, kayaks, and spas</strong>, designed for everyone who loves the water, whether for sport or relaxation.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
+    "collection_list_wzQibn": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_BbLAkB": {
+          "type": "collection",
+          "settings": {
+            "collection": "all",
+            "image": "shopify://shop_images/Media_Hero_1_942e3297-403f-4014-8952-f119a013e811.png",
+            "title": "",
+            "description": "Check out all our products",
+            "overlay_content": true,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_UC8q6n": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "hot-tub-full-range",
+            "title": "Hot Tubs",
+            "description": "With built in integrated heaters",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_mBWnar": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-range",
+            "image": "shopify://shop_images/New_SUPs_Homepage.png",
+            "title": "SUPs",
+            "description": "Unleash your surfing spirit",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_tD8Pjd": {
+          "type": "collection",
+          "settings": {
+            "collection": "kayak-and-canoe-range",
+            "image": "shopify://shop_images/Kayaks_Homepage.png",
+            "title": "Kayaks & Canoes",
+            "description": "The ultimate water adventure",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_Ptkfxq": {
+          "type": "collection",
+          "settings": {
+            "collection": "robes",
+            "image": "shopify://shop_images/robes_1.png",
+            "title": "",
+            "description": "Waterproof, windproof, adventure ready",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_3jzUDA": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "accessories",
+            "title": "Spa Accessories",
+            "description": "Elevate your experience",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_3ztetz": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-accessories",
+            "image": "shopify://shop_images/Tourer_Package_Collage_3.png",
+            "title": "SUP Accessories",
+            "description": "Don't forget these essentials",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_BbLAkB",
+        "collection_UC8q6n",
+        "collection_mBWnar",
+        "collection_tD8Pjd",
+        "collection_Ptkfxq",
+        "collection_3jzUDA",
+        "collection_3ztetz"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "card_style": "card",
+        "image_type": "collection",
+        "image_ratio": "square",
+        "show_products_count": false,
+        "show_view_all": false,
+        "columns": 5,
+        "carousel_on_desktop": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "heading": "Our Products",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>At Wave, we’re not just about products; we’re about creating memorable experiences—whether you're riding the waves, relaxing in a spa, or enjoying time with family and friends. With Wave, you can be confident that you're choosing quality, performance, and luxury every time.</p>",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text-1",
+    "image_with_text_KfQeV6",
+    "image_with_text_JMdQKB",
+    "multicolumn_8dUEp8",
+    "collection_list_wzQibn"
+  ]
+}

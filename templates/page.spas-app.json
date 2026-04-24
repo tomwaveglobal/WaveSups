@@ -1,0 +1,357 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_XkWMHD": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "subheading_LmbHHG": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Wave Spas App",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_z7MEAD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Control Beyond Expectations",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_LmbHHG",
+        "heading_z7MEAD"
+      ],
+      "name": "Image with text overlay",
+      "settings": {
+        "transparent_header": false,
+        "image": "shopify://shop_images/Altantic_Slate_Rattan_Hero_SPA_Graded_Expanded_103a4f1d-d0a2-4fb5-88a2-d6b4feaea0f6.jpg",
+        "image_height": "550px",
+        "content_width": "medium",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Adriatic_Hero_SPA_Grade.jpg",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#f59e0b",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 30,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "image_with_text_DxEAKD": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_BmEVjQ": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Control Beyond Expectations",
+            "subheading_size": "subtitle-sm",
+            "secondary_color": true
+          }
+        },
+        "heading_QdBdDQ": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Wave Spas App",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "scribble",
+            "highlighted_scribble": "basic-underline"
+          }
+        },
+        "text_dmU4xi": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Our Wave Spas App empowers you to take control of your hot tub experience right from the palm of your hand. </em></p><p><strong>Effortless Bubbles Control<br/></strong>Experience the epitome of indulgence as you effortlessly control the intensity of bubbles, tailoring your spa experience to perfection<br/><br/><strong>Smart Heating Scheduler<br/></strong>Transform your spa into a haven of warmth by programming it to preheat before your arrival. Let the welcoming embrace of perfectly heated water await you!<br/><br/><strong>Intuitive Filter Management<br/></strong>Luxuriate in the convenience of a glance as our app displays your filter's remaining capacity. Stay ahead with the knowledge of when to indulge in a fresh filter<br/><br/><strong>Temperature Mastery for Effortless Relaxation</strong><br/>Unwind with absolute control by effortlessly monitoring the current spa temperature. Seamlessly plan the perfect relaxation time, ensuring every moment in your spa is a retreat into luxury<br/><br/></p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 32,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_AbiycU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "subheading_BmEVjQ",
+        "heading_QdBdDQ",
+        "text_dmU4xi",
+        "button_AbiycU"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/Wave_App4_63718f3a-2afe-4212-bc4a-db50dbcd8b37.webp",
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 20,
+        "divider": false,
+        "full_width": false,
+        "rounded": true,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_96tkFa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_eaYcAx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Download",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_Xa7rbF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you ready to take your relaxation to the next level? Download now from Google Play or App Store and dive into relaxation like never before using the links below!</p><p><strong>Please note:</strong> We're constantly improving our pairing and connectivity capabilities. For 2025, we've launched a new <a href=\"/products/handheld-wifi-controller-ukce\" title=\"Handheld WIFI Controller | 2025 Models\"><strong>Bluetooth and WiFi Pairing Controller</strong></a><strong> - </strong>designed to offer enhanced connectivity with modern routers and mesh WiFi networks.</p>",
+            "text_font": "body",
+            "text_size": "subtext-sm",
+            "text_max_size": 100,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_jBXggL": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download on Google Play",
+            "button_link": "https://play.google.com/store/apps/details?id=com.shanghaixintu.wavespa",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        },
+        "button_gLKmkM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Download on Apple",
+            "button_link": "https://apps.apple.com/gb/app/wave-spa/id6477339416",
+            "button_style": "secondary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_eaYcAx",
+        "text_Xa7rbF",
+        "button_jBXggL",
+        "button_gLKmkM"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "#1f1f1f",
+        "color_background": "#fafafa",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "#fafafa",
+        "color_button_background": "#1f1f1f",
+        "color_button_gradient": "",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "narrow": true,
+        "rounded": true
+      }
+    },
+    "faq_CcDgUm": {
+      "type": "faq",
+      "blocks": {
+        "question_RXPMMU": {
+          "type": "question",
+          "settings": {
+            "title": "How do I pair the app to my hot tub?",
+            "text": "<p>View our handy guide <a href=\"https://cdn.shopify.com/s/files/1/0058/2284/0889/files/APP_instruction.pdf?v=1731588911\">here</a></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_UdApBf": {
+          "type": "question",
+          "settings": {
+            "title": "My spa won't connect to wifi, what do I do?",
+            "text": "<p>Ensure that the Wave Spa is powered on. Press and hold the Wi-Fi button on the controller until you hear a long beep to reset the connection. Make sure you are trying to connect to a 2.4ghz network – our app supports this band width only. Make sure your spa controller is placed in an area with strong, stable Wi-Fi coverage. You can check the signal strength by testing it with your phone near the spa controller.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_yXzw7b": {
+          "type": "question",
+          "settings": {
+            "title": "How far can my spa be from the router?",
+            "text": "<p>Our app can work up to 15m away from the router. When connecting, please ensure that you wait 60 seconds to find the spa and enter the correct network name and password for your home Wi-Fi.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_WxGbC6": {
+          "type": "question",
+          "settings": {
+            "title": "I didn't receive the activation email",
+            "text": "<p>It might be because the email lands in your Spam folder – look for a 4-digit number<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_FRjHAP": {
+          "type": "question",
+          "settings": {
+            "title": "How do I enable anti-freeze?",
+            "text": "<p>Set the spa to 20°C and press the down button: this will activate AF (anti-freeze)<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "question_BXQJYA": {
+          "type": "question",
+          "settings": {
+            "title": "I can't connect to IOS/Android",
+            "text": "<p>If you're having trouble connecting to the Wave Spa app on iOS or Android, make sure you're using the latest version of the app and try clearing the cache or reinstalling it. iOS users may experience connectivity issues due to a recent update, our team is working on a fix, and we recommend using an Android device as a temporary workaround. If you're on Android and still having issues, try connecting via an iOS device if available.<br/><br/></p>",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "question_RXPMMU",
+        "question_UdApBf",
+        "question_yXzw7b",
+        "question_WxGbC6",
+        "question_FRjHAP",
+        "question_BXQJYA"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "style": "with-border",
+        "heading": "FAQ / Troubleshooting",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>These are the most commonly asked questions, received from our <br/>customers. Please, ensure you problem-solve these points before <br/>contacting Customer Service as this gives you the best possible chance <br/>of the app connecting.</p><p>Please note: there will be some devices which aren't compatible with the app</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "color_overlay": "#ffffff",
+        "overlay_opacity": 4,
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
+    "main-page": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "text_size": "text-base",
+        "padding_top": 72,
+        "padding_bottom": 120,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_XkWMHD",
+    "image_with_text_DxEAKD",
+    "rich_text_96tkFa",
+    "faq_CcDgUm",
+    "main-page"
+  ]
+}

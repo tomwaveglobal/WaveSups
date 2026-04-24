@@ -1,0 +1,126 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_nzGEnP": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-products",
+            "image": "shopify://shop_images/Media_Hero_1_942e3297-403f-4014-8952-f119a013e811.png",
+            "title": "All Products",
+            "description": "",
+            "overlay_content": true,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_zBtdfP": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-range",
+            "image": "shopify://shop_images/New_SUPs_Homepage.png",
+            "title": "Paddleboards (SUPs)",
+            "description": "Unleash your surfing spirit",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_8jFDE3": {
+          "type": "collection",
+          "settings": {
+            "collection": "kayak-and-canoe-range",
+            "image": "shopify://shop_images/Kayaks_Homepage.png",
+            "title": "Kayaks & Canoes",
+            "description": "The ultimate water adventure",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_6d8iG9": {
+          "type": "collection",
+          "settings": {
+            "collection": "robes",
+            "image": "shopify://shop_images/robes_1.png",
+            "title": "Changing Robes",
+            "description": "Waterproof, windproof, adventure ready",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_9bcfMf": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "accessories",
+            "title": "Spa Extras",
+            "description": "",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_H4aBX8": {
+          "type": "collection",
+          "settings": {
+            "collection": "sup-accessories",
+            "image": "shopify://shop_images/Tourer_Package_Collage_3.png",
+            "title": "SUP Accessories",
+            "description": "SUP up on essentials",
+            "overlay_content": false,
+            "color_text": "#ffffff",
+            "color_overlay": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_nzGEnP",
+        "collection_zBtdfP",
+        "collection_8jFDE3",
+        "collection_6d8iG9",
+        "collection_9bcfMf",
+        "collection_H4aBX8"
+      ],
+      "settings": {
+        "display_type": "selected",
+        "sort": "alphabetical",
+        "card_style": "card",
+        "image_type": "collection",
+        "image_ratio": "square",
+        "show_products_count": false,
+        "columns": 4,
+        "columns_mobile": "2",
+        "heading": "Collections",
+        "heading_size": "title-lg tracking-heading",
+        "heading_alignment": "text-left",
+        "heading_tag": "h1",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

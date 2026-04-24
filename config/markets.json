@@ -1,0 +1,100 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "markets": {
+    "france": {
+      "parent": "@default"
+    },
+    "usa": {
+      "parent": "@default"
+    },
+    "austria": {
+      "parent": "@default"
+    },
+    "belgium": {
+      "parent": "@default"
+    },
+    "bulgaria": {
+      "parent": "@default"
+    },
+    "croatia": {
+      "parent": "@default"
+    },
+    "czechia": {
+      "parent": "@default"
+    },
+    "denmark": {
+      "parent": "@default"
+    },
+    "estonia": {
+      "parent": "@default"
+    },
+    "finland": {
+      "parent": "@default"
+    },
+    "germany": {
+      "parent": "@default"
+    },
+    "greece": {
+      "parent": "@default"
+    },
+    "hungary": {
+      "parent": "@default"
+    },
+    "ireland": {
+      "parent": "@default"
+    },
+    "italy": {
+      "parent": "@default"
+    },
+    "latvia": {
+      "parent": "@default"
+    },
+    "lithuania": {
+      "parent": "@default"
+    },
+    "luxembourg": {
+      "parent": "@default"
+    },
+    "norway": {
+      "parent": "@default"
+    },
+    "poland": {
+      "parent": "@default"
+    },
+    "portugal": {
+      "parent": "@default"
+    },
+    "romania": {
+      "parent": "@default"
+    },
+    "slovakia": {
+      "parent": "@default"
+    },
+    "slovenia": {
+      "parent": "@default"
+    },
+    "spain": {
+      "parent": "@default"
+    },
+    "sweden": {
+      "parent": "@default"
+    },
+    "switzerland": {
+      "parent": "@default"
+    },
+    "netherlands": {
+      "parent": "@default"
+    },
+    "gb": {
+      "parent": "@default"
+    }
+  }
+}

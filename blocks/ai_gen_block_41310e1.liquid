@@ -1,0 +1,779 @@
+{% doc %}
+  @prompt
+    a section like the current portfolio section but with each profile being a clickable url link, allow up to 10 profiles, and change them from team profiles to just images with rounded corners so it fits the theme, Include the option to have a title on each image white text on a black bar at the bottom of the image with a 70% overay opacity. Also have 4 images on desktop but enable carousel scrolling 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-portfolio-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-portfolio-container-{{ ai_gen_id }} {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-portfolio-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-portfolio-title-{{ ai_gen_id }} {
+    font-family: var(--font-heading-family);
+    font-weight: 700;
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0 0 16px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .ai-portfolio-subtitle-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subtitle_size }}px;
+    color: {{ block.settings.subtitle_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-portfolio-carousel-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    margin-top: {{ block.settings.grid_spacing }}px;
+  }
+
+  .ai-portfolio-carousel-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.grid_gap }}px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .ai-portfolio-carousel-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-portfolio-card-{{ ai_gen_id }} {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-portfolio-card-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-portfolio-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-portfolio-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-portfolio-overlay-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, {{ block.settings.overlay_opacity | divided_by: 100.0 }});
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ai-portfolio-image-title-{{ ai_gen_id }} {
+    color: {{ block.settings.image_title_color }};
+    font-size: {{ block.settings.image_title_size }}px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .ai-portfolio-link-icon-{{ ai_gen_id }} {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ai-portfolio-link-icon-{{ ai_gen_id }} svg {
+    width: 16px;
+    height: 16px;
+    stroke: {{ block.settings.image_title_color }};
+  }
+
+  .ai-portfolio-nav-button-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: {{ block.settings.nav_button_background }};
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-portfolio-nav-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.nav_button_hover_background }};
+  }
+
+  .ai-portfolio-nav-button-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .ai-portfolio-nav-button-{{ ai_gen_id }} svg {
+    width: 24px;
+    height: 24px;
+    stroke: {{ block.settings.nav_button_color }};
+  }
+
+  .ai-portfolio-nav-prev-{{ ai_gen_id }} {
+    left: -24px;
+  }
+
+  .ai-portfolio-nav-next-{{ ai_gen_id }} {
+    right: -24px;
+  }
+
+  .ai-portfolio-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .ai-portfolio-card-{{ ai_gen_id }} {
+      width: calc((100% - ({{ block.settings.grid_gap }}px * 3)) / 4);
+    }
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-portfolio-card-{{ ai_gen_id }} {
+      width: calc((100% - ({{ block.settings.grid_gap }}px * 2)) / 3);
+    }
+
+    .ai-portfolio-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.8);
+    }
+
+    .ai-portfolio-nav-prev-{{ ai_gen_id }} {
+      left: -16px;
+    }
+
+    .ai-portfolio-nav-next-{{ ai_gen_id }} {
+      right: -16px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-portfolio-card-{{ ai_gen_id }} {
+      width: calc((100% - {{ block.settings.grid_gap }}px) / 2);
+    }
+
+    .ai-portfolio-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.title_size }}px * 0.7);
+    }
+
+    .ai-portfolio-nav-button-{{ ai_gen_id }} {
+      width: 40px;
+      height: 40px;
+    }
+
+    .ai-portfolio-nav-prev-{{ ai_gen_id }} {
+      left: -12px;
+    }
+
+    .ai-portfolio-nav-next-{{ ai_gen_id }} {
+      right: -12px;
+    }
+
+    .ai-portfolio-image-title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.image_title_size }}px * 0.9);
+    }
+  }
+{% endstyle %}
+
+<portfolio-carousel-{{ ai_gen_id }} class="ai-portfolio-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-portfolio-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-portfolio-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-portfolio-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <div class="ai-portfolio-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% assign has_images = false %}
+    {% for i in (1..10) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign image = block.settings[image_key]
+        if image != blank
+          assign has_images = true
+          break
+        endif
+      %}
+    {% endfor %}
+
+    {% if has_images %}
+      <div class="ai-portfolio-carousel-wrapper-{{ ai_gen_id }}">
+        <button
+          class="ai-portfolio-nav-button-{{ ai_gen_id }} ai-portfolio-nav-prev-{{ ai_gen_id }}"
+          aria-label="Previous"
+          data-nav="prev"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="ai-portfolio-carousel-{{ ai_gen_id }}" data-carousel>
+          {% for i in (1..10) %}
+            {% liquid
+              assign image_key = 'image_' | append: i
+              assign url_key = 'url_' | append: i
+              assign title_key = 'title_' | append: i
+              assign image = block.settings[image_key]
+              assign url = block.settings[url_key]
+              assign image_title = block.settings[title_key]
+            %}
+
+            {% if image != blank %}
+              <a 
+                href="{% if url != blank %}{{ url }}{% else %}#{% endif %}" 
+                class="ai-portfolio-card-{{ ai_gen_id }}"
+                {% if url == blank %}aria-disabled="true"{% endif %}
+              >
+                <div class="ai-portfolio-image-wrapper-{{ ai_gen_id }}">
+                  <img
+                    src="{{ image | image_url: width: 600 }}"
+                    alt="{{ image.alt | escape }}"
+                    loading="lazy"
+                    width="600"
+                    height="600"
+                    class="ai-portfolio-image-{{ ai_gen_id }}"
+                  >
+
+                  {% if image_title != blank %}
+                    <div class="ai-portfolio-overlay-{{ ai_gen_id }}">
+                      <h3 class="ai-portfolio-image-title-{{ ai_gen_id }}">{{ image_title }}</h3>
+                      {% if url != blank %}
+                        <div class="ai-portfolio-link-icon-{{ ai_gen_id }}">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                          </svg>
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <button
+          class="ai-portfolio-nav-button-{{ ai_gen_id }} ai-portfolio-nav-next-{{ ai_gen_id }}"
+          aria-label="Next"
+          data-nav="next"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    {% else %}
+      <div class="ai-portfolio-empty-state-{{ ai_gen_id }}">
+        Add images to get started
+      </div>
+    {% endif %}
+  </div>
+</portfolio-carousel-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class PortfolioCarousel{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.carousel = null;
+        this.prevButton = null;
+        this.nextButton = null;
+      }
+
+      connectedCallback() {
+        this.carousel = this.querySelector('[data-carousel]');
+        this.prevButton = this.querySelector('[data-nav="prev"]');
+        this.nextButton = this.querySelector('[data-nav="next"]');
+
+        if (this.carousel && this.prevButton && this.nextButton) {
+          this.setupCarousel();
+          this.setupAccessibility();
+        }
+      }
+
+      setupCarousel() {
+        this.prevButton.addEventListener('click', () => this.scroll('prev'));
+        this.nextButton.addEventListener('click', () => this.scroll('next'));
+
+        this.carousel.addEventListener('scroll', () => this.updateButtons());
+        this.updateButtons();
+      }
+
+      scroll(direction) {
+        const cardWidth = this.carousel.querySelector('.ai-portfolio-card-{{ ai_gen_id }}').offsetWidth;
+        const gap = {{ block.settings.grid_gap }};
+        const scrollAmount = cardWidth + gap;
+
+        if (direction === 'prev') {
+          this.carousel.scrollLeft -= scrollAmount;
+        } else {
+          this.carousel.scrollLeft += scrollAmount;
+        }
+      }
+
+      updateButtons() {
+        const isAtStart = this.carousel.scrollLeft <= 0;
+        const isAtEnd = this.carousel.scrollLeft + this.carousel.offsetWidth >= this.carousel.scrollWidth - 1;
+
+        this.prevButton.disabled = isAtStart;
+        this.nextButton.disabled = isAtEnd;
+      }
+
+      setupAccessibility() {
+        const cards = this.querySelectorAll('.ai-portfolio-card-{{ ai_gen_id }}');
+        cards.forEach(card => {
+          if (card.getAttribute('aria-disabled') === 'true') {
+            card.addEventListener('click', (e) => {
+              e.preventDefault();
+            });
+          }
+        });
+      }
+    }
+
+    customElements.define('portfolio-carousel-{{ ai_gen_id }}', PortfolioCarousel{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Image carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section header"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our portfolio"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "label": "Grid gap",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "label": "Header spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "grid_spacing",
+      "label": "Grid spacing",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "image_title_size",
+      "label": "Image title size",
+      "min": 12,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "image_title_color",
+      "label": "Image title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_background",
+      "label": "Navigation button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_hover_background",
+      "label": "Navigation button hover",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "nav_button_color",
+      "label": "Navigation button icon",
+      "default": "#171717"
+    },
+    {
+      "type": "header",
+      "content": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_1",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_2",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_3",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_4",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_5",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_5",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_6",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_6",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_7",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_7",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_7",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_8",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_8",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_8",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 9"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_9",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_9",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_9",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Image 10"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_10",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_10",
+      "label": "Title"
+    },
+    {
+      "type": "url",
+      "id": "url_10",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image carousel"
+    }
+  ]
+}
+{% endschema %}

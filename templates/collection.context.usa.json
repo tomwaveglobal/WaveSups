@@ -1,0 +1,36 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "collection.json",
+  "context": {
+    "market": "usa"
+  },
+  "sections": {
+    "images-with-text-overlay": {
+      "settings": {
+        "image_height": "700px",
+        "content_width": "large",
+        "image_height_mobile": "100vh"
+      },
+      "blocks": {
+        "spacing": {
+          "disabled": true,
+          "settings": {}
+        },
+        "text": {
+          "settings": {
+            "text": "{{ collection.metafields.custom.us_seo_description | metafield_tag }}",
+            "text_size": "subtext-md"
+          }
+        }
+      }
+    }
+  }
+}

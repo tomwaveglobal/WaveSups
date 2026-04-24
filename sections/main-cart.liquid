@@ -1,0 +1,2829 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+</style>
+
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+
+{%- comment -%}========== CART ENHANCEMENT STYLES =========={%- endcomment -%}
+<style>
+  /* ===== UNIVERSAL TAP/FOCUS REMOVAL ===== */
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none;
+  }
+  
+  *:focus,
+  *:active,
+  *:focus-visible {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Remove blue borders specifically from cart items */
+  .cart-item,
+  .cart-item *,
+  .cart-item a,
+  .cart-item button,
+  .cart-item input,
+  .energy-upgrade-row,
+  .energy-upgrade-row *,
+  .cart-item-upgrades,
+  .cart-item-upgrades * {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  /* Prevent selection highlights */
+  .cart-item__details,
+  .upgrade-card__details,
+  .energy-upgrade-banner__text {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* ===== STAR RATINGS ===== */
+  .cart-item-stars,
+  .upgrade-stars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    line-height: 1;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+  
+  .cart-item-stars__rating,
+  .upgrade-stars__rating {
+    display: flex;
+    gap: 1px;
+    line-height: 1;
+  }
+  
+  .cart-item-stars__star,
+  .upgrade-stars__star {
+    font-size: 14px;
+    line-height: 1;
+    display: inline-block;
+    color: #ffa500;
+  }
+  
+  .cart-item-stars__star--empty,
+  .upgrade-stars__star--empty {
+    color: #ddd;
+  }
+  
+  .cart-item-stars__count,
+  .upgrade-stars__count {
+    font-size: 12px;
+    color: #999;
+    white-space: nowrap;
+  }
+  
+  .cart-item-stars__value {
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* ===== REMOVE SHOPIFY DEFAULT STRIKETHROUGHS ===== */
+  .price,
+  .price *,
+  .price::before,
+  .price::after,
+  .price--on-sale,
+  .price--on-sale *,
+  .price--on-sale::before,
+  .price--on-sale::after,
+  .price__sale,
+  .price__sale *,
+  .price__sale::before,
+  .price__sale::after,
+  .price__regular:not([style*="line-through"]),
+  .price__regular:not([style*="line-through"]) *,
+  .price__regular:not([style*="line-through"])::before,
+  .price__regular:not([style*="line-through"])::after {
+    text-decoration: none !important;
+    background-image: none !important;
+    background: transparent !important;
+  }
+  
+  .cart *::before,
+  .cart *::after,
+  .cart__content *::before,
+  .cart__content *::after,
+  .cart-item *::before,
+  .cart-item *::after {
+    background-image: none !important;
+  }
+  
+  .price--on-sale .price__sale::before,
+  .price--on-sale .price__sale::after {
+    content: none !important;
+    display: none !important;
+  }
+  
+  /* Force strikethrough on compare prices */
+  .price__regular[style*="line-through"] {
+    text-decoration: line-through !important;
+  }
+
+  /* ===== ENERGY BUNDLE UPGRADE ===== */
+  .energy-upgrade-row {
+    outline: none !important;
+  }
+  
+  .energy-upgrade-row td {
+    border-bottom: 1px solid #e5e5e5 !important;
+    padding-bottom: 24px !important;
+  }
+  
+  /* Remove border between cart item and energy upgrade */
+  .cart-item + .energy-upgrade-row,
+  tr.cart-item:has(+ .energy-upgrade-row) {
+    border-bottom: none !important;
+  }
+  
+  .cart-item td {
+    border-bottom: none !important;
+  }
+  
+  tr.cart-item:has(+ .energy-upgrade-row) td {
+    border-bottom: none !important;
+  }
+  
+  /* More aggressive border removal */
+  table.cart__items tr.cart-item {
+    border-bottom: none !important;
+  }
+  
+  table.cart__items tr.cart-item td {
+    border-bottom: none !important;
+    padding-bottom: 16px !important;
+  }
+  
+  .energy-upgrade-row td {
+    padding-top: 0 !important;
+  }
+  
+  .energy-upgrade-banner {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    border: 2px solid #ffa500;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0 24px 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .energy-upgrade-banner:hover,
+  .energy-upgrade-banner:active,
+  .energy-upgrade-banner:focus {
+    box-shadow: none !important;
+    transform: none !important;
+    border: 2px solid #ffa500 !important;
+  }
+  
+  .energy-upgrade-banner__decorative {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .energy-upgrade-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .energy-upgrade-banner__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .energy-upgrade-banner__image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .energy-upgrade-banner__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .energy-upgrade-banner__fallback {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: #ffa500;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .energy-upgrade-banner__text {
+    flex: 1;
+  }
+  
+  .energy-upgrade-banner__title {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.3;
+  }
+  
+  .energy-upgrade-banner__benefit {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.4;
+  }
+  
+  .energy-upgrade-banner__benefit strong {
+    color: #ffa500;
+  }
+  
+  .energy-upgrade-banner__info {
+    margin: 0;
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.4;
+  }
+  
+  .energy-upgrade-btn {
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .energy-upgrade-btn:hover,
+  .energy-upgrade-btn:active,
+  .energy-upgrade-btn:focus {
+    background: #000000;
+    outline: none !important;
+    transform: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .energy-upgrade-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+  }
+
+  /* ===== FREQUENTLY BOUGHT TOGETHER ===== */
+  .cart-item-upgrades {
+    outline: none !important;
+  }
+  
+  .upgrade-section {
+    padding: 16px 12px;
+    margin: 16px 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  
+  .upgrade-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .upgrade-section__title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .upgrade-section__products {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .upgrade-card {
+    background: #fafafa;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    outline: none !important;
+    transition: background-color 0.2s ease;
+    transform: none !important;
+  }
+  
+  .upgrade-card:active,
+  .upgrade-card:hover,
+  .upgrade-card:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    background: #f5f5f5;
+  }
+  
+  .upgrade-card__image {
+    cursor: pointer;
+    flex-shrink: 0;
+    text-decoration: none;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  .upgrade-card__image:active {
+    opacity: 0.8;
+    outline: none !important;
+  }
+  
+  .upgrade-card__image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+  
+  .upgrade-card__details {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .upgrade-card__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .upgrade-card__title {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 2px 0;
+    line-height: 1.3;
+  }
+  
+  .upgrade-card__title a {
+    color: inherit;
+    text-decoration: none;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  .upgrade-card__title a:active {
+    opacity: 0.7;
+    outline: none !important;
+  }
+  
+  .upgrade-card__options {
+    margin-bottom: 6px;
+  }
+  
+  .upgrade-card__price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  
+  
+  /* ===== FREQUENTLY BOUGHT TOGETHER - REDESIGNED ===== */
+  
+  /* Main container - clean and minimal */
+  .consolidated-upgrades {
+    margin-top: 64px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 24px;
+  }
+  
+  .consolidated-upgrades .upgrade-section {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header - clean and simple, right-aligned */
+  .consolidated-upgrades .upgrade-section__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0 16px 0;
+    color: #000;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    line-height: 1.3;
+    text-align: left;
+  }
+  
+  .consolidated-upgrades .upgrade-section__title::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M6.24986 7.91666L13.7499 3.33333M9.99996 10.4167L17.5 5.83333M9.99996 10.4167L2.49996 5.83333M9.99996 10.4167V18.75M1.66663 8.55104V11.4489C1.66663 12.44 1.66663 12.9355 1.80881 13.3807C1.93464 13.7747 2.14059 14.1385 2.41371 14.4491C2.72235 14.8001 3.14725 15.055 3.99705 15.5649L7.53038 17.6849C8.42828 18.2237 8.87723 18.493 9.35649 18.5983C9.78042 18.6914 10.2195 18.6914 10.6434 18.5983C11.1227 18.493 11.5716 18.2237 12.4695 17.6849L16.0029 15.5649C16.8527 15.055 17.2776 14.8001 17.5862 14.4491C17.8593 14.1385 18.0653 13.7747 18.1911 13.3807C18.3333 12.9355 18.3333 12.44 18.3333 11.4489V8.55104C18.3333 7.56002 18.3333 7.0645 18.1911 6.61926C18.0653 6.22525 17.8593 5.86151 17.5862 5.5509C17.2776 5.19989 16.8527 4.94495 16.0029 4.43508L12.4695 2.31508C11.5716 1.77634 11.1227 1.50697 10.6434 1.40172C10.2195 1.30863 9.78042 1.30863 9.35649 1.40172C8.87723 1.50697 8.42828 1.77634 7.53038 2.31508L3.99705 4.43508C3.14725 4.94495 2.72235 5.19989 2.41371 5.5509C2.14059 5.86151 1.93464 6.22525 1.80881 6.61926C1.66663 7.0645 1.66663 7.56002 1.66663 8.55104Z' stroke='%23000000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  
+  .consolidated-upgrades .upgrade-section__products {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* ===== CARD - CLEAN COMPACT DESIGN ===== */
+  .consolidated-upgrades .upgrade-card {
+    background: white;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    border-radius: 0;
+    padding: 14px 0;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    box-shadow: none;
+    transition: background 0.2s ease;
+  }
+  
+  .consolidated-upgrades .upgrade-card:first-child {
+    border-top: none;
+  }
+  
+  .consolidated-upgrades .upgrade-card:last-child {
+    border-bottom: none;
+  }
+  
+  .consolidated-upgrades .upgrade-card:hover {
+    background: #fafafa;
+  }
+  
+  /* Hide Checkbox */
+  .consolidated-upgrades .upgrade-card__checkbox {
+    display: none !important;
+  }
+  
+  /* Image - compact 50px */
+  .consolidated-upgrades .upgrade-card__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  
+  .consolidated-upgrades .upgrade-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Content layout - flexible middle section */
+  .consolidated-upgrades .upgrade-card__details {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+  }
+  
+  .consolidated-upgrades .upgrade-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+  
+  /* Title - clean and compact */
+  .consolidated-upgrades .upgrade-card__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0;
+    color: #000;
+  }
+  
+  .consolidated-upgrades .upgrade-card__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .consolidated-upgrades .upgrade-card__title a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Variant selector - compact inline */
+  .consolidated-upgrades .upgrade-card__variant-selector {
+    padding: 4px 24px 4px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    background: white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    appearance: none;
+    cursor: pointer;
+    max-width: 140px;
+    line-height: 1.2;
+    color: #000000;
+  }
+  
+  .consolidated-upgrades .upgrade-card__variant-selector:hover {
+    border-color: #9ca3af;
+  }
+  
+  .consolidated-upgrades .upgrade-card__variant-selector:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Hide stars */
+  .consolidated-upgrades .upgrade-stars {
+    display: none;
+  }
+  
+  /* Variant options display */
+  .consolidated-upgrades .upgrade-card__options {
+    margin: 0;
+  }
+  
+  .consolidated-upgrades .upgrade-card__options dl {
+    display: none;
+  }
+  
+  /* Price - clean and prominent */
+  .consolidated-upgrades .price {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    min-width: 60px;
+    text-align: right;
+    color: #000;
+  }
+  
+  /* Actions row */
+  .consolidated-upgrades .upgrade-card__actions-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  
+  /* Button - compact outline style */
+  .consolidated-upgrades .upgrade-card__add-btn {
+    background: transparent;
+    color: #000;
+    border: 1.5px solid #000;
+    border-radius: 50px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 90px;
+    box-shadow: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .consolidated-upgrades .upgrade-card__add-btn:hover {
+    background: #000;
+    color: white;
+    transform: none;
+  }
+  
+  .consolidated-upgrades .upgrade-card__add-btn:active {
+    background: #1a1a1a;
+    color: white;
+  }
+  
+  .consolidated-upgrades .upgrade-card__add-btn:disabled {
+    background: transparent;
+    border-color: #9ca3af;
+    color: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  /* Variant text (for single variant products) */
+  .consolidated-upgrades .upgrade-card__variant-text {
+    font-size: 11px;
+    color: #000000;
+    margin-top: 2px;
+  }
+  
+  /* ===== MOBILE ===== */
+  @media (max-width: 767px) {
+    .consolidated-upgrades {
+      margin-top: 48px;
+      padding: 0;
+    }
+    
+    .consolidated-upgrades .upgrade-section__title {
+      font-size: 15px;
+      margin: 24px 0 12px 0;
+    }
+    
+    .consolidated-upgrades .upgrade-section__title::before {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .consolidated-upgrades .upgrade-card {
+      flex-wrap: wrap;
+      padding: 12px 0;
+      gap: 10px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__image {
+      width: 45px;
+      height: 45px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__details {
+      flex: 1;
+      flex-wrap: wrap;
+      width: calc(100% - 55px);
+    }
+    
+    .consolidated-upgrades .upgrade-card__content {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__actions-row {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__variant-selector {
+      flex: 1;
+      max-width: 48%;
+      font-size: 11px;
+      padding: 4px 20px 4px 6px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__add-btn {
+      flex: 1;
+      max-width: 48%;
+      padding: 5px 12px;
+      font-size: 11px;
+      min-width: auto;
+    }
+    
+    .consolidated-upgrades .upgrade-card__title {
+      font-size: 13px;
+    }
+    
+    .consolidated-upgrades .price {
+      font-size: 14px;
+    }
+  }
+  
+  /* ===== TABLET ===== */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .consolidated-upgrades .upgrade-card {
+      flex-wrap: wrap;
+    }
+    
+    .consolidated-upgrades .upgrade-card__details {
+      flex: 1;
+      min-width: 400px;
+    }
+    
+    .consolidated-upgrades .upgrade-card__actions-row {
+      width: 100%;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+  }
+  
+  
+  /* ===== ENHANCED VARIANT SELECTOR (DROPDOWN) ===== */
+  .upgrade-card__variant-selector {
+    width: 100%;
+    max-width: 220px;
+    padding: 10px 32px 10px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    background: white;
+    font-family: inherit;
+    align-self: flex-start;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23374151' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: all 0.2s ease;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .upgrade-card__variant-selector:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+  }
+  
+  .upgrade-card__variant-selector:focus,
+  .upgrade-card__variant-selector:active {
+    border-color: #000;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* ===== ENHANCED ADD BUTTON ===== */
+  .upgrade-card__add-btn {
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+    transform: none !important;
+    align-self: flex-start;
+    letter-spacing: 0.01em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  
+  .upgrade-card__add-btn:hover {
+    background: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px) !important;
+  }
+  
+  .upgrade-card__add-btn:active {
+    background: #000000;
+    transform: translateY(0) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upgrade-card__add-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none;
+  }
+
+  /* ===== HIDE ERROR MESSAGES ===== */
+  .quantity-popover,
+  .quantity-popover__wrapper,
+  .cart-item-upgrades ~ * [role="alert"],
+  [role="alert"],
+  .notice,
+  .error-message,
+  [class*="popover"],
+  [class*="error"]:not(.price__sale) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* ===== PREVENT LAYOUT SHIFT ===== */
+  .cart-item,
+  .energy-upgrade-row,
+  .cart-item-upgrades {
+    will-change: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+  
+  /* ===== FIX CART ITEM SPACING ===== */
+  .cart-item td {
+    padding: 16px 0 !important;
+    box-sizing: border-box;
+  }
+  
+  /* Additional aggressive border removal for cart items */
+  table.cart__items tbody tr.cart-item,
+  table.cart__items tbody tr.cart-item td,
+  .cart-item,
+  .cart-item > td {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+  }
+  
+  /* Remove any theme borders on table elements */
+  .cart__items table tr,
+  .cart__items tbody tr,
+  .cart__items tr.cart-item,
+  .cart table tr {
+    border: none !important;
+  }
+
+  /* ===== RESPONSIVE - MOBILE & TABLET (UP TO 767px) ===== */
+  @media (max-width: 767px) {
+    /* Compact Frequently Bought Cards */
+    .upgrade-card {
+      flex-direction: row;
+      gap: 8px;
+      padding: 10px;
+    }
+    
+    .upgrade-card__image img {
+      width: 80px;
+      height: 80px;
+      border-radius: 6px;
+    }
+    
+    .upgrade-card__details {
+      gap: 8px;
+    }
+    
+    .upgrade-card__content {
+      gap: 4px;
+    }
+    
+    .upgrade-card__variant-selector {
+      max-width: 100%;
+      margin-top: 4px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    
+    .upgrade-card__add-btn {
+      padding: 7px 16px;
+      font-size: 12px;
+    }
+    
+    .upgrade-section {
+      padding: 12px 8px;
+      margin: 12px 0;
+    }
+    
+    .upgrade-section__title {
+      font-size: 14px;
+    }
+    
+    .upgrade-section__header {
+      margin-bottom: 10px;
+    }
+    
+    .upgrade-card__title {
+      font-size: 13px;
+      margin: 0 0 2px 0;
+    }
+    
+    .upgrade-card__options {
+      margin-bottom: 4px;
+    }
+    
+    .upgrade-card__options dl {
+      gap: 2px !important;
+      margin-bottom: 4px !important;
+    }
+    
+    .upgrade-card__options .text-xs {
+      font-size: 11px !important;
+    }
+    
+    .upgrade-stars {
+      gap: 4px;
+      margin-top: 2px;
+    }
+    
+    .upgrade-stars__star {
+      font-size: 12px;
+    }
+    
+    .upgrade-stars__value {
+      font-size: 11px;
+    }
+    
+    .upgrade-stars__count {
+      font-size: 10px;
+    }
+    
+    .upgrade-card__price-wrapper {
+      gap: 4px;
+    }
+    
+    .upgrade-card__price-wrapper span {
+      font-size: 13px !important;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .energy-upgrade-banner {
+      padding: 14px;
+      margin: 12px 0;
+      box-sizing: border-box;
+    }
+    
+    .energy-upgrade-banner__content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+    
+    .energy-upgrade-banner__left {
+      min-width: 0;
+      gap: 10px;
+    }
+    
+    .energy-upgrade-banner__image,
+    .energy-upgrade-banner__fallback {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .energy-upgrade-banner__title {
+      font-size: 15px;
+    }
+    
+    .energy-upgrade-banner__benefit {
+      font-size: 13px;
+    }
+    
+    .energy-upgrade-banner__info {
+      font-size: 12px;
+    }
+    
+    .energy-upgrade-btn {
+      width: 100%;
+      padding: 14px 24px;
+    }
+  }
+  
+  /* ===== ADDITIONAL MOBILE REFINEMENTS ===== */
+  @media (max-width: 480px) {
+    .upgrade-card__details {
+      flex-direction: column;
+      gap: 6px;
+    }
+    
+    .upgrade-card__add-btn {
+      width: 100%;
+      align-self: stretch;
+    }
+  }
+  
+  /* ===== DESKTOP COMPACT STYLING ===== */
+  @media (min-width: 768px) {
+    .upgrade-section {
+      padding: 14px 0;
+    }
+    
+    .upgrade-card {
+      padding: 12px;
+      align-items: center;
+    }
+    
+    .upgrade-card__image img {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .upgrade-section__products {
+      gap: 8px;
+    }
+  }
+</style>
+
+
+<script src="{{ 'cart.js' | asset_url }}" defer></script>
+{%- if settings.gift_wrap_product != blank and settings.gift_wrap_product.available -%}
+  <script src="{{ 'gift-wrapping.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+<div class="cart{% if cart == empty %} is-empty{% endif %} section{% if cart != empty %} section--padding{% endif %}{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    <div class="title-wrapper{% if section.settings.heading_size == 'title-xl' %} title-wrapper-lg{% endif %} leading-none grid gap-4 md:flex {{ section.settings.heading_alignment }} md:justify-between">
+      <{{ section.settings.heading_tag }} class="heading {{ section.settings.heading_size }}">
+        {%- assign heading_content = 'cart.general.title' | t -%}
+        {%- render 'heading-content', content: heading_content, style: 'none' -%}
+      </{{ section.settings.heading_tag }}>
+      <p>
+        <a class="button button--secondary icon-with-text" href="{{ routes.all_products_collection_url }}" is="hover-link">
+          <span class="btn-fill" data-fill></span>
+          <span class="btn-text">
+            {%- liquid
+              render 'icon', icon: 'return', size: 'sm'
+              echo 'cart.general.continue_shopping' | t
+            -%}
+          </span>
+        </a>
+      </p>
+    </div>
+
+    <div class="empty-state grid items-center justify-center text-center gap-7d5 md:gap-14">
+      <div class="flex flex-col items-center gap-5 md:gap-10">
+        {%- render 'icon', icon: 'empty', size: 'xxxl' -%}
+        <div class="grid gap-5">
+          <p class="heading leading-none tracking-tight">{{ 'cart.general.empty' | t }}</p>
+        </div>
+      </div>
+      <a class="empty-state__link button button--primary button--fixed" href="{{ routes.all_products_collection_url }}" is="hover-link">
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">{{ 'cart.general.continue_shopping' | t }}</span>
+      </a>
+    </div>
+    
+    {%- if cart != empty -%}
+      {%- liquid
+        if settings.gift_wrap_product != blank and settings.gift_wrap_product.available
+          assign enable_gift_wrapping = true
+
+          assign gift_wrap_product = settings.gift_wrap_product
+          assign gift_wrap_variant = gift_wrap_product.first_available_variant
+          assign gift_wrap_per_product = settings.gift_wrap_per_product
+          assign gift_items = cart.items | where: 'variant_id', gift_wrap_variant.id
+
+          unless gift_wrap_per_product
+            assign gift_wraps_in_cart = 0
+            for item in gift_items
+              assign gift_wraps_in_cart = gift_wraps_in_cart | plus: item.quantity
+            endfor
+          endunless
+        endif
+
+        assign cart_gift_wrap_items = nil
+      -%}
+      <main-cart id="MainCart-{{ section.id }}" class="cart__content flex flex-col lg:flex-row" data-section-id="{{ section.id }}">
+        <div class="grow flex flex-col gap-8 md:gap-12">
+          <form class="cart__form" action="{{ routes.cart_url }}" method="POST" id="cart">
+            <cart-items class="cart__items block" data-section-id="{{ section.id }}">
+              <table role="table" class="no-headings w-full overflow-visible">
+                <caption class="sr-only">{{ 'cart.general.title' | t }}</caption>
+                <thead>
+                  <tr>
+                    <th colspan="1" scope="col">
+                      {{- 'cart.headings.product' | t -}}
+                    </th>
+                    <th class="hidden md:table-cell" colspan="1" scope="col">
+                      {{- 'cart.headings.quantity' | t -}}
+                    </th>
+                    <th class="text-right hidden md:table-cell" colspan="1" scope="col">
+                      {{- 'cart.headings.total' | t -}}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {%- for item in cart.items -%}
+                    {%- liquid
+                      assign is_gift_wrap_item = false
+                      if gift_wrap_variant != nil and item.id == gift_wrap_variant.id
+                        assign is_gift_wrap_item = true
+                      endif
+                    -%}
+                    {%- capture cart_item -%}
+                      <tr class="cart-item" id="CartItem-{{ item.key }}">
+                        <td>
+                          <div class="flex items-start md:items-center gap-4d5 md:gap-10">
+                            {%- if item.image -%}
+                              {%- assign max_width = item.image.width -%}
+                              {%- capture sizes -%}128px{%- endcapture -%}
+                              {%- capture widths -%}{{ 128 | times: 1.5 | at_most: max_width | round }}, {{ 128 | times: 2 | at_most: max_width }}, {{ 128 | times: 3 | at_most: max_width }}{%- endcapture -%}
+                              {%- unless is_gift_wrap_item -%}
+                                <a class="cart-item__media media relative overflow-hidden shrink-0" href="{{ item.url }}">
+                                  {{- item.image | image_url: width: max_width | image_tag: loading: 'lazy', widths: widths, sizes: sizes, is: 'lazy-image' -}}
+                                </a>
+                              {%- else -%}
+                                <figure class="cart-item__media media relative overflow-hidden shrink-0">
+                                  {{- item.image | image_url: width: max_width | image_tag: loading: 'lazy', widths: widths, sizes: sizes, is: 'lazy-image' -}}
+                                </figure>
+                              {%- endunless -%}
+                            {%- endif -%}
+                            
+                            <div class="cart-item__details grow flex flex-col justify-start gap-1d5">
+                              <div class="grid gap-1">
+                                <div class="block leading-tight">
+                                  {%- unless is_gift_wrap_item -%}
+                                    {%- if section.settings.show_vendor -%}
+                                      <p class="text-xs text-opacity">{{ item.product.vendor }}</p>
+                                    {%- endif -%}
+                                    <a href="{{ item.url }}" class="cart__item-title reversed-link font-medium text-base leading-tight">{{ item.product.title | escape }}</a>
+                                  {%- else -%}
+                                    <p class="font-medium text-base leading-tight">{{ item.product.title | escape }}</p>
+                                  {%- endunless -%}
+                                  {%- comment -%} ===== STAR RATING ===== {%- endcomment -%}
+                                  {%- liquid
+                                    assign rating = item.product.metafields.reviewscouk.rating
+                                    assign total_reviews = item.product.metafields.reviewscouk.total
+                                  -%}
+                                  {%- if rating and rating != blank -%}
+                                    <div class="cart-item-stars">
+                                      <div class="cart-item-stars__rating">
+                                        {%- liquid
+                                          assign rating_number = rating | times: 1.0
+                                          assign rounded_rating = rating_number | round
+                                          assign empty_stars = 5 | minus: rounded_rating
+                                        -%}
+                                        {%- for i in (1..rounded_rating) -%}
+                                          <span class="cart-item-stars__star">★</span>
+                                        {%- endfor -%}
+                                        {%- for i in (1..empty_stars) -%}
+                                          <span class="cart-item-stars__star cart-item-stars__star--empty">★</span>
+                                        {%- endfor -%}
+                                      </div>
+                                      <span class="cart-item-stars__value">{{ rating }}</span>
+                                      {%- if total_reviews and total_reviews != blank -%}
+                                        <span class="cart-item-stars__count">({{ total_reviews }} Reviews)</span>
+                                      {%- endif -%}
+                                    </div>
+                                  {%- endif -%}
+                                </div>
+                      
+                                {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != null -%}
+                                  <dl class="grid gap-1d5">
+                                    {%- unless item.product.has_only_default_variant -%}
+                                      {%- for option in item.options_with_values -%}
+                                        <div class="text-xs text-opacity leading-tight">
+                                          <dt class="font-medium">{{ option.name }}:</dt>
+                                          <dd class="inline">{{ option.value }}</dd>
+                                        </div>
+                                      {%- endfor -%}
+                                    {%- endunless -%}
+                      
+                                    {%- for property in item.properties -%}
+                                      {%- assign property_first_char = property.first | slice: 0 -%}
+                                      {%- if property.last != blank and property_first_char != '_' -%}
+                                        <div class="text-xs text-opacity leading-tight">
+                                          <dt class="inline">{{ property.first }}:&nbsp;</dt>
+                                          <dd class="inline">
+                                            {%- if property.last contains '/uploads/' -%}
+                                              <a href="{{ property.last }}" class="link" target="_blank" aria-describedby="a11y-new-window-message">
+                                                {{- property.last | split: '/' | last -}}
+                                              </a>
+                                            {%- else -%}
+                                              {{- property.last -}}
+                                            {%- endif -%}
+                                          </dd>
+                                        </div>
+                                      {%- endif -%}
+                                    {%- endfor -%}
+                                  </dl>
+                      
+                                  {%- if item.selling_plan_allocation != null -%}
+                                    <p class="text-xs text-opacity">{{ item.selling_plan_allocation.selling_plan.name }}</p>
+                                  {%- endif -%}
+                                {%- endif -%}
+                              </div>
+
+                              <div class="flex flex-col gap-3 md:gap-4">
+                                <div class="flex flex-col gap-1">
+                                  <div class="price{% if item.original_price != item.final_price or item.variant.compare_at_price > item.variant.price %} price--on-sale{% endif %} text-sm flex flex-wrap gap-1d5">
+                                    {%- liquid
+                                      assign money_price = item.original_price | money
+                                      if settings.currency_code_enabled
+                                        assign money_price = item.original_price | money_with_currency
+                                      endif
+                                    -%}
+                                    {%- if item.variant.compare_at_price > item.variant.price -%}
+                                      <span class="sr-only">{{ 'products.price.regular_price' | t }}</span>
+                                      <span class="price__regular inline-flex items-center relative" style="text-decoration: line-through !important; color: #000;">
+                                        {%- liquid
+                                          if settings.currency_code_enabled
+                                            echo item.variant.compare_at_price | money_with_currency
+                                          else
+                                            echo item.variant.compare_at_price | money
+                                          endif
+                                        -%}
+                                      </span>
+                                      <span class="sr-only">{{ 'products.price.sale_price' | t }}</span>
+                                      <span class="price__sale whitespace-nowrap" style="color: #ffa500;">
+                                        {%- liquid
+                                          if settings.currency_code_enabled
+                                            echo item.variant.price | money_with_currency
+                                          else
+                                            echo item.variant.price | money
+                                          endif
+                                        -%}
+                                      </span>
+                                    {%- elsif item.original_price != item.final_price -%}
+                                      <span class="sr-only">{{ 'products.price.regular_price' | t }}</span>
+                                      <span class="price__regular inline-flex items-center relative" style="text-decoration: line-through !important; color: #000;">{{ money_price }}</span>
+                                      <span class="sr-only">{{ 'products.price.sale_price' | t }}</span>
+                                      <span class="price__sale whitespace-nowrap" style="color: #ffa500;">
+                                        {%- liquid
+                                          if settings.currency_code_enabled
+                                            echo item.final_price | money_with_currency
+                                          else
+                                            echo item.final_price | money
+                                          endif
+                                        -%}
+                                      </span>
+                                    {%- else -%}
+                                      <span class="price__regular whitespace-nowrap">{{ money_price }}</span>
+                                    {%- endif -%}
+                        
+                                    {%- if item.variant.available and item.unit_price_measurement -%}
+                                      <span class="sr-only">{{ 'products.price.unit_price' | t }}</span>
+                                      <span class="unit-price flex items-center">
+                                        {%- liquid
+                                          capture unit_price_base_unit
+                                            if item.variant.unit_price_measurement
+                                              if item.variant.unit_price_measurement.reference_value != 1
+                                                echo item.variant.unit_price_measurement.reference_value
+                                              endif
+                                              echo item.variant.unit_price_measurement.reference_unit
+                                            endif
+                                          endcapture
+                                        -%}
+                                        ({{ item.variant.unit_price | money }}
+                                        <span aria-hidden="true">/</span>
+                                        <span class="sr-only">&nbsp;{{ 'general.accessibility.unit_price_separator' | t }}&nbsp;</span>
+                                        {{ unit_price_base_unit }})
+                                      </span>
+                                    {%- endif -%}
+                                  </div>
+                        
+                                  {%- if item.line_level_discount_allocations != blank -%}
+                                    <ul class="discounts grid gap-2" role="list" aria-label="{{ 'customer.order.discounts' | t | escape }}">
+                                      {%- for discount_allocation in item.line_level_discount_allocations -%}
+                                        <li class="discounts__discount text-xs flex flex-wrap items-center gap-1">
+                                          <span class="badge badge--highlight flex items-center gap-1d5 font-medium leading-none">{{ discount_allocation.discount_application.title }}</span>
+                                          <span class="badge badge--onsale flex items-center gap-1d5 font-medium leading-none">-{{ discount_allocation.amount | money }}</span>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endif -%}
+                                </div>
+
+                                {%- liquid
+                                  unless is_gift_wrap_item
+                                    if gift_wrap_per_product
+                                      render 'gift-wrap-selector', gift_wrap_variant: gift_wrap_variant, line_item: item, section_id: section.id, context: 'page'
+                                    endif
+                                  endunless
+                                -%}
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="cart-item__quantity text-sm text-right md:text-left">
+                          {%- liquid
+                            assign has_qty_rules = false
+                            if item.variant.quantity_rule.increment > 1 or item.variant.quantity_rule.min > 1 or item.variant.quantity_rule.max != null
+                              assign has_qty_rules = true
+                            endif
+      
+                            assign has_vol_pricing = false
+                            if item.variant.quantity_price_breaks.size > 0
+                              assign has_vol_pricing = true
+                            endif
+                          -%}
+                          {%- if has_qty_rules or has_vol_pricing -%}
+                            {%- capture qty_rules_vol_pricing -%}
+                              {%- if has_qty_rules -%}
+                                <div class="quantity__rules text-sm font-medium leading-tight">
+                                  {%- if item.variant.quantity_rule.increment > 1 -%}
+                                    <span class="divider">
+                                      {{- 'products.quantity.multiples_of' | t: quantity: item.variant.quantity_rule.increment -}}
+                                    </span>
+                                  {%- endif -%}
+                                  {%- if item.variant.quantity_rule.min > 1 -%}
+                                    <span class="divider">
+                                      {{- 'products.quantity.min_of' | t: quantity: item.variant.quantity_rule.min -}}
+                                    </span>
+                                  {%- endif -%}
+                                  {%- if item.variant.quantity_rule.max != null -%}
+                                    <span class="divider">
+                                      {{- 'products.quantity.max_of' | t: quantity: item.variant.quantity_rule.max -}}
+                                    </span>
+                                  {%- endif -%}
+                                </div>
+                              {%- endif -%}
+                              {%- if has_vol_pricing -%}
+                                {{ 'volume-pricing.css' | asset_url | stylesheet_tag }}
+                                <volume-pricing class="volume-pricing grid gap-6">
+                                  <span class="caption-large font-medium">{{ 'products.volume_pricing.title' | t }}</span>
+                                  <ul class="list-unstyled">
+                                    <li class="text-sm flex gap-2d5 justify-between">
+                                      <span class="font-medium">{{ item.variant.quantity_rule.min }}+</span>
+                                      {%- assign price = item.variant.price | money_with_currency -%}
+                                      <span> {{ 'sections.quick_order_list.each' | t: money: price }}</span>
+                                    </li>
+                                    {%- for price_break in item.variant.quantity_price_breaks -%}
+                                      <li class="text-sm flex gap-2d5 justify-between">
+                                        <span class="font-medium">
+                                          {{- price_break.minimum_quantity -}}
+                                          <span aria-hidden="true">+</span>
+                                        </span>
+                                        {%- assign price = price_break.price | money_with_currency -%}
+                                        <span> {{ 'sections.quick_order_list.each' | t: money: price }}</span>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </volume-pricing>
+                              {%- endif -%}
+                            {%- endcapture -%}
+                          {%- endif -%}
+                          <div class="cart-quantity__info grid md:flex items-center justify-end md:justify-start gap-3 md:gap-4">
+                            {%- if has_qty_rules or has_vol_pricing -%}
+                              <hover-element class="hotspot hidden md:flex items-center justify-center relative cursor-pointer">
+                                {%- render 'icon', icon: 'info', size: 'lg' -%}
+                                <div class="hotspot__content absolute z-1 pointer-events-none cursor-default grid gap-6 items-center text-left">
+                                  {{- qty_rules_vol_pricing -}}
+                                </div>
+                              </hover-element>
+                            {%- endif -%}
+                            {%- unless is_gift_wrap_item -%}
+                              <div class="flex gap-3">
+                                {%- if has_qty_rules or has_vol_pricing -%}
+                                  <button type="button" class="md:hidden flex items-center justify-center" aria-controls="VolumePricing-{{ section.id }}-{{ item.key }}" aria-expanded="false">
+                                    {%- render 'icon', icon: 'info', size: 'sm' -%}
+                                  </button>
+                                  <x-modal id="VolumePricing-{{ section.id }}-{{ item.key }}" class="x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none"
+                                    role="dialog"
+                                    aria-modal="true"
+                                    aria-label="{{ item.product.title | escape }}"
+                                    hidden
+                                  >
+                                    <overlay-element class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none" aria-controls="VolumePricing-{{ section.id }}-{{ item.key }}" aria-expanded="false"></overlay-element>
+                                    <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
+                                      <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative" tabindex="0">
+                                        <span class="drawer__title heading title-md grid gap-4">
+                                          {{ item.product.title | escape }}
+                                          {%- unless item.product.has_only_default_variant -%}
+                                            <dl class="grid gap-1d5">
+                                              {%- for option in item.options_with_values -%}
+                                                <div class="text-xs text-opacity leading-tight">
+                                                  <dt class="sr-only">{{ option.name }}:</dt>
+                                                  <dd class="inline">{{ option.value }}</dd>
+                                                </div>
+                                              {%- endfor -%}
+                                            </dl>
+                                          {%- endunless -%}
+                                        </span>
+                                        <button class="button button--secondary button--close drawer__close hidden sm:flex items-center justify-center" type="button" is="hover-button" aria-controls="VolumePricing-{{ section.id }}-{{ item.key }}" aria-expanded="false" aria-label="{{ 'general.accessibility.close' | t | escape }}">
+                                          <span class="btn-fill" data-fill></span>
+                                          <span class="btn-text">
+                                            {%- render 'icon', icon: 'close', size: 'sm' -%}
+                                          </span>
+                                        </button>
+                                      </gesture-element>
+                                      <div class="drawer__content opacity-0 invisible flex flex-col h-full grow shrink">
+                                        <div class="drawer__scrollable relative flex flex-col gap-5 md:gap-7 grow shrink">
+                                          <div class="text-base md:text-lg grid gap-6">
+                                            {{- qty_rules_vol_pricing -}}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </x-modal>
+                                {%- endif -%}
+                                <quantity-input class="cart-quantity flex items-center relative">
+                                  <label class="sr-only" for="Quantity-{{ section.id }}-{{ item.key }}">
+                                    {{- 'products.quantity.label' | t -}}
+                                  </label>
+                                  <input class="quantity__input input text-center w-full h-full"
+                                    type="number"
+                                    name="updates[]"
+                                    aria-label="{{ 'products.quantity.input_label' | t: product: item.product.title | escape }}"
+                                    id="Quantity-{{ section.id }}-{{ item.key }}"
+                                    data-index="{{ item.key }}"
+                                    inputmode="numeric"
+                                    autocomplete="off"
+                                    data-quantity-variant-id="{{ item.variant.id }}"
+                                    data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+                                    min="0"
+                                    data-min="{{ item.variant.quantity_rule.min }}"
+                                    {% if item.variant.quantity_rule.max != null %}
+                                      max="{{ item.variant.quantity_rule.max }}"
+                                    {% endif %}
+                                    step="{{ item.variant.quantity_rule.increment }}"
+                                    value="{{ item.quantity }}"
+                                  />
+                                  <div class="quantity__buttons absolute right-0 hidden lg:flex flex-col items-center justify-center h-full">
+                                    <button type="button" name="plus" class="quantity__button flex justify-center w-full items-end" aria-label="{{ 'products.quantity.increase' | t: product: item.product.title | escape }}">
+                                      {%- render 'icon', icon: 'increase', size: 'sm', class: 'stroke-1' -%}
+                                    </button>
+                                    <button type="button" name="minus" class="quantity__button flex justify-center w-full items-start" aria-label="{{ 'products.quantity.decrease' | t: product: item.product.title | escape }}">
+                                      {%- render 'icon', icon: 'decrease', size: 'sm', class: 'stroke-1' -%}
+                                    </button>
+                                  </div>
+                                </quantity-input>
+                              </div>
+                            {%- else -%}
+                              <div class="cart-quantity flex items-center relative">
+                                <label class="sr-only" for="Quantity-{{ section.id }}-{{ item.key }}">
+                                  {{- 'products.quantity.label' | t -}}
+                                </label>
+                                <input class="quantity__input input text-center w-full h-full"
+                                  type="number"
+                                  name="updates[]"
+                                  aria-label="{{ 'products.quantity.input_label' | t: product: item.product.title | escape }}"
+                                  id="Quantity-{{ section.id }}-{{ item.key }}"
+                                  data-index="{{ item.key }}"
+                                  inputmode="numeric"
+                                  autocomplete="off"
+                                  data-quantity-variant-id="{{ item.variant.id }}"
+                                  data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
+                                  min="0"
+                                  data-min="{{ item.variant.quantity_rule.min }}"
+                                  {% if item.variant.quantity_rule.max != null %}
+                                    max="{{ item.variant.quantity_rule.max }}"
+                                  {% endif %}
+                                  step="{{ item.variant.quantity_rule.increment }}"
+                                  value="{{ item.quantity }}"
+                                  disabled
+                                />
+                              </div>
+                            {%- endunless -%}
+                            <div class="text-xs relative">
+                              <div id="Loader-{{ section.id }}-{{ item.key }}" class="loader absolute right-0 md:left-0" hidden>
+                                {%- render 'icon', icon: 'rotator', size: 'xs', class: 'animate-rotator' -%}
+                              </div>
+                              <a class="link" href="{{ item.url_to_remove }}"{% unless is_gift_wrap_item %} is="cart-remove-button"{% else %} is="remove-gift-wrap"{% endunless %} data-index="{{ item.key }}" data-no-instant>{{ 'cart.general.remove' | t }}</a>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="text-right hidden md:table-cell">
+                          <span class="price text-base-xl">
+                            {%- liquid
+                              if settings.currency_code_enabled
+                                echo item.final_line_price | money_with_currency
+                              else
+                                echo item.final_line_price | money
+                              endif
+                            -%}
+                          </span>
+                        </td>
+                      </tr>
+                    {%- endcapture -%}
+
+                    {%- liquid
+                      unless is_gift_wrap_item
+                        echo cart_item
+                      else
+                        assign cart_gift_wrap_items = cart_gift_wrap_items | append: cart_item
+                      endunless
+                    -%}
+                    
+                    {%- comment -%}========== ENERGY BUNDLE UPGRADE MODULE =========={%- endcomment -%}
+                    {%- unless is_gift_wrap_item -%}
+                      {%- assign has_energy_upgrade = false -%}
+                      {%- assign energy_bundle_variant = nil -%}
+                      {%- assign current_model_value = '' -%}
+                      {%- assign upgrade_price_difference = 0 -%}
+                      
+                      {%- for option in item.options_with_values -%}
+                        {%- if option.name == 'Model' or option.name == 'Edition' -%}
+                          {%- assign current_model_value = option.value -%}
+                          {%- break -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                      
+                      {%- if current_model_value == 'Standard' -%}
+                        {%- for variant in item.product.variants -%}
+                          {%- if variant.available and variant.id != item.variant_id -%}
+                            {%- assign variant_options = variant.title | split: ' / ' -%}
+                            {%- assign is_energysave = false -%}
+                            
+                            {%- for opt in variant_options -%}
+                              {%- if opt == 'EnergySave Bundle' -%}
+                                {%- assign is_energysave = true -%}
+                                {%- break -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                            
+                            {%- if is_energysave -%}
+                              {%- assign color_match = false -%}
+                              {%- assign size_match = false -%}
+                              
+                              {%- for option in item.options_with_values -%}
+                                {%- if option.name == 'Color' -%}
+                                  {%- assign current_color = option.value -%}
+                                  {%- if variant.title contains current_color -%}
+                                    {%- assign color_match = true -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                                {%- if option.name == 'Size' -%}
+                                  {%- assign current_size = option.value -%}
+                                  {%- if variant.title contains current_size -%}
+                                    {%- assign size_match = true -%}
+                                  {%- endif -%}
+                                {%- endif -%}
+                              {%- endfor -%}
+                              
+                              {%- if color_match and size_match -%}
+                                {%- assign has_energy_upgrade = true -%}
+                                {%- assign energy_bundle_variant = variant -%}
+                                {%- assign upgrade_price_difference = variant.price | minus: item.variant.price -%}
+                                {%- break -%}
+                              {%- endif -%}
+                            {%- endif -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                      
+                      {%- if has_energy_upgrade -%}
+                        <tr class="energy-upgrade-row">
+                          <td colspan="3" style="padding: 0;">
+                            <div class="energy-upgrade-banner">
+                              <div class="energy-upgrade-banner__decorative"></div>
+                              
+                              <div class="energy-upgrade-banner__content">
+                                <div class="energy-upgrade-banner__left">
+                                  {%- if energy_bundle_variant.image -%}
+                                    <div class="energy-upgrade-banner__image">
+                                      <img src="{{ energy_bundle_variant.image | image_url: width: 160 }}" 
+                                           alt="{{ energy_bundle_variant.title | escape }}"
+                                           loading="lazy">
+                                    </div>
+                                  {%- else -%}
+                                    <div class="energy-upgrade-banner__fallback">
+                                      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#22c55e"/>
+                                        <path d="M16.2 7.8c-3.4-1.2-7.1.1-8.8 3.2-.9 1.6-.9 3.5 0 5.1.4.7 1 1.3 1.7 1.7 1.6.9 3.5.9 5.1 0 3.1-1.7 4.4-5.4 3.2-8.8-.3-.8-.8-1.4-1.2-1.2z" fill="#22c55e"/>
+                                        <path d="M12 8v8M8 12h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                      </svg>
+                                    </div>
+                                  {%- endif -%}
+                                  
+                                  <div class="energy-upgrade-banner__text">
+                                    <h4 class="energy-upgrade-banner__title">
+                                      Upgrade to our EnergySave™ Bundle
+                                    </h4>
+                                    <p class="energy-upgrade-banner__benefit">
+                                      Save up to <strong>30% on running costs</strong> annually
+                                    </p>
+                                    <p class="energy-upgrade-banner__info">
+                                      Bundle Includes EnergySave™ Cover & Floor Mats worth up to £200/$250/€230
+                                    </p>
+                                  </div>
+                                </div>
+                                
+                                <div>
+                                  <button type="button" 
+                                          class="energy-upgrade-btn"
+                                          data-line-key="{{ item.key }}"
+                                          data-variant-id="{{ item.variant.id }}"
+                                          data-new-variant-id="{{ energy_bundle_variant.id }}"
+                                          data-quantity="{{ item.quantity }}">
+                                    {%- if upgrade_price_difference > 0 -%}
+                                      Upgrade for&nbsp;
+                                      {%- if settings.currency_code_enabled -%}
+                                        {{- upgrade_price_difference | money_with_currency -}}
+                                      {%- else -%}
+                                        {{- upgrade_price_difference | money -}}
+                                      {%- endif -%}
+                                    {%- elsif upgrade_price_difference == 0 -%}
+                                      Free Upgrade!
+                                    {%- elsif upgrade_price_difference < 0 -%}
+                                      {%- assign savings = 0 | minus: upgrade_price_difference -%}
+                                      Upgrade & Save&nbsp;
+                                      {%- if settings.currency_code_enabled -%}
+                                        {{- savings | money_with_currency -}}
+                                      {%- else -%}
+                                        {{- savings | money -}}
+                                      {%- endif -%}
+                                    {%- endif -%}
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      {%- endif -%}
+                    {%- endunless -%}
+
+                  {%- endfor -%}
+
+                  {%- comment -%}========== CONSOLIDATED FREQUENTLY BOUGHT TOGETHER =========={%- endcomment -%}
+                  {%- liquid
+                    assign all_upgrades = ""
+                    assign shown_product_ids = ""
+                    
+                    for cart_item in cart.items
+                      assign item_upgrades = cart_item.product.metafields.custom.popular_upgrades.value
+                      if item_upgrades
+                        for upgrade in item_upgrades
+                          assign upgrade_id_str = upgrade.id | append: ","
+                          unless shown_product_ids contains upgrade_id_str
+                            assign product_already_in_cart = false
+                            for check_item in cart.items
+                              if check_item.product.id == upgrade.id
+                                assign product_already_in_cart = true
+                                break
+                              endif
+                            endfor
+                            unless product_already_in_cart
+                              if upgrade.available
+                                assign all_upgrades = all_upgrades | append: upgrade.id | append: "|"
+                                assign shown_product_ids = shown_product_ids | append: upgrade_id_str
+                              endif
+                            endunless
+                          endunless
+                        endfor
+                      endif
+                    endfor
+                    
+                    assign upgrade_ids_array = all_upgrades | split: "|"
+                  -%}
+                  
+                  {%- if upgrade_ids_array.size > 0 -%}
+                    <tr class="cart-item-upgrades consolidated-upgrades">
+                      <td colspan="3" style="padding: 0;">
+                        <div class="upgrade-section">
+                          <div class="upgrade-section__header">
+                            <h3 class="upgrade-section__title">
+                              Popular Add Ons
+                            </h3>
+                          </div>
+
+                          <div class="upgrade-section__products">
+                            {%- for cart_item in cart.items -%}
+                              {%- assign item_upgrades = cart_item.product.metafields.custom.popular_upgrades.value -%}
+                              {%- if item_upgrades -%}
+                                {%- for upgrade_product in item_upgrades -%}
+                                  {%- assign upgrade_id_str = upgrade_product.id | append: "|" -%}
+                                  {%- if all_upgrades contains upgrade_id_str -%}
+                                    {%- assign product_in_cart = false -%}
+                                    {%- for check_item in cart.items -%}
+                                      {%- if check_item.product.id == upgrade_product.id -%}
+                                        {%- assign product_in_cart = true -%}
+                                        {%- break -%}
+                                      {%- endif -%}
+                                    {%- endfor -%}
+                                    
+                                    {%- unless product_in_cart -%}
+                                      {%- if upgrade_product.available -%}
+                                        {%- liquid
+                                          assign available_variants_count = 0
+                                          for variant in upgrade_product.variants
+                                            if variant.available
+                                              assign available_variants_count = available_variants_count | plus: 1
+                                            endif
+                                          endfor
+                                        -%}
+
+                                        {%- if available_variants_count > 0 -%}
+                                          {%- liquid
+                                            assign first_available_variant = nil
+                                            for variant in upgrade_product.variants
+                                              if variant.available
+                                                assign first_available_variant = variant
+                                                break
+                                              endif
+                                            endfor
+                                            
+                                            assign unique_id = cart_item.key | replace: ':', '' | append: "-" | append: forloop.index
+                                          -%}
+
+                                          <div class="upgrade-card" data-product-id="{{ upgrade_product.id }}" data-card-index="{{ unique_id }}">
+                                            
+                                            {%- comment -%} Image {%- endcomment -%}
+                                            <a href="{{ upgrade_product.url }}" 
+                                               class="upgrade-card__image">
+                                              {%- if upgrade_product.featured_image -%}
+                                                <img src="{{ upgrade_product.featured_image | image_url: width: 120 }}" 
+                                                     alt="{{ upgrade_product.title | escape }}"
+                                                     loading="lazy">
+                                              {%- endif -%}
+                                            </a>
+
+                                            <div class="upgrade-card__details">
+                                              <div class="upgrade-card__content">
+                                                {%- comment -%} Title {%- endcomment -%}
+                                                <h4 class="upgrade-card__title">
+                                                  <a href="{{ upgrade_product.url }}">
+                                                    {{ upgrade_product.title | escape }}
+                                                  </a>
+                                                </h4>
+
+                                                {%- comment -%} Variant Selector {%- endcomment -%}
+                                                {%- if available_variants_count > 1 -%}
+                                                  <select class="upgrade-card__variant-selector variant-selector-consolidated" 
+                                                          data-card-index="{{ unique_id }}"
+                                                          data-parent-index="consolidated"
+                                                          data-product-options='{{ upgrade_product.options | json | escape }}'>
+                                                    {%- for variant in upgrade_product.variants -%}
+                                                      {%- if variant.available -%}
+                                                        <option value="{{ variant.id }}" 
+                                                                data-price="{{ variant.price }}"
+                                                                data-compare-price="{{ variant.compare_at_price }}"
+                                                                data-title="{{ variant.title | escape }}"
+                                                                data-option1="{{ variant.option1 | escape }}"
+                                                                data-option2="{{ variant.option2 | escape }}"
+                                                                data-option3="{{ variant.option3 | escape }}"
+                                                                {% if variant.id == first_available_variant.id %}selected{% endif %}>
+                                                          {{ variant.title | escape }}
+                                                        </option>
+                                                      {%- endif -%}
+                                                    {%- endfor -%}
+                                                  </select>
+                                                {%- elsif first_available_variant.title != 'Default Title' -%}
+                                                  <div class="upgrade-card__variant-text">
+                                                    {{ first_available_variant.title }}
+                                                  </div>
+                                                {%- endif -%}
+                                              </div>
+                                              
+                                              <div class="upgrade-card__actions-row">
+                                                {%- comment -%} Price {%- endcomment -%}
+                                                <div class="price{% if first_available_variant.compare_at_price > first_available_variant.price %} price--on-sale{% endif %} upgrade-price-wrapper-{{ unique_id }}">
+                                                  {%- liquid
+                                                    assign money_price = first_available_variant.price | money
+                                                    if settings.currency_code_enabled
+                                                      assign money_price = first_available_variant.price | money_with_currency
+                                                    endif
+                                                  -%}
+                                                  {%- if first_available_variant.compare_at_price > first_available_variant.price -%}
+                                                    <span class="sr-only">{{ 'products.price.sale_price' | t }}</span>
+                                                    <span class="price__sale whitespace-nowrap upgrade-price-{{ unique_id }}">
+                                                      {{ money_price }}
+                                                    </span>
+                                                  {%- else -%}
+                                                    <span class="price__regular whitespace-nowrap upgrade-price-{{ unique_id }}">
+                                                      {{ money_price }}
+                                                    </span>
+                                                  {%- endif -%}
+                                                </div>
+                                                
+                                                {%- comment -%} Add Button {%- endcomment -%}
+                                                <button type="button" 
+                                                        class="upgrade-card__add-btn individual-add-btn"
+                                                        data-variant-id="{{ first_available_variant.id }}"
+                                                        data-card-index="{{ unique_id }}"
+                                                        data-parent-index="consolidated">
+                                                  Add to Bag
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          {%- assign all_upgrades = all_upgrades | replace: upgrade_id_str, "" -%}
+                                        {%- endif -%}
+                                      {%- endif -%}
+                                    {%- endunless -%}
+                                  {%- endif -%}
+                                {%- endfor -%}
+                              {%- endif -%}
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  {%- endif -%}
+
+
+                  {%- liquid
+                    unless gift_wrap_per_product
+                      if cart_gift_wrap_items != nil
+                        echo cart_gift_wrap_items
+                      endif
+                    endunless
+                  -%}
+                </tbody>
+              </table>
+            </cart-items>
+          </form>
+
+          {%- liquid
+            if enable_gift_wrapping
+              if gift_wrap_per_product
+                render 'gift-wrapping-list', gift_items: gift_items, section_id: section.id
+              else
+                render 'gift-wrapping', gift_wrap_variant: gift_wrap_variant, gift_wraps_in_cart: gift_wraps_in_cart, section_id: section.id
+              endif
+            endif
+          -%}
+
+          {%- if section.settings.show_shipping_calculator or section.settings.add_discount_code -%}
+            <div class="grid gap-6 items-start{% if section.settings.show_shipping_calculator and section.settings.add_discount_code %} xl:grid-cols-2{% endif %}">
+              {%- if section.settings.show_shipping_calculator -%}
+                <div class="cart-details">
+                  <details class="details" is="accordion-details">
+                    <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                      <span class="text-base-2xl font-medium leading-none">{{ 'general.cart.shipping_calculator.caption' | t }}</span>
+                      <svg class="icon icon-chevron-down" viewBox="0 0 18 10" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M1 1L9 9L17 1"></path>
+                      </svg>
+                    </summary>
+                    <form class="details__content grid gap-4 md:gap-6" action="{{ routes.cart_url }}" method="POST" novalidate is="shipping-calculator">
+                      <div class="grid{% unless section.settings.add_discount_code %} xl:flex{% endunless %} gap-4">
+                        <country-province class="grid{% unless section.settings.add_discount_code %} xl:flex{% endunless %} gap-4"{% if shop.customer_accounts_enabled and customer %} data-country="{{ customer.default_address.country }}"{% if customer.default_address.province != '' %} data-province="{{ customer.default_address.province }}"{% endif %}{% endif %}>
+                          <div class="field">
+                            <select
+                              name="address[country]"
+                              class="select is-floating"
+                              autocomplete="country"
+                              is="custom-select"
+                              id="ShippingCalculatorCountry-{{ section.id }}"
+                            >
+                              {{- all_country_option_tags -}}
+                            </select>
+                            {%- render 'icon', icon: 'chevron-up', size: 'sm', class: 'absolute pointer-events-none' -%}
+                            <label class="label is-floating" for="ShippingCalculatorCountry-{{ section.id }}">{{ 'customer.addresses.country' | t }}</label>
+                          </div>
+                          <div class="field" hidden>
+                            <select
+                              name="address[province]"
+                              class="select is-floating"
+                              autocomplete="address-level1"
+                              is="custom-select"
+                              id="ShippingCalculatorProvince-{{ section.id }}"
+                            >
+                            </select>
+                            {%- render 'icon', icon: 'chevron-up', size: 'sm', class: 'absolute pointer-events-none' -%}
+                            <label class="label is-floating" for="ShippingCalculatorProvince-{{ section.id }}">{{ 'customer.addresses.province' | t }}</label>
+                          </div>
+                        </country-province>
+                        <div class="field">
+                          <input
+                            name="address[zip]"
+                            class="input is-floating"
+                            type="text"
+                            autocapitalize="characters"
+                            autocomplete="postal-code"
+                            placeholder=" "
+                            id="ShippingCalculatorZip-{{ section.id }}"
+                            {% if shop.customer_accounts_enabled and customer %}value="{{ customer.default_address.zip }}"{% endif %}
+                          />
+                          <label class="label is-floating" for="ShippingCalculatorZip-{{ section.id }}">{{ 'customer.addresses.zip' | t }}</label>
+                        </div>
+                        <div class="justify-self-start{% if section.settings.add_discount_code %} w-full{% endif %}">
+                          <button class="button{% if section.settings.add_discount_code %} button--primary w-full{% else %} button--secondary button--fixed{% endif %}" type="submit" is="hover-button">
+                            <span class="btn-fill" data-fill></span>
+                            <span class="btn-text">{{ 'general.cart.shipping_calculator.button' | t }}</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="alert alert--error alert--transparent flex gap-2d5" hidden>
+                        {%- render 'icon', icon: 'alert-circle-filled', size: 'sm', class: 'shrink-0' -%}
+                        <div class="grid gap-2 align-self-center text-sm leading-tight"></div>
+                      </div>
+                    </form>
+                  </details>
+                </div>
+              {%- endif -%}
+              
+              {%- if section.settings.add_discount_code -%}
+                {%- liquid
+                  assign discount_codes = cart.cart_level_discount_applications | where: 'type', 'discount_code' | map: 'title'
+                  for item in cart.items
+                    for allocation in item.line_level_discount_allocations
+                      if allocation.discount_application.type == 'discount_code'
+                        assign discount_codes = item.line_level_discount_allocations | slice: forloop.index0 | map: 'discount_application' | map: 'title' | concat: discount_codes
+                      endif
+                    endfor
+                  endfor
+
+                  assign discount_codes = discount_codes | uniq
+                -%}
+                <div class="cart-details">
+                  <details class="details" is="accordion-details" id="CartDiscount-{{ section.id }}">
+                    <summary class="details__summary flex items-center justify-between gap-2 cursor-pointer">
+                      <p class="flex items-center gap-2d5">
+                        <span class="text-base-2xl font-medium leading-none">{{ 'general.cart.discount.caption' | t }}</span>
+                        {%- if discount_codes.size > 0 -%}
+                          <span class="cart-discount__count flex items-center justify-center text-xs font-medium rounded-full">{{ discount_codes.size }}</span>
+                        {%- endif -%}
+                      </p>
+                      <svg class="icon icon-chevron-down" viewBox="0 0 18 10" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M1 1L9 9L17 1"></path>
+                      </svg>
+                    </summary>
+                    <form class="details__content cart-discount grid gap-4 md:gap-6" action="{{ routes.cart_url }}" method="POST" novalidate is="cart-discount" data-section-id="{{ section.id }}">
+                      <ul class="active-facets flex flex-wrap items-center gap-2" role="list" aria-label="{{ 'customer.order.discounts' | t | escape }}">
+                        {%- for discount_code in discount_codes -%}
+                          <li
+                            class="removable-facet badge badge--highlight flex items-center justify-between gap-2 text-xs lg:text-sm leading-none"
+                            aria-label="{{ 'general.cart.discount.applied' | t: code: discount_code | escape }}"
+                          >
+                            <p class="facet-title">{{ discount_code }}</p>
+                            <button type="button" class="block relative" aria-label="{{ 'general.cart.discount.remove' | t: code: discount_code | escape }}" is="discount-remove" data-magnet="3" data-discount="{{ discount_code }}">
+                              <span class="btn-text" data-text>
+                                {%- liquid
+                                  render 'icon', icon: 'remove', size: 'xs'
+                                  render 'icon', icon: 'loader', size: 'sm absolute opacity-0 invisible animate-spin'
+                                -%}
+                              </span>
+                            </button>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                      <div class="field">
+                        <input type="text" name="discount" class="input is-floating" rows="3" placeholder=" " id="CartDiscountForm-{{ section.id }}"/>
+                        <label class="label is-floating" for="CartDiscountForm-{{ section.id }}">{{ 'general.cart.discount.placeholder' | t }}</label>
+                      </div>
+                      <button class="button button--primary w-full" type="submit" is="hover-button">
+                        <span class="btn-fill" data-fill></span>
+                        <span class="btn-text">{{ 'general.cart.discount.button' | t }}</span>
+                      </button>
+                      <div class="alert alert--error alert--transparent flex gap-2d5" hidden>
+                        {%- render 'icon', icon: 'alert-circle-filled', size: 'sm', class: 'shrink-0' -%}
+                        <div class="grid gap-2 align-self-center text-sm leading-tight"></div>
+                      </div>
+                    </form>
+                  </details>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+
+        <div class="grow-0">
+          <sticky-element class="flex flex-col gap-7d5 lg:sticky top-0">
+            <div class="cart__sidebar flex flex-col gap-7d5 md:gap-10">
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when '@app' -%}
+                    {%- render block -%}
+                  
+                  {%- when 'subtotal' -%}
+                    <div class="grid gap-3" {{ block.shopify_attributes }}>
+                      {%- if cart.cart_level_discount_applications.size > 0 -%}
+                        <ul class="discounts grid gap-2" role="list" aria-label="{{ 'customer.order.discounts' | t | escape }}">
+                          {%- for discount in cart.cart_level_discount_applications -%}
+                            <li class="discounts__discount text-sm sm:text-base flex flex-wrap items-center justify-between gap-1d5">
+                              <p class="flex items-center gap-1d5">
+                                {%- liquid
+                                  render 'icon', icon: 'discount', size: 'sm'
+                                  echo discount.title
+                                -%}
+                              </p>
+                              <span class="badge badge--onsale flex items-center gap-1d5 font-medium leading-none">-{{ discount.total_allocated_amount | money }}</span>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+
+                      <div class="totals flex flex-wrap items-end justify-between gap-2">
+                        <p class="totals__subtotal h2 font-medium text-base-xl md:text-2xl leading-none">{{ 'cart.general.subtotal' | t }}</p>
+                        <p class="totals__subtotal-value font-bold text-2xl md:text-3xl leading-none">{{ cart.total_price | money_with_currency }}</p>
+                      </div>
+
+                      <div class="tax-note text-opacity text-2sm rte">
+                        {%- liquid
+                          if cart.taxes_included and shop.shipping_policy.body != blank
+                            echo 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url
+                          elsif cart.taxes_included
+                            echo 'cart.general.taxes_included_but_shipping_at_checkout' | t
+                          elsif shop.shipping_policy.body != blank
+                            echo 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url
+                          else
+                            echo 'cart.general.taxes_and_shipping_at_checkout' | t
+                          endif
+                        -%}
+                      </div>
+                    </div>
+
+                  {%- when 'cart_note' -%}
+                    <cart-note class="grid gap-3 cart-note" {{ block.shopify_attributes }}>
+                      <p class="leading-tight">{{ block.settings.heading | escape }}</p>
+                      <div class="field">
+                        <textarea
+                          class="textarea is-floating"
+                          rows="4"
+                          id="CartNotForm-{{ block.id }}"
+                          name="note"
+                          form="cart"
+                          placeholder=" "
+                        >{{ cart.note }}</textarea>
+                        <label class="label is-floating" for="CartNotForm-{{ block.id }}">{{ 'cart.general.note' | t }}</label>
+                      </div>
+                    </cart-note>
+
+                  {%- when 'buttons' -%}
+                    <div class="grid gap-3" {{ block.shopify_attributes }}>
+                      <noscript>
+                        <button class="button button--secondary w-full" type="submit" name="update" form="cart">
+                          {{- 'cart.general.update' | t -}}
+                        </button>
+                      </noscript>
+
+                      <button class="button button--primary icon-with-text w-full" type="submit" name="checkout" form="cart" is="hover-button">
+                        <span class="btn-fill" data-fill></span>
+                        <span class="btn-text">
+                          {%- liquid
+                            render 'icon', icon: 'lock', size: 'sm'
+                            echo 'cart.general.checkout' | t
+                          -%}
+                        </span>
+                      </button>
+          
+                      {%- if block.settings.show_accelerated_buttons and additional_checkout_buttons -%}
+                        <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
+                      {%- endif -%}
+                    </div>
+
+                  {%- when 'free_shipping' -%}
+                    {%- liquid
+                      if block.settings.minimum_amount != blank
+                        assign minimum_amounts = block.settings.minimum_amount | remove: ' '
+                        assign show_free_shipping_bar = false
+              
+                        if minimum_amounts contains ':'
+                          assign minimum_amounts = minimum_amounts | split: ','
+                          for amount in minimum_amounts
+                            assign amount_parts = amount | split: ':'
+                            assign currency_code = amount_parts | first | upcase
+                            if currency_code == cart.currency.iso_code
+                              assign minimum_amount = amount_parts | last
+                              assign show_free_shipping_bar = true
+                              break
+                            endif
+                          endfor
+                        else
+                          assign minimum_amount = minimum_amounts
+                          assign show_free_shipping_bar = true
+                        endif
+                        
+                        if show_free_shipping_bar
+                          render 'free-shipping-bar', minimum_amount: minimum_amount
+                        endif
+                      endif
+                    -%}
+
+                  {%- when 'custom_field' -%}
+                    {%- assign custom_name = block.settings.title | escape -%}
+                    {%- assign custom_value = cart.attributes[custom_name] -%}
+                    <div class="field" {{ block.shopify_attributes }}>
+                      {%- if block.settings.type == 'checkbox' -%}
+                        <label for="CartFormInput-{{ section.id }}-{{ block.id }}" class="flex items-center gap-3">
+                          <input
+                            type="hidden"
+                            name="attributes[{{ custom_name }}]"
+                            form="cart"
+                            value="{{ block.settings.unchecked_value | escape }}"
+                          />
+                          <input
+                            type="checkbox"
+                            id="CartFormInput-{{ section.id }}-{{ block.id }}"
+                            name="attributes[{{ custom_name }}]"
+                            form="cart"
+                            value="{{ block.settings.checked_value | escape }}"
+                            {%- if block.settings.required %} required{% endif -%}
+                          />
+                          {{- block.settings.title | escape -}}
+                        </label>
+                        
+                      {%- elsif block.settings.type == 'radio' -%}
+                        <div class="grid gap-4">
+                          <p>{{ block.settings.title | escape }}</p>
+                          {%- assign options = block.settings.radio_options | split: ',' -%}
+                          {%- if options.size > 0 -%}
+                            <ul class="grid gap-2 leading-none" role="list">
+                              {%- for option in options -%}
+                                {%- assign option_2 = option | strip | escape -%}
+                                <li>
+                                  <label for="CartFormInput-{{ section.id }}-{{ block.id }}-{{ forloop.index0 }}" class="inline-flex items-center gap-3">
+                                    <input
+                                      type="radio"
+                                      id="CartFormInput-{{ section.id }}-{{ block.id }}-{{ forloop.index0 }}"
+                                      name="attributes[{{ custom_name }}]"
+                                      form="cart"
+                                      value="{{ option_2 }}"
+                                      {%- if block.settings.required %} required{% endif -%}
+                                      {%- if option_2 == custom_value %} checked{% endif -%}
+                                    />
+                                    {{- option_2 -}}
+                                  </label>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                        </div>
+
+                      {%- else -%}
+                        {%- case block.settings.type -%}
+                          {%- when 'text' -%}
+                            <input
+                              class="input is-floating"
+                              type="text"
+                              id="CartFormInput-{{ section.id }}-{{ block.id }}"
+                              name="attributes[{{ custom_name }}]"
+                              form="cart"
+                              value="{{ custom_value | escape }}"
+                              placeholder="{{ block.settings.title | escape }}"
+                              {%- if block.settings.required %} required{% endif -%}
+                            />
+                            <label class="label is-floating" for="CartFormInput-{{ section.id }}-{{ block.id }}">{{ block.settings.title | escape }}</label>
+        
+                          {%- when 'textarea' -%}
+                            <textarea
+                              class="textarea is-floating"
+                              rows="4"
+                              id="CartFormInput-{{ section.id }}-{{ block.id }}"
+                              name="attributes[{{ custom_name }}]"
+                              form="cart"
+                              placeholder=" "
+                              {%- if block.settings.required %} required{% endif -%}
+                            >{{ custom_value }}</textarea>
+                            <label class="label is-floating" for="CartFormInput-{{ section.id }}-{{ block.id }}">{{ block.settings.title | escape }}</label>
+        
+                          {%- when 'select' -%}
+                            {%- assign options = block.settings.select_options | split: ',' -%}
+                            {%- if options.size > 0 -%}
+                              <select
+                                class="select is-floating"
+                                id="CartFormInput-{{ section.id }}-{{ block.id }}"
+                                name="attributes[{{ custom_name }}]"
+                                form="cart"
+                                {%- if block.settings.required %} required{% else %} is="custom-select"{% endif -%}
+                              >
+                                <option value="" disabled selected></option>
+                                {%- for option in options -%}
+                                  {%- assign option_2 = option | strip | escape -%}
+                                  <option value="{{ option_2 }}"{% if option_2 == custom_value %} selected{% endif %}>{{ option_2 }}</option>
+                                {%- endfor -%}
+                              </select>
+                              {%- render 'icon', icon: 'chevron-up', size: 'sm', class: 'absolute pointer-events-none' -%}
+                            {%- endif -%}
+                            <label class="label{% if options.size > 0 %} is-floating{% endif %}" for="CartFormInput-{{ section.id }}-{{ block.id }}">{{ block.settings.title | escape }}</label>
+                        {%- endcase -%}
+                      {%- endif -%}
+                    </div>
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+            {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+              <div class="flex flex-col gap-3">
+                <span class="text-xs text-opacity text-center">{{ 'cart.general.we_accept' | t }}</span>
+                <div class="flex flex-wrap justify-center gap-2">
+                  {%- liquid
+                    for type in shop.enabled_payment_types
+                      echo type | payment_type_svg_tag
+                    endfor
+                  -%}
+                </div>
+              </div>
+            {%- endif -%}
+          </sticky-element>
+        </div>
+      </main-cart>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- comment -%}========== JAVASCRIPT FOR ENHANCEMENTS =========={%- endcomment -%}
+<script>
+  (function() {
+    'use strict';
+    
+    // ===== ERROR SUPPRESSION =====
+    function hideAllErrors() {
+      var alerts = document.querySelectorAll('[role="alert"], [role="status"]');
+      alerts.forEach(function(el) {
+        var text = el.textContent.toLowerCase();
+        if (text.indexOf('increment') > -1 || 
+            text.indexOf('can only add') > -1 ||
+            text.indexOf('undefined') > -1) {
+          el.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important;';
+          if (el.parentElement) {
+            el.parentElement.style.cssText = 'display: none !important;';
+          }
+        }
+      });
+      
+      var errors = document.querySelectorAll('.quantity-popover, .quantity-popover__wrapper, .notice, .error, [class*="popover"], .form__message');
+      errors.forEach(function(el) {
+        if (el.textContent) {
+          var text = el.textContent.toLowerCase();
+          if (text.indexOf('increment') > -1 || 
+              text.indexOf('undefined') > -1 ||
+              text.indexOf('can only add') > -1) {
+            el.style.cssText = 'display: none !important; visibility: hidden !important; opacity: 0 !important;';
+            if (el.parentElement) {
+              el.parentElement.style.cssText = 'display: none !important;';
+            }
+          }
+        }
+      });
+    }
+    
+    hideAllErrors();
+    setInterval(hideAllErrors, 100);
+    
+    if (typeof MutationObserver !== 'undefined') {
+      var observer = new MutationObserver(hideAllErrors);
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+    
+    // ===== ENERGY BUNDLE UPGRADE =====
+    var upgradeButtons = document.querySelectorAll('.energy-upgrade-btn');
+    
+    upgradeButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lineKey = this.getAttribute('data-line-key');
+        var oldVariantId = this.getAttribute('data-variant-id');
+        var newVariantId = this.getAttribute('data-new-variant-id');
+        var quantity = parseInt(this.getAttribute('data-quantity'));
+        var btnText = this.textContent;
+        
+        this.disabled = true;
+        this.textContent = 'Upgrading...';
+        
+        fetch('/cart/update.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ updates: { [oldVariantId]: 0 } })
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(cart) {
+          return fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: newVariantId, quantity: quantity })
+          });
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          window.location.reload();
+        })
+        .catch(function(error) {
+          console.error('Upgrade error:', error);
+          alert('Sorry, there was an error upgrading your item. Please try again.');
+          btn.disabled = false;
+          btn.textContent = btnText;
+        });
+      });
+    });
+    
+    // ===== CURRENCY DETECTION FOR UPGRADE BUTTONS =====
+    function updateCurrencySymbols() {
+      var currencySymbol = '£'; // Default to GBP
+      
+      // Detect currency from Shopify object
+      if (typeof Shopify !== 'undefined') {
+        if (Shopify.currency && Shopify.currency.active) {
+          var currency = Shopify.currency.active;
+          if (currency === 'USD') {
+            currencySymbol = '$';
+          } else if (currency === 'EUR') {
+            currencySymbol = '€';
+          } else if (currency === 'GBP') {
+            currencySymbol = '£';
+          }
+        }
+      }
+      
+      // Only update if currency is not GBP (since £ is default in the template)
+      if (currencySymbol !== '£') {
+        var energyButtons = document.querySelectorAll('.energy-upgrade-btn');
+        energyButtons.forEach(function(btn) {
+          var text = btn.textContent || btn.innerText;
+          // Replace £ symbol with the correct currency symbol
+          if (text.indexOf('£') > -1) {
+            btn.textContent = text.replace(/£/g, currencySymbol);
+          }
+        });
+      }
+    }
+    
+    // Run on page load
+    updateCurrencySymbols();
+    
+    // Also run after a short delay in case Shopify object loads late
+    setTimeout(updateCurrencySymbols, 500);
+    
+    // ===== FREQUENTLY BOUGHT TOGETHER - INDIVIDUAL ADD BUTTONS =====
+    var upgradeSections = document.querySelectorAll('.cart-item-upgrades');
+    
+    upgradeSections.forEach(function(section, sectionIndex) {
+      var variantSelectors = section.querySelectorAll('[class*="variant-selector-"]');
+      var addButtons = section.querySelectorAll('.individual-add-btn');
+      
+      function formatMoney(cents) {
+        if (typeof Shopify !== 'undefined' && Shopify.formatMoney) {
+          return Shopify.formatMoney(cents, {{ shop.money_format | json }});
+        }
+        var pounds = (cents / 100).toFixed(2);
+        return '£' + pounds;
+      }
+      
+      // Handle variant selector changes
+      variantSelectors.forEach(function(selector) {
+        selector.addEventListener('change', function(e) {
+          // Don't prevent default - let Shopify handle its events
+          // Only stop propagation to avoid duplicate handling
+          e.stopPropagation();
+          
+          var selectedOption = e.target.options[e.target.selectedIndex];
+          var newPrice = selectedOption.getAttribute('data-price');
+          var comparePrice = selectedOption.getAttribute('data-compare-price');
+          var newVariantId = selectedOption.value;
+          var cardIndex = selector.getAttribute('data-card-index');
+          var parentIndex = selector.getAttribute('data-parent-index');
+          
+          console.log('Variant changed:', {
+            cardIndex: cardIndex,
+            parentIndex: parentIndex,
+            newPrice: newPrice,
+            comparePrice: comparePrice,
+            newVariantId: newVariantId
+          });
+          
+          // Update the add button's variant ID
+          var addBtn = section.querySelector('.individual-add-btn[data-card-index="' + cardIndex + '"][data-parent-index="' + parentIndex + '"]');
+          if (addBtn) {
+            addBtn.setAttribute('data-variant-id', newVariantId);
+          }
+          
+          // Update variant options display
+          var variantOptionsDisplay = section.querySelector('.upgrade-variant-options-' + parentIndex + '-' + cardIndex);
+          if (variantOptionsDisplay) {
+            var option1 = selectedOption.getAttribute('data-option1');
+            var option2 = selectedOption.getAttribute('data-option2');
+            var option3 = selectedOption.getAttribute('data-option3');
+            
+            var productOptions = [];
+            try {
+              var optionsData = selector.getAttribute('data-product-options');
+              if (optionsData) {
+                productOptions = JSON.parse(optionsData);
+              }
+            } catch(err) {}
+            
+            var optionsHTML = '<dl class="grid gap-1d5" style="margin-bottom: 8px;">';
+            
+            if (option1 && productOptions[0]) {
+              optionsHTML += '<div class="flex gap-1 text-xs text-opacity leading-tight">' +
+                            '<dt class="font-medium">' + productOptions[0] + ':</dt>' +
+                            '<dd>' + option1 + '</dd></div>';
+            }
+            
+            if (option2 && productOptions[1]) {
+              optionsHTML += '<div class="flex gap-1 text-xs text-opacity leading-tight">' +
+                            '<dt class="font-medium">' + productOptions[1] + ':</dt>' +
+                            '<dd>' + option2 + '</dd></div>';
+            }
+            
+            if (option3 && productOptions[2]) {
+              optionsHTML += '<div class="flex gap-1 text-xs text-opacity leading-tight">' +
+                            '<dt class="font-medium">' + productOptions[2] + ':</dt>' +
+                            '<dd>' + option3 + '</dd></div>';
+            }
+            
+            optionsHTML += '</dl>';
+            
+            if (option1 || option2 || option3) {
+              variantOptionsDisplay.innerHTML = optionsHTML;
+            }
+          }
+          
+          // Update price display
+          var priceSelector;
+          if (parentIndex === 'consolidated') {
+            priceSelector = '.upgrade-price-wrapper-' + cardIndex;
+          } else {
+            priceSelector = '.upgrade-price-wrapper-' + parentIndex + '-' + cardIndex;
+          }
+          var priceWrapper = section.querySelector(priceSelector);
+          if (priceWrapper) {
+            var priceHTML = '';
+            var hasSale = comparePrice && parseInt(comparePrice) > parseInt(newPrice);
+            
+            var priceClassSuffix = parentIndex === 'consolidated' ? cardIndex : parentIndex + '-' + cardIndex;
+            
+            if (hasSale) {
+              priceWrapper.classList.add('price--on-sale');
+              priceHTML = '<span class="sr-only">Regular price</span>' +
+                         '<span class="price__regular inline-flex items-center relative upgrade-compare-price-' + priceClassSuffix + '" style="text-decoration: line-through !important; color: #000;">' + 
+                         formatMoney(parseInt(comparePrice)) + '</span>' +
+                         '<span class="sr-only">Sale price</span>' +
+                         '<span class="price__sale whitespace-nowrap upgrade-price-' + priceClassSuffix + '" style="color: #ffa500;">' + 
+                         formatMoney(parseInt(newPrice)) + '</span>';
+            } else {
+              priceWrapper.classList.remove('price--on-sale');
+              priceHTML = '<span class="price__regular whitespace-nowrap upgrade-price-' + priceClassSuffix + '">' + 
+                         formatMoney(parseInt(newPrice)) + '</span>';
+            }
+            
+            priceWrapper.innerHTML = priceHTML;
+            console.log('Price updated for', priceSelector, 'to', formatMoney(parseInt(newPrice)));
+          } else {
+            console.log('Price wrapper not found for', priceSelector);
+          }
+        }, false);
+      });
+      
+      // Handle individual add buttons
+      addButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          if (btn.disabled) return;
+          
+          var variantId = btn.getAttribute('data-variant-id');
+          if (!variantId) return;
+          
+          btn.disabled = true;
+          btn.textContent = 'Adding...';
+          
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: variantId, quantity: 1 })
+          })
+          .then(function(response) {
+            return response.json().then(function(data) {
+              if (response.ok) {
+                window.location.reload();
+              } else {
+                throw new Error(data.description || data.message || 'Failed to add');
+              }
+            });
+          })
+          .catch(function(error) {
+            console.error('Error:', error);
+            alert('Error: ' + error.message);
+            btn.textContent = 'Add';
+            btn.disabled = false;
+          });
+        });
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-cart.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__heading.content"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "title-sm",
+          "label": "t:sections.global.settings.heading_size.options__1.label"
+        },
+        {
+          "value": "title-md",
+          "label": "t:sections.global.settings.heading_size.options__2.label"
+        },
+        {
+          "value": "title-lg tracking-heading",
+          "label": "t:sections.global.settings.heading_size.options__3.label"
+        },
+        {
+          "value": "title-xl tracking-heading",
+          "label": "t:sections.global.settings.heading_size.options__4.label"
+        }
+      ],
+      "default": "title-xl tracking-heading",
+      "label": "t:sections.global.settings.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.global.settings.heading_alignment.label",
+      "options": [
+        {
+          "value": "md:items-end",
+          "label": "t:sections.global.settings.heading_alignment.options__1.label"
+        },
+        {
+          "value": "md:items-center md:flex-col",
+          "label": "t:sections.global.settings.heading_alignment.options__2.label"
+        },
+        {
+          "value": "md:items-end md:flex-row-reverse",
+          "label": "t:sections.global.settings.heading_alignment.options__3.label"
+        }
+      ],
+      "default": "md:items-end"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.global.settings.heading_tag.options__1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.global.settings.heading_tag.options__2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.global.settings.heading_tag.options__3.label"
+        },
+        {
+          "value": "h4",
+          "label": "t:sections.global.settings.heading_tag.options__4.label"
+        },
+        {
+          "value": "h5",
+          "label": "t:sections.global.settings.heading_tag.options__5.label"
+        },
+        {
+          "value": "h6",
+          "label": "t:sections.global.settings.heading_tag.options__6.label"
+        },
+        {
+          "value": "div",
+          "label": "t:sections.global.settings.heading_tag.options__7.label"
+        },
+        {
+          "value": "span",
+          "label": "t:sections.global.settings.heading_tag.options__8.label"
+        },
+        {
+          "value": "p",
+          "label": "t:sections.global.settings.heading_tag.options__9.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.global.settings.heading_tag.label",
+      "info": "t:sections.global.settings.heading_tag.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "t:sections.global.settings.show_vendor.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "t:sections.main-cart.settings.show_payment_icons.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_calculator",
+      "label": "t:sections.main-cart.settings.show_shipping_calculator.label",
+      "info": "t:sections.main-cart.settings.show_shipping_calculator.info",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "add_discount_code",
+      "label": "t:sections.main-cart.settings.add_discount_code.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_top.label",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_bottom.label",
+      "default": 120
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.global.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.global.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "default": false,
+      "label": "t:sections.global.settings.rounded.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "subtotal",
+      "name": "t:sections.main-cart.blocks.subtotal.name",
+      "limit": 1,
+      "settings": [
+        
+      ]
+    },
+    {
+      "type": "cart_note",
+      "name": "t:sections.main-cart.blocks.cart_note.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.global.settings.heading.label",
+          "default": "Add a note to your order"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.main-cart.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_accelerated_buttons",
+          "label": "t:sections.main-cart.blocks.buttons.settings.show_accelerated_buttons.label",
+          "info": "t:sections.main-cart.blocks.buttons.settings.show_accelerated_buttons.info",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "free_shipping",
+      "name": "t:sections.main-cart.blocks.free_shipping.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-cart.blocks.free_shipping.settings.paragraph.content"
+        },
+        {
+          "type": "text",
+          "id": "minimum_amount",
+          "default": "100",
+          "label": "t:sections.main-cart.blocks.free_shipping.settings.minimum_amount.label",
+          "info": "t:sections.main-cart.blocks.free_shipping.settings.minimum_amount.info"
+        }
+      ]
+    },
+    {
+      "type": "custom_field",
+      "name": "t:sections.main-cart.blocks.custom_field.name",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "t:sections.main-cart.blocks.custom_field.settings.paragraph.content"
+        },
+        {
+          "type": "select",
+          "id": "type",
+          "options": [
+            {
+              "value": "text",
+              "label": "t:sections.main-cart.blocks.custom_field.settings.type.options__1.label"
+            },
+            {
+              "value": "textarea",
+              "label": "t:sections.main-cart.blocks.custom_field.settings.type.options__2.label"
+            },
+            {
+              "value": "checkbox",
+              "label": "t:sections.main-cart.blocks.custom_field.settings.type.options__3.label"
+            },
+            {
+              "value": "radio",
+              "label": "t:sections.main-cart.blocks.custom_field.settings.type.options__4.label"
+            },
+            {
+              "value": "select",
+              "label": "t:sections.main-cart.blocks.custom_field.settings.type.options__5.label"
+            }
+          ],
+          "default": "text",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.type.label"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.label.label",
+          "default": "Your label"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.required.label",
+          "default": false
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'checkbox' }}",
+          "type": "header",
+          "content": "t:sections.main-cart.blocks.custom_field.settings.header__checkbox.content",
+          "info": "t:sections.main-cart.blocks.custom_field.settings.header__checkbox.info"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'checkbox' }}",
+          "type": "text",
+          "id": "checked_value",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.checked_value.label",
+          "default": "Yes"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'checkbox' }}",
+          "type": "text",
+          "id": "unchecked_value",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.unchecked_value.label",
+          "default": "No"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'radio' }}",
+          "type": "header",
+          "content": "t:sections.main-cart.blocks.custom_field.settings.header__radio.content",
+          "info": "t:sections.main-cart.blocks.custom_field.settings.header__radio.info"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'radio' }}",
+          "type": "text",
+          "id": "radio_options",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.options.label",
+          "info": "t:sections.main-cart.blocks.custom_field.settings.options.info"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'select' }}",
+          "type": "header",
+          "content": "t:sections.main-cart.blocks.custom_field.settings.header__dropdown.content",
+          "info": "t:sections.main-cart.blocks.custom_field.settings.header__dropdown.info"
+        },
+        {
+          "visible_if": "{{ block.settings.type == 'select' }}",
+          "type": "text",
+          "id": "select_options",
+          "label": "t:sections.main-cart.blocks.custom_field.settings.options.label",
+          "info": "t:sections.main-cart.blocks.custom_field.settings.options.info"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
