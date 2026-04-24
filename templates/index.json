@@ -474,6 +474,7 @@
         },
         "spinning_text": {
           "type": "spinning_text",
+          "disabled": true,
           "settings": {
             "text": "Best Seller"
           }
