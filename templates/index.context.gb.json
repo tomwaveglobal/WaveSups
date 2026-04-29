@@ -16,9 +16,20 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_e6Nny7": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Carousel_Home_page_28f91dcf-8ad8-42a8-a94b-68fbf2624ac7.jpg",
+            "image_mobile": "shopify://shop_images/Mobile_5f6baf4a-99ce-4ba9-8ea6-1e48c1b94a1c.jpg",
+            "heading": "Long Weekend, Big Savings.\nShop our final pre-summer sale"
+          }
+        },
         "image_rC3mcC": {
-          "disabled": true,
-          "settings": {}
+          "disabled": false,
+          "settings": {
+            "heading": "Sun's Out, Paddles Out!<br> <span style=\"color: #F59E0B;\">20% Off </span>to Kickstart Your Summer.",
+            "button_label": "Shop Now"
+          }
         }
       }
     }
