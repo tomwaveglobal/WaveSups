@@ -27,7 +27,7 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "heading": "Sun's Out, Paddles Out!<br> <span style=\"color: #F59E0B;\">20% Off </span>to Kickstart Your Summer.",
             "button_label": "Shop Now"
