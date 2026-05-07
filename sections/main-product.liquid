@@ -241,17 +241,26 @@
                   -%}
                   {%- capture text_block_style -%}
                     {%- if block.settings.background_color != blank and block.settings.background_color != 'rgba(0,0,0,0)' -%}background-color: {{ block.settings.background_color }};{%- endif -%}
-                    {%- if block.settings.text_color != blank and block.settings.text_color != 'rgba(0,0,0,0)' -%}color: {{ block.settings.text_color }};{%- endif -%}
-                    {%- if block.settings.background_height > 0 -%}min-height: {{ block.settings.background_height }}px;{%- endif -%}
+                    {%- if block.settings.background_height > 0 -%}padding-top: {{ block.settings.background_height }}px;padding-bottom: {{ block.settings.background_height }}px;{%- endif -%}
+                    {%- if block.settings.border_radius > 0 -%}border-radius: {{ block.settings.border_radius }}px;{%- endif -%}
                   {%- endcapture -%}
-                  {%- assign alignment_class = 'justify-start' -%}
+                  {%- capture icon_style -%}
+                    {%- if block.settings.icon_color != blank and block.settings.icon_color != 'rgba(0,0,0,0)' -%}color: {{ block.settings.icon_color }};{%- endif -%}
+                  {%- endcapture -%}
+                  {%- capture text_style -%}
+                    {%- if block.settings.text_color != blank and block.settings.text_color != 'rgba(0,0,0,0)' -%}color: {{ block.settings.text_color }};{%- endif -%}
+                  {%- endcapture -%}
+                  {%- assign outer_align = 'left' -%}
+                  {%- assign justify_class = 'justify-start' -%}
                   {%- if block.settings.alignment == 'center' -%}
-                    {%- assign alignment_class = 'justify-center' -%}
+                    {%- assign outer_align = 'center' -%}
+                    {%- assign justify_class = 'justify-center' -%}
                   {%- elsif block.settings.alignment == 'right' -%}
-                    {%- assign alignment_class = 'justify-end' -%}
+                    {%- assign outer_align = 'right' -%}
+                    {%- assign justify_class = 'justify-end' -%}
                   {%- endif -%}
-                  <div class="product__text{% if modulo == 0 %} even{% endif %}{% if prev_block.type != 'text' %} first{% endif %}{% if next_block.type != 'text' %} last{% endif %}" {{ block.shopify_attributes }}>
-                    <div class="product__text-inner flex items-center gap-2d5 {{ alignment_class }}"{% if text_block_style != blank %} style="{{ text_block_style }}"{% endif %}>
+                  <div class="product__text text-{{ outer_align }}{% if modulo == 0 %} even{% endif %}{% if prev_block.type != 'text' %} first{% endif %}{% if next_block.type != 'text' %} last{% endif %}" {{ block.shopify_attributes }}>
+                    <div class="product__text-inner flex items-center gap-2d5 {{ justify_class }}"{% if text_block_style != blank %} style="{{ text_block_style }}"{% endif %}>
                       {%- if block.settings.icon_image != blank -%}
                         {%- liquid
                           if block.settings.iwidth == 'fit'
@@ -263,12 +272,13 @@
                           assign image_alt = image_alt | default: block.settings.text | escape
                           assign max_width = block.settings.icon_image.width
                         -%}
-                        <figure class="media media--transparent relative inline-block">
+                        <figure class="media media--transparent relative inline-block"{% if icon_style != blank %} style="{{ icon_style }}"{% endif %}>
                           {%- capture sizes -%}{{ icon_width }}px{%- endcapture -%}
                           {%- capture widths -%}{{ icon_width | times: 1.5 | at_most: max_width | round }}, {{ icon_width | times: 2 | at_most: max_width }}, {{ icon_width | times: 3 | at_most: max_width }}{%- endcapture -%}
                           {{- block.settings.icon_image | image_url: width: max_width | image_tag: loading: 'lazy', sizes: sizes, widths: widths, alt: image_alt, class: 'image-fit' -}}
                         </figure>
                       {%- elsif block.settings.icon != 'none' -%}
+                        <span class="inline-flex items-center"{% if icon_style != blank %} style="{{ icon_style }}"{% endif %}>
                         {%- liquid
                           if block.settings.iwidth == 'fit'
                             render 'icon-guarantee', icon: block.settings.icon, size: 'lg', class: 'inline-block stroke-1'
@@ -276,8 +286,9 @@
                             render 'icon-guarantee', icon: block.settings.icon, size: 'custom', class: 'inline-block stroke-1', width: block.settings.icon_width
                           endif
                         -%}
+                        </span>
                       {%- endif -%}
-                      <p class="data-contona-persona rte {{ block.settings.text_size }} leading-tight">{{ block.settings.text }}</p>
+                      <p class="data-contona-persona rte {{ block.settings.text_size }} leading-tight"{% if text_style != blank %} style="{{ text_style }}"{% endif %}>{{ block.settings.text }}</p>
                     </div>
                   </div>
                 {%- else -%}
@@ -1889,6 +1900,64 @@
           ],
           "default": "text-base",
           "label": "t:sections.global.settings.text_size.label"
+        },
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "rgba(0,0,0,0)"
+        },
+        {
+          "type": "header",
+          "content": "Layout"
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "range",
+          "id": "background_height",
+          "label": "Vertical padding",
+          "info": "Adds equal padding above and below the text.",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Border radius",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "unit": "px",
+          "default": 0
         }
       ]
     },
