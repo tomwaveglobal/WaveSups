@@ -19,7 +19,14 @@
         "text_9TUUbA": {
           "disabled": false,
           "settings": {
-            "text": "Use code <strong>SUMMER10</strong> for 10% off | Limited Time!"
+            "icon_width": 30,
+            "text": "Use code <strong>SUMMER10</strong> for 10% off | Limited Time!",
+            "text_size": "text-base",
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "alignment": "center",
+            "background_height": 10
           }
         },
         "text_tkTAte": {
