@@ -17,10 +17,10 @@
       "settings": {},
       "blocks": {
         "announcement-2": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "text": "<em><strong>SALE ALERT:  </strong></em>20% Off with SUN20",
-            "text_mobile": "<em><strong>SALE ALERT:  </strong></em>20% Off with SUN20"
+            "text": "<em><strong>SALE ALERT:  10%</strong></em> Off with SUMMER10",
+            "text_mobile": "<em><strong>SALE ALERT:  10</strong></em>% Off with SUMMER10"
           }
         }
       }
