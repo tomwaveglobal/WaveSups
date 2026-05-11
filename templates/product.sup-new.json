@@ -52,7 +52,13 @@
             "iwidth": "custom",
             "icon_width": 20,
             "text": "{{ product.metafields.custom.description_snippet.value }}",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "description": {
@@ -93,20 +99,6 @@
             "color_background": "#1f1f1f"
           }
         },
-        "on_site_message_EFzeYN": {
-          "type": "on_site_message",
-          "settings": {
-            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
-            "message_icon_width": 100,
-            "message_image_checkbox": true,
-            "message": "<p>Starting at #amount* per month</p>",
-            "message_divide_amount": "24",
-            "message_price_range": "100",
-            "message_limit_amount": "100000",
-            "message_background": "#fafafa",
-            "message_text_color": "#00a341"
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -128,6 +120,20 @@
             "help_type": "drawer",
             "help_page": "contact",
             "help_page_external": false
+          }
+        },
+        "on_site_message_EFzeYN": {
+          "type": "on_site_message",
+          "settings": {
+            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
+            "message_icon_width": 100,
+            "message_image_checkbox": true,
+            "message": "<p>Starting at #amount* per month</p>",
+            "message_divide_amount": "24",
+            "message_price_range": "100",
+            "message_limit_amount": "100000",
+            "message_background": "#fafafa",
+            "message_text_color": "#00a341"
           }
         },
         "product_bundle_tWCDMV": {
@@ -191,7 +197,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Free Next Day Delivery (Order by 2pm)</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_LiCrpH": {
@@ -202,7 +214,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Running Cost - From £2 a day</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_kfKeDi": {
@@ -214,7 +232,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>24 Month Guarantee</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_9JnzcB": {
@@ -226,7 +250,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>UK-based 7-Day Customer Support</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         }
       },
@@ -240,9 +270,9 @@
         "countdown",
         "variant_picker",
         "variant_pre_order_nkaMyt",
-        "on_site_message_EFzeYN",
         "buy_buttons",
         "share",
+        "on_site_message_EFzeYN",
         "product_bundle_tWCDMV",
         "inventory",
         "pickup_availability",
