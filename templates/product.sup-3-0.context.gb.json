@@ -20,8 +20,8 @@
           "disabled": false,
           "settings": {
             "icon_width": 30,
-            "text": "Use code <strong>SUMMER10</strong> for 10% off",
-            "text_size": "text-base",
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
             "text_color": "#ffffff",
             "icon_color": "#ffffff",
             "background_color": "#f59e0b",
