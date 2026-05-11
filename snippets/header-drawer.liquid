@@ -75,10 +75,10 @@ endif
         {% assign eu_override = '' %}
         {% assign us_override = '' %}
 
-        {% if product.metafields.custom.uk_override_url != blank or product.metafields.custom.eu_override_url != blank or product.metafields.custom.us_override_url != blank %}
-          {% assign uk_override = product.metafields.custom.uk_override_url %}
-          {% assign eu_override = product.metafields.custom.eu_override_url %}
-          {% assign us_override = product.metafields.custom.us_override_url %}
+        {% if product.metafields.country.code_gb != blank or product.metafields.country.code_eu != blank or product.metafields.country.code_us != blank %}
+          {% assign uk_override = product.metafields.country.code_gb %}
+          {% assign eu_override = product.metafields.country.code_eu %}
+          {% assign us_override = product.metafields.country.code_us %}
         {% endif %}
         {%- if enable_language_selector or enable_country_selector -%}
           <div class="drawer__footer-top flex">
