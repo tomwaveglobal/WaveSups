@@ -12,11 +12,7 @@
   <p>
     <a
       class="reversed-link"
-      {% unless country.market.metafields.default.market == true %}
-        href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country.iso_code }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
-      {% else %}
         href="{{ shop.url }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
-      {% endunless %}
       title="{{ country.name | escape }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})"
     >
       {{- country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
