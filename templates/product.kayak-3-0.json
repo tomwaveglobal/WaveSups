@@ -602,35 +602,35 @@
           "type": "nav_item",
           "settings": {
             "title": "Description",
-            "target_id": "shopify-section-template--28814748975491__collage"
+            "target_id": "shopify-section-template--28923902722435__collage"
           }
         },
         "nav_item_KrVxkG": {
           "type": "nav_item",
           "settings": {
             "title": "Tech Specs",
-            "target_id": "shopify-section-template--28814748975491__product-details"
+            "target_id": "shopify-section-template--28923902722435__product-details"
           }
         },
         "nav_item_mUKW9M": {
           "type": "nav_item",
           "settings": {
             "title": "Comparison Table",
-            "target_id": "shopify-section-template--28814748975491__comparison_table_rB8zXC"
+            "target_id": "shopify-section-template--28923902722435__comparison_table_rB8zXC"
           }
         },
         "nav_item_k9LzJe": {
           "type": "nav_item",
           "settings": {
             "title": "FAQs",
-            "target_id": "shopify-section-template--28814748975491__faq"
+            "target_id": "shopify-section-template--28923902722435__faq"
           }
         },
         "nav_item_FyGbwJ": {
           "type": "nav_item",
           "settings": {
             "title": "Reviews",
-            "target_id": "shopify-section-template--28814748975491__rich_text_kbbtYn"
+            "target_id": "shopify-section-template--28923902722435__rich_text_kbbtYn"
           }
         }
       },
