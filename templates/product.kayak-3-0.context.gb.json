@@ -16,10 +16,6 @@
     "main-product": {
       "settings": {},
       "blocks": {
-        "text_3PYKCi": {
-          "disabled": false,
-          "settings": {}
-        },
         "text_WF3nRk": {
           "type": "text",
           "disabled": false,
@@ -30,15 +26,19 @@
             "icon_width": 30,
             "text": "Use code <strong>SUMMER10</strong> for 10% off | Limited Time!",
             "text_size": "text-base",
-            "header-897501314e5563681bd86272c3d41282": null,
+            "header-517bf04ead5e53a8f84e859dbce295e0": null,
             "text_color": "#ffffff",
             "icon_color": "#ffffff",
             "background_color": "#f59e0b",
-            "header-30ffd33a45c03b85954706c24fd2faaa": null,
+            "header-a961888c99101e6eb4518df990f878fd": null,
             "alignment": "center",
             "background_height": 10,
             "border_radius": 0
           }
+        },
+        "text_3PYKCi": {
+          "disabled": false,
+          "settings": {}
         }
       },
       "block_order": [
@@ -52,11 +52,11 @@
         "variant_picker",
         "variant_pre_order_nkaMyt",
         "on_site_message_EFzeYN",
-        "product_bundle_tWCDMV",
         "text_WF3nRk",
         "buy_buttons",
         "share",
         "text_3PYKCi",
+        "product_bundle_tWCDMV",
         "inventory",
         "pickup_availability",
         "complementary",
