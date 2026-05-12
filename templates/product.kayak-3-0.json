@@ -116,6 +116,23 @@
             "border_radius": 0
           }
         },
+        "text_XaNygx": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "sale",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "alignment": "center",
+            "background_height": 10,
+            "border_radius": 0
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -305,6 +322,7 @@
         "variant_picker",
         "variant_pre_order_nkaMyt",
         "text_ceUtLU",
+        "text_XaNygx",
         "buy_buttons",
         "share",
         "on_site_message_EFzeYN",
