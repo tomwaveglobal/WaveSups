@@ -16,24 +16,57 @@
     "main-product": {
       "settings": {},
       "blocks": {
-        "text_9TUUbA": {
-          "disabled": false,
-          "settings": {
-            "icon_width": 30,
-            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
-            "text_size": "text-sm",
-            "text_color": "#ffffff",
-            "icon_color": "#ffffff",
-            "background_color": "#f59e0b",
-            "alignment": "center",
-            "background_height": 10
-          }
-        },
         "text_tkTAte": {
           "disabled": false,
           "settings": {}
+        },
+        "text_7tjBVb": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "icon": "sale",
+            "icon_image": null,
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
+            "header-9c20e47b1f4bbd21d5a16936885610c4": null,
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "header-ac8afeb43c45ea04cc5d150521f3beb7": null,
+            "alignment": "center",
+            "background_height": 10,
+            "border_radius": 0
+          }
         }
-      }
+      },
+      "block_order": [
+        "vendor_aTdrrh",
+        "breadcrumb_rcrAce",
+        "title",
+        "reviews_io_reviewsio_rating_output_XtJhKf",
+        "text_4JQyhw",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_nkaMyt",
+        "text_7tjBVb",
+        "buy_buttons",
+        "share",
+        "on_site_message_EFzeYN",
+        "product_bundle_tWCDMV",
+        "text_tkTAte",
+        "inventory",
+        "pickup_availability",
+        "complementary",
+        "sticky_buy_button",
+        "icon_list_4xTkbm",
+        "text_7bqpGD",
+        "text_LiCrpH",
+        "text_kfKeDi",
+        "text_9JnzcB"
+      ]
     },
     "scroll_spy_KbzzdE": {
       "settings": {},
