@@ -19,8 +19,58 @@
         "text_mgaWWC": {
           "disabled": false,
           "settings": {}
+        },
+        "text_iedzif": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "icon": "sale",
+            "icon_image": null,
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
+            "header-2a01af869f22a9146d980cc72e4cd95d": null,
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "header-8280aabd792daebf247c4a3509866e2f": null,
+            "alignment": "center",
+            "background_height": 10,
+            "border_radius": 0
+          }
         }
-      }
+      },
+      "block_order": [
+        "vendor",
+        "vendor_4FDdY4",
+        "breadcrumb_ybVtDL",
+        "title",
+        "reviews_io_reviewsio_rating_output_F6kwka",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_k3WqCr",
+        "inventory",
+        "text_iedzif",
+        "buy_buttons",
+        "pickup_availability",
+        "share",
+        "on_site_message_G33ktP",
+        "sticky_buy_button",
+        "text_wHjicc",
+        "text_nyTcfN",
+        "text_gG7GfK",
+        "text_zVGPaF",
+        "collapsible_tab_G994Ez",
+        "collapsible_tab_HjXj44",
+        "collapsible_tab_YbjcFc",
+        "collapsible_tab_YdLQXD",
+        "collapsible_tab_PdngfT",
+        "text_mgaWWC",
+        "complementary",
+        "icon_list_4pRH6W"
+      ]
     }
   }
 }
