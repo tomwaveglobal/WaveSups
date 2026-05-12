@@ -214,11 +214,6 @@
           "enable_syndication": false
         }
       },
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
-      },
       "924744721961926860": {
         "type": "shopify://apps/freshmarketer-email-sms/blocks/freshmarketer-onsite-js/6fac208c-ff40-4b41-be01-e5940014bcb0",
         "disabled": false,
@@ -580,5 +575,11 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "/* Pre-order message block — smaller text, less top padding, more bottom */.pre-order-message-block .pre-order-message-container {font-size: 14px !important;}",
+      ".pre-order-message-block .pre-order-message-container.pre-order-message-container-padding {padding-top: 0; padding-bottom: var(--sp-4);}"
+    ]
   }
 }
