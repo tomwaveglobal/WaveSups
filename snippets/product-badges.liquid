@@ -1,22 +1,40 @@
-{%- assign current_country = localization.country.iso_code | upcase -%}
+{%- liquid
+  assign current_country = localization.country.iso_code | upcase
+
+  if badge_context == 'nav'
+    assign badge_mode = settings.advanced_badge_mode_nav
+  else
+    case template.name
+      when 'product'
+        assign badge_mode = settings.advanced_badge_mode_product
+      when 'collection'
+        assign badge_mode = settings.advanced_badge_mode_collection
+      when 'index'
+        assign badge_mode = settings.advanced_badge_mode_home
+      when 'search'
+        assign badge_mode = settings.advanced_badge_mode_search
+      else
+        assign badge_mode = 'hidden'
+    endcase
+  endif
+
+  assign badge_mode = badge_mode | default: 'hidden'
+-%}
+{%- if badge_mode != 'hidden' -%}
 <div class="badges{% if class != blank %} {{ class }}{% endif %} pointer-events-none">
   {%- assign label_value = product.metafields.theme.label.value -%}
   {%- if label_value != blank -%}
     {%- assign badge_bg = product.metafields.theme.label_color.value | default: settings.product_badge_bg_color -%}
     {%- assign badge_fg = settings.product_badge_text_color | default: '#ffffff' -%}
-    {%- assign badge_size = settings.product_badge_text_size | default: 12 -%}
     {%- capture styles -%}
       {%- if badge_bg != blank -%}--badge-background: {{ badge_bg }};{%- endif -%}
       {%- if badge_fg != blank -%}--badge-foreground: {{ badge_fg }};{%- endif -%}
-      font-size: {{ badge_size }}px;
     {%- endcapture -%}
 
     {%- assign label_entries = label_value | split: ';' -%}
     {%- for entry in label_entries -%}
       {%- assign entry_trimmed = entry | strip -%}
-      {%- if entry_trimmed == blank -%}
-        {%- continue -%}
-      {%- endif -%}
+      {%- if entry_trimmed == blank -%}{%- continue -%}{%- endif -%}
 
       {%- assign show_label = false -%}
       {%- assign label_text = '' -%}
@@ -40,10 +58,67 @@
       {%- endif -%}
 
       {%- if show_label and label_text != blank -%}
-        <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
-          {{- label_text | escape -}}
-        </span>
+        {%- assign badge_image = blank -%}
+        {%- assign badge_show_text = true -%}
+        {%- if settings.advanced_badge_map_1_text != blank and settings.advanced_badge_map_1_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_1_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_1_show_text -%}
+        {%- elsif settings.advanced_badge_map_2_text != blank and settings.advanced_badge_map_2_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_2_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_2_show_text -%}
+        {%- elsif settings.advanced_badge_map_3_text != blank and settings.advanced_badge_map_3_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_3_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_3_show_text -%}
+        {%- elsif settings.advanced_badge_map_4_text != blank and settings.advanced_badge_map_4_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_4_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_4_show_text -%}
+        {%- elsif settings.advanced_badge_map_5_text != blank and settings.advanced_badge_map_5_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_5_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_5_show_text -%}
+        {%- elsif settings.advanced_badge_map_6_text != blank and settings.advanced_badge_map_6_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_6_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_6_show_text -%}
+        {%- elsif settings.advanced_badge_map_7_text != blank and settings.advanced_badge_map_7_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_7_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_7_show_text -%}
+        {%- elsif settings.advanced_badge_map_8_text != blank and settings.advanced_badge_map_8_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_8_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_8_show_text -%}
+        {%- elsif settings.advanced_badge_map_9_text != blank and settings.advanced_badge_map_9_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_9_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_9_show_text -%}
+        {%- elsif settings.advanced_badge_map_10_text != blank and settings.advanced_badge_map_10_text == label_text -%}
+          {%- assign badge_image = settings.advanced_badge_map_10_image -%}
+          {%- assign badge_show_text = settings.advanced_badge_map_10_show_text -%}
+        {%- endif -%}
+
+        {%- case badge_mode -%}
+          {%- when 'text' -%}
+            <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+              {{- label_text | escape -}}
+            </span>
+          {%- when 'image' -%}
+            {%- if badge_image != blank -%}
+              {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+            {%- endif -%}
+          {%- when 'both' -%}
+            {%- if badge_image != blank and badge_show_text -%}
+              <div class="badge-image-wrap relative inline-block">
+                {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+                <span class="badge badge-on-image flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+                  {{- label_text | escape -}}
+                </span>
+              </div>
+            {%- elsif badge_image != blank -%}
+              {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+            {%- elsif badge_show_text -%}
+              <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+                {{- label_text | escape -}}
+              </span>
+            {%- endif -%}
+        {%- endcase -%}
       {%- endif -%}
     {%- endfor -%}
   {%- endif -%}
 </div>
+{%- endif -%}

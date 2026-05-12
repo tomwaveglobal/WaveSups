@@ -1,0 +1,110 @@
+{%- doc -%}
+  Renders the colour swatches for a product card.
+
+  Extracted from product-card.liquid so the same swatch HTML can render in
+  either the content area (default) or overlaid on the product image
+  (settings.product_card_swatches_overlay = true).
+
+  @param {object} product - Product object
+  @param {string} product_url - Product URL (collection-scoped)
+  @param {boolean} show_quick_view - Whether quick view is enabled (affects aria-controls)
+  @param {string} quick_view_id - Quick view modal ID
+{%- enddoc -%}
+{%- liquid
+  assign swatch_trigger_list = 'products.general.color_swatch_trigger' | t | downcase | split: ','
+  assign color_count = 0
+
+  assign has_color_option = false
+  for option in product.options_with_values
+    assign option_name = option.name | downcase
+    for trigger in swatch_trigger_list
+      assign swatch_trigger = trigger | strip
+      if option_name contains swatch_trigger
+        assign has_color_option = true
+      elsif swatch_trigger == 'color' and option_name contains 'colour'
+        assign has_color_option = true
+      endif
+      if has_color_option
+        break
+      endif
+    endfor
+    if has_color_option
+      break
+    endif
+  endfor
+-%}
+{%- for option in product.options_with_values -%}
+  {%- liquid
+    assign is_color = false
+    assign use_variant_image = false
+    assign option_name = option.name | downcase
+    for trigger in swatch_trigger_list
+      assign swatch_trigger = trigger | strip
+      if option_name contains swatch_trigger
+        assign is_color = true
+      elsif swatch_trigger == 'color' and option_name contains 'colour'
+        assign is_color = true
+      endif
+
+      if is_color == true
+        break
+      endif
+    endfor
+
+    if option_name contains 'model'
+      unless has_color_option
+        assign is_color = true
+        assign use_variant_image = true
+      endunless
+    endif
+  -%}
+  {%- if is_color -%}
+    {%- liquid
+      assign option_index = forloop.index0
+      assign values = ''
+      assign max_color_count = settings.product_max_color_swatches
+    -%}
+    <div class="product-card__bottom flex items-center gap-2">
+      <ul class="swatches swatches--{{ settings.rounded_swatch }}{% if settings.product_color_swatch_type == 'variant' or use_variant_image %} swatches--variant{% endif %} swatches--{{ product.id }} inline-flex items-start gap-2">
+        {%- for variant in product.variants -%}
+          {%- assign value = variant.options[option_index] %}
+          {%- unless values contains value -%}
+            {%- liquid
+              assign values = values | join: ',' | append: ',' | append: value | split: ','
+              assign color_count = color_count | plus: 1
+              assign color_title = product.title | append: ' - ' | append: value
+              assign color_url = variant.url | within: collection
+              if settings.product_disable_collection_portion
+                assign color_url = variant.url
+              endif
+
+              assign swatch = blank
+              if value.swatch != blank
+                assign swatch = value.swatch
+              endif
+
+              if use_variant_image and variant.image
+                assign swatch = variant
+              elsif settings.product_color_swatch_type == 'variant' and variant.image
+                assign swatch = variant
+              endif
+            -%}
+            {%- if color_count <= max_color_count -%}
+              <li>
+                {%- render 'swatch', href: color_url, title: color_title, value: value, value_label: value, swatch: swatch -%}
+              </li>
+            {%- endif -%}
+          {%- endunless -%}
+        {%- endfor -%}
+      </ul>
+      {%- if color_count > max_color_count -%}
+        <a href="{{ product_url }}" class="reversed-link font-medium text-xs text-opacity leading-none tracking-widest" is="hover-link"{% if show_quick_view %} aria-controls="{{ quick_view_id }}" aria-expanded="false"{% endif %}>+{{ color_count | minus: max_color_count }}</a>
+      {%- endif -%}
+    </div>
+    {%- if color_count < 1 -%}
+      <style>
+        .swatches--{{ product.id }} { display: none; }
+      </style>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}

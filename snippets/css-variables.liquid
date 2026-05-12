@@ -235,6 +235,47 @@
       --page-padding: max(var(--sp-12), 50vw - var(--scrollbar-width, 0px)/2 - var(--page-width)/2);
     }
   }
+
+  .badges .badge {
+    font-size: {{ settings.product_badge_text_size | default: 12 }}px;
+  }
+  @media screen and (min-width: 768px) {
+    .badges .badge {
+      font-size: {{ settings.product_badge_text_size_desktop | default: 16 }}px;
+    }
+  }
+
+  .badge-image {
+    display: block;
+    width: {{ settings.advanced_badge_image_mobile | default: 60 }}px;
+    height: auto;
+  }
+  @media screen and (min-width: 768px) {
+    .badge-image {
+      width: {{ settings.advanced_badge_image_desktop | default: 120 }}px;
+    }
+  }
+  .badge-image-wrap .badge-on-image {
+    position: absolute;
+    left: 50%;
+    bottom: var(--sp-2);
+    transform: translateX(-50%);
+    z-index: 1;
+    white-space: nowrap;
+  }
+
+  .product-card__media.swatches-overlay .product-card__bottom {
+    position: absolute;
+    left: 50%;
+    bottom: var(--sp-3);
+    transform: translateX(-50%);
+    z-index: 3;
+    padding: var(--sp-1d5) var(--sp-3);
+    background: rgb(var(--color-background) / 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 999px;
+    pointer-events: auto;
+  }
 </style>
 
 {%- unless settings.type_body_font.system? -%}
