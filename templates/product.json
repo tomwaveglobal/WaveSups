@@ -93,6 +93,7 @@
         },
         "variant_pre_order_k3WqCr": {
           "type": "variant_pre_order",
+          "disabled": true,
           "settings": {
             "text_size": "text-base",
             "color_text": "#ffffff",
