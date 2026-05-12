@@ -1062,6 +1062,30 @@
         ]
       },
       {
+        "type": "range",
+        "id": "product_badge_text_size",
+        "min": 8,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "default": 12,
+        "label": "Badge text size",
+        "info": "Controls the font size of product badges like \"Free Gift!\""
+      },
+      {
+        "type": "color",
+        "id": "product_badge_text_color",
+        "label": "Badge text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "product_badge_bg_color",
+        "label": "Badge background color",
+        "info": "Used as the default when a product doesn't set its own label color metafield",
+        "default": "#f5a623"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.products.settings.header__icon_list.content",
         "info": "t:settings_schema.products.settings.header__icon_list.info"
