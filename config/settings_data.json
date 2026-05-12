@@ -577,9 +577,6 @@
     }
   },
   "platform_customizations": {
-    "custom_css": [
-      "/* Pre-order message block — smaller text, less top padding, more bottom */.pre-order-message-block .pre-order-message-container {font-size: 14px !important;}",
-      ".pre-order-message-block .pre-order-message-container.pre-order-message-container-padding {padding-top: 0; padding-bottom: var(--sp-4);}"
-    ]
+    "custom_css": []
   }
 }
