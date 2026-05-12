@@ -855,6 +855,20 @@
         "id": "swatch_image_tooltip",
         "label": "t:settings_schema.swatches.settings.swatch_image_tooltip.label",
         "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "product_card_swatches_overlay",
+        "label": "Overlay swatches on product image",
+        "info": "When enabled, colour swatches appear over the bottom-centre of the product image on collection cards instead of below it.",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "product_card_swatches_keep_text",
+        "label": "Also keep swatches under the image",
+        "info": "Only applies when overlay is on. Off = overlay only. On = swatches appear in both places.",
+        "default": false
       }
     ]
   },
@@ -1069,8 +1083,19 @@
         "step": 1,
         "unit": "px",
         "default": 12,
-        "label": "Badge text size",
-        "info": "Controls the font size of product badges like \"Free Gift!\""
+        "label": "Badge text size (mobile)",
+        "info": "Font size of product badges like \"Free Gift!\" on screens under 768px"
+      },
+      {
+        "type": "range",
+        "id": "product_badge_text_size_desktop",
+        "min": 8,
+        "max": 40,
+        "step": 1,
+        "unit": "px",
+        "default": 16,
+        "label": "Badge text size (desktop)",
+        "info": "Font size from 768px and up"
       },
       {
         "type": "color",
@@ -1084,6 +1109,267 @@
         "label": "Badge background color",
         "info": "Used as the default when a product doesn't set its own label color metafield",
         "default": "#f5a623"
+      },
+      {
+        "type": "header",
+        "content": "Advanced Badges"
+      },
+      {
+        "type": "paragraph",
+        "content": "Map product badge text (e.g. \"Free Gift!\") to an uploaded image. When a product's badge text matches a mapping, the image replaces the styled text pill. Country rules from the badge text (e.g. GB:NEW IN) still apply."
+      },
+      {
+        "type": "header",
+        "content": "Visibility — choose what each page type shows"
+      },
+      {
+        "type": "select",
+        "id": "advanced_badge_mode_product",
+        "label": "Product pages",
+        "options": [
+          { "value": "hidden", "label": "Hidden" },
+          { "value": "text",   "label": "Text only" },
+          { "value": "image",  "label": "Image only" },
+          { "value": "both",   "label": "Image + text" }
+        ],
+        "default": "hidden"
+      },
+      {
+        "type": "select",
+        "id": "advanced_badge_mode_collection",
+        "label": "Collection pages",
+        "options": [
+          { "value": "hidden", "label": "Hidden" },
+          { "value": "text",   "label": "Text only" },
+          { "value": "image",  "label": "Image only" },
+          { "value": "both",   "label": "Image + text" }
+        ],
+        "default": "hidden"
+      },
+      {
+        "type": "select",
+        "id": "advanced_badge_mode_home",
+        "label": "Home page",
+        "options": [
+          { "value": "hidden", "label": "Hidden" },
+          { "value": "text",   "label": "Text only" },
+          { "value": "image",  "label": "Image only" },
+          { "value": "both",   "label": "Image + text" }
+        ],
+        "default": "hidden"
+      },
+      {
+        "type": "select",
+        "id": "advanced_badge_mode_search",
+        "label": "Search results",
+        "options": [
+          { "value": "hidden", "label": "Hidden" },
+          { "value": "text",   "label": "Text only" },
+          { "value": "image",  "label": "Image only" },
+          { "value": "both",   "label": "Image + text" }
+        ],
+        "default": "hidden"
+      },
+      {
+        "type": "select",
+        "id": "advanced_badge_mode_nav",
+        "label": "Top navigation menu",
+        "info": "Product cards inside the header mega-menu dropdown.",
+        "options": [
+          { "value": "hidden", "label": "Hidden" },
+          { "value": "text",   "label": "Text only" },
+          { "value": "image",  "label": "Image only" },
+          { "value": "both",   "label": "Image + text" }
+        ],
+        "default": "hidden"
+      },
+      {
+        "type": "header",
+        "content": "Image sizing"
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_image_mobile",
+        "label": "Badge image width (mobile, px)",
+        "default": "60",
+        "info": "Number of pixels, e.g. 60"
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_image_desktop",
+        "label": "Badge image width (desktop, px)",
+        "default": "120",
+        "info": "Number of pixels, e.g. 120"
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_1_text",
+        "label": "Badge text 1",
+        "info": "Match exactly (case-sensitive), e.g. Free Gift!"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_1_image",
+        "label": "Image for badge 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_1_show_text",
+        "label": "Show text on top of image (badge 1)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_2_text",
+        "label": "Badge text 2",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_2_image",
+        "label": "Image for badge 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_2_show_text",
+        "label": "Show text on top of image (badge 2)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_3_text",
+        "label": "Badge text 3",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_3_image",
+        "label": "Image for badge 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_3_show_text",
+        "label": "Show text on top of image (badge 3)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_4_text",
+        "label": "Badge text 4",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_4_image",
+        "label": "Image for badge 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_4_show_text",
+        "label": "Show text on top of image (badge 4)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_5_text",
+        "label": "Badge text 5",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_5_image",
+        "label": "Image for badge 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_5_show_text",
+        "label": "Show text on top of image (badge 5)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_6_text",
+        "label": "Badge text 6",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_6_image",
+        "label": "Image for badge 6"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_6_show_text",
+        "label": "Show text on top of image (badge 6)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_7_text",
+        "label": "Badge text 7",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_7_image",
+        "label": "Image for badge 7"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_7_show_text",
+        "label": "Show text on top of image (badge 7)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_8_text",
+        "label": "Badge text 8",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_8_image",
+        "label": "Image for badge 8"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_8_show_text",
+        "label": "Show text on top of image (badge 8)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_9_text",
+        "label": "Badge text 9",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_9_image",
+        "label": "Image for badge 9"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_9_show_text",
+        "label": "Show text on top of image (badge 9)",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "advanced_badge_map_10_text",
+        "label": "Badge text 10",
+        "info": "Match exactly (case-sensitive)"
+      },
+      {
+        "type": "image_picker",
+        "id": "advanced_badge_map_10_image",
+        "label": "Image for badge 10"
+      },
+      {
+        "type": "checkbox",
+        "id": "advanced_badge_map_10_show_text",
+        "label": "Show text on top of image (badge 10)",
+        "default": true
       },
       {
         "type": "header",

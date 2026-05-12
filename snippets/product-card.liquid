@@ -56,12 +56,22 @@
       assign loading = 'eager'
       assign lazyimage = null
     endunless
+
+    capture quick_view_id
+      echo 'Quickview-'
+      echo section_id
+      if block_id != blank
+        echo '-'
+        echo block_id
+      endif
+      echo '-'
+      echo product_id
+    endcapture
   -%}
   <div class="card product-card product-card--{{ settings.card_style }}{% if settings.card_border_thickness > 0 %} product-card--thickness{% endif %}{% unless featured_media %} no-media{% endunless %}{% if product.available and show_quick_add and mobile_quick_add %} mobile:with-quick-add{% endif %} flex flex-col leading-none relative">
     {%- if featured_media -%}
-      <div class="product-card__media relative h-auto">
+      <div class="product-card__media relative h-auto{% if settings.product_card_swatches_overlay %} swatches-overlay{% endif %}">
         {%- if show_quick_view -%}
-          {%- capture quick_view_id -%}Quickview-{{ section_id }}{% if block_id != blank %}-{{ block_id }}{% endif %}-{{ product_id }}{%- endcapture -%}
           <button type="button" class="quick-view__button button button--secondary z-2 absolute top-0 right-0 opacity-0" is="hover-button" aria-controls="{{ quick_view_id }}" aria-expanded="false">
             <span class="btn-fill" data-fill></span>
             <span class="btn-text">
@@ -119,7 +129,7 @@
           {%- endunless -%}
         {%- endif -%}
 
-        {%- render 'product-badges', product: product, vertical_badges: vertical_badges, show_sold_out: show_sold_out, show_save_amount: show_save_amount, save_type: save_type, class: 'z-2 absolute grid gap-3 pointer-events-none' -%}
+        {%- render 'product-badges', product: product, vertical_badges: vertical_badges, show_sold_out: show_sold_out, show_save_amount: show_save_amount, save_type: save_type, badge_context: badge_context, class: 'z-2 absolute grid gap-3 pointer-events-none' -%}
 
         <a class="block relative media media--{{ image_ratio }}{% unless image_fill %} media--contain{% endunless %}{% unless show_secondary_image and media_count > 1 %} overflow-hidden{% endunless %}" href="{{ product_url }}" aria-label="{{ product.title | escape }}" tabindex="-1">
           {%- unless featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}
@@ -269,6 +279,10 @@
           {%- endunless -%}
         {%- endif -%}
 
+        {%- if show_color_swatches and settings.product_card_swatches_overlay -%}
+          {%- render 'product-card-swatches', product: product, product_url: product_url, show_quick_view: show_quick_view, quick_view_id: quick_view_id -%}
+        {%- endif -%}
+
         {%- if show_countdown and product.metafields.theme.countdown.value != blank -%}
           {%- liquid
             assign now_time = 'now' | date: '%s' | times: 1
@@ -339,110 +353,10 @@
       </div>
       <div class="ruk_rating_snippet" data-sku="{{ product.handle }};{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}"></div>
 
-      {%- if show_color_swatches -%}
-        {%- liquid
-          assign swatch_trigger_list = 'products.general.color_swatch_trigger' | t | downcase | split: ','
-          assign color_count = 0
-
-          comment
-              Pre-scan: does this product have a true colour/color option?
-              If yes, colour swatches take priority and model is skipped.
-              If no, model option falls back to variant images.
-            endcomment
-            assign has_color_option = false
-            for option in product.options_with_values
-              assign option_name = option.name | downcase
-              for trigger in swatch_trigger_list
-                assign swatch_trigger = trigger | strip
-                if option_name contains swatch_trigger
-                  assign has_color_option = true
-                elsif swatch_trigger == 'color' and option_name contains 'colour'
-                  assign has_color_option = true
-                endif
-                if has_color_option
-                  break
-                endif
-              endfor
-              if has_color_option
-                break
-              endif
-            endfor
-        -%}
-        {%- for option in product.options_with_values -%}
-          {%- liquid
-            assign is_color = false
-            assign use_variant_image = false
-            assign option_name = option.name | downcase
-            for trigger in swatch_trigger_list
-              assign swatch_trigger = trigger | strip
-              if option_name contains swatch_trigger
-                assign is_color = true
-              elsif swatch_trigger == 'color' and option_name contains 'colour'
-                assign is_color = true
-              endif
-
-              if is_color == true
-                break
-              endif
-            endfor
-
-            if option_name contains 'model'
-                unless has_color_option
-                  assign is_color = true
-                  assign use_variant_image = true
-                endunless
-              endif
-          -%}
-          {%- if is_color -%}
-            {%- liquid
-              assign option_index = forloop.index0
-              assign values = ''
-              assign max_color_count = settings.product_max_color_swatches
-            -%}
-            <div class="product-card__bottom flex items-center gap-2">
-              <ul class="swatches swatches--{{ settings.rounded_swatch }}{% if settings.product_color_swatch_type == 'variant' or use_variant_image %} swatches--variant{% endif %} swatches--{{ product.id }} inline-flex items-start gap-2">
-                {%- for variant in product.variants -%}
-                  {%- assign value = variant.options[option_index] %}
-                  {%- unless values contains value -%}
-                    {%- liquid
-                      assign values = values | join: ',' | append: ',' | append: value | split: ','
-                      assign color_count = color_count | plus: 1
-                      assign color_title = product.title | append: ' - ' | append: value
-                      assign color_url = variant.url | within: collection
-                      if settings.product_disable_collection_portion
-                        assign color_url = variant.url
-                      endif
-
-                      assign swatch = blank
-                      if value.swatch != blank
-                        assign swatch = value.swatch
-                      endif
-
-                      if use_variant_image and variant.image
-                        assign swatch = variant
-                      elsif settings.product_color_swatch_type == 'variant' and variant.image
-                        assign swatch = variant
-                      endif
-                    -%}
-                    {%- if color_count <= max_color_count -%}
-                      <li>
-                        {%- render 'swatch', href: color_url, title: color_title, value: value, value_label: value, swatch: swatch -%}
-                      </li>
-                    {%- endif -%}
-                  {%- endunless -%}
-                {%- endfor -%}
-              </ul>
-              {%- if color_count > max_color_count -%}
-                <a href="{{ product_url }}" class="reversed-link font-medium text-xs text-opacity leading-none tracking-widest" is="hover-link"{% if show_quick_view %} aria-controls="{{ quick_view_id }}" aria-expanded="false"{% endif %}>+{{ color_count | minus: max_color_count }}</a>
-              {%- endif -%}
-            </div>
-            {%- if color_count < 1 -%}
-              <style>
-                .swatches--{{ product.id }} { display: none; }
-              </style>
-            {%- endif -%}
-          {%- endif -%}
-        {%- endfor -%}
+      {%- if show_color_swatches and settings.product_card_swatches_overlay == false -%}
+        {%- render 'product-card-swatches', product: product, product_url: product_url, show_quick_view: show_quick_view, quick_view_id: quick_view_id -%}
+      {%- elsif show_color_swatches and settings.product_card_swatches_overlay and settings.product_card_swatches_keep_text -%}
+        {%- render 'product-card-swatches', product: product, product_url: product_url, show_quick_view: show_quick_view, quick_view_id: quick_view_id -%}
       {%- endif -%}
     </div>
 
