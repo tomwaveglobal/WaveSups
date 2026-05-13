@@ -99,7 +99,7 @@
                 {{- localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
               </button>
               {%- unless section_rendering_api -%}
-                <select class="localization__item cursor-pointer absolute top-0 left-0 w-full h-full opacity-0" name="locale_code" id="FooterLocalizationCountryList">
+                <select class="localization__item cursor-pointer absolute top-0 left-0 w-full h-full opacity-0" name="country_code" id="FooterLocalizationCountryList">
                   <option value="{{ localization.country.iso_code }}" selected>
                     {{- localization.country.name }} ({{ localization.country.currency.iso_code }} {{ localization.country.currency.symbol }})
                   </option>

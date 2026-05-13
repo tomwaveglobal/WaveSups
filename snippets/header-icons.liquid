@@ -98,6 +98,7 @@
                         -%}
                       </ul>
                       <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" />
+                      <input type="hidden" name="return_to" value="{{ request.path }}" />
                     {%- endform -%}
                   {%- endunless -%}
                 </div>
@@ -164,6 +165,7 @@
                         {%- endfor -%}
                       </ul>
                       <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}" />
+                      <input type="hidden" name="return_to" value="{{ request.path }}" />
                     {%- endform -%}
                   {%- endunless -%}
                 </div>

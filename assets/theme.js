@@ -3419,7 +3419,9 @@ class LocalizationListbox extends HTMLFormElement {
     event.preventDefault();
 
     this.input.value = event.currentTarget.getAttribute('data-value');
-    this.returnTo.value = window.location.pathname;
+    if (this.returnTo) {
+      this.returnTo.value = `${window.location.pathname}${window.location.search}`;
+    }
     this.submit();
   }
 }
