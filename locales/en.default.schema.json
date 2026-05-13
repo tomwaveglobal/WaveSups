@@ -1363,10 +1363,6 @@
           "label": "Enable country/region selector",
           "info": "To add a country/region, go to your [market settings](/admin/settings/markets)."
         },
-        "country_selector_order": {
-          "label": "Country list order",
-          "info": "Optional. Comma-separated list: use country names as they appear in the dropdown (e.g. Spain, Slovakia, Germany) or ISO codes (e.g. ES, SK, DE). Those markets appear first in this order; remaining markets follow in the default order. Leave blank for Shopify’s default order."
-        },
         "enable_language_selector": {
           "label": "Enable language selector",
           "info": "To add a language, go to your [language settings](/admin/settings/languages)."
@@ -5183,6 +5179,18 @@
       "settings": {
         "customer_account_menu": {
           "label": "Customer account menu"
+        }
+      }
+    },
+    "localization": {
+      "name": "Localization",
+      "settings": {
+        "header__country_selector": {
+          "content": "Country/region selector"
+        },
+        "country_selector_order": {
+          "label": "Country list order",
+          "info": "Applies to every country list in the theme (announcement bar, header, mobile drawer, footer). Optional. Comma-separated list: use country names as they appear in the dropdown (e.g. Spain, Slovakia, Germany) or ISO codes (e.g. ES, SK, DE). Those markets appear first in this order; remaining markets follow in the default order. Leave blank for Shopify’s default order."
         }
       }
     },

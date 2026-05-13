@@ -61,7 +61,6 @@
         "show_social": true,
         "enable_language_selector": false,
         "enable_country_selector": true,
-        "country_selector_order": "United Kingdom, United States, France, Germany, Spain, Italy",
         "invert_icons_selectors": false,
         "announcement_position": "center",
         "announcement_layout": "carousel",

@@ -1581,6 +1581,21 @@
     ]
   },
   {
+    "name": "t:settings_schema.localization.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.localization.settings.header__country_selector.content"
+      },
+      {
+        "type": "textarea",
+        "id": "country_selector_order",
+        "label": "t:settings_schema.localization.settings.country_selector_order.label",
+        "info": "t:settings_schema.localization.settings.country_selector_order.info"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.social-media.name",
     "settings": [
       {

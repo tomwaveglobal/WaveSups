@@ -89,25 +89,13 @@
                     {%- form 'localization', id: form_id, class: 'dropdown__container relative', is: 'localization-listbox' -%}
                       {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
                       <ul class="dropdown__nav flex flex-col gap-1d5 xl:gap-2" role="list">
-                        {%- for language in localization.available_languages -%}
-                          <li class="opacity-0">
-                            <p>
-                              <a class="reversed-link{% if language.iso_code == localization.language.iso_code %} active pointer-events-none{% endif %}"
-                                href="#"
-                                hreflang="{{ language.iso_code }}"
-                                lang="{{ language.iso_code }}"
-                                {% if language.iso_code == localization.language.iso_code %}
-                                  aria-current="true"
-                                {% endif %}
-                                data-value="{{ language.iso_code }}"
-                                title="{{ language.endonym_name | capitalize | escape }}"
-                                data-no-instant
-                              >
-                                {{- language.endonym_name | capitalize -}}
-                              </a>
-                            </p>
-                          </li>
-                        {%- endfor -%}
+                        {%- render 'localization-countries-ordered',
+                          render_as: 'form_anchors',
+                          current_country_iso: localization.country.iso_code,
+                          eu_override: '',
+                          us_override: '',
+                          uk_override: ''
+                        -%}
                       </ul>
                       <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}" />
                     {%- endform -%}
