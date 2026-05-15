@@ -103,6 +103,8 @@
     "product_color_swatch_type": "file",
     "product_save_amount": true,
     "product_save_type": "percent",
+    "product_badge_text_size": 8,
+    "product_badge_text_size_desktop": 12,
     "advanced_badge_mode_product": "both",
     "advanced_badge_mode_collection": "text",
     "advanced_badge_mode_home": "both",
