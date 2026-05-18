@@ -58,16 +58,79 @@ Supported variables
     }
     </script>
 
+    {%- assign popup_id = 'OnSiteMessagePopup-' | append: block.id -%}
+    {%- assign popup_title = block.settings.message_image_popup_title | default: 'Finance Options' -%}
+
     <div {% render 'surface', class: offer_class, background: block.settings.message_background, text_color: block.settings.message_text_color, background_fallback: 'bg-secondary' %} {{ block.shopify_attributes }}>
       {% assign amount = product.selected_or_first_available_variant.price | divided_by: divide | money_without_trailing_zeros %}
       {% assign message = block.settings.message %}
       <div class="on-site-container {% unless block.settings.message_background == blank or block.settings.message_background == 'transparent' %} on-site-container-padding {% endunless %}" style="display: flex; align-items: center; justify-content: space-between;">
           <p class="bold text-sm" style="margin: 0; text-align: left;">{{ message | replace: "#divid", divide | replace: "#amount", amount }}</p>
           {%- if block.settings.message_image_checkbox -%}
-          <div class="on-site-container__icon" style="max-width:{{ block.settings.message_icon_width }}px; margin-left: 12px; flex-shrink: 0;">
-              {{ block.settings.message_custom_icon | img_url: 'master' | img_tag }}
-          </div>
+            {%- if block.settings.message_image_link != blank -%}
+              <button
+                type="button"
+                class="on-site-container__icon on-site-container__icon--button"
+                style="max-width:{{ block.settings.message_icon_width }}px; margin-left: 12px; flex-shrink: 0; background: none; border: 0; padding: 0; cursor: pointer;"
+                is="hover-button"
+                aria-controls="{{ popup_id }}"
+                aria-expanded="false"
+                aria-label="{{ popup_title | escape }}"
+              >
+                {{ block.settings.message_custom_icon | img_url: 'master' | img_tag }}
+              </button>
+            {%- else -%}
+              <div class="on-site-container__icon" style="max-width:{{ block.settings.message_icon_width }}px; margin-left: 12px; flex-shrink: 0;">
+                  {{ block.settings.message_custom_icon | img_url: 'master' | img_tag }}
+              </div>
+            {%- endif -%}
           {%- endif -%}
       </div>
     </div>
+
+    {%- if block.settings.message_image_checkbox and block.settings.message_image_link != blank -%}
+      <x-modal
+        id="{{ popup_id }}"
+        class="x-modal drawer z-30 fixed bottom-0 left-0 h-full w-full pointer-events-none on-site-message-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="{{ popup_title | escape }}"
+        hidden
+      >
+        <overlay-element class="overlay fixed-modal invisible opacity-0 fixed bottom-0 left-0 w-full h-screen pointer-events-none" aria-controls="{{ popup_id }}" aria-expanded="false"></overlay-element>
+        <div class="drawer__inner z-10 absolute top-0 flex flex-col w-full h-full overflow-hidden">
+          <button
+            class="on-site-message-modal__close"
+            type="button"
+            is="hover-button"
+            aria-controls="{{ popup_id }}"
+            aria-expanded="false"
+            aria-label="{{ 'general.accessibility.close' | t | escape }}"
+            style="position: absolute; top: 10px; right: 10px; z-index: 30; width: 40px; height: 40px; padding: 0; border-radius: 9999px; background: #ffffff; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 2px 8px rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: center; cursor: pointer; color: #111;"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <gesture-element class="drawer__header flex justify-between opacity-0 invisible relative" tabindex="0" style="padding-right: 60px;">
+            <span class="drawer__title heading title-md">{{ popup_title | escape }}</span>
+          </gesture-element>
+          <div class="drawer__content opacity-0 invisible flex flex-col h-full grow shrink">
+            <div class="drawer__scrollable relative flex flex-col grow shrink" style="padding: 0;">
+              <iframe
+                src="{{ block.settings.message_image_link }}"
+                title="{{ popup_title | escape }}"
+                loading="lazy"
+                style="border: 0; width: 100%; height: 100%; min-height: 60vh; flex: 1 1 auto; display: block;"
+                allow="payment"
+              ></iframe>
+              <p class="text-sm" style="padding: var(--sp-3) var(--sp-5) var(--sp-3); margin: 0; flex: 0 0 auto;">
+                Having trouble viewing? <a href="{{ block.settings.message_image_link }}" target="_blank" rel="noopener noreferrer" class="link">Open in a new tab</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </x-modal>
+    {%- endif -%}
   {%- endif -%}
