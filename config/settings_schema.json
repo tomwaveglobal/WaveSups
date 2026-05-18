@@ -1111,6 +1111,17 @@
         "default": "#f5a623"
       },
       {
+        "type": "range",
+        "id": "product_badge_image_radius",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 10,
+        "label": "Badge image radius",
+        "info": "Corner radius for image-based badges (e.g. Free Starter Kit). 0 = square corners."
+      },
+      {
         "type": "header",
         "content": "Advanced Badges"
       },
