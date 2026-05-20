@@ -102,6 +102,7 @@
         },
         "text_9TUUbA": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "icon": "sale",
             "iwidth": "custom",
@@ -145,6 +146,8 @@
             "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
             "message_icon_width": 100,
             "message_image_checkbox": true,
+            "message_image_link": "",
+            "message_image_popup_title": "Finance Options",
             "message": "<p>Starting at #amount* per month</p>",
             "message_divide_amount": "24",
             "message_price_range": "100",

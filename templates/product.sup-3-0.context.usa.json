@@ -41,6 +41,15 @@
           }
         }
       }
+    },
+    "main-product": {
+      "settings": {},
+      "blocks": {
+        "text_9TUUbA": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
     }
   },
   "context": {
