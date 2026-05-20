@@ -19,8 +19,8 @@
         "announcement-2": {
           "disabled": false,
           "settings": {
-            "text": "<em><strong>SALE ALERT:  10%</strong></em> Off with SUMMER10",
-            "text_mobile": "<em><strong>SALE ALERT:  10%</strong></em> Off with SUMMER10"
+            "text": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards",
+            "text_mobile": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards"
           }
         }
       }
