@@ -18,7 +18,7 @@
       "blocks": {
         "text_WF3nRk": {
           "type": "text",
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "icon": "sale",
             "icon_image": null,
@@ -26,11 +26,11 @@
             "icon_width": 30,
             "text": "Use code <strong>SUMMER10</strong> for 10% off | Limited Time!",
             "text_size": "text-base",
-            "header-517bf04ead5e53a8f84e859dbce295e0": null,
+            "header-47e046adaee187d53beaf1e5b33b4a33": null,
             "text_color": "#ffffff",
             "icon_color": "#ffffff",
             "background_color": "#f59e0b",
-            "header-a961888c99101e6eb4518df990f878fd": null,
+            "header-0918683a9421f6c23192e414ee3d5ade": null,
             "alignment": "center",
             "background_height": 10,
             "border_radius": 0
