@@ -16,24 +16,24 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_rC3mcC": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/15_-Sale-Watersport-1_9417f03c-b6d1-4555-8e56-5fe638e4c756.jpg",
+            "image_mobile": "shopify://shop_images/15_-Sale-Watersport-2-V3_2155be06-7d84-4ffe-8269-887cc7744189.jpg",
+            "heading": "‎",
+            "button_label": "Shop Sale",
+            "button_link": "shopify://collections/sale"
+          }
+        },
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_28f91dcf-8ad8-42a8-a94b-68fbf2624ac7.jpg",
             "image_mobile": "shopify://shop_images/Mobile_5f6baf4a-99ce-4ba9-8ea6-1e48c1b94a1c.jpg",
             "heading": "Stop saying \"next summer\"",
-            "button_label": "Shop The Rane",
+            "button_label": "Shop The Range",
             "button_link": "shopify://collections/all-products"
-          }
-        },
-        "image_rC3mcC": {
-          "disabled": false,
-          "settings": {
-            "heading": "‎",
-            "button_label": "Shop Sale",
-            "button_link": "shopify://collections/sale",
-            "image": "shopify://shop_images/15_-Sale-Watersport-1_9417f03c-b6d1-4555-8e56-5fe638e4c756.jpg",
-            "image_mobile": "shopify://shop_images/15_-Sale-Watersport-2-V3_2155be06-7d84-4ffe-8269-887cc7744189.jpg"
           }
         }
       },
