@@ -21,19 +21,29 @@
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_28f91dcf-8ad8-42a8-a94b-68fbf2624ac7.jpg",
             "image_mobile": "shopify://shop_images/Mobile_5f6baf4a-99ce-4ba9-8ea6-1e48c1b94a1c.jpg",
-            "heading": "Stop saying \"next summer.\"<br> 15% Off Selected Boards",
-            "button_label": "Shop Sale",
-            "button_link": "shopify://collections/sale"
+            "heading": "Stop saying \"next summer\"",
+            "button_label": "Shop The Rane",
+            "button_link": "shopify://collections/all-products"
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "heading": "Sun's Out, Paddles Out!<br> <span style=\"color: #F59E0B;\">20% Off </span>to Kickstart Your Summer.",
-            "button_label": "Shop Now"
+            "heading": "‎",
+            "button_label": "Shop Sale",
+            "button_link": "shopify://collections/sale",
+            "image": "shopify://shop_images/15_-Sale-Watersport-1_9417f03c-b6d1-4555-8e56-5fe638e4c756.jpg",
+            "image_mobile": "shopify://shop_images/15_-Sale-Watersport-2-V3_2155be06-7d84-4ffe-8269-887cc7744189.jpg"
           }
         }
-      }
+      },
+      "block_order": [
+        "image_rC3mcC",
+        "image_e6Nny7",
+        "image_UPWkm3",
+        "slide-2",
+        "image_bAHz74"
+      ]
     }
   }
 }
