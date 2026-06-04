@@ -112,16 +112,18 @@
     "advanced_badge_mode_nav": "text",
     "advanced_badge_image_mobile": "110",
     "advanced_badge_image_desktop": "140",
-    "advanced_badge_map_1_text": "Quick Release Leash (WQR)",
-    "advanced_badge_map_1_image": "shopify://shop_images/WQR.jpg",
+    "advanced_badge_map_1_text": "Complete Cruiser Package",
+    "advanced_badge_map_1_image": "shopify://shop_images/Cruiser_862b252d-0f34-407a-9e33-a3059f44f82e.png",
     "advanced_badge_map_1_show_text": true,
-    "advanced_badge_map_2_text": "Worlds Safest Leash (WQR)",
-    "advanced_badge_map_2_image": "shopify://shop_images/WQR.png",
-    "advanced_badge_map_3_text": "Complete Package",
+    "advanced_badge_map_2_text": "Complete SUP Package",
+    "advanced_badge_map_2_image": "shopify://shop_images/Tourer_091275da-99ec-4ab4-9725-a57993e643d5.png",
+    "advanced_badge_map_3_text": "Complete Kayak Package",
     "advanced_badge_map_3_image": "shopify://shop_images/Kayak.png",
     "advanced_badge_map_3_show_text": true,
-    "advanced_badge_map_4_text": "Complete Package‎",
-    "advanced_badge_map_4_image": "shopify://shop_images/Pro_Package_Collage_3.png",
+    "advanced_badge_map_4_text": "Complete Pro Package‎",
+    "advanced_badge_map_4_image": "shopify://shop_images/Pro_aae80c8b-1958-4990-b61a-0bcd3a368cf2.png",
+    "advanced_badge_map_5_text": "Complete Recon Package",
+    "advanced_badge_map_5_image": "shopify://shop_images/Recon_97cbc4ee-353c-4962-8698-f81403a5e09c.png",
     "product_icon_list_metafield": "custom.product_icons",
     "product_icon_list": true,
     "product_icon_list_max": 4,
@@ -233,11 +235,6 @@
           "lang": "auto",
           "enable_syndication": false
         }
-      },
-      "924744721961926860": {
-        "type": "shopify://apps/freshmarketer-email-sms/blocks/freshmarketer-onsite-js/6fac208c-ff40-4b41-be01-e5940014bcb0",
-        "disabled": false,
-        "settings": {}
       },
       "15316669992541710076": {
         "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
