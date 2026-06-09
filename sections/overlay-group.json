@@ -17,6 +17,7 @@
         "show_vendor": false,
         "show_cart_note": false,
         "show_shipping_calculator": true,
+        "add_discount_code": true,
         "show_view_cart_button": false,
         "show_checkout_button": true,
         "show_free_shipping_bar": true,
@@ -59,6 +60,9 @@
             "text_font": "body",
             "text_size": "subtext-custom",
             "text_max_size": 12,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": true,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -71,7 +75,8 @@
             "heading_size": "text-2xl lg:text-3xl",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
-            "highlighted_scribble": "basic-underline"
+            "highlighted_scribble": "basic-underline",
+            "highlighted_reveal": false
           }
         },
         "spacing": {
@@ -92,6 +97,9 @@
             "text_font": "body",
             "text_size": "text-sm",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": true,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -124,7 +132,7 @@
         "floating"
       ],
       "settings": {
-        "mode": "enabled",
+        "mode": "testing",
         "only_homepage": true,
         "only_visitor": false,
         "delay": 60,
@@ -150,7 +158,8 @@
             "heading_size": "text-lg-2xl",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -160,6 +169,9 @@
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -214,7 +226,8 @@
             "heading_size": "text-lg-2xl",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -224,6 +237,9 @@
             "text_font": "body",
             "text_size": "text-base",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
