@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "context": {
+    "market": "netherlands"
+  },
+  "parent": "header-group.json",
+  "sections": {
+    "header": {
+      "settings": {
+        "menu": "new-eu-top-nav-25",
+        "menu_mobile": "new-eu-top-nav-25"
+      },
+      "blocks": {
+        "mega_menu_tab_Wn9z4a": {
+          "settings": {
+            "button_link": "shopify://collections/sale-eu",
+            "tab_target_link_1": "shopify://collections/sale-eu"
+          }
+        }
+      }
+    }
+  }
+}
