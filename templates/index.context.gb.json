@@ -19,10 +19,10 @@
         "image_rC3mcC": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/15_-Sale-Watersport-1_9417f03c-b6d1-4555-8e56-5fe638e4c756.jpg",
-            "image_mobile": "shopify://shop_images/15_-Sale-Watersport-2-V3_2155be06-7d84-4ffe-8269-887cc7744189.jpg",
+            "image": "shopify://shop_images/FathersDay_SUPs-1.jpg",
+            "image_mobile": "shopify://shop_images/FathersDay_SUPs-2.jpg",
             "heading": "‎",
-            "button_label": "Shop Sale",
+            "button_label": "Shop Father's Day",
             "button_link": "shopify://collections/sale"
           }
         },
