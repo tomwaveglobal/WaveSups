@@ -61,6 +61,7 @@
         "show_social": true,
         "enable_language_selector": false,
         "enable_country_selector": true,
+        "country_selector_order": "",
         "invert_icons_selectors": false,
         "announcement_position": "center",
         "announcement_layout": "carousel",
@@ -694,7 +695,7 @@
           "settings": {
             "menu_title": "Sale",
             "button_label": "View All Sale",
-            "button_link": "shopify://collections/sale",
+            "button_link": "shopify://collections/sale-uk",
             "heading_1": "Collections",
             "heading_2": "Most popular",
             "show_vendor": false,
