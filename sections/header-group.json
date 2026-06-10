@@ -701,7 +701,7 @@
             "show_vendor": false,
             "show_price": true,
             "tab_target_1": "Sale",
-            "tab_target_link_1": "shopify://collections/sale",
+            "tab_target_link_1": "shopify://collections/sale-uk",
             "tab_products_1": [],
             "tab_product_limit_1": 4,
             "tab_icon_width_1": 42,
