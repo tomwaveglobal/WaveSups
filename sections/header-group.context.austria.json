@@ -20,7 +20,7 @@
       },
       "blocks": {
         "mega_menu_tab_Wn9z4a": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "button_link": "shopify://collections/sale-eu",
             "tab_target_link_1": "shopify://collections/sale-eu"
