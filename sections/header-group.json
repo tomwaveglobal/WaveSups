@@ -693,15 +693,15 @@
         "mega_menu_tab_Wn9z4a": {
           "type": "mega_menu_tab",
           "settings": {
-            "menu_title": "Sale | EU",
+            "menu_title": "Sale | UK",
             "button_label": "View All Sale",
-            "button_link": "shopify://collections/sale-eu",
+            "button_link": "shopify://collections/sale-uk",
             "heading_1": "Collections",
             "heading_2": "Most popular",
             "show_vendor": false,
             "show_price": true,
             "tab_target_1": "Sale",
-            "tab_target_link_1": "shopify://collections/sale-eu",
+            "tab_target_link_1": "shopify://collections/sale-uk",
             "tab_products_1": [],
             "tab_product_limit_1": 4,
             "tab_icon_width_1": 42,
