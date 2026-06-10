@@ -693,9 +693,9 @@
         "mega_menu_tab_Wn9z4a": {
           "type": "mega_menu_tab",
           "settings": {
-            "menu_title": "Sale",
+            "menu_title": "Sale | EU",
             "button_label": "View All Sale",
-            "button_link": "shopify://collections/sale-uk",
+            "button_link": "shopify://collections/sale-eu",
             "heading_1": "Collections",
             "heading_2": "Most popular",
             "show_vendor": false,
