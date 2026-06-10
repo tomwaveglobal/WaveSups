@@ -54,21 +54,27 @@
         "mega_menu_tab_aePWta": {
           "settings": {
             "tab_products_1": [],
+            "tab_target_2": "Trailblazer",
+            "tab_target_link_2": "shopify://collections/kayaks-trailblazer",
+            "tab_icon_2": "shopify://shop_images/Trailblazer_3.0_1600px_7c016c70-92fe-469e-8977-44e94e826bae.png",
             "tab_products_3": [],
             "tab_target_4": "Voyager",
             "tab_target_link_4": "shopify://collections/voyager-range",
             "tab_icon_4": "shopify://shop_images/Voyager_1600px.png",
             "tab_target_6": "",
             "tab_target_link_6": "",
-            "tab_icon_6": null,
-            "tab_target_2": "Trailblazer",
-            "tab_target_link_2": "shopify://collections/kayaks-trailblazer",
-            "tab_icon_2": "shopify://shop_images/Trailblazer_3.0_1600px_7c016c70-92fe-469e-8977-44e94e826bae.png"
+            "tab_icon_6": null
           }
         },
         "mega_menu_tab_63jewV": {
           "disabled": false,
           "settings": {}
+        },
+        "mega_menu_tab_Wn9z4a": {
+          "settings": {
+            "button_link": "shopify://collections/sale-usa",
+            "tab_target_link_1": "shopify://collections/sale-usa"
+          }
         }
       }
     }
