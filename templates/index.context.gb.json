@@ -35,14 +35,21 @@
             "button_label": "Shop The Range",
             "button_link": "shopify://collections/all-products"
           }
+        },
+        "image_bAHz74": {
+          "settings": {
+            "image": "shopify://shop_images/Carousel-Home-page.jpg",
+            "heading": "‎",
+            "image_mobile": "shopify://shop_images/Carousel_mobile.jpg"
+          }
         }
       },
       "block_order": [
+        "image_bAHz74",
         "image_rC3mcC",
         "image_e6Nny7",
         "image_UPWkm3",
-        "slide-2",
-        "image_bAHz74"
+        "slide-2"
       ]
     }
   }
