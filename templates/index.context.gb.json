@@ -16,6 +16,14 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_bAHz74": {
+          "settings": {
+            "image": "shopify://shop_images/Carousel-Home-page.jpg",
+            "image_mobile": "shopify://shop_images/Carousel_mobile.jpg",
+            "heading": "‎",
+            "button_label": "Shop Trailblazer 3.0"
+          }
+        },
         "image_rC3mcC": {
           "disabled": false,
           "settings": {
@@ -34,13 +42,6 @@
             "heading": "Stop saying \"next summer\"",
             "button_label": "Shop The Range",
             "button_link": "shopify://collections/all-products"
-          }
-        },
-        "image_bAHz74": {
-          "settings": {
-            "image": "shopify://shop_images/Carousel-Home-page.jpg",
-            "heading": "‎",
-            "image_mobile": "shopify://shop_images/Carousel_mobile.jpg"
           }
         }
       },
