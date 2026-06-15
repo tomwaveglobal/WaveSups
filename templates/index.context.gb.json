@@ -17,6 +17,7 @@
       "settings": {},
       "blocks": {
         "image_bAHz74": {
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Carousel-Home-page.jpg",
             "image_mobile": "shopify://shop_images/Carousel_mobile.jpg",
