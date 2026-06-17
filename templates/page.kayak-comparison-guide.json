@@ -56,7 +56,7 @@
       "name": "Image with text overlay",
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/Trustpilot-Blog.jpg",
+        "image": "shopify://shop_images/Carousel_Home_SUP_Half_Term.png",
         "image_height": "550px",
         "content_width": "medium",
         "content_position": "md:items-end md:justify-start",
@@ -214,6 +214,7 @@
         },
         "values_9qUiMz": {
           "type": "values",
+          "disabled": true,
           "settings": {
             "product": "trailblazer-3",
             "value_1": "<h6><strong>1 Seater</strong></h6><p>426x24x38cm | 167.7x9.4x14.9\"</p><h6><strong>2 Seater</strong></h6><p>466x24x38cm | 183x9.4x14.9\"</p>",
@@ -322,6 +323,7 @@
         "first_available_variant": false,
         "show_vendor": false,
         "show_price": true,
+        "show_rating": true,
         "heading": "Compare Kayaks",
         "heading_size": "title-md",
         "heading_alignment": "text-center md:items-center",
