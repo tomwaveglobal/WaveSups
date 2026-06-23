@@ -26,7 +26,7 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Fathers_day.png",
             "image_mobile": "shopify://shop_images/Fathers_day_mobile.png",
