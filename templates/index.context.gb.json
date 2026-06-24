@@ -21,7 +21,7 @@
           "settings": {
             "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel.gif",
             "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Carousel.gif",
-            "heading": "‎",
+            "heading": "",
             "button_label": "Shop SUP 3.0",
             "button_link": "shopify://products/pro-3"
           }
