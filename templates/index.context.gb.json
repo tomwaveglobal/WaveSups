@@ -17,12 +17,12 @@
       "settings": {},
       "blocks": {
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3.gif",
-            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Carousel.gif",
+            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Mobile-2.gif",
             "heading": "",
-            "button_label": "Shop SUP 3.0",
+            "button_label": "Shop PRO 3.0",
             "button_link": "shopify://products/pro-3"
           }
         },
