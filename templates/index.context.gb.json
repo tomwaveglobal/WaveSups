@@ -17,12 +17,13 @@
       "settings": {},
       "blocks": {
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Carousel-Home-page.jpg",
-            "image_mobile": "shopify://shop_images/Carousel_mobile.jpg",
+            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel.gif",
+            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Carousel.gif",
             "heading": "‎",
-            "button_label": "Shop Trailblazer 3.0"
+            "button_label": "Shop SUP 3.0",
+            "button_link": "shopify://products/pro-3"
           }
         },
         "image_rC3mcC": {
