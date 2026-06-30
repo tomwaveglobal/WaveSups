@@ -130,8 +130,95 @@
         "rounded": true
       }
     },
+    "staged_product_bundle_xgdzV7": {
+      "type": "staged-product-bundle",
+      "blocks": {
+        "stage_Ggp6id": {
+          "type": "stage",
+          "settings": {
+            "title": "Choose a SUP/Kayak",
+            "description": "",
+            "required": true,
+            "max_picks": 1,
+            "collection": "",
+            "products": [
+              "cruiser-3",
+              "tourer-3",
+              "woody-3",
+              "recon-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "navigator-3",
+              "venturer-inflatable-canoe",
+              "voyager-kayak",
+              "roamer-inflatable-kayak"
+            ],
+            "product_limit": 24,
+            "columns": 4
+          }
+        },
+        "stage_CryVzr": {
+          "type": "stage",
+          "settings": {
+            "title": "Choose Two Accessories",
+            "description": "",
+            "required": true,
+            "max_picks": 2,
+            "collection": "",
+            "products": [
+              "waterproof-zipped-pvc-deck-bag",
+              "waterproof-roll-top-pvc-deck-bag",
+              "waist-bag-navy",
+              "kids-sup-paddle",
+              "hydro-carbon-paddle",
+              "hydro-paddle-ukca",
+              "premium-paddle",
+              "aluminium-kids-kayak-paddle-3",
+              "basic-paddle",
+              "canoe-paddle",
+              "carry-case-3",
+              "sup-repair-kit-3",
+              "triple-action-hand-pump",
+              "electric-pump-ht737",
+              "sup-carry-case",
+              "kayak-bottle-holder",
+              "single-action-pump-ukce",
+              "carry-case-2-0-models"
+            ],
+            "product_limit": 8,
+            "columns": 3
+          }
+        }
+      },
+      "block_order": [
+        "stage_Ggp6id",
+        "stage_CryVzr"
+      ],
+      "name": "Staged bundle",
+      "settings": {
+        "heading": "Build your bundle",
+        "heading_size": "lg:text-4xl text-2xl",
+        "heading_tag": "h2",
+        "heading_alignment": "text-left",
+        "subheading": "",
+        "description": "",
+        "summary_title": "Your bundle",
+        "columns_mobile": "2",
+        "show_variant_labels": false,
+        "picker_type": "button",
+        "enable_color_swatches": true,
+        "color_swatch_type": "color",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "product-bundle": {
       "type": "product-bundle",
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1536px) {.product-bundle {flex: 0 0 25%; } .product-bundle__sidebar {width: 100%; }}"
       ],
@@ -190,6 +277,7 @@
     },
     "product_bundle_wqEpE4": {
       "type": "product-bundle",
+      "disabled": true,
       "custom_css": [
         "@media screen and (min-width: 1536px) {.product-bundle {flex: 0 0 25%; } .product-bundle__sidebar {width: 100%; }}"
       ],
@@ -419,6 +507,7 @@
     "main-page",
     "image-with-text-overlay",
     "rich-text",
+    "staged_product_bundle_xgdzV7",
     "product-bundle",
     "product_bundle_wqEpE4",
     "floating-product-bundle",
