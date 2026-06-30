@@ -35,8 +35,8 @@ class StagedProductBundle extends HTMLElement {
     this.querySelectorAll('[data-staged-bundle-step]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const target = parseInt(btn.getAttribute('data-staged-bundle-step'), 10);
-        // Only allow jumping backwards (or to the current stage) from the stepper.
-        if (target <= this.current) this.goTo(target);
+        // goTo validates forward moves (required stages must be satisfied first).
+        this.goTo(target);
       });
     });
 
@@ -158,6 +158,14 @@ class StagedProductBundle extends HTMLElement {
     return this.stages.every((stage) => (stage.required ? stage.selections.length > 0 : true));
   }
 
+  // A stage is reachable if every required stage before it has a selection.
+  canReach(index) {
+    for (let i = 0; i < index; i++) {
+      if (!this.canAdvanceFrom(i)) return false;
+    }
+    return true;
+  }
+
   goTo(index) {
     if (index < 0 || index > this.lastStageIndex) return;
     // Going forward: every stage up to (not including) target must be satisfied.
@@ -203,8 +211,9 @@ class StagedProductBundle extends HTMLElement {
       const i = parseInt(btn.getAttribute('data-staged-bundle-step'), 10);
       btn.classList.toggle('is-current', i === this.current);
       btn.classList.toggle('is-done', i < this.current && this.stages[i].selections.length > 0);
-      // Reachable = already visited (<= current).
-      btn.disabled = i > this.current;
+      // Clickable if already visited, the current step, or reachable (all
+      // required steps before it are satisfied).
+      btn.disabled = !(i <= this.current || this.canReach(i));
     });
 
     // Prev button
