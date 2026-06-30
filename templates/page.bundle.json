@@ -49,7 +49,8 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image_height": "750px",
+        "image": "shopify://shop_images/Carousel_Home_page_ab0cd04f-9e44-408f-acb1-247a33eb816f.jpg",
+        "image_height": "550px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
