@@ -52,7 +52,13 @@
             "iwidth": "custom",
             "icon_width": 20,
             "text": "{{ product.metafields.custom.description_snippet.value }}",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "description": {
@@ -87,24 +93,11 @@
         },
         "variant_pre_order_nkaMyt": {
           "type": "variant_pre_order",
+          "disabled": true,
           "settings": {
             "text_size": "text-base",
             "color_text": "#ffffff",
             "color_background": "#1f1f1f"
-          }
-        },
-        "on_site_message_EFzeYN": {
-          "type": "on_site_message",
-          "settings": {
-            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
-            "message_icon_width": 100,
-            "message_image_checkbox": true,
-            "message": "<p>Starting at #amount* per month</p>",
-            "message_divide_amount": "24",
-            "message_price_range": "100",
-            "message_limit_amount": "100000",
-            "message_background": "#fafafa",
-            "message_text_color": "#00a341"
           }
         },
         "text_ceUtLU": {
@@ -115,21 +108,30 @@
             "iwidth": "custom",
             "icon_width": 24,
             "text": "Use code <strong>SUN15</strong> for 15% off | Limited Time Only!",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
-        "product_bundle_tWCDMV": {
-          "type": "product_bundle",
+        "text_XaNygx": {
+          "type": "text",
+          "disabled": true,
           "settings": {
-            "opened": true,
-            "clickable": true,
-            "variant_selection": false,
-            "icon": "box",
+            "icon": "sale",
             "iwidth": "custom",
             "icon_width": 30,
-            "heading": "Popular Add Ons",
-            "products": "{{ product.metafields.custom.popular_upgrades.value }}",
-            "metafield": ""
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "alignment": "center",
+            "background_height": 10,
+            "border_radius": 0
           }
         },
         "buy_buttons": {
@@ -137,9 +139,9 @@
           "settings": {
             "show_quantity_selector": true,
             "show_price": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": false,
             "show_back_in_stock_name": false,
             "show_back_in_stock_phone": false
           }
@@ -155,6 +157,22 @@
             "help_page_external": false
           }
         },
+        "on_site_message_EFzeYN": {
+          "type": "on_site_message",
+          "settings": {
+            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
+            "message_icon_width": 100,
+            "message_image_checkbox": true,
+            "message_image_link": "",
+            "message_image_popup_title": "Finance Options",
+            "message": "<p>Starting at #amount* per month</p>",
+            "message_divide_amount": "24",
+            "message_price_range": "100",
+            "message_limit_amount": "100000",
+            "message_background": "#fafafa",
+            "message_text_color": "#00a341"
+          }
+        },
         "text_3PYKCi": {
           "type": "text",
           "disabled": true,
@@ -163,7 +181,13 @@
             "iwidth": "custom",
             "icon_width": 24,
             "text": "Klarna's Pay in 3 / Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only. Subject to status. Ts&Cs and late fees apply.",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "inventory": {
@@ -195,6 +219,20 @@
           "type": "sticky_buy_button",
           "settings": {}
         },
+        "product_bundle_tWCDMV": {
+          "type": "product_bundle",
+          "settings": {
+            "opened": true,
+            "clickable": true,
+            "variant_selection": false,
+            "icon": "box",
+            "iwidth": "custom",
+            "icon_width": 30,
+            "heading": "Popular Add Ons",
+            "products": "{{ product.metafields.custom.popular_upgrades.value }}",
+            "metafield": ""
+          }
+        },
         "icon_list_4xTkbm": {
           "type": "icon_list",
           "repeater": "{{ product.metafields.custom.product_icons.value }}",
@@ -213,7 +251,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Free Next Day Delivery (Order by 2pm)</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_LiCrpH": {
@@ -224,7 +268,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Running Cost - From £2 a day</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_kfKeDi": {
@@ -236,7 +286,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>24 Month Guarantee</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_9JnzcB": {
@@ -248,7 +304,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>UK-based 7-Day Customer Support</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         }
       },
@@ -262,16 +324,17 @@
         "countdown",
         "variant_picker",
         "variant_pre_order_nkaMyt",
-        "on_site_message_EFzeYN",
         "text_ceUtLU",
-        "product_bundle_tWCDMV",
+        "text_XaNygx",
         "buy_buttons",
         "share",
+        "on_site_message_EFzeYN",
         "text_3PYKCi",
         "inventory",
         "pickup_availability",
         "complementary",
         "sticky_buy_button",
+        "product_bundle_tWCDMV",
         "icon_list_4xTkbm",
         "text_7bqpGD",
         "text_LiCrpH",
@@ -602,35 +665,35 @@
           "type": "nav_item",
           "settings": {
             "title": "Description",
-            "target_id": "shopify-section-template--28814748975491__collage"
+            "target_id": "shopify-section-template--28923902722435__collage"
           }
         },
         "nav_item_KrVxkG": {
           "type": "nav_item",
           "settings": {
             "title": "Tech Specs",
-            "target_id": "shopify-section-template--28814748975491__product-details"
+            "target_id": "shopify-section-template--28923902722435__product-details"
           }
         },
         "nav_item_mUKW9M": {
           "type": "nav_item",
           "settings": {
             "title": "Comparison Table",
-            "target_id": "shopify-section-template--28814748975491__comparison_table_rB8zXC"
+            "target_id": "shopify-section-template--28923902722435__comparison_table_rB8zXC"
           }
         },
         "nav_item_k9LzJe": {
           "type": "nav_item",
           "settings": {
             "title": "FAQs",
-            "target_id": "shopify-section-template--28814748975491__faq"
+            "target_id": "shopify-section-template--28923902722435__faq"
           }
         },
         "nav_item_FyGbwJ": {
           "type": "nav_item",
           "settings": {
             "title": "Reviews",
-            "target_id": "shopify-section-template--28814748975491__rich_text_kbbtYn"
+            "target_id": "shopify-section-template--28923902722435__rich_text_kbbtYn"
           }
         }
       },
@@ -1221,6 +1284,7 @@
         },
         "values_fRFWPx": {
           "type": "values",
+          "disabled": true,
           "settings": {
             "product": "trailblazer-3",
             "value_1": "<p><strong>1 Seater<br/></strong>426x24x38cm | 167.7x9.4x14.9\"</p><p><strong>2 Seater<br/></strong>466x24x38cm | 183x9.4x14.9\"</p>",

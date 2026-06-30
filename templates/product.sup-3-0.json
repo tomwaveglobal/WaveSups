@@ -52,7 +52,13 @@
             "iwidth": "custom",
             "icon_width": 20,
             "text": "{{ product.metafields.custom.description_snippet.value }}",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "description": {
@@ -87,10 +93,67 @@
         },
         "variant_pre_order_nkaMyt": {
           "type": "variant_pre_order",
+          "disabled": true,
           "settings": {
             "text_size": "text-base",
             "color_text": "#ffffff",
             "color_background": "#1f1f1f"
+          }
+        },
+        "text_9TUUbA": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "sale",
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Use code <strong>SUN15</strong> for 15% off | Ends Soon!",
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_price": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "enable_back_in_stock": false,
+            "show_back_in_stock_name": false,
+            "show_back_in_stock_phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share",
+            "show_help_desk": true,
+            "help_label": "Need help?",
+            "help_type": "drawer",
+            "help_page": "contact",
+            "help_page_external": false
+          }
+        },
+        "on_site_message_EFzeYN": {
+          "type": "on_site_message",
+          "settings": {
+            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
+            "message_icon_width": 100,
+            "message_image_checkbox": true,
+            "message_image_link": "",
+            "message_image_popup_title": "Finance Options",
+            "message": "<p>Starting at #amount* per month</p>",
+            "message_divide_amount": "24",
+            "message_price_range": "100",
+            "message_limit_amount": "100000",
+            "message_background": "#fafafa",
+            "message_text_color": "#00a341"
           }
         },
         "product_bundle_tWCDMV": {
@@ -107,53 +170,6 @@
             "metafield": ""
           }
         },
-        "on_site_message_EFzeYN": {
-          "type": "on_site_message",
-          "settings": {
-            "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
-            "message_icon_width": 100,
-            "message_image_checkbox": true,
-            "message": "<p>Starting at #amount* per month</p>",
-            "message_divide_amount": "24",
-            "message_price_range": "100",
-            "message_limit_amount": "100000",
-            "message_background": "#fafafa",
-            "message_text_color": "#00a341"
-          }
-        },
-        "text_9TUUbA": {
-          "type": "text",
-          "settings": {
-            "icon": "sale",
-            "iwidth": "custom",
-            "icon_width": 24,
-            "text": "Use code <strong>SUN15</strong> for 15% off | Ends Soon!",
-            "text_size": "text-sm"
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_quantity_selector": true,
-            "show_price": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "enable_back_in_stock": true,
-            "show_back_in_stock_name": false,
-            "show_back_in_stock_phone": false
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share",
-            "show_help_desk": true,
-            "help_label": "Need help?",
-            "help_type": "drawer",
-            "help_page": "contact",
-            "help_page_external": false
-          }
-        },
         "text_tkTAte": {
           "type": "text",
           "disabled": true,
@@ -162,7 +178,13 @@
             "iwidth": "custom",
             "icon_width": 24,
             "text": "Klarna's Pay in 3 / Pay in 30 days are unregulated credit agreements. Borrowing more than you can afford or paying late may negatively impact your financial status and ability to obtain credit. 18+, UK residents only. Subject to status. Ts&Cs and late fees apply.",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "inventory": {
@@ -212,7 +234,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Free Next Day Delivery (Order by 2pm)</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_LiCrpH": {
@@ -223,7 +251,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Running Cost - From £2 a day</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_kfKeDi": {
@@ -235,7 +269,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>24 Month Guarantee</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_9JnzcB": {
@@ -247,7 +287,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>UK-based 7-Day Customer Support</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         }
       },
@@ -261,11 +307,11 @@
         "countdown",
         "variant_picker",
         "variant_pre_order_nkaMyt",
-        "product_bundle_tWCDMV",
-        "on_site_message_EFzeYN",
         "text_9TUUbA",
         "buy_buttons",
         "share",
+        "on_site_message_EFzeYN",
+        "product_bundle_tWCDMV",
         "text_tkTAte",
         "inventory",
         "pickup_availability",
@@ -601,35 +647,35 @@
           "type": "nav_item",
           "settings": {
             "title": "Description",
-            "target_id": "shopify-section-template--28814749008259__collage"
+            "target_id": "shopify-section-template--28923902755203__collage"
           }
         },
         "nav_item_7THtic": {
           "type": "nav_item",
           "settings": {
             "title": "Tech Specs",
-            "target_id": "shopify-section-template--28814749008259__product-details"
+            "target_id": "shopify-section-template--28923902755203__product-details"
           }
         },
         "nav_item_iYCPyi": {
           "type": "nav_item",
           "settings": {
             "title": "Comparison Table",
-            "target_id": "shopify-section-template--28814749008259__comparison_table_rB8zXC"
+            "target_id": "shopify-section-template--28923902755203__comparison_table_rB8zXC"
           }
         },
         "nav_item_DWMLg9": {
           "type": "nav_item",
           "settings": {
             "title": "FAQs",
-            "target_id": "shopify-section-template--28814749008259__faq"
+            "target_id": "shopify-section-template--28923902755203__faq"
           }
         },
         "nav_item_HnRtQj": {
           "type": "nav_item",
           "settings": {
             "title": "Reviews",
-            "target_id": "shopify-section-template--28814749008259__rich_text_ePnQft"
+            "target_id": "shopify-section-template--28923902755203__rich_text_ePnQft"
           }
         }
       },

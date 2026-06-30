@@ -16,11 +16,44 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_bAHz74": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3.gif",
+            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Mobile-2.gif",
+            "heading": "",
+            "button_label": "Shop PRO 3.0",
+            "button_link": "shopify://products/pro-3"
+          }
+        },
         "image_rC3mcC": {
           "disabled": true,
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Fathers_day.png",
+            "image_mobile": "shopify://shop_images/Fathers_day_mobile.png",
+            "heading": "‎",
+            "button_label": "Shop Father's Day",
+            "button_link": "shopify://collections/sale-uk"
+          }
+        },
+        "image_e6Nny7": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/Carousel_Home_page_28f91dcf-8ad8-42a8-a94b-68fbf2624ac7.jpg",
+            "image_mobile": "shopify://shop_images/Mobile_5f6baf4a-99ce-4ba9-8ea6-1e48c1b94a1c.jpg",
+            "heading": "Stop saying \"next summer\"",
+            "button_label": "Shop The Range",
+            "button_link": "shopify://collections/all-products"
+          }
         }
-      }
+      },
+      "block_order": [
+        "image_bAHz74",
+        "image_rC3mcC",
+        "image_e6Nny7",
+        "image_UPWkm3",
+        "slide-2"
+      ]
     }
   }
 }

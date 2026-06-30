@@ -16,13 +16,65 @@
     "main-product": {
       "settings": {},
       "blocks": {
-        "text_9TUUbA": {
+        "text_7tjBVb": {
+          "type": "text",
           "disabled": true,
-          "settings": {}
+          "settings": {
+            "icon": "sale",
+            "icon_image": null,
+            "iwidth": "custom",
+            "icon_width": 30,
+            "text": "Use code <strong>SUMMER10</strong> <strong>for 10% off</strong>",
+            "text_size": "text-sm",
+            "header-4b7649f9dc449ddb23875c13978c2798": null,
+            "text_color": "#ffffff",
+            "icon_color": "#ffffff",
+            "background_color": "#f59e0b",
+            "header-cb680627a202f82efc3c56f2028b9e5d": null,
+            "alignment": "center",
+            "background_height": 10,
+            "border_radius": 0
+          }
         },
         "text_tkTAte": {
           "disabled": false,
           "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor_aTdrrh",
+        "breadcrumb_rcrAce",
+        "title",
+        "reviews_io_reviewsio_rating_output_XtJhKf",
+        "text_4JQyhw",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_nkaMyt",
+        "text_7tjBVb",
+        "buy_buttons",
+        "share",
+        "on_site_message_EFzeYN",
+        "product_bundle_tWCDMV",
+        "text_tkTAte",
+        "inventory",
+        "pickup_availability",
+        "complementary",
+        "sticky_buy_button",
+        "icon_list_4xTkbm",
+        "text_7bqpGD",
+        "text_LiCrpH",
+        "text_kfKeDi",
+        "text_9JnzcB"
+      ]
+    },
+    "scroll_spy_KbzzdE": {
+      "settings": {},
+      "blocks": {
+        "nav_item_UpKDGT": {
+          "settings": {
+            "target_id": "#shopify-section-template--28923902755203__collage"
+          }
         }
       }
     }

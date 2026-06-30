@@ -394,6 +394,7 @@
         },
         "profile_JmtHtX": {
           "type": "profile",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Trailblazer_Recon_1_person_4000px.png",
             "heading": "The Trailblazer",

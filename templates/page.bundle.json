@@ -38,7 +38,8 @@
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         }
       },
@@ -48,8 +49,8 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image": "",
-        "image_height": "750px",
+        "image": "shopify://shop_images/Carousel_Home_page_ab0cd04f-9e44-408f-acb1-247a33eb816f.jpg",
+        "image_height": "550px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
@@ -57,6 +58,8 @@
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "#e0a580",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -75,13 +78,30 @@
     },
     "rich-text": {
       "type": "rich-text",
+      "blocks": {
+        "heading_AQgbXE": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Rich text",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AQgbXE"
+      ],
       "custom_css": [
         "@media screen and (min-width: 1536px) {.collage, .collage .title-wrapper {padding-inline: 0; }}"
       ],
       "settings": {
         "text_alignment": "left",
         "text_alignment_mobile": "left",
-        "heading": "Buy 3 and <em>save 30%</em>",
+        "heading": "Get a SUP and save <em>15% off</em> Accessories",
         "heading_size": "title-sm",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_width": "large",
@@ -94,6 +114,7 @@
         "button_icon": true,
         "highlighted_text": "scribble",
         "highlighted_scribble": "squiggle-underline",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -116,29 +137,42 @@
       ],
       "settings": {
         "collection": "",
-        "products": [],
-        "product_limit": 6,
-        "columns": 3,
+        "products": [
+          "cruiser-3",
+          "tourer-3",
+          "woody-3",
+          "recon-3",
+          "pro-3",
+          "surf-3",
+          "surf-kids-3",
+          "navigator-3",
+          "voyager-kayak",
+          "roamer-inflatable-kayak",
+          "venturer-inflatable-canoe"
+        ],
+        "product_limit": 12,
+        "columns": 4,
         "columns_mobile": "1",
-        "minimum_quantity": 3,
-        "maximum_quantity": 3,
-        "prevent_duplicate_products": true,
+        "minimum_quantity": 1,
+        "maximum_quantity": 12,
+        "prevent_duplicate_products": false,
         "allow_quantity_change": true,
         "quantity_increment": "1",
         "quantity_minimum": "1",
         "quantity_maximum": "",
-        "show_variant_labels": true,
+        "show_variant_labels": false,
         "picker_type": "button",
         "enable_color_swatches": true,
         "color_swatch_type": "color",
-        "heading": "Your bundle",
-        "heading_size": "lg:text-5xl text-2xl",
+        "heading": "<em>Step 1: </em>Choose Your SUP/Kayak",
+        "heading_size": "lg:text-3xl text-2xl",
         "heading_alignment": "text-left",
         "heading_tag": "h2",
         "subheading": "",
         "description": "",
-        "highlighted_text": "none",
+        "highlighted_text": "text",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -150,7 +184,70 @@
         "padding_top": 24,
         "padding_bottom": 100,
         "divider": false,
-        "full_width": false,
+        "full_width": true,
+        "rounded": false
+      }
+    },
+    "product_bundle_wqEpE4": {
+      "type": "product-bundle",
+      "custom_css": [
+        "@media screen and (min-width: 1536px) {.product-bundle {flex: 0 0 25%; } .product-bundle__sidebar {width: 100%; }}"
+      ],
+      "settings": {
+        "collection": "",
+        "products": [
+          "waterproof-zipped-pvc-deck-bag",
+          "waterproof-roll-top-pvc-deck-bag",
+          "waist-bag-navy",
+          "kids-sup-paddle",
+          "hydro-carbon-paddle",
+          "hydro-paddle-ukca",
+          "premium-paddle",
+          "aluminium-kids-kayak-paddle-3",
+          "basic-paddle",
+          "canoe-paddle",
+          "carry-case-3",
+          "sup-repair-kit-3",
+          "triple-action-hand-pump",
+          "electric-pump-ht737",
+          "sup-carry-case",
+          "kayak-bottle-holder"
+        ],
+        "product_limit": 12,
+        "columns": 4,
+        "columns_mobile": "1",
+        "minimum_quantity": 2,
+        "maximum_quantity": 12,
+        "prevent_duplicate_products": false,
+        "allow_quantity_change": true,
+        "quantity_increment": "1",
+        "quantity_minimum": "1",
+        "quantity_maximum": "",
+        "show_variant_labels": false,
+        "picker_type": "button",
+        "enable_color_swatches": true,
+        "color_swatch_type": "color",
+        "heading": "<em><strong>Step 2: </strong></em>Choose Two Accessories",
+        "heading_size": "lg:text-3xl text-2xl",
+        "heading_alignment": "text-left",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "text",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 24,
+        "padding_bottom": 100,
+        "divider": false,
+        "full_width": true,
         "rounded": false
       }
     },
@@ -161,8 +258,11 @@
           "type": "icon",
           "settings": {
             "icon": "none",
-            "icon_image": "",
-            "icon_width": 48
+            "iwidth": "custom",
+            "icon_width": 48,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
           }
         },
         "heading": {
@@ -172,7 +272,8 @@
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -182,6 +283,9 @@
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -193,11 +297,11 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "collection": "",
         "products": [],
         "product_limit": 3,
-        "image": "",
         "image_height": "900px",
         "layout": "image_first",
         "content_position": "md:items-end",
@@ -211,6 +315,8 @@
         "enable_color_swatches": true,
         "color_swatch_type": "color",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -234,8 +340,11 @@
           "type": "icon",
           "settings": {
             "icon": "none",
-            "icon_image": "",
-            "icon_width": 48
+            "iwidth": "custom",
+            "icon_width": 48,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
           }
         },
         "heading": {
@@ -245,7 +354,8 @@
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -255,6 +365,9 @@
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -266,11 +379,11 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "collection": "",
         "products": [],
         "product_limit": 3,
-        "image": "",
         "layout": "text_first",
         "content_position": "md:items-end",
         "text_alignment": "right",
@@ -307,6 +420,7 @@
     "image-with-text-overlay",
     "rich-text",
     "product-bundle",
+    "product_bundle_wqEpE4",
     "floating-product-bundle",
     "compact-product-bundle"
   ]

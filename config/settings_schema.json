@@ -1111,6 +1111,17 @@
         "default": "#f5a623"
       },
       {
+        "type": "range",
+        "id": "product_badge_image_radius",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "default": 10,
+        "label": "Badge image radius",
+        "info": "Corner radius for image-based badges (e.g. Free Starter Kit). 0 = square corners."
+      },
+      {
         "type": "header",
         "content": "Advanced Badges"
       },
@@ -1577,6 +1588,21 @@
         "type": "text",
         "id": "typewriter_starter_text",
         "label": "t:settings_schema.search.settings.typewriter_starter_text.label"
+      }
+    ]
+  },
+  {
+    "name": "t:settings_schema.localization.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.localization.settings.header__country_selector.content"
+      },
+      {
+        "type": "textarea",
+        "id": "country_selector_order",
+        "label": "t:settings_schema.localization.settings.country_selector_order.label",
+        "info": "t:settings_schema.localization.settings.country_selector_order.info"
       }
     ]
   },

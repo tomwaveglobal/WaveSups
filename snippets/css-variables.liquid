@@ -249,6 +249,7 @@
     display: block;
     width: {{ settings.advanced_badge_image_mobile | default: 60 }}px;
     height: auto;
+    border-radius: {{ settings.product_badge_image_radius | default: 10 }}px;
   }
   @media screen and (min-width: 768px) {
     .badge-image {

@@ -42,7 +42,8 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         }
       },
@@ -53,7 +54,7 @@
       "name": "t:sections.image-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": false,
-        "image": "shopify://shop_images/Trustpilot-Blog.jpg",
+        "image": "shopify://shop_images/Carousel_Home_page_f6cc11a3-c68c-462d-957c-db5e2548441b.jpg",
         "image_height": "550px",
         "content_width": "medium",
         "content_position": "md:items-end md:justify-start",
@@ -62,6 +63,8 @@
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "#f59e0b",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -85,9 +88,12 @@
           "type": "text",
           "settings": {
             "text": "<p>We've tried to answer the most common questions about our products<br/>If you still don't find the answer you're looking for get in touch!</p>",
+            "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
-            "text_font": "body",
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -113,6 +119,7 @@
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -441,6 +448,7 @@
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "rgba(0,0,0,0)",
         "gradient_background": "",

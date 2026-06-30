@@ -75,10 +75,10 @@ endif
         {% assign eu_override = '' %}
         {% assign us_override = '' %}
 
-        {% if product.metafields.custom.uk_override_url != blank or product.metafields.custom.eu_override_url != blank or product.metafields.custom.us_override_url != blank %}
-          {% assign uk_override = product.metafields.custom.uk_override_url %}
-          {% assign eu_override = product.metafields.custom.eu_override_url %}
-          {% assign us_override = product.metafields.custom.us_override_url %}
+        {% if product.metafields.country.code_gb != blank or product.metafields.country.code_eu != blank or product.metafields.country.code_us != blank %}
+          {% assign uk_override = product.metafields.country.code_gb %}
+          {% assign eu_override = product.metafields.country.code_eu %}
+          {% assign us_override = product.metafields.country.code_us %}
         {% endif %}
         {%- if enable_language_selector or enable_country_selector -%}
           <div class="drawer__footer-top flex">
@@ -114,32 +114,12 @@ endif
                     <div id="header_drawer_localization_country_form" class="modal__content flex flex-col overflow-hidden">
                       {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
                       <ul class="modal__scrollable listbox grid gap-1d5 xl:gap-2" role="list" tabindex="-1">
-                        {%- for country in localization.available_countries -%}
-
-                          {% assign link_override = '' %}
-                          {% if country.market.metafields.country.code == "EU" %}
-                            {% assign link_override = eu_override %}
-                          {% elsif country.market.metafields.country.code == "US" %}
-                            {% assign link_override = us_override %}
-                          {% elsif country.market.metafields.country.code == "UK" %}
-                            {% assign link_override = uk_override %}
-                          {% endif %}
-
-                          <li class="opacity-0">
-                            <p>
-                              <a class="reversed-link"
-                                {% unless country.market.metafields.default.market == true %}
-                                href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country.iso_code }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
-                                {% else %}
-                                href="{{ shop.url }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
-                                {% endunless %}
-                                title="{{ country.name | escape }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})"
-                              >
-                                {{- country.name }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})
-                              </a>
-                            </p>
-                          </li>
-                        {%- endfor -%}
+                        {%- render 'localization-countries-ordered',
+                          render_as: 'market_links',
+                          eu_override: eu_override,
+                          us_override: us_override,
+                          uk_override: uk_override
+                        -%}
                       </ul>
                     </div>
                 </div>

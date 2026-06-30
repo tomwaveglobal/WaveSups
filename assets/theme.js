@@ -3419,7 +3419,9 @@ class LocalizationListbox extends HTMLFormElement {
     event.preventDefault();
 
     this.input.value = event.currentTarget.getAttribute('data-value');
-    this.returnTo.value = window.location.pathname;
+    if (this.returnTo) {
+      this.returnTo.value = `${window.location.pathname}${window.location.search}`;
+    }
     this.submit();
   }
 }
@@ -8508,3 +8510,150 @@ class ScrollSpy extends HTMLElement {
   }
 };
 customElements.define('scroll-spy', ScrollSpy, { extends: 'nav' });
+
+
+/* ========================================
+   Images with Text Overlay - Read More/Less
+   ======================================== */
+
+// Mobile Read More/Less Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize all banner sections with mobile truncate functionality
+  const bannerSections = document.querySelectorAll('[data-mobile-truncate]');
+  
+  bannerSections.forEach(function(bannerBox) {
+    const section = bannerBox.closest('.section');
+    if (!section) return;
+
+    const contentWrapper = bannerBox.querySelector('.banner__content-wrapper');
+    const readMoreBtn = bannerBox.querySelector('.banner__read-more-btn');
+    const readLessBtn = bannerBox.querySelector('.banner__read-less-btn');
+    const bannerSection = section.querySelector('.banner');
+
+    if (!contentWrapper || !readMoreBtn || !readLessBtn) return;
+
+    // Add fallback class for browsers without :has() support
+    if (bannerSection) {
+      bannerSection.classList.add('has-mobile-truncate');
+    }
+
+    // Check if content needs truncation on mobile and tablet
+    function checkTruncation() {
+      // Only on mobile and tablet
+      if (window.innerWidth > 1024) {
+        bannerBox.classList.remove('has-truncation', 'is-expanded');
+        return;
+      }
+
+      // Don't check if already expanded
+      if (bannerBox.classList.contains('is-expanded')) {
+        return;
+      }
+
+      // Check if content is taller than threshold
+      const contentHeight = contentWrapper.scrollHeight;
+      const viewportHeight = window.innerHeight;
+      const threshold = viewportHeight * 0.45; // 45vh
+
+      if (contentHeight > threshold) {
+        bannerBox.classList.add('has-truncation');
+      } else {
+        bannerBox.classList.remove('has-truncation');
+      }
+    }
+
+    // Expand to scrollable mode
+    function expandContent() {
+      bannerBox.classList.remove('has-truncation');
+      bannerBox.classList.add('is-expanded');
+      readMoreBtn.setAttribute('aria-expanded', 'true');
+      
+      // Also expand the banner section itself
+      const bannerSection = section.querySelector('.banner');
+      if (bannerSection) {
+        bannerSection.classList.add('is-expanded');
+      }
+      
+      // Scroll to top of content
+      setTimeout(() => {
+        contentWrapper.scrollTop = 0;
+      }, 100);
+    }
+
+    // Collapse back to truncated mode
+    function collapseContent() {
+      bannerBox.classList.remove('is-expanded');
+      bannerBox.classList.add('has-truncation');
+      readMoreBtn.setAttribute('aria-expanded', 'false');
+      contentWrapper.scrollTop = 0;
+      
+      // Also collapse the banner section
+      const bannerSection = section.querySelector('.banner');
+      if (bannerSection) {
+        bannerSection.classList.remove('is-expanded');
+      }
+      
+      // Smooth scroll back to section
+      setTimeout(() => {
+        const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'smooth'
+        });
+      }, 100);
+    }
+
+    // Event listeners
+    readMoreBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      expandContent();
+    });
+
+    readLessBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      collapseContent();
+    });
+
+    // Initialize after short delay
+    setTimeout(() => {
+      checkTruncation();
+    }, 150);
+
+    // Handle resize (only when width changes)
+    let resizeTimer;
+    let lastWidth = window.innerWidth;
+    
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        const currentWidth = window.innerWidth;
+        
+        if (currentWidth !== lastWidth) {
+          // Exit expanded mode if was expanded
+          if (bannerBox.classList.contains('is-expanded')) {
+            bannerBox.classList.remove('is-expanded');
+          }
+          
+          // Recheck
+          checkTruncation();
+          lastWidth = currentWidth;
+        }
+      }, 250);
+    });
+
+    // Recheck after images and fonts load
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        checkTruncation();
+      }, 200);
+    });
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        setTimeout(() => {
+          checkTruncation();
+        }, 100);
+      });
+    }
+  });
+});

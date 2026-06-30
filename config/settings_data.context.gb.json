@@ -8,15 +8,8 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "overlay-group.json",
   "context": {
     "market": "gb"
   },
-  "sections": {
-    "newsletter-popup": {
-      "disabled": false,
-      "settings": {},
-      "blocks": {}
-    }
-  }
+  "current": {}
 }

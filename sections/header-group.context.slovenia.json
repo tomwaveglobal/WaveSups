@@ -9,19 +9,20 @@
  */
 {
   "context": {
-    "market": "gb"
+    "market": "slovenia"
   },
   "parent": "header-group.json",
   "sections": {
-    "announcement-bar": {
-      "settings": {},
+    "header": {
+      "settings": {
+        "menu": "new-eu-top-nav-25",
+        "menu_mobile": "new-eu-top-nav-25"
+      },
       "blocks": {
-        "announcement-2": {
-          "disabled": false,
+        "mega_menu_tab_Wn9z4a": {
           "settings": {
-            "text": "<em><strong>Summer Sale:  15%</strong></em> Off Selected Boards",
-            "link": "shopify://collections/sale-uk",
-            "text_mobile": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards"
+            "button_link": "shopify://collections/sale-eu",
+            "tab_target_link_1": "shopify://collections/sale-eu"
           }
         }
       }

@@ -44,10 +44,10 @@
   {% assign eu_override = '' %}
   {% assign us_override = '' %}
 
-  {% if product.metafields.custom.uk_override_url != blank or product.metafields.custom.eu_override_url != blank or product.metafields.custom.us_override_url != blank %}
-    {% assign uk_override = product.metafields.custom.uk_override_url %}
-    {% assign eu_override = product.metafields.custom.eu_override_url %}
-    {% assign us_override = product.metafields.custom.us_override_url %}
+  {% if product.metafields.country.code_gb != blank or product.metafields.country.code_eu != blank or product.metafields.country.code_us != blank %}
+    {% assign uk_override = product.metafields.country.code_gb %}
+    {% assign eu_override = product.metafields.country.code_eu %}
+    {% assign us_override = product.metafields.country.code_us %}
   {% endif %}
 
   <nav class="topbar topbar--{{ section.settings.announcement_position }}{% if section.settings.invert_icons_selectors %} topbar--inverted{% endif %}{% unless section.settings.show_social or enable_language_selector or enable_country_selector %} topbar--only{% endunless %} page-width{% if section.settings.full_width %} page-width--full{% endif %} section{% if section.settings.rounded %} section--rounded{% endif %} relative grid py-0 h-full w-full items-center" aria-label="{{ 'sections.announcements.announcement_bar' | t | escape }}">
@@ -80,64 +80,12 @@
                 <div class="dropdown__container">
                   {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
                   <ul class="dropdown__nav flex flex-col gap-1d5 xl:gap-2" role="list">
-                    {%- liquid
-                      assign country_order_raw = section.settings.country_selector_order | strip
+                    {%- render 'localization-countries-ordered',
+                      render_as: 'market_links',
+                      eu_override: eu_override,
+                      us_override: us_override,
+                      uk_override: uk_override
                     -%}
-                    {%- if country_order_raw == blank -%}
-                      {%- for country in localization.available_countries -%}
-                        {%- render 'localization-country-option',
-                          country: country,
-                          eu_override: eu_override,
-                          us_override: us_override,
-                          uk_override: uk_override
-                        -%}
-                      {%- endfor -%}
-                    {%- else -%}
-                      {%- assign ordered_rendered = '|' -%}
-                      {%- assign order_codes = country_order_raw | split: ',' -%}
-                      {%- for code_raw in order_codes -%}
-                        {%- assign order_token = code_raw | strip -%}
-                        {%- if order_token != blank -%}
-                          {%- assign order_iso = order_token | upcase -%}
-                          {%- assign order_name_key = order_token | downcase -%}
-                          {%- for country in localization.available_countries -%}
-                            {%- liquid
-                              assign country_name_key = country.name | downcase
-                              assign order_matches = false
-                              if country.iso_code == order_iso
-                                assign order_matches = true
-                              elsif country_name_key == order_name_key
-                                assign order_matches = true
-                              endif
-                            -%}
-                            {%- if order_matches -%}
-                              {%- assign ordered_marker = '|' | append: country.iso_code | append: '|' -%}
-                              {%- unless ordered_rendered contains ordered_marker -%}
-                                {%- render 'localization-country-option',
-                                  country: country,
-                                  eu_override: eu_override,
-                                  us_override: us_override,
-                                  uk_override: uk_override
-                                -%}
-                                {%- assign ordered_rendered = ordered_rendered | append: country.iso_code | append: '|' -%}
-                              {%- endunless -%}
-                            {%- endif -%}
-                          {%- endfor -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                      {%- for country in localization.available_countries -%}
-                        {%- assign ordered_marker = '|' | append: country.iso_code | append: '|' -%}
-                        {%- unless ordered_rendered contains ordered_marker -%}
-                          {%- render 'localization-country-option',
-                            country: country,
-                            eu_override: eu_override,
-                            us_override: us_override,
-                            uk_override: uk_override
-                          -%}
-                          {%- assign ordered_rendered = ordered_rendered | append: country.iso_code | append: '|' -%}
-                        {%- endunless -%}
-                      {%- endfor -%}
-                    {%- endif -%}
                   </ul>
                 </div>
             </dropdown-localization>

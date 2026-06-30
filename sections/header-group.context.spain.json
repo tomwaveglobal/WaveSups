@@ -8,15 +8,24 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "overlay-group.json",
   "context": {
-    "market": "gb"
+    "market": "spain"
   },
+  "parent": "header-group.json",
   "sections": {
-    "newsletter-popup": {
-      "disabled": false,
-      "settings": {},
-      "blocks": {}
+    "header": {
+      "settings": {
+        "menu": "new-eu-top-nav-25",
+        "menu_mobile": "new-eu-top-nav-25"
+      },
+      "blocks": {
+        "mega_menu_tab_Wn9z4a": {
+          "settings": {
+            "button_link": "shopify://collections/sale-eu",
+            "tab_target_link_1": "shopify://collections/sale-eu"
+          }
+        }
+      }
     }
   }
 }
