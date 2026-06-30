@@ -1,0 +1,177 @@
+/* Staged product bundle ------------------------------------------------- */
+
+.staged-bundle {
+  --staged-summary-width: 360px;
+  --staged-accent: rgb(var(--color-foreground));
+}
+
+/* The theme's .button rule sets display, which beats the UA [hidden] rule, so
+   force-hide our toggled buttons/elements. */
+.staged-bundle [hidden] {
+  display: none !important;
+}
+
+/* Stepper --------------------------------------------------------------- */
+.staged-bundle__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.staged-bundle__step {
+  min-width: 0;
+}
+
+.staged-bundle__step-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.staged-bundle__step-btn.is-current,
+.staged-bundle__step-btn.is-done {
+  opacity: 1;
+}
+
+.staged-bundle__step-btn:disabled {
+  cursor: default;
+}
+
+.staged-bundle__step-num {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--color-foreground), 0.35);
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.staged-bundle__step-btn.is-current .staged-bundle__step-num,
+.staged-bundle__step-btn.is-done .staged-bundle__step-num {
+  background: var(--staged-accent);
+  color: rgb(var(--color-background));
+  border-color: var(--staged-accent);
+}
+
+.staged-bundle__step-line {
+  height: 1px;
+  background: rgba(var(--color-foreground), 0.2);
+  min-width: 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .staged-bundle__step-label {
+    display: none;
+  }
+  .staged-bundle__step {
+    flex: 1 1 auto;
+  }
+}
+
+/* Stage panels ---------------------------------------------------------- */
+.staged-bundle__stage.is-hidden {
+  display: none;
+}
+
+.staged-bundle__stage.is-error {
+  animation: staged-bundle-shake 0.4s ease;
+}
+
+@keyframes staged-bundle-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+/* Lock the add buttons in a stage that has hit its pick limit */
+.staged-bundle__stage[locked] .product-form__submit {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Selected (locked) product card gets a clear chosen state */
+.staged-bundle .product-card[locked] {
+  outline: 2px solid var(--staged-accent);
+  outline-offset: 2px;
+  border-radius: var(--media-radius, 0.5rem);
+}
+
+.staged-bundle .product-card[locked] .product-card__media::after {
+  content: "✓";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 3;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--staged-accent);
+  color: rgb(var(--color-background));
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* Summary --------------------------------------------------------------- */
+.staged-bundle__summary {
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .staged-bundle__summary {
+    flex: 0 0 var(--staged-summary-width);
+    width: var(--staged-summary-width);
+    margin-top: 0;
+  }
+}
+
+.staged-bundle__summary-inner {
+  padding: 1.5rem;
+  border: 1px solid rgba(var(--color-foreground), 0.12);
+  border-radius: var(--media-radius, 0.75rem);
+  background: rgba(var(--color-foreground), 0.02);
+}
+
+/* Sticky summary that follows the page on desktop. Needs the summary column to
+   stretch full-height (flex default) — so the layout must NOT use items-start. */
+@media screen and (min-width: 1024px) {
+  .staged-bundle__summary-inner {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.staged-bundle__selections {
+  list-style: none;
+}
+
+.staged-bundle__selection {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.staged-bundle__selection:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.staged-bundle__selection .horizontal-product__media {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--media-radius, 0.5rem);
+}
+
+.staged-bundle__back {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
