@@ -5,6 +5,12 @@
   --staged-accent: rgb(var(--color-foreground));
 }
 
+/* The theme's .button rule sets display, which beats the UA [hidden] rule, so
+   force-hide our toggled buttons/elements. */
+.staged-bundle [hidden] {
+  display: none !important;
+}
+
 /* Stepper --------------------------------------------------------------- */
 .staged-bundle__steps {
   list-style: none;
@@ -132,6 +138,15 @@
   border: 1px solid rgba(var(--color-foreground), 0.12);
   border-radius: var(--media-radius, 0.75rem);
   background: rgba(var(--color-foreground), 0.02);
+}
+
+/* Sticky summary that follows the page on desktop. Needs the summary column to
+   stretch full-height (flex default) — so the layout must NOT use items-start. */
+@media screen and (min-width: 1024px) {
+  .staged-bundle__summary-inner {
+    position: sticky;
+    top: 1.5rem;
+  }
 }
 
 .staged-bundle__selections {
