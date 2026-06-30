@@ -49,11 +49,12 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image": "shopify://shop_images/Carousel_Home_page_ab0cd04f-9e44-408f-acb1-247a33eb816f.jpg",
+        "image": "shopify://shop_images/Carousel_Home_page_69638d52-919b-4b5c-8c7f-d63ecbea58fa.jpg",
         "image_height": "550px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
         "text_alignment": "left",
+        "image_mobile": "shopify://shop_images/Mobile_e7a24d13-ed9a-4141-b7dc-69682edeb0a1.jpg",
         "image_height_mobile": "auto",
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
