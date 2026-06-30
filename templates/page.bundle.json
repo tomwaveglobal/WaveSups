@@ -38,7 +38,8 @@
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         }
       },
@@ -48,7 +49,6 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image": "",
         "image_height": "750px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
@@ -57,6 +57,8 @@
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "#e0a580",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -94,6 +96,7 @@
         "button_icon": true,
         "highlighted_text": "scribble",
         "highlighted_scribble": "squiggle-underline",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -116,7 +119,11 @@
       ],
       "settings": {
         "collection": "",
-        "products": [],
+        "products": [
+          "tourer-3",
+          "waterproof-zipped-pvc-deck-bag",
+          "waterproof-roll-top-pvc-deck-bag"
+        ],
         "product_limit": 6,
         "columns": 3,
         "columns_mobile": "1",
@@ -139,6 +146,7 @@
         "description": "",
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -161,8 +169,11 @@
           "type": "icon",
           "settings": {
             "icon": "none",
-            "icon_image": "",
-            "icon_width": 48
+            "iwidth": "custom",
+            "icon_width": 48,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
           }
         },
         "heading": {
@@ -172,7 +183,8 @@
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -182,6 +194,9 @@
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -193,11 +208,11 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "collection": "",
         "products": [],
         "product_limit": 3,
-        "image": "",
         "image_height": "900px",
         "layout": "image_first",
         "content_position": "md:items-end",
@@ -211,6 +226,8 @@
         "enable_color_swatches": true,
         "color_swatch_type": "color",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -234,8 +251,11 @@
           "type": "icon",
           "settings": {
             "icon": "none",
-            "icon_image": "",
-            "icon_width": 48
+            "iwidth": "custom",
+            "icon_width": 48,
+            "link": "",
+            "accessibility_info": "",
+            "external": false
           }
         },
         "heading": {
@@ -245,7 +265,8 @@
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text": {
@@ -255,6 +276,9 @@
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -266,11 +290,11 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "collection": "",
         "products": [],
         "product_limit": 3,
-        "image": "",
         "layout": "text_first",
         "content_position": "md:items-end",
         "text_alignment": "right",
