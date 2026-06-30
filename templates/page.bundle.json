@@ -153,7 +153,7 @@
         "product_limit": 12,
         "columns": 4,
         "columns_mobile": "1",
-        "minimum_quantity": 2,
+        "minimum_quantity": 1,
         "maximum_quantity": 12,
         "prevent_duplicate_products": false,
         "allow_quantity_change": true,
