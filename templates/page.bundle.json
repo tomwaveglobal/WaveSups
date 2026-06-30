@@ -161,10 +161,10 @@
         "stage_eCMnHB": {
           "type": "stage",
           "settings": {
-            "title": "Choose Two Accessories",
+            "title": "Choose Your Accessories",
             "description": "",
             "required": true,
-            "max_picks": 2,
+            "max_picks": 1,
             "collection": "",
             "products": [
               "waterproof-zipped-pvc-deck-bag",
