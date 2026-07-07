@@ -59,6 +59,20 @@
 
     <link rel="stylesheet" href="{{ 'apps.css' | asset_url }}" media="print" fetchpriority="low" onload="this.media='all'">
 
+    {%- comment -%}
+      Zendesk embedded mode: on the contact template, stop the messaging widget
+      from auto-rendering as a floating bubble so the "Zendesk Chat Bot" section
+      can render it inline in the page. Must run before the Zendesk snippet
+      (injected via content_for_header below).
+    {%- endcomment -%}
+    {%- if template.suffix == 'contact' -%}
+      <script>
+        window.zEMessenger = window.zEMessenger || {};
+        window.zEMessenger.autoRender = false;
+        window.zEMessenger.autorender = false;
+      </script>
+    {%- endif -%}
+
     {{ content_for_header }}
 
     <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
