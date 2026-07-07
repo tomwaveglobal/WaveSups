@@ -159,6 +159,32 @@
         "rounded": false
       }
     },
+    "zendesk_chat_YUjWNa": {
+      "type": "zendesk-chat",
+      "name": "Zendesk Chat Bot",
+      "settings": {
+        "chat_inline_min_height": 640,
+        "chat_button_label": "Start chat",
+        "chat_loading_text": "Connecting you to our team…",
+        "heading": "Chat with our team",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "<p>We'd love to hear from you. Our team is here to help. <br/>The best way to contact us is to use our automated chat below, 'Kai' can answer most questions and raise a support ticket if needed.</p>",
+        "highlighted_text": "none",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 20,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
+    },
     "contact-form": {
       "type": "contact-form",
       "blocks": {
@@ -188,6 +214,7 @@
         "media",
         "contact_nfdiVF"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Contact Us",
         "heading_size": "title-md",
@@ -229,7 +256,7 @@
             "image_ratio": "adapt",
             "heading": "Returns",
             "heading_size": "text-lg-2xl",
-            "text": "<p>Thinking of making a return? We're here to help.</p><p>Whether you've changed your mind or have an issue with a faulty or damaged item, the first step is to contact our support team.</p><ul><li><strong>For \"Change of Mind\":</strong> You have 14 days from the day after delivery to notify us.</li><li><strong>For Faulty/Damaged Items:</strong> Please contact us as soon as you discover an issue.</li></ul><p>To start a return and receive instructions, please email us at <a href=\"mailto:support@supboards.com \" title=\"mailto:support@supboards.com \"><strong>support@wavesupboards.com</strong></a>. For complete details on all procedures, timeframes, and our warranty policy, please read our full return policy <a href=\"https://wavesupboards.com/pages/shipping-and-returns\" target=\"_blank\" title=\"https://wavesupboards.com/pages/shipping-and-returns\">here.</a></p>",
+            "text": "<p>Thinking of making a return? We're here to help.</p><p>Whether you've changed your mind or have an issue with a faulty or damaged item, the first step is to contact our support team.</p><ul><li><strong>For \"Change of Mind\":</strong> You have 14 days from the day after delivery to notify us.</li><li><strong>For Faulty/Damaged Items:</strong> Please contact us as soon as you discover an issue.</li></ul><p>To start a return and receive instructions, please start the provcess using the chat window above. For complete details on all procedures, timeframes, and our warranty policy, please read our full return policy <a href=\"https://wavesupboards.com/pages/shipping-and-returns\" target=\"_blank\" title=\"https://wavesupboards.com/pages/shipping-and-returns\">here.</a></p>",
             "button_label": "",
             "button_link": "",
             "button_style": "secondary",
@@ -248,7 +275,7 @@
             "image_ratio": "adapt",
             "heading": "Warranty Claims",
             "heading_size": "text-lg-2xl",
-            "text": "<p>All of our new (2.0, 3.0) SUPs, Kayaks and Canoes come with a 2 Year warranty for manufacturing faults/generic damage from the date in which you receive the product.<br/><br/>In the unlikely event that you do have issues with your Wave Spa, we will try to help you with troubleshooting in the first instance followed by repairs. If we are unsuccessful, we will move to replacing any damaged parts or the whole spa.</p><p>For support and to receive instructions, please email us at<a href=\"mailto:support@supboards.com\" title=\"mailto:support@supboards.com\"> support@supboards.com.</a></p>",
+            "text": "<p>All of our new (2.0, 3.0) SUPs, Kayaks and Canoes come with a 2 Year warranty for manufacturing faults/generic damage from the date in which you receive the product.<br/><br/>In the unlikely event that you do have issues with your Wave Spa, we will try to help you with troubleshooting in the first instance followed by repairs. If we are unsuccessful, we will move to replacing any damaged parts or the whole spa.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "secondary",
@@ -323,6 +350,7 @@
     "image_with_text_overlay_TX7a8X",
     "empty_space_JDcX4K",
     "rich-text",
+    "zendesk_chat_YUjWNa",
     "contact-form",
     "multicolumn_PUdCbp"
   ]
