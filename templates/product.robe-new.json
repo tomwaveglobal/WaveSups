@@ -24,7 +24,11 @@
           "type": "vendor",
           "settings": {
             "show_product_vendor": true,
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "",
+            "background_color": "",
+            "background_height": 0,
+            "alignment": "left"
           }
         },
         "title": {
@@ -32,6 +36,7 @@
           "settings": {
             "title_size": "product-title-md",
             "title_size_mobile": "product-title-md",
+            "title_tag": "h2",
             "show_price": true,
             "show_rating": true
           }
@@ -47,7 +52,13 @@
             "iwidth": "custom",
             "icon_width": 20,
             "text": "{{ product.metafields.custom.description_snippet.value }}",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "description": {
@@ -86,6 +97,8 @@
             "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
             "message_icon_width": 100,
             "message_image_checkbox": true,
+            "message_image_link": "",
+            "message_image_popup_title": "Finance Options",
             "message": "<p>Starting at #amount* per month</p>",
             "message_divide_amount": "3",
             "message_price_range": "100",
@@ -179,7 +192,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Free Next Day Delivery (Order by 2pm)</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_LiCrpH": {
@@ -190,7 +209,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>Running Cost - From £2 a day</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_kfKeDi": {
@@ -202,7 +227,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>24-Month Guarantee</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         },
         "text_9JnzcB": {
@@ -214,7 +245,13 @@
             "iwidth": "custom",
             "icon_width": 30,
             "text": "<strong>UK-based 7-Day Customer Support</strong>",
-            "text_size": "text-sm"
+            "text_size": "text-sm",
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
           }
         }
       },
@@ -1106,6 +1143,7 @@
         },
         "contact": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Didn’t find your answer?",
             "text": "<p>Don't hestitate to contact us</p>",
@@ -1131,7 +1169,7 @@
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Please read our <a href=\"/pages/faqs\" title=\"Frequently Asked Questions\">FAQs</a> page to find out more.</p>",
+        "description": "<p>Didn't find your answer? You can also check out the <a href=\"https://wavespas.com/blogs/knowledge-base\" title=\"Knowledge Base\">Support Centre.<br/></a>Or chat to us directly using the chat pop up in the bottom left corner</p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
