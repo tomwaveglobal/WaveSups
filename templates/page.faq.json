@@ -395,6 +395,7 @@
         },
         "contact": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Didn’t find your answer?",
             "text": "<p>Don't hestitate to contact us</p>",
