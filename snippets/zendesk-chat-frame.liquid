@@ -1,0 +1,144 @@
+{%- doc -%}
+  Renders the Zendesk messaging widget INLINE in the page using Zendesk's
+  official embedded mode:
+    zE('messenger', 'render', { mode: 'embedded', widget: { targetElement: '#...' } })
+
+  Floating auto-render is disabled on the contact template in layout/theme.liquid
+  (window.zEMessenger.autoRender = false), which must load before the Zendesk
+  snippet. This snippet then renders the widget into the in-page container.
+
+  Requires Zendesk *messaging* (embedded mode is not supported by Web Widget
+  Classic). Only one mode (embedded OR floating) should be used per page.
+
+  @param {object} section - The section, using these settings:
+    chat_inline_min_height, chat_button_label, chat_loading_text
+
+  @example
+  {% render 'zendesk-chat-frame', section: section %}
+{%- enddoc -%}
+
+<style>
+  #zdChat-{{ section.id }} {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  #zdChat-{{ section.id }} .zd-chat__frame {
+    position: relative;
+    min-height: {{ section.settings.chat_inline_min_height }}px;
+    border: 1px solid rgb(var(--color-foreground, 23 23 23) / 0.12);
+    border-radius: 0.75rem;
+    background: rgb(var(--color-foreground, 23 23 23) / 0.02);
+    overflow: hidden;
+  }
+
+  /* Zendesk fills the target element; make sure it can actually use the height. */
+  #zdChat-{{ section.id }} .zd-chat__target {
+    position: absolute;
+    inset: 0;
+  }
+
+  #zdChat-{{ section.id }} .zd-chat__status {
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    pointer-events: none;
+  }
+
+  #zdChat-{{ section.id }} .zd-chat__status [data-zd-open] {
+    pointer-events: auto;
+  }
+
+  #zdChat-{{ section.id }}.zd-chat--rendered .zd-chat__status {
+    display: none;
+  }
+</style>
+
+<div id="zdChat-{{ section.id }}" class="zd-chat" data-zd-chat>
+  <div class="zd-chat__frame">
+    <div id="zdTarget-{{ section.id }}" class="zd-chat__target" data-zd-target></div>
+    <div class="zd-chat__status flex flex-col items-center justify-center gap-5 text-center" data-zd-status>
+      <p class="zd-chat__status-text rte leading-normal">{{ section.settings.chat_loading_text | escape }}</p>
+      {%- if section.settings.chat_button_label != blank -%}
+        <button type="button" class="button button--primary" is="hover-button" data-zd-open>
+          <span class="btn-fill" data-fill></span>
+          <span class="btn-text">{{ section.settings.chat_button_label | escape }}</span>
+        </button>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('zdChat-{{ section.id }}');
+    if (!root) return;
+
+    var TARGET = '#zdTarget-{{ section.id }}';
+    var targetEl = document.getElementById('zdTarget-{{ section.id }}');
+    var statusEl = root.querySelector('[data-zd-status]');
+    var openBtn = root.querySelector('[data-zd-open]');
+
+    function log() {
+      try { console.log.apply(console, ['[ZendeskChat]'].concat([].slice.call(arguments))); } catch (e) {}
+    }
+
+    log('Embedded-mode section running. zE present now?', typeof window.zE, '| autoRender =',
+      (window.zEMessenger && window.zEMessenger.autoRender));
+
+    function z() {
+      if (typeof window.zE !== 'function') return false;
+      try { window.zE.apply(null, arguments); return true; }
+      catch (e) { log('zE call errored:', e && e.message); return false; }
+    }
+
+    // Ask Zendesk to render the messaging widget inside our container.
+    function renderEmbedded() {
+      return z('messenger', 'render', {
+        mode: 'embedded',
+        widget: { targetElement: TARGET }
+      });
+    }
+
+    function rendered() {
+      // Zendesk injects an iframe (or its own markup) into the target once rendered.
+      return targetEl && targetEl.querySelector('iframe, [id^="webWidget"], div');
+    }
+
+    // Wait for the Zendesk API, then render — retrying until the container fills.
+    var readyTries = 0;
+    (function whenReady() {
+      if (typeof window.zE === 'function') {
+        log('zE ready — rendering embedded messenger into', TARGET);
+        renderEmbedded();
+        var n = 0;
+        var iv = setInterval(function () {
+          if (rendered()) {
+            root.classList.add('zd-chat--rendered');
+            if (statusEl) statusEl.style.display = 'none';
+            clearInterval(iv);
+            log('Embedded messenger rendered into the page.');
+          } else if (n++ > 40) {
+            clearInterval(iv);
+            log('Embedded render did not fill the container. If nothing shows, this store may be on Web Widget Classic (embedded mode needs Zendesk messaging), or cookie consent has not been accepted.');
+          } else {
+            renderEmbedded();
+          }
+        }, 300);
+        return;
+      }
+      if (readyTries++ > 160) {
+        log('zE never became available — the Zendesk snippet is not loading. Most likely cookie consent has not been accepted on this page.');
+        return;
+      }
+      setTimeout(whenReady, 150);
+    })();
+
+    if (openBtn) {
+      openBtn.addEventListener('click', function () {
+        renderEmbedded();
+        z('messenger', 'open');
+      });
+    }
+  })();
+</script>
