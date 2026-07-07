@@ -1472,6 +1472,7 @@
         },
         "contact": {
           "type": "contact",
+          "disabled": true,
           "settings": {
             "heading": "Didn’t find your answer?",
             "text": "<p>Don't hestitate to contact us</p>",
@@ -1497,7 +1498,7 @@
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>Please read our <a href=\"/pages/faqs\" title=\"Frequently Asked Questions\">FAQs</a> page to find out more.</p>",
+        "description": "<p>Didn't find your answer? You can also check out the <a href=\"https://wavespas.com/blogs/knowledge-base\" title=\"Knowledge Base\">Support Centre.<br/></a>Or chat to us directly using the chat pop up in the bottom left corner</p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
