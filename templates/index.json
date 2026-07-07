@@ -297,7 +297,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Recon 3.0",
+            "heading": "The Pro 3.0",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -308,7 +308,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<h4>Rugged Durability. Unmatched Stability. Adventure Reinvented.</h4><p><br/>The all-new Wave Recon 3.0 is our most resilient board yet, engineered for the explorer who ventures off the beaten path. Featuring a heavy-duty Triple-Layer Military-Grade PVC construction that offers a rock-solid base for gear-heavy expeditions, or navigating unpredictable waters.<br/></p>",
+            "text": "<h3>Performance Without Compromise. Speed Redefined. Elite Engineering. Adventure Mastered.<br/></h3><p><br/>The all-new Wave Pro 3.0 is the pinnacle of our SUP range, engineered specifically for those who demand elite-level speed and unwavering stability. With a streamlined silhouette designed for effortless glide and a rock-solid 20 PSI rigidity, this high-performance tourer transforms every stroke into pure momentum. Equipped with a professional-grade carbon-fibre paddle and race-style fin, the Pro 3.0 isn't just a board, it’s the ultimate SUP for serious exploration..<br/><br/></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -324,7 +324,7 @@
           "type": "button",
           "settings": {
             "button_label": "Pre Order Now",
-            "button_link": "shopify://products/recon-3",
+            "button_link": "shopify://products/pro-3",
             "button_style": "primary",
             "button_size": "md",
             "button_external": false,
@@ -339,7 +339,7 @@
       ],
       "settings": {
         "transparent_header": false,
-        "video": "shopify://files/videos/Paddle_boarders_paddling_202601071610_fm93o.mp4",
+        "video": "shopify://files/videos/Pro 3.0.mp4",
         "video_url": "",
         "description": "",
         "enable_video_autoplay": true,
