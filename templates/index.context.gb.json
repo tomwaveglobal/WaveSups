@@ -17,7 +17,7 @@
       "settings": {},
       "blocks": {
         "image_bAHz74": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3.gif",
             "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Mobile-2.gif",
@@ -50,8 +50,8 @@
       "block_order": [
         "image_bAHz74",
         "image_rC3mcC",
-        "image_e6Nny7",
         "image_UPWkm3",
+        "image_e6Nny7",
         "slide-2"
       ]
     }
