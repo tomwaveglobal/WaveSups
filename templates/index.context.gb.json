@@ -17,10 +17,10 @@
       "settings": {},
       "blocks": {
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3.gif",
-            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Mobile-2.gif",
+            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3_7a648391-a5ab-48ad-aa33-1be09933fe11.gif",
+            "image_mobile": "shopify://shop_images/Crystal_Carousel.gif",
             "heading": "",
             "button_label": "Shop PRO 3.0",
             "button_link": "shopify://products/pro-3"
