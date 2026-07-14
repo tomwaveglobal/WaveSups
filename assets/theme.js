@@ -5376,6 +5376,7 @@ class ProductInfo extends HTMLElement {
       this.updateSourceFromDestination(parsedHTML, 'StickyPrice');
       this.updateSourceFromDestination(parsedHTML, 'Sku');
       this.updateSourceFromDestination(parsedHTML, 'Badges');
+      this.updateSourceFromDestination(parsedHTML, 'BadgesOverlay');
       this.updateSourceFromDestination(parsedHTML, 'Inventory');
       this.updateSourceFromDestination(parsedHTML, 'Volume');
       this.updateSourceFromDestination(parsedHTML, 'PricePerItem');
@@ -5453,7 +5454,7 @@ class ProductInfo extends HTMLElement {
     this.productForm?.toggleSubmitButton(true, theme.variantStrings.unavailable, true);
     this.productStickyForm?.toggleSubmitButton(true, theme.variantStrings.unavailable, true);
 
-    const selectors = ['Price', 'BuyButtonPrice', 'StickyPrice', 'Inventory', 'Sku', 'Badges', 'PricePerItem', 'BackInStock', 'ProductBundle', 'VolumeNote', 'Volume', 'QuantityRules', 'QuantityRulesCart']
+    const selectors = ['Price', 'BuyButtonPrice', 'StickyPrice', 'Inventory', 'Sku', 'Badges', 'BadgesOverlay', 'PricePerItem', 'BackInStock', 'ProductBundle', 'VolumeNote', 'Volume', 'QuantityRules', 'QuantityRulesCart']
       .map((id) => `#${id}-${this.sectionId}-${this.productId}`)
       .join(', ');
     document.querySelectorAll(selectors).forEach((selector) => selector.setAttribute('hidden', ''));

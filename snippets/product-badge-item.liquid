@@ -1,0 +1,36 @@
+{%- doc -%}
+  Renders a single advanced badge (text pill, image, or image + text) using the shared badge rules.
+
+  Shared by product-badges.liquid so the metafield-label flow and the variant-focus flow render identically.
+
+  @param {string} badge_mode - 'text' | 'image' | 'both'
+  @param {string} label_text - Badge label / image alt text
+  @param {object} [badge_image] - Optional badge image
+  @param {boolean} [badge_show_text] - Show the text pill on top of the image (for 'both' mode)
+  @param {string} [styles] - Inline CSS custom properties for badge colours
+{%- enddoc -%}
+{%- case badge_mode -%}
+  {%- when 'text' -%}
+    <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+      {{- label_text | escape -}}
+    </span>
+  {%- when 'image' -%}
+    {%- if badge_image != blank -%}
+      {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+    {%- endif -%}
+  {%- when 'both' -%}
+    {%- if badge_image != blank and badge_show_text -%}
+      <div class="badge-image-wrap relative inline-block">
+        {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+        <span class="badge badge-on-image flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+          {{- label_text | escape -}}
+        </span>
+      </div>
+    {%- elsif badge_image != blank -%}
+      {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+    {%- elsif badge_show_text -%}
+      <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
+        {{- label_text | escape -}}
+      </span>
+    {%- endif -%}
+{%- endcase -%}

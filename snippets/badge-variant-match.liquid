@@ -1,0 +1,16 @@
+{%- doc -%}
+  Outputs the string "true" when any comma-separated code in `codes` matches a barcode/SKU
+  present in `index`. Outputs nothing otherwise. Callers capture the output and test it.
+
+  @param {string} codes - Comma-separated barcodes/SKUs from a Variant Focus setting
+  @param {string} index - Delimited, downcased variant code index like "|barcode|sku|barcode|sku|"
+{%- enddoc -%}
+{%- assign code_list = codes | split: ',' -%}
+{%- for code in code_list -%}
+  {%- assign needle = code | strip | downcase -%}
+  {%- if needle == blank -%}
+    {%- continue -%}
+  {%- endif -%}
+  {%- assign needle = '|' | append: needle | append: '|' -%}
+  {%- if index contains needle -%}true{%- break -%}{%- endif -%}
+{%- endfor -%}

@@ -22,19 +22,47 @@
 -%}
 {%- if badge_mode != 'hidden' -%}
 <div class="badges{% if class != blank %} {{ class }}{% endif %} pointer-events-none">
+  {%- liquid
+    assign badge_bg = product.metafields.theme.label_color.value | default: settings.product_badge_bg_color
+    assign badge_fg = settings.product_badge_text_color | default: '#ffffff'
+  -%}
+  {%- capture styles -%}
+    {%- if badge_bg != blank -%}--badge-background: {{ badge_bg }};{%- endif -%}
+    {%- if badge_fg != blank -%}--badge-foreground: {{ badge_fg }};{%- endif -%}
+  {%- endcapture -%}
+
+  {%- comment -%}
+    Build a delimited, downcased index of variant barcodes + SKUs to match against.
+    When use_variant is set (product page / quick view), match only the SELECTED variant so the
+    badge refreshes as the shopper changes variants. Otherwise (cards) match any variant.
+  {%- endcomment -%}
+  {%- assign variant_code_index = '' -%}
+  {%- if use_variant -%}
+    {%- assign selected_variant = product.selected_or_first_available_variant -%}
+    {%- assign variant_code_index = '|' | append: selected_variant.barcode | append: '|' | append: selected_variant.sku | append: '|' -%}
+  {%- else -%}
+    {%- for variant in product.variants -%}
+      {%- assign variant_code_index = variant_code_index | append: '|' | append: variant.barcode | append: '|' | append: variant.sku -%}
+    {%- endfor -%}
+    {%- assign variant_code_index = variant_code_index | append: '|' -%}
+  {%- endif -%}
+  {%- assign variant_code_index = variant_code_index | downcase -%}
+
+  {%- comment -%} Track which modules have rendered so a product never shows the same module twice. {%- endcomment -%}
+  {%- assign rendered_modules = '' -%}
+
+  {%- comment -%}
+    1. Metafield-driven badges (product.metafields.theme.label). When a matched module's Variant Focus
+    also matches, the module shows its Override badge instead of (or, if "show both" is on, alongside) the base.
+  {%- endcomment -%}
   {%- assign label_value = product.metafields.theme.label.value -%}
   {%- if label_value != blank -%}
-    {%- assign badge_bg = product.metafields.theme.label_color.value | default: settings.product_badge_bg_color -%}
-    {%- assign badge_fg = settings.product_badge_text_color | default: '#ffffff' -%}
-    {%- capture styles -%}
-      {%- if badge_bg != blank -%}--badge-background: {{ badge_bg }};{%- endif -%}
-      {%- if badge_fg != blank -%}--badge-foreground: {{ badge_fg }};{%- endif -%}
-    {%- endcapture -%}
-
     {%- assign label_entries = label_value | split: ';' -%}
     {%- for entry in label_entries -%}
       {%- assign entry_trimmed = entry | strip -%}
-      {%- if entry_trimmed == blank -%}{%- continue -%}{%- endif -%}
+      {%- if entry_trimmed == blank -%}
+        {%- continue -%}
+      {%- endif -%}
 
       {%- assign show_label = false -%}
       {%- assign label_text = '' -%}
@@ -58,67 +86,123 @@
       {%- endif -%}
 
       {%- if show_label and label_text != blank -%}
-        {%- assign badge_image = blank -%}
-        {%- assign badge_show_text = true -%}
+        {%- assign matched_module = 0 -%}
         {%- if settings.advanced_badge_map_1_text != blank and settings.advanced_badge_map_1_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_1_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_1_show_text -%}
+          {%- assign matched_module = 1 -%}
         {%- elsif settings.advanced_badge_map_2_text != blank and settings.advanced_badge_map_2_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_2_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_2_show_text -%}
+          {%- assign matched_module = 2 -%}
         {%- elsif settings.advanced_badge_map_3_text != blank and settings.advanced_badge_map_3_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_3_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_3_show_text -%}
+          {%- assign matched_module = 3 -%}
         {%- elsif settings.advanced_badge_map_4_text != blank and settings.advanced_badge_map_4_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_4_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_4_show_text -%}
+          {%- assign matched_module = 4 -%}
         {%- elsif settings.advanced_badge_map_5_text != blank and settings.advanced_badge_map_5_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_5_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_5_show_text -%}
+          {%- assign matched_module = 5 -%}
         {%- elsif settings.advanced_badge_map_6_text != blank and settings.advanced_badge_map_6_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_6_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_6_show_text -%}
+          {%- assign matched_module = 6 -%}
         {%- elsif settings.advanced_badge_map_7_text != blank and settings.advanced_badge_map_7_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_7_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_7_show_text -%}
+          {%- assign matched_module = 7 -%}
         {%- elsif settings.advanced_badge_map_8_text != blank and settings.advanced_badge_map_8_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_8_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_8_show_text -%}
+          {%- assign matched_module = 8 -%}
         {%- elsif settings.advanced_badge_map_9_text != blank and settings.advanced_badge_map_9_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_9_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_9_show_text -%}
+          {%- assign matched_module = 9 -%}
         {%- elsif settings.advanced_badge_map_10_text != blank and settings.advanced_badge_map_10_text == label_text -%}
-          {%- assign badge_image = settings.advanced_badge_map_10_image -%}
-          {%- assign badge_show_text = settings.advanced_badge_map_10_show_text -%}
+          {%- assign matched_module = 10 -%}
         {%- endif -%}
 
-        {%- case badge_mode -%}
-          {%- when 'text' -%}
-            <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
-              {{- label_text | escape -}}
-            </span>
-          {%- when 'image' -%}
-            {%- if badge_image != blank -%}
-              {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
+        {%- if matched_module > 0 -%}
+          {%- assign base_image_key = 'advanced_badge_map_' | append: matched_module | append: '_image' -%}
+          {%- assign base_show_key = 'advanced_badge_map_' | append: matched_module | append: '_show_text' -%}
+          {%- assign focus_key = 'advanced_badge_map_' | append: matched_module | append: '_variant_focus' -%}
+          {%- assign ov_text_key = 'advanced_badge_map_' | append: matched_module | append: '_override_text' -%}
+          {%- assign ov_image_key = 'advanced_badge_map_' | append: matched_module | append: '_override_image' -%}
+          {%- assign ov_show_key = 'advanced_badge_map_' | append: matched_module | append: '_override_show_text' -%}
+          {%- assign ov_both_key = 'advanced_badge_map_' | append: matched_module | append: '_override_show_both' -%}
+
+          {%- assign focus_value = settings[focus_key] -%}
+          {%- assign ov_text = settings[ov_text_key] -%}
+          {%- assign ov_image = settings[ov_image_key] -%}
+
+          {%- assign variant_match = false -%}
+          {%- if focus_value != blank -%}
+            {%- capture variant_match_raw -%}{%- render 'badge-variant-match', codes: focus_value, index: variant_code_index -%}{%- endcapture -%}
+            {%- if variant_match_raw contains 'true' -%}
+              {%- assign variant_match = true -%}
             {%- endif -%}
-          {%- when 'both' -%}
-            {%- if badge_image != blank and badge_show_text -%}
-              <div class="badge-image-wrap relative inline-block">
-                {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
-                <span class="badge badge-on-image flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
-                  {{- label_text | escape -}}
-                </span>
-              </div>
-            {%- elsif badge_image != blank -%}
-              {{ badge_image | image_url: width: 800 | image_tag: alt: label_text, class: 'badge-image', loading: 'lazy' }}
-            {%- elsif badge_show_text -%}
-              <span class="badge flex items-center gap-1d5 font-medium leading-none rounded-full"{% if styles != blank %} style="{{ styles }}"{% endif %}>
-                {{- label_text | escape -}}
-              </span>
+          {%- endif -%}
+
+          {%- assign has_override = false -%}
+          {%- if ov_text != blank or ov_image != blank -%}
+            {%- assign has_override = true -%}
+          {%- endif -%}
+
+          {%- if variant_match and has_override -%}
+            {%- if settings[ov_both_key] -%}
+              {%- render 'product-badge-item', badge_mode: badge_mode, label_text: label_text, badge_image: settings[base_image_key], badge_show_text: settings[base_show_key], styles: styles -%}
             {%- endif -%}
-        {%- endcase -%}
+            {%- assign ov_label = ov_text | default: label_text -%}
+            {%- render 'product-badge-item', badge_mode: badge_mode, label_text: ov_label, badge_image: ov_image, badge_show_text: settings[ov_show_key], styles: styles -%}
+          {%- else -%}
+            {%- render 'product-badge-item', badge_mode: badge_mode, label_text: label_text, badge_image: settings[base_image_key], badge_show_text: settings[base_show_key], styles: styles -%}
+          {%- endif -%}
+
+          {%- assign rendered_modules = rendered_modules | append: '|' | append: matched_module | append: '|' -%}
+        {%- else -%}
+          {%- comment -%} Custom label text that maps to no module: a plain text pill. {%- endcomment -%}
+          {%- render 'product-badge-item', badge_mode: badge_mode, label_text: label_text, badge_image: blank, badge_show_text: true, styles: styles -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   {%- endif -%}
+
+  {%- comment -%}
+    2. Variant-focus badges for modules not already shown above. A matching variant shows the module's
+    Override badge (replacing, or alongside if "show both") — or its base badge if no override is set.
+  {%- endcomment -%}
+  {%- for i in (1..10) -%}
+    {%- assign module_needle = '|' | append: i | append: '|' -%}
+    {%- if rendered_modules contains module_needle -%}
+      {%- continue -%}
+    {%- endif -%}
+
+    {%- assign focus_key = 'advanced_badge_map_' | append: i | append: '_variant_focus' -%}
+    {%- assign focus_value = settings[focus_key] -%}
+    {%- if focus_value == blank -%}
+      {%- continue -%}
+    {%- endif -%}
+
+    {%- capture variant_match_raw -%}{%- render 'badge-variant-match', codes: focus_value, index: variant_code_index -%}{%- endcapture -%}
+    {%- unless variant_match_raw contains 'true' -%}
+      {%- continue -%}
+    {%- endunless -%}
+
+    {%- assign base_text_key = 'advanced_badge_map_' | append: i | append: '_text' -%}
+    {%- assign base_image_key = 'advanced_badge_map_' | append: i | append: '_image' -%}
+    {%- assign base_show_key = 'advanced_badge_map_' | append: i | append: '_show_text' -%}
+    {%- assign ov_text_key = 'advanced_badge_map_' | append: i | append: '_override_text' -%}
+    {%- assign ov_image_key = 'advanced_badge_map_' | append: i | append: '_override_image' -%}
+    {%- assign ov_show_key = 'advanced_badge_map_' | append: i | append: '_override_show_text' -%}
+    {%- assign ov_both_key = 'advanced_badge_map_' | append: i | append: '_override_show_both' -%}
+
+    {%- assign base_text = settings[base_text_key] -%}
+    {%- assign ov_text = settings[ov_text_key] -%}
+    {%- assign ov_image = settings[ov_image_key] -%}
+
+    {%- assign has_override = false -%}
+    {%- if ov_text != blank or ov_image != blank -%}
+      {%- assign has_override = true -%}
+    {%- endif -%}
+
+    {%- if has_override -%}
+      {%- if settings[ov_both_key] -%}
+        {%- render 'product-badge-item', badge_mode: badge_mode, label_text: base_text, badge_image: settings[base_image_key], badge_show_text: settings[base_show_key], styles: styles -%}
+      {%- endif -%}
+      {%- assign ov_label = ov_text | default: base_text -%}
+      {%- render 'product-badge-item', badge_mode: badge_mode, label_text: ov_label, badge_image: ov_image, badge_show_text: settings[ov_show_key], styles: styles -%}
+    {%- else -%}
+      {%- render 'product-badge-item', badge_mode: badge_mode, label_text: base_text, badge_image: settings[base_image_key], badge_show_text: settings[base_show_key], styles: styles -%}
+    {%- endif -%}
+
+    {%- assign rendered_modules = rendered_modules | append: '|' | append: i | append: '|' -%}
+  {%- endfor -%}
 </div>
 {%- endif -%}
