@@ -139,7 +139,9 @@
             product_form_id: product_form_id
           -%}
 
-          {%- render 'product-badges', product: product, show_save_amount: true, save_type: 'percentage', class: 'z-2 absolute top-0 left-0 grid gap-3 p-4' -%}
+          <div id="BadgesOverlay-{{ section.id }}-{{ product.id }}">
+            {%- render 'product-badges', product: product, use_variant: true, show_save_amount: true, save_type: 'percentage', class: 'z-2 absolute top-0 left-0 grid gap-3 p-4' -%}
+          </div>
 
           {%- liquid
             if icon_list_block and icon_list_block.settings.show_below_media
