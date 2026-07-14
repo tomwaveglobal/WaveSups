@@ -27,13 +27,13 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Fathers_day.png",
-            "image_mobile": "shopify://shop_images/Fathers_day_mobile.png",
+            "image": "shopify://shop_images/Waist-Bag-Kayak_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/Waist-Bag-Kayak_Jul26-2.jpg",
             "heading": "‎",
-            "button_label": "Shop Father's Day",
-            "button_link": "shopify://collections/sale-uk"
+            "button_label": "Shop Kayaks",
+            "button_link": "shopify://collections/kayak-and-canoe-range"
           }
         },
         "image_e6Nny7": {
@@ -48,8 +48,8 @@
         }
       },
       "block_order": [
-        "image_bAHz74",
         "image_rC3mcC",
+        "image_bAHz74",
         "image_UPWkm3",
         "image_e6Nny7",
         "slide-2"
