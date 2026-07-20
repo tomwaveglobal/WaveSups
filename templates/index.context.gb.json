@@ -16,8 +16,18 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_e6Nny7": {
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Waist-Bag-Woody_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/Waist-Bag-Woody_Jul26-2.jpg",
+            "heading": "‎",
+            "button_label": "Shop The Range",
+            "button_link": "shopify://collections/all-products"
+          }
+        },
         "image_rC3mcC": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Waist-Bag-Kayak_Jul26-1.jpg",
             "image_mobile": "shopify://shop_images/Waist-Bag-Kayak_Jul26-2.jpg",
@@ -34,16 +44,6 @@
             "heading": "",
             "button_label": "Shop PRO 3.0",
             "button_link": "shopify://products/pro-3"
-          }
-        },
-        "image_e6Nny7": {
-          "disabled": false,
-          "settings": {
-            "image": "shopify://shop_images/Waist-Bag-Woody_Jul26-1.jpg",
-            "image_mobile": "shopify://shop_images/Waist-Bag-Woody_Jul26-2.jpg",
-            "heading": "‎",
-            "button_label": "Shop The Range",
-            "button_link": "shopify://collections/all-products"
           }
         }
       },
