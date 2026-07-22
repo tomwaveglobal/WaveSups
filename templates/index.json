@@ -12,17 +12,16 @@
     "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "image_e6Nny7": {
+        "image_rC3mcC": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Carousel_Home_page_f6cc11a3-c68c-462d-957c-db5e2548441b.jpg",
-            "image_mobile": "shopify://shop_images/Roamer-Mobile.jpg",
-            "heading": "<span style=\"color: #F59E0B;\">Get water-ready for less. </span> <p> In Stock: The Roamer<br>for Just £249.99 </p>",
+            "image": "shopify://shop_images/10Off_Watersports_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/10Off_Watersports_Jul26-2.jpg",
+            "heading": "‎",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Shop Roamer",
-            "button_link": "shopify://products/roamer-inflatable-kayak",
+            "button_label": "Get your discount",
+            "button_link": "shopify://collections/all-products",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false
@@ -73,17 +72,17 @@
             "button_icon": true
           }
         },
-        "image_rC3mcC": {
+        "image_e6Nny7": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Carousel_Home_page_V2.jpg",
-            "image_mobile": "shopify://shop_images/Mobile_a025a721-971f-4108-b50a-90e3190b2cef.jpg",
-            "heading": "Sun's Out, Paddles Out!<br> <span style=\"color: #F59E0B;\">20% Off </span>to Kickstart Your Summer.<br><span style=\"color: #F59E0B;\">1 Week Only!</span>",
+            "image": "shopify://shop_images/Carousel_Home_page_f6cc11a3-c68c-462d-957c-db5e2548441b.jpg",
+            "image_mobile": "shopify://shop_images/Roamer-Mobile.jpg",
+            "heading": "<span style=\"color: #F59E0B;\">Get water-ready for less. </span> <p> In Stock: The Roamer<br>for Just £249.99 </p>",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Shop With Code SUN20",
-            "button_link": "shopify://collections/sup-range",
+            "button_label": "Shop Roamer",
+            "button_link": "shopify://products/roamer-inflatable-kayak",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false
@@ -91,11 +90,11 @@
         }
       },
       "block_order": [
-        "image_e6Nny7",
+        "image_rC3mcC",
         "image_UPWkm3",
         "slide-2",
         "image_bAHz74",
-        "image_rC3mcC"
+        "image_e6Nny7"
       ],
       "custom_css": [
         ".slideshow {background: #ffffff !important;}",
