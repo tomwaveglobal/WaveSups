@@ -9,6 +9,19 @@
  */
 {
   "sections": {
+    "slideshow": {
+      "settings": {},
+      "blocks": {
+        "image_e6Nny7": {
+          "disabled": true,
+          "settings": {}
+        },
+        "image_rC3mcC": {
+          "disabled": true,
+          "settings": {}
+        }
+      }
+    },
     "video-with-text-overlay": {
       "disabled": true,
       "settings": {},
@@ -20,15 +33,6 @@
       },
       "blocks": {
         "spinning_text": {
-          "disabled": true,
-          "settings": {}
-        }
-      }
-    },
-    "slideshow": {
-      "settings": {},
-      "blocks": {
-        "image_e6Nny7": {
           "disabled": true,
           "settings": {}
         }
