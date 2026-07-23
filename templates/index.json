@@ -15,13 +15,13 @@
         "image_rC3mcC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/10Off_Watersports_Jul26-1.jpg",
-            "image_mobile": "shopify://shop_images/10Off_Watersports_Jul26-2.jpg",
+            "image": "shopify://shop_images/Next-Summer_-Woody_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/Next-Summer_-Woody_Jul26-2.jpg",
             "heading": "‎",
             "heading_size": "title-sm",
             "heading_tag": "h2",
-            "button_label": "Get your discount",
-            "button_link": "shopify://collections/all-products",
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/sup-range",
             "button_style": "primary",
             "button_external": false,
             "button_icon": false

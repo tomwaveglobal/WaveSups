@@ -18,10 +18,10 @@
           "type": "announcement",
           "settings": {
             "icon": "alert",
-            "text": "<em><strong>SALE ALERT:  </strong></em>10% off SUPs & Kayaks",
+            "text": "<em><strong>Get on the water:  </strong></em>Shop Paddleboards",
             "link": "shopify://collections/all-products",
             "hide_icon_mobile": true,
-            "text_mobile": "<em><strong>Flash Sale</strong></em> 10% off",
+            "text_mobile": "<em><strong>Get on the water:  </strong></em>Shop Paddleboards",
             "highlighted_text": "text",
             "highlighted_scribble": "circle"
           }
