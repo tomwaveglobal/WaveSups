@@ -27,13 +27,13 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Waist-Bag-Kayak_Jul26-1.jpg",
-            "image_mobile": "shopify://shop_images/Waist-Bag-Kayak_Jul26-2.jpg",
-            "heading": "‎",
-            "button_label": "Shop Kayaks",
-            "button_link": "shopify://collections/kayak-and-canoe-range"
+            "image": "shopify://shop_images/Next-Summer_-Woody_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/Next-Summer_-Woody_Jul26-2.jpg",
+            "heading": "",
+            "button_label": "Shop paddleboards",
+            "button_link": "shopify://collections/sup-range"
           }
         },
         "image_bAHz74": {
