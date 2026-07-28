@@ -24,7 +24,12 @@
             "text_mobile": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards"
           }
         }
-      }
+      },
+      "block_order": [
+        "announcement-2",
+        "announcement_mnCMPh",
+        "announcement-1"
+      ]
     }
   }
 }

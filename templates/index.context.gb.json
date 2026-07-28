@@ -39,8 +39,8 @@
         "image_bAHz74": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3_7a648391-a5ab-48ad-aa33-1be09933fe11.gif",
-            "image_mobile": "shopify://shop_images/Crystal_Carousel.gif",
+            "image": "shopify://shop_images/SUPs_Out-Of-the-house_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_Out-Of-the-house_Jul26-2.jpg",
             "heading": "",
             "button_label": "Shop PRO 3.0",
             "button_link": "shopify://products/pro-3"
@@ -49,8 +49,8 @@
       },
       "block_order": [
         "image_e6Nny7",
-        "image_rC3mcC",
         "image_bAHz74",
+        "image_rC3mcC",
         "image_UPWkm3",
         "slide-2"
       ]
