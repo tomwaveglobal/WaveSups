@@ -26,15 +26,19 @@
             "icon_width": 30,
             "text": "Use code <strong>SUMMER10</strong> for 10% off | Limited Time!",
             "text_size": "text-base",
-            "header-0cbf508b6813e10ba669d0ae35f0c021": null,
+            "header-1938876ce62ae6767b82d93219629997": null,
             "text_color": "#ffffff",
             "icon_color": "#ffffff",
             "background_color": "#f59e0b",
-            "header-c7f1f69db677f183b1eb45acd7d29c9f": null,
+            "header-edd5076ab4dded1a6d3316dd61270238": null,
             "alignment": "center",
             "background_height": 10,
             "border_radius": 0
           }
+        },
+        "share": {
+          "disabled": true,
+          "settings": {}
         },
         "text_3PYKCi": {
           "disabled": false,
@@ -50,11 +54,11 @@
             "icon_width": 24,
             "text": "Shop Pay Installments offers credit with Affirm as lender. <a href=\"https://help.shop.app/en/shop/shop-pay-installments/plans\" title=\"https://help.shop.app/en/shop/shop-pay-installments/plans\">Learn more</a>.",
             "text_size": "text-sm",
-            "header-98c09e176296de7023828be497948ae4": null,
+            "header-1ae96ace961423cf3036525ed093a2b3": null,
             "text_color": "#000000",
             "icon_color": "#000000",
             "background_color": "rgba(0,0,0,0)",
-            "header-1061945977cbdce6662cf3ba14fcdf8a": null,
+            "header-97f61197af465c9c98b659f42149916e": null,
             "alignment": "left",
             "background_height": 0,
             "border_radius": 0
@@ -74,10 +78,10 @@
         "on_site_message_EFzeYN",
         "text_WF3nRk",
         "buy_buttons",
+        "product_bundle_tWCDMV",
         "share",
         "text_3PYKCi",
         "text_7XQaT",
-        "product_bundle_tWCDMV",
         "inventory",
         "pickup_availability",
         "complementary",
