@@ -12,5 +12,60 @@
     "market": "gb"
   },
   "parent": "product.sup-new.json",
-  "sections": {}
+  "sections": {
+    "main-product": {
+      "settings": {},
+      "blocks": {
+        "share": {
+          "disabled": true,
+          "settings": {}
+        },
+        "text_fUHp7i": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "icon": "none",
+            "icon_image": null,
+            "iwidth": "custom",
+            "icon_width": 24,
+            "text": "Shop Pay Installments offers credit with Affirm as lender. <a href=\"https://help.shop.app/en/shop/shop-pay-installments/plans\" title=\"https://help.shop.app/en/shop/shop-pay-installments/plans\">Learn more</a>.",
+            "text_size": "text-sm",
+            "header-114e5aa2c07f3e8e2c388533ed752882": null,
+            "text_color": "#000000",
+            "icon_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "header-27bbc13e65503afce7ee352f0b2181ed": null,
+            "alignment": "left",
+            "background_height": 0,
+            "border_radius": 0
+          }
+        }
+      },
+      "block_order": [
+        "vendor_aTdrrh",
+        "breadcrumb_rcrAce",
+        "title",
+        "reviews_io_reviewsio_rating_output_XtJhKf",
+        "text_4JQyhw",
+        "description",
+        "countdown",
+        "variant_picker",
+        "variant_pre_order_nkaMyt",
+        "buy_buttons",
+        "share",
+        "on_site_message_EFzeYN",
+        "product_bundle_tWCDMV",
+        "inventory",
+        "pickup_availability",
+        "complementary",
+        "sticky_buy_button",
+        "text_fUHp7i",
+        "icon_list_4xTkbm",
+        "text_7bqpGD",
+        "text_LiCrpH",
+        "text_kfKeDi",
+        "text_9JnzcB"
+      ]
+    }
+  }
 }
