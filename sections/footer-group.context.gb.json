@@ -17,7 +17,28 @@
       "settings": {
         "newsletter_text": ""
       },
-      "blocks": {}
+      "blocks": {
+        "text_zFyqe": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "heading": "",
+            "text": "<p>Credit is offered by Shopify International Ltd. (FRN: 1031087) in partnership with Affirm UK Limited.</p><p>Shopify International Limited is an Appointed Representative of Affirm U.K. Limited, trading as</p><p>Affirm, which is authorised and regulated by the Financial Conduct Authority (FRN: 756087).</p><p>Affirm’s company number is 10199101 and its registered office is at C/O TMF Group, 1 Angel Court,</p><p>13th Floor, London, EC2R 7HJ.\"</p>",
+            "container_width": 50,
+            "header-42740f851205b248e021875bec47ffbb": null,
+            "opened": false
+          }
+        }
+      },
+      "block_order": [
+        "logo_social",
+        "link_list-1",
+        "link_list_HBRTnx",
+        "link_list_PhCpjg",
+        "text_YmNC7V",
+        "text_zFyqe",
+        "brand_information"
+      ]
     }
   }
 }
