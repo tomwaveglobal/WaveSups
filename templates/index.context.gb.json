@@ -26,24 +26,24 @@
             "button_link": "shopify://collections/all-products"
           }
         },
-        "image_rC3mcC": {
-          "disabled": false,
-          "settings": {
-            "image": "shopify://shop_images/Next-Summer_-Woody_Jul26-1.jpg",
-            "image_mobile": "shopify://shop_images/Next-Summer_-Woody_Jul26-2.jpg",
-            "heading": "",
-            "button_label": "Shop Paddleboards",
-            "button_link": "shopify://collections/sup-range"
-          }
-        },
         "image_bAHz74": {
           "disabled": false,
           "settings": {
             "image": "shopify://shop_images/SUPs_Out-Of-the-house_Jul26-1.jpg",
             "image_mobile": "shopify://shop_images/SUPs_Out-Of-the-house_Jul26-2.jpg",
             "heading": "",
-            "button_label": "Shop PRO 3.0",
-            "button_link": "shopify://products/pro-3"
+            "button_label": "Shop Paddleboards",
+            "button_link": ""
+          }
+        },
+        "image_rC3mcC": {
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Next-Summer_-Woody_Jul26-1.jpg",
+            "image_mobile": "shopify://shop_images/Next-Summer_-Woody_Jul26-2.jpg",
+            "heading": "",
+            "button_label": "Shop Paddleboards",
+            "button_link": "shopify://collections/sup-range"
           }
         }
       },
