@@ -27,16 +27,20 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text_7UABJr": {
           "type": "text",
           "settings": {
             "text": "",
+            "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
-            "text_font": "body",
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -52,7 +56,6 @@
       "name": "t:sections.image-with-text-overlay.presets.name",
       "settings": {
         "transparent_header": true,
-        "image": "shopify://shop_images/Carousel_Home_Mothers_Day.jpg",
         "image_height": "650px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
@@ -61,6 +64,8 @@
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "#e0a580",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -87,16 +92,20 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
-            "highlighted_scribble": "basic-underline"
+            "highlighted_scribble": "basic-underline",
+            "highlighted_reveal": false
           }
         },
         "text_zqtFqW": {
           "type": "text",
           "settings": {
             "text": "<p>From mastering the art of water care to seamless SUP inflation, our goal is to ensure your experience is nothing short of restorative. Browse our jargon-free guides and expert tips - curated to help you maintain your oasis and get back to the water faster.</p>",
+            "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
-            "text_font": "body",
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -124,6 +133,7 @@
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -148,7 +158,6 @@
             "show_border": true,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "image": "shopify://shop_images/Blog_image_Mothers_Day2.png",
             "image_ratio": "landscape",
             "heading": "Spa Troubleshooting",
             "heading_size": "text-lg-2xl",
@@ -188,7 +197,6 @@
             "show_border": true,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "image": "shopify://shop_images/Como_Bubbles.png",
             "image_ratio": "landscape",
             "heading": "Water Maintenance",
             "heading_size": "text-lg-2xl",
@@ -208,7 +216,6 @@
             "show_border": true,
             "text_alignment": "center",
             "text_alignment_mobile": "center",
-            "image": "shopify://shop_images/Premium_Setup.png",
             "image_ratio": "landscape",
             "heading": "Shipping, Returns & Warranty Support",
             "heading_size": "text-lg-2xl",
@@ -248,6 +255,7 @@
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -318,28 +326,26 @@
             "nav_button_background": "#ffffff",
             "nav_button_hover_background": "#f4f4f4",
             "nav_button_color": "#171717",
-            "image_1": "shopify://shop_images/mobile_02.jpg",
+            "image_1": "shopify://shop_images/Swirple_What_The_Sup_1.png",
             "title_1": "FAQs",
             "url_1": "shopify://pages/faqs",
-            "image_2": "shopify://shop_images/Hero3.png",
-            "title_2": "Videos",
-            "url_2": "shopify://pages/hot-tub-spa-how-to-guide",
-            "image_3": "shopify://shop_images/Como_Bubbles.png",
-            "title_3": "How To's",
-            "url_3": "https://wavespas.com/blogs/knowledge-base/tagged/how-tos",
-            "image_4": "shopify://shop_images/Controller_lifestyle.jpg",
-            "title_4": "Error Codes",
-            "url_4": "https://wavespas.com/blogs/knowledge-base/tagged/error-codes",
-            "image_5": "shopify://shop_images/signing-shipping-forms-for-large-box.jpg",
-            "title_5": "Shipping & Returns",
-            "url_5": "shopify://pages/shipping-and-returns",
-            "image_6": "shopify://shop_images/Tahoe_lifestyle_1.png",
-            "title_6": "Comparison Guide",
-            "url_6": "https://wavespas.com/pages/spa-comparison-guide",
-            "image_7": "shopify://shop_images/mobile_01.jpg",
+            "image_2": "shopify://shop_images/Mobile_e7a24d13-ed9a-4141-b7dc-69682edeb0a1.jpg",
+            "title_2": "Set Up Guides",
+            "url_2": "shopify://pages/how-to-guides",
+            "image_3": "shopify://shop_images/signing-shipping-forms-for-large-box.jpg",
+            "title_3": "Shipping & Returns",
+            "url_3": "shopify://pages/shipping-and-returns",
+            "image_4": "shopify://shop_images/Media_Hero_1_492f9750-56f5-4a7a-b54d-898af858af5e.png",
+            "title_4": "SUP Comparison Guide",
+            "url_4": "shopify://pages/sup-comparison-guide",
+            "image_5": "shopify://shop_images/Roamer_Hero_1.png",
+            "title_5": "Kayak Comparison Guide",
+            "url_5": "shopify://pages/kayak-guide",
+            "image_6": "shopify://shop_images/image5.jpg",
+            "title_6": "Ambassadors",
+            "url_6": "shopify://pages/ambassador",
             "title_7": "Running Cost Calculator",
             "url_7": "https://wavespas.com/pages/hot-tub-running-cost-calculator-estimate-your-monthly-bill",
-            "image_8": "shopify://shop_images/Tahoe-8.jpg",
             "title_8": "Ambassadors",
             "url_8": "https://wavespas.com/pages/ambassador-program",
             "title_9": "",
@@ -389,37 +395,29 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "text_gMrEL9": {
           "type": "text",
           "settings": {
             "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning Waveflow systems, we'll get you back to relaxing in no time.</p>",
+            "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
-            "text_font": "body",
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
-          }
-        },
-        "button_Ane9Rz": {
-          "type": "button",
-          "settings": {
-            "button_label": "Speak Now",
-            "button_link": "shopify://pages/contact-us",
-            "button_style": "primary",
-            "button_size": "md",
-            "button_external": false,
-            "button_icon": true
           }
         }
       },
       "block_order": [
         "heading_AA4Bef",
-        "text_gMrEL9",
-        "button_Ane9Rz"
+        "text_gMrEL9"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -438,6 +436,7 @@
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "#ffffff",
         "color_background": "#1f1f1f",
         "gradient_background": "",
@@ -452,6 +451,32 @@
         "narrow": true,
         "rounded": false
       }
+    },
+    "zendesk_chat_XVYUGz": {
+      "type": "zendesk-chat",
+      "name": "Zendesk Chat Bot",
+      "settings": {
+        "chat_inline_min_height": 640,
+        "chat_button_label": "Start chat",
+        "chat_loading_text": "Connecting you to our team…",
+        "heading": "Chat with our team",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "narrow": true,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -461,6 +486,7 @@
     "17726329719e1087e3",
     "1772549226876255a5",
     "main-blog",
-    "rich_text_c8pR63"
+    "rich_text_c8pR63",
+    "zendesk_chat_XVYUGz"
   ]
 }
