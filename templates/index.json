@@ -1147,7 +1147,7 @@
     "blog-posts-collage": {
       "type": "blog-posts-collage",
       "settings": {
-        "blog": "blogs",
+        "blog": "wave-sups-uk",
         "post_limit": 3,
         "show_view_all": true,
         "image_ratio": "adapt",
