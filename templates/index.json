@@ -296,7 +296,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "The Tourer 3.0",
+            "heading": "The Pro 3.0",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -336,7 +336,6 @@
         "text",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "transparent_header": false,
         "video": "shopify://files/videos/Pro 3.0.mp4",
