@@ -99,7 +99,7 @@
         "text_zqtFqW": {
           "type": "text",
           "settings": {
-            "text": "<p>From mastering the art of water care to seamless SUP inflation, our goal is to ensure your experience is nothing short of restorative. Browse our jargon-free guides and expert tips - curated to help you maintain your oasis and get back to the water faster.</p>",
+            "text": "<p>From perfecting your first paddle stroke to seamless board inflation, our goal is to keep every session on the water feeling effortless. Browse our jargon-free guides and expert tips, curated to help you care for your gear, ride with confidence, and get back to the waves faster.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -370,7 +370,7 @@
         "heading_alignment": "text-center justify-center",
         "heading_tag": "h1",
         "subheading": "",
-        "description": "<p>Explore our comprehensive knowledge base for expert advice on water maintenance, technical troubleshooting, and product care. From chemical guides to warranty details, everything you need to enjoy your Wave experience is right here.</p>",
+        "description": "<p>Explore our comprehensive knowledge base for expert advice on maintenance, technical troubleshooting, and product care. From board guides to warranty details, everything you need to enjoy your Wave experience is right here.</p>",
         "show_tag_filter": true,
         "per_page": 9,
         "layout": "grid",
@@ -404,7 +404,7 @@
         "text_gMrEL9": {
           "type": "text",
           "settings": {
-            "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning Waveflow systems, we'll get you back to relaxing in no time.</p>",
+            "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning products, we'll get you back on the water in no time.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
