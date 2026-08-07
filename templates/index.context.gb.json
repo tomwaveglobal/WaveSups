@@ -48,18 +48,18 @@
         },
         "slide-2": {
           "settings": {
-            "heading": "",
             "image": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-1.png",
-            "image_mobile": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-2.png"
+            "image_mobile": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-2.png",
+            "heading": ""
           }
         }
       },
       "block_order": [
+        "slide-2",
         "image_e6Nny7",
         "image_bAHz74",
         "image_rC3mcC",
-        "image_UPWkm3",
-        "slide-2"
+        "image_UPWkm3"
       ]
     }
   }
