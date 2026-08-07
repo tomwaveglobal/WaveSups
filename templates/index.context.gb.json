@@ -16,6 +16,13 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "slide-2": {
+          "settings": {
+            "image": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-1_418e93d2-f154-47ef-8918-95c30289b2dc.png",
+            "image_mobile": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-2.png",
+            "heading": ""
+          }
+        },
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
@@ -44,13 +51,6 @@
             "heading": "",
             "button_label": "Shop Paddleboards",
             "button_link": "shopify://collections/sup-range"
-          }
-        },
-        "slide-2": {
-          "settings": {
-            "image": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-1.png",
-            "image_mobile": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-2.png",
-            "heading": ""
           }
         }
       },
