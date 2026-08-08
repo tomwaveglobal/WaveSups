@@ -23,6 +23,15 @@
             "heading": ""
           }
         },
+        "image_UPWkm3": {
+          "settings": {
+            "image": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-2.jpg",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/recon-3",
+            "heading": ""
+          }
+        },
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
@@ -51,14 +60,6 @@
             "heading": "",
             "button_label": "Shop Paddleboards",
             "button_link": "shopify://collections/sup-range"
-          }
-        },
-        "image_UPWkm3": {
-          "settings": {
-            "image": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-2.jpg",
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/recon-3"
           }
         }
       },
