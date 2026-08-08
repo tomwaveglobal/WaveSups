@@ -52,14 +52,22 @@
             "button_label": "Shop Paddleboards",
             "button_link": "shopify://collections/sup-range"
           }
+        },
+        "image_UPWkm3": {
+          "settings": {
+            "image": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-2.jpg",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/recon-3"
+          }
         }
       },
       "block_order": [
         "slide-2",
+        "image_UPWkm3",
         "image_e6Nny7",
         "image_bAHz74",
-        "image_rC3mcC",
-        "image_UPWkm3"
+        "image_rC3mcC"
       ]
     }
   }
