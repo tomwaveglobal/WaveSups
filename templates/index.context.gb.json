@@ -27,9 +27,9 @@
           "settings": {
             "image": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-1.jpg",
             "image_mobile": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-2.jpg",
+            "heading": "",
             "button_label": "Buy Now",
-            "button_link": "shopify://products/recon-3",
-            "heading": ""
+            "button_link": "shopify://products/recon-3"
           }
         },
         "image_e6Nny7": {
@@ -43,10 +43,10 @@
           }
         },
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/SUPs_Water-its-warmest_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_Water-its-warmest_Aug26-2.jpg",
+            "image": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-2.png",
             "heading": "",
             "button_label": "Shop Paddleboards",
             "button_link": "shopify://collections/sup-range"
@@ -65,9 +65,9 @@
       },
       "block_order": [
         "slide-2",
+        "image_bAHz74",
         "image_UPWkm3",
         "image_e6Nny7",
-        "image_bAHz74",
         "image_rC3mcC"
       ]
     }
