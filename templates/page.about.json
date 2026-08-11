@@ -161,8 +161,9 @@
         "profile-1": {
           "type": "profile",
           "settings": {
-            "heading": "Example title",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "image": "shopify://shop_images/Roll_Top_Deck_Bag.jpg",
+            "heading": "Pack it, don’t store it.",
+            "text": "<p>It fits in a bag, in the boot, under the stairs. No garage, no roof rack, no project<br/><br/><br/><br/></p>",
             "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
@@ -171,8 +172,9 @@
         "profile-2": {
           "type": "profile",
           "settings": {
-            "heading": "Example title",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "image": "shopify://shop_images/What_The_SUP_Chroma_1.jpg",
+            "heading": "The reviews say it all.",
+            "text": "<p>Over 4,000 reviews and counting. When beginners keep saying “easier than I expected,” we’re doing our job.</p>",
             "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
@@ -181,8 +183,9 @@
         "profile-3": {
           "type": "profile",
           "settings": {
-            "heading": "Example title",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "image": "shopify://shop_images/Blog_header_8f8788c3-16b8-4840-b0bf-5913f5b3c9a1.jpg",
+            "heading": "Made to be paddled.",
+            "text": "<p>Tough drop-stitch construction and kit that stands up to the sea, the river and the lake - because a board that lives in the bag is a board that never gets used.</p>",
             "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
@@ -202,12 +205,12 @@
         "image_ratio_mobile": "portrait",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "Talk about your <em>brand</em>",
+        "heading": "What we believe",
         "heading_size": "title-md",
         "heading_alignment": "text-left justify-start",
         "heading_tag": "h2",
-        "subheading": "Add a tagline",
-        "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "subheading": "On the water, effortlessly",
+        "description": "<p>Everything we make is built around one idea - that getting on the water should be effortless. These three convictions are how we get there.</p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -230,38 +233,74 @@
         "rounded": false
       }
     },
-    "scrolling-text": {
-      "type": "scrolling-text",
+    "images_with_text_overlay_Rt8XzP": {
+      "type": "images-with-text-overlay",
       "blocks": {
-        "text": {
+        "subheading_xDhJdb": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "For the Rest of us",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
+          }
+        },
+        "heading_EKNzRP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who we're for?",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "text_pVakyP": {
           "type": "text",
           "settings": {
-            "text": "<em><strong>Free shipping and returns</strong></em>",
-            "text_size": 160,
+            "text": "<p>Many of our customers are first-timers, couples after a new thing to do together, or families chasing a proper day out. Most are learning on a normal weekend, at a normal beach or river, on a normal budget. None of them needed a roof rack, a lesson, or a garage full of gear.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
             "text_font": "body",
-            "highlighted_text": "stencil",
+            "secondary_color": false,
+            "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
         }
       },
       "block_order": [
-        "text"
+        "subheading_xDhJdb",
+        "heading_EKNzRP",
+        "text_pVakyP"
       ],
+      "name": "t:sections.images-with-text-overlay.presets.name",
       "settings": {
-        "direction": "left",
-        "speed": 20,
-        "grid_horizontal": 70,
-        "enable_twin": false,
-        "enable_parallax": true,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
+        "transparent_header": false,
+        "image_height": "650px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_1": "shopify://shop_images/Product_Hero_2_d4c58736-9524-4709-bd42-ded0f111bda1.png",
+        "image_2": "shopify://shop_images/What_The_SUP_MUL_Image1_2.0.jpg",
+        "image_3": "shopify://shop_images/WD_prevention_day.png",
+        "image_4": "shopify://shop_images/Waist_Bag.jpg",
+        "image_5": "shopify://shop_images/Media_Hero_1_492f9750-56f5-4a7a-b54d-898af858af5e.png",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
         "gradient_highlight": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "divider": false,
-        "rounded": false
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true
       }
     },
     "testimonials": {
@@ -271,8 +310,8 @@
           "type": "testimonial",
           "settings": {
             "icon": "quote",
-            "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
-            "author": "Author's name",
+            "text": "<p><em>First time out today, Crummock Water in the Lake District. Family loved it - I can tell we’re going to get lots of great memories from days out with it. Easy to set up, handles perfectly, even my 13-year-old daughter can manage the 11-foot SUP fine</em></p>",
+            "author": "Anthony, Lancaster.  ★★★★★",
             "author_info": "",
             "author_url": "",
             "image_ratio": "rounded",
@@ -319,10 +358,11 @@
         "content-1": {
           "type": "content",
           "settings": {
-            "subheading": "2019",
-            "heading": "Image with text",
+            "image": "shopify://shop_images/Wave_GJmr-9058.jpg",
+            "subheading": "2021",
+            "heading": "<strong>The first boards go out - and the reviews start coming in.</strong>",
             "heading_tag": "h2",
-            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Wave Watersports launches off the back of Wave Spas, built on the same conviction: the things putting people off getting on the water - storage, roof racks, big up-front cost - were the wrong problem to be solving. The first customer reviews land in the spring.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "primary",
@@ -336,10 +376,11 @@
         "content-2": {
           "type": "content",
           "settings": {
-            "subheading": "2020",
-            "heading": "Image with text",
+            "image": "shopify://shop_images/Pro_In_the_box_New26.jpg",
+            "subheading": "2022",
+            "heading": "<strong>The range grows beyond the board.  </strong>",
             "heading_tag": "h2",
-            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Paddleboards are joined by inflatable kayaks, canoes and a full kit list — pumps, paddles, bags, robes and safety gear -so a first-timer can buy everything for a day on the water in a single order.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "primary",
@@ -353,10 +394,11 @@
         "content-3": {
           "type": "content",
           "settings": {
-            "subheading": "2021",
-            "heading": "Image with text",
+            "image": "shopify://shop_images/PHOTO-2023-07-28-11-52-28_1_c347105e-4353-4f87-9f34-f24699121c43.jpg",
+            "subheading": "2024",
+            "heading": "<strong>The 2.0 generation arrives.</strong>",
             "heading_tag": "h2",
-            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>The core boards are refreshed as a new generation - Cruiser 2.0, Woody 2.0, Tourer 2.0 and the Pro - tuned for stability first, so beginners feel steady from the very first paddle.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "primary",
@@ -370,10 +412,11 @@
         "content-4": {
           "type": "content",
           "settings": {
-            "subheading": "2022",
-            "heading": "Image with text",
+            "image": "shopify://shop_images/Product_Hero_2_d4c58736-9524-4709-bd42-ded0f111bda1.png",
+            "subheading": "2024",
+            "heading": "<strong>Four thousand reviews, and counting.</strong>",
             "heading_tag": "h2",
-            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Wave Watersports passes 4,000 customer reviews at a 4.6-star average, with more than eight in ten customers leaving five stars. The customers, as ever, get the last word.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "primary",
@@ -387,10 +430,11 @@
         "content-5": {
           "type": "content",
           "settings": {
-            "subheading": "2024",
-            "heading": "Image with text",
+            "image": "shopify://shop_images/SUP_3.0_launch.png",
+            "subheading": "2025",
+            "heading": "<strong>The all-new Wave 3.0 range arrives.</strong>",
             "heading_tag": "h2",
-            "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>Our biggest step forward yet. The 3.0 range rebuilds the board from the ground up — stiffer drop-stitch construction for a rigid, hard-board feel that still packs into a bag, refined shapes for better glide and tracking, and upgraded kit throughout. The same easy-in, easy-out promise, made noticeably better on the water.</p>",
             "button_label": "",
             "button_link": "",
             "button_style": "primary",
@@ -414,7 +458,7 @@
         "layout": "image_first",
         "image_ratio": "portrait",
         "image_ratio_mobile": "wide",
-        "heading": "Example heading",
+        "heading": "Wave Journey",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
@@ -438,13 +482,24 @@
         "rounded": true
       }
     },
-    "rich-text": {
-      "type": "rich-text",
+    "images_with_text_qeGX4K": {
+      "type": "images-with-text",
       "blocks": {
-        "text": {
+        "heading_t3kKrF": {
+          "type": "heading",
+          "settings": {
+            "heading": "One more thing",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_qcT6qJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Add a tagline</p>",
+            "text": "<p>We also make the UK’s highest-rated portable hot tubs under <strong>Wave Spas</strong> — our sister brand, run by the same two founders. Different kit, same principle: enjoy it without making a project of it.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -456,10 +511,55 @@
             "highlighted_scribble": "circle"
           }
         },
+        "button_GkMqKz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Wave Spas",
+            "button_link": "https://wavespas.com/",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_t3kKrF",
+        "text_qcT6qJ",
+        "button_GkMqKz"
+      ],
+      "name": "t:sections.images-with-text.name",
+      "settings": {
+        "image": "shopify://shop_images/Como_Lifestyle_1.webp",
+        "image_2": "shopify://shop_images/imgi_50_Gym_Carousel_1_email.png",
+        "image_ratio": "portrait",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "enable_parallax": true
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Example <em>heading</em>",
+            "heading": "Trusted by",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
@@ -469,7 +569,6 @@
         }
       },
       "block_order": [
-        "text",
         "heading"
       ],
       "settings": {
@@ -510,6 +609,7 @@
         "logo-1": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/debenhams-1-1.webp",
             "height": 60,
             "link": ""
           }
@@ -517,6 +617,7 @@
         "logo-2": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/decathlon-logo-png_seeklogo-524860.png",
             "height": 60,
             "link": ""
           }
@@ -524,6 +625,7 @@
         "logo-3": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/Tesco_logo.png",
             "height": 60,
             "link": ""
           }
@@ -531,6 +633,7 @@
         "logo-4": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/independent-logo-eagle.avif",
             "height": 60,
             "link": ""
           }
@@ -538,6 +641,7 @@
         "logo-5": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/times_1_1.png",
             "height": 60,
             "link": ""
           }
@@ -545,6 +649,7 @@
         "logo-6": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/T3.png",
             "height": 60,
             "link": ""
           }
@@ -552,6 +657,7 @@
         "logo-7": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/amazon_1_1.png",
             "height": 60,
             "link": ""
           }
@@ -605,9 +711,10 @@
     "image-with-text-overlay",
     "images-with-text",
     "portfolio",
-    "scrolling-text",
+    "images_with_text_overlay_Rt8XzP",
     "testimonials",
     "timeline",
+    "images_with_text_qeGX4K",
     "rich-text",
     "logo-list"
   ]
