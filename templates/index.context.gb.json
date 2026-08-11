@@ -23,6 +23,16 @@
             "heading": ""
           }
         },
+        "image_e6Nny7": {
+          "disabled": false,
+          "settings": {
+            "image": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-2.png",
+            "heading": "‎",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/surf-3"
+          }
+        },
         "image_bAHz74": {
           "disabled": true,
           "settings": {
@@ -35,21 +45,11 @@
         },
         "image_UPWkm3": {
           "settings": {
-            "image": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_Recon-Back-in-Stock_Aug26-2.jpg",
+            "image": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-V2.jpg",
+            "image_mobile": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-2V2.jpg",
             "heading": "",
             "button_label": "Buy Now",
-            "button_link": "shopify://products/recon-3"
-          }
-        },
-        "image_e6Nny7": {
-          "disabled": false,
-          "settings": {
-            "image": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-2.png",
-            "heading": "‎",
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/surf-3"
+            "button_link": "shopify://products/twin"
           }
         },
         "image_rC3mcC": {
@@ -65,9 +65,9 @@
       },
       "block_order": [
         "slide-2",
+        "image_UPWkm3",
         "image_e6Nny7",
         "image_bAHz74",
-        "image_UPWkm3",
         "image_rC3mcC"
       ]
     }
