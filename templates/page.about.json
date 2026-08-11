@@ -14,6 +14,7 @@
       "disabled": true,
       "settings": {
         "heading_size": "title-xl tracking-heading",
+        "heading_alignment": "text-left",
         "heading_tag": "h1",
         "text_size": "text-base",
         "padding_top": 72,
@@ -29,10 +30,13 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>Add a tagline</strong></em></p>",
+            "text": "<p><em><strong>About us</strong></em></p>",
             "text_font": "body",
             "text_size": "subtext-lg",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "text",
             "highlighted_scribble": "circle"
@@ -41,11 +45,12 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text overlay",
+            "heading": "Made to get you on the water, not tie you up on the shore.",
             "heading_size": "title-xl tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         }
       },
@@ -55,7 +60,7 @@
       ],
       "settings": {
         "transparent_header": true,
-        "image": "",
+        "image": "shopify://shop_images/Product_Hero_2_d4c58736-9524-4709-bd42-ded0f111bda1.png",
         "image_height": "750px",
         "content_width": "large",
         "content_position": "md:items-end md:justify-start",
@@ -64,6 +69,8 @@
         "content_position_mobile": "items-end justify-start",
         "text_alignment_mobile": "left",
         "color_text": "#ffffff",
+        "color_background": "",
+        "gradient_background": "",
         "color_highlight": "#e0a580",
         "gradient_highlight": "",
         "color_button_text": "#171717",
@@ -86,44 +93,47 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Example <em>heading</em>",
+            "heading": "We didn’t start Wave because the world needed another <em><strong>paddleboard </strong></em>brand .",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
-            "highlighted_scribble": "basic-underline"
+            "highlighted_scribble": "basic-underline",
+            "highlighted_reveal": false
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "text": "<p>We started it because most people who’d love to get out on the water never do.</p><p>For most of us, getting on the water is shorthand for hassle. A hard board you’ve nowhere to store. A roof rack you don’t own. A price tag that turns a summer idea into a someday plan. And a nagging worry that you’ll turn up, wobble off, and never touch it<br/>again.</p><p>We thought that was nonsense.</p><p>So we built the opposite. Boards and kayaks that pack down into a bag, pump up in ten minutes, and are steady enough that a complete beginner can stand up on the first try. Since 2021 more than 4,000 people have reviewed them, at an average of 4.6 out<br/>of 5  -  most of whom would never have called themselves “paddleboard people.” We built the brand for them, and we’re still building it for them.</p><p><em><strong>Tom & Dan, Founders</strong></em></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
         },
-        "button": {
-          "type": "button",
+        "image_PiWgNK": {
+          "type": "image",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style": "secondary",
-            "button_size": "md",
-            "button_icon": true
+            "image": "shopify://shop_images/Tom_Dan_signature.png",
+            "image_width": "custom",
+            "image_max_width": 410,
+            "image_max_width_mobile": 180
           }
         }
       },
       "block_order": [
         "heading",
         "text",
-        "button"
+        "image_PiWgNK"
       ],
       "settings": {
-        "image": "",
-        "image_2": "",
+        "image": "shopify://shop_images/Wave_GJmr-9149.jpg",
+        "image_2": "shopify://shop_images/What_The_SUP_Chroma_2.jpg",
         "image_ratio": "portrait",
         "image_width": "medium",
         "layout": "image_first",
@@ -151,9 +161,9 @@
         "profile-1": {
           "type": "profile",
           "settings": {
-            "image": "",
             "heading": "Example title",
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -161,9 +171,9 @@
         "profile-2": {
           "type": "profile",
           "settings": {
-            "image": "",
             "heading": "Example title",
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -171,9 +181,9 @@
         "profile-3": {
           "type": "profile",
           "settings": {
-            "image": "",
             "heading": "Example title",
             "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<br/><br/>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store. Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
           }
@@ -186,6 +196,7 @@
       ],
       "settings": {
         "columns": 4,
+        "carousel_on_desktop": false,
         "layout": "grid",
         "image_ratio": "portrait",
         "image_ratio_mobile": "portrait",
@@ -197,8 +208,13 @@
         "heading_tag": "h2",
         "subheading": "Add a tagline",
         "description": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
         "highlighted_text": "scribble",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -240,6 +256,8 @@
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
@@ -255,7 +273,12 @@
             "icon": "quote",
             "text": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>",
             "author": "Author's name",
-            "image_ratio": "rounded"
+            "author_info": "",
+            "author_url": "",
+            "image_ratio": "rounded",
+            "image_height": 30,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
@@ -271,9 +294,11 @@
         "description": "",
         "button_label": "",
         "button_link": "",
+        "button_external": false,
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "",
         "gradient_background": "",
@@ -294,76 +319,86 @@
         "content-1": {
           "type": "content",
           "settings": {
-            "image": "",
             "subheading": "2019",
             "heading": "Image with text",
             "heading_tag": "h2",
             "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "button_label": "",
             "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
             "button_icon": true,
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "content-2": {
           "type": "content",
           "settings": {
-            "image": "",
             "subheading": "2020",
             "heading": "Image with text",
             "heading_tag": "h2",
             "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "button_label": "",
             "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
             "button_icon": true,
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "content-3": {
           "type": "content",
           "settings": {
-            "image": "",
             "subheading": "2021",
             "heading": "Image with text",
             "heading_tag": "h2",
             "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "button_label": "",
             "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
             "button_icon": true,
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "content-4": {
           "type": "content",
           "settings": {
-            "image": "",
             "subheading": "2022",
             "heading": "Image with text",
             "heading_tag": "h2",
             "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "button_label": "",
             "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
             "button_icon": true,
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         },
         "content-5": {
           "type": "content",
           "settings": {
-            "image": "",
             "subheading": "2024",
             "heading": "Image with text",
             "heading_tag": "h2",
             "text": "<p>Share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
             "button_label": "",
             "button_link": "",
+            "button_style": "primary",
+            "button_external": false,
             "button_icon": true,
             "highlighted_text": "none",
-            "highlighted_scribble": "circle"
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
           }
         }
       },
@@ -375,6 +410,8 @@
         "content-5"
       ],
       "settings": {
+        "show_navigation": true,
+        "layout": "image_first",
         "image_ratio": "portrait",
         "image_ratio_mobile": "wide",
         "heading": "Example heading",
@@ -385,6 +422,7 @@
         "description": "",
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "#ffffff",
         "color_background": "#171717",
         "gradient_background": "",
@@ -410,6 +448,9 @@
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
             "secondary_color": false,
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -422,7 +463,8 @@
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
-            "highlighted_scribble": "squiggle-underline"
+            "highlighted_scribble": "squiggle-underline",
+            "highlighted_reveal": false
           }
         }
       },
@@ -436,14 +478,17 @@
         "heading": "",
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
         "heading_tag": "h2",
         "subheading": "",
         "description": "",
         "button_label": "",
         "button_link": "",
+        "button_external": false,
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "#fafafa",
         "gradient_background": "",
@@ -465,7 +510,6 @@
         "logo-1": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -473,7 +517,6 @@
         "logo-2": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -481,7 +524,6 @@
         "logo-3": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -489,7 +531,6 @@
         "logo-4": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -497,7 +538,6 @@
         "logo-5": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -505,7 +545,6 @@
         "logo-6": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -513,7 +552,6 @@
         "logo-7": {
           "type": "logo",
           "settings": {
-            "image": "",
             "height": 60,
             "link": ""
           }
@@ -541,9 +579,11 @@
         "description": "",
         "button_label": "",
         "button_link": "",
+        "button_external": false,
         "button_icon": true,
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
         "color_text": "",
         "color_background": "#fafafa",
         "gradient_background": "",
