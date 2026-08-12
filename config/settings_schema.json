@@ -2068,5 +2068,17 @@
         "unit": "s"
       }
     ]
+  },
+  {
+    "name": "Product reviews",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_trustpilot_logo",
+        "default": true,
+        "label": "Show Trustpilot logo beside the reviews rating",
+        "info": "Turn off to hide the Trustpilot logo that sits next to the Reviews.io star rating on product pages."
+      }
+    ]
   }
 ]
