@@ -1575,6 +1575,7 @@
       "blocks": {
         "image_XxPGe3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Trustpilot_SUPs.png",
             "image_width": "custom",
