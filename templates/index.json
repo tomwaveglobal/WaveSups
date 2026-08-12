@@ -107,6 +107,7 @@
         "show_navigation": true,
         "image_height": "650px",
         "content_width": "small",
+        "image_height_tablet": "inherit",
         "image_height_mobile": "500px",
         "accessibility_info": "Slideshow about our brand",
         "color_text": "#ffffff",
@@ -1185,6 +1186,7 @@
       "blocks": {
         "image_dzKHj4": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Trustpilot_SUPs.png",
             "image_width": "custom",
