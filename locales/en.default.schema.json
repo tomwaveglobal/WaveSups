@@ -402,6 +402,9 @@
         "header__mobile": {
           "content": "Mobile layout"
         },
+        "header__tablet": {
+          "content": "Tablet layout"
+        },
         "header__section": {
           "content": "Section"
         },
@@ -759,6 +762,41 @@
         },
         "image_mobile": {
           "label": "Mobile image"
+        },
+        "image_tablet": {
+          "label": "Tablet image",
+          "info": "Shown from 768px to 1023px wide. Leave empty to use the desktop image."
+        },
+        "image_height_tablet": {
+          "options__1": {
+            "label": "Same as desktop"
+          },
+          "options__2": {
+            "label": "300px"
+          },
+          "options__3": {
+            "label": "400px"
+          },
+          "options__4": {
+            "label": "500px"
+          },
+          "options__5": {
+            "label": "600px"
+          },
+          "options__6": {
+            "label": "700px"
+          },
+          "options__7": {
+            "label": "800px"
+          },
+          "options__8": {
+            "label": "Full screen"
+          },
+          "options__9": {
+            "label": "Adapt to tablet image"
+          },
+          "label": "Tablet height",
+          "info": "Applies from 768px to 1023px wide."
         },
         "image_height": {
           "options__1": {

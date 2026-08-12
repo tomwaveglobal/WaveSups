@@ -6,6 +6,8 @@
       assign first_block_image = first_block.settings.video.preview_image | default: first_block.settings.cover_image
     endif
 
+    assign first_block_image_tablet = first_block.settings.image_tablet | default: first_block_image
+
     assign first_block_image_mobile = first_block.settings.image_mobile | default: first_block_image
     if first_block.type == 'video'
       assign first_block_image_mobile = first_block.settings.video_mobile.preview_image | default: first_block.settings.cover_image_mobile
@@ -26,6 +28,49 @@
     @media screen and (max-width: 767px) {
       #shopify-section-{{ section.id }} {
         --ratio-percent: {{ 1 | divided_by: first_block_image_mobile.aspect_ratio | times: 100 }}%;
+      }
+    }
+  {% endif -%}
+
+  {%- comment -%}
+    Tablet height. Scoped to this section by id rather than a global `tablet:media--*`
+    utility because `.banner.media--adapt` is scoped `min-width: 768px` and so applies
+    across the tablet range too — a single-class utility would lose to it whenever the
+    desktop height is set to "Adapt to image".
+  {%- endcomment -%}
+  {%- if section.settings.image_height_tablet != 'inherit' %}
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      #shopify-section-{{ section.id }} .banner {
+        {%- if section.settings.image_height_tablet == 'adapt' -%}
+          {%- if first_block_image_tablet != blank %}
+            --ratio-percent: {{ 1 | divided_by: first_block_image_tablet.aspect_ratio | times: 100 }}%;
+          {% endif %}
+          height: 0;
+          padding-block-end: var(--ratio-percent);
+        {%- elsif section.settings.image_height_tablet == '100vh' %}
+          height: 100vh;
+          height: 100svh;
+          padding-block-end: 0;
+        {%- else %}
+          height: {{ section.settings.image_height_tablet }};
+          padding-block-end: 0;
+        {%- endif %}
+      }
+
+      {%- comment -%} Match the positioning the theme's adapt rules expect, or undo it. {%- endcomment -%}
+      #shopify-section-{{ section.id }} .banner .media--height > img:first-child {
+        position: {% if section.settings.image_height_tablet == 'adapt' %}static{% else %}absolute{% endif %};
+      }
+
+      #shopify-section-{{ section.id }} .banner .banner__media {
+        {%- if section.settings.image_height_tablet == 'adapt' %}
+          position: absolute;
+          inset: 0;
+          width: 100%;
+        {%- else %}
+          position: static;
+          inset: auto;
+        {%- endif %}
       }
     }
   {% endif -%}
@@ -87,7 +132,18 @@
                           height="{{ block.settings.image_mobile.height }}"
                         >
                       {%- endif -%}
-    
+
+                      {%- comment -%} No tablet image set falls through to the desktop image below. {%- endcomment -%}
+                      {%- if block.settings.image_tablet -%}
+                        <source
+                          media="(min-width: 768px) and (max-width: 1023px)"
+                          srcset="{{ block.settings.image_tablet | image_url: width: 800 }} 800w, {{ block.settings.image_tablet | image_url: width: 1000 }} 1000w, {{ block.settings.image_tablet | image_url: width: 1200 }} 1200w, {{ block.settings.image_tablet | image_url: width: 1600 }} 1600w, {{ block.settings.image_tablet | image_url: width: 2000 }} 2000w, {{ block.settings.image_tablet | image_url: width: 2400 }} 2400w"
+                          sizes="{{ sizes }}"
+                          width="{{ block.settings.image_tablet.width }}"
+                          height="{{ block.settings.image_tablet.height }}"
+                        >
+                      {%- endif -%}
+
                       {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: loading, fetchpriority: fetchpriority, sizes: sizes, widths: '300,400,500,600,700,800,900,1000,1200,1400,1600,1800,2000,2200,2400,2600,2800,3000,3200', is: lazyimage, class: 'banner__image' -}}
                     {%- else -%}
                       {%- capture placeholder -%}{% cycle 'lifestyle-1', 'lifestyle-2' %}{%- endcapture -%}
@@ -312,6 +368,55 @@
     },
     {
       "type": "header",
+      "content": "t:sections.global.settings.header__tablet.content"
+    },
+    {
+      "type": "select",
+      "id": "image_height_tablet",
+      "options": [
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__1.label",
+          "value": "inherit"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__2.label",
+          "value": "300px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__3.label",
+          "value": "400px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__4.label",
+          "value": "500px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__5.label",
+          "value": "600px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__6.label",
+          "value": "700px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__7.label",
+          "value": "800px"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__8.label",
+          "value": "100vh"
+        },
+        {
+          "label": "t:sections.global.settings.image_height_tablet.options__9.label",
+          "value": "adapt"
+        }
+      ],
+      "default": "inherit",
+      "label": "t:sections.global.settings.image_height_tablet.label",
+      "info": "t:sections.global.settings.image_height_tablet.info"
+    },
+    {
+      "type": "header",
       "content": "t:sections.global.settings.header__mobile.content"
     },
     {
@@ -502,6 +607,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.global.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_tablet",
+          "label": "t:sections.global.settings.image_tablet.label",
+          "info": "t:sections.global.settings.image_tablet.info"
         },
         {
           "type": "image_picker",
