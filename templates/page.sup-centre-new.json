@@ -46,7 +46,7 @@
           "type": "heading",
           "settings": {
             "heading": "Made to get you on the water, not tie you up on the shore.",
-            "heading_size": "title-xl tracking-heading",
+            "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
