@@ -145,6 +145,8 @@
             "message_custom_icon": "shopify://shop_images/shop_buttons.avif",
             "message_icon_width": 100,
             "message_image_checkbox": true,
+            "message_image_link": "",
+            "message_image_popup_title": "Finance Options",
             "message": "<p>Pay three installments of #amount with</p>",
             "message_divide_amount": "3",
             "message_price_range": "100",
@@ -1335,6 +1337,7 @@
       "blocks": {
         "image_EdTA9Y": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Trustpilot_SUPs.png",
             "image_width": "custom",
