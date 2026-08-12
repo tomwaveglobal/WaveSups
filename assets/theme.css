@@ -10915,6 +10915,11 @@ reviewsio-product-ratings::after {
   transform: translateY(-1px);
 }
 
+/* Theme setting: Product reviews > Show Trustpilot logo beside the reviews rating */
+body[data-hide-trustpilot-logo] reviewsio-product-ratings::after {
+  content: none;
+}
+
 /*! pagination */
 
 .pagination .page {
