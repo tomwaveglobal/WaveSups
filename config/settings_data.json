@@ -164,6 +164,7 @@
     "tab_attention_message_1": "Something we said?",
     "tab_attention_message_2": "We're still here!",
     "tab_attention_message_delay": 3,
+    "show_trustpilot_logo": false,
     "product_image_background": "#f8f8f8",
     "checkout_logo_position": "left",
     "checkout_logo_size": "small",
