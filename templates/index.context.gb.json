@@ -20,7 +20,17 @@
           "settings": {
             "image": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-1_418e93d2-f154-47ef-8918-95c30289b2dc.png",
             "image_mobile": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26-2.png",
-            "heading": ""
+            "heading": "",
+            "image_tablet": "shopify://shop_images/SUPs_Tourer-Back-in-Stock_Aug26Tablet.jpg"
+          }
+        },
+        "image_UPWkm3": {
+          "settings": {
+            "image": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-V2.jpg",
+            "image_mobile": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-2V2.jpg",
+            "heading": "",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/twin"
           }
         },
         "image_e6Nny7": {
@@ -41,15 +51,6 @@
             "heading": "",
             "button_label": "Buy Now",
             "button_link": "shopify://products/surf-3"
-          }
-        },
-        "image_UPWkm3": {
-          "settings": {
-            "image": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-V2.jpg",
-            "image_mobile": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-2V2.jpg",
-            "heading": "",
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/twin"
           }
         },
         "image_rC3mcC": {
