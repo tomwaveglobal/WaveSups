@@ -30,7 +30,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p><em><strong>About us</strong></em></p>",
+            "text": "<p><br/>Find Your Local Centre<br/><br/></p>",
             "text_font": "body",
             "text_size": "subtext-lg",
             "text_max_size": 32,
@@ -45,7 +45,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Made to get you on the water, not tie you up on the shore.",
+            "heading": "Wave SUP Centre Programme",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h2",
             "highlighted_text": "none",
@@ -93,7 +93,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "We didn’t start Wave because the world needed another <em><strong>paddleboard</strong></em> brand",
+            "heading": "A growing family of paddleboarding hubs, run by passionate local partners and powered by <em><strong>Wave SUPs.</strong></em>",
             "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "scribble",
@@ -104,7 +104,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>We started it because most people who’d love to get out on the water never do.</p><p>For most of us, getting on the water is shorthand for hassle. A hard board you’ve nowhere to store. A roof rack you don’t own. A price tag that turns a summer idea into a someday plan. And a nagging worry that you’ll turn up, wobble off, and never touch it<br/>again.</p><p>We thought that was nonsense.</p><p>So we built the opposite. Boards and kayaks that pack down into a bag, pump up in ten minutes, and are steady enough that a complete beginner can stand up on the first try. Since 2021 more than 4,000 people have reviewed them, at an average of 4.6 out<br/>of 5  -  most of whom would never have called themselves “paddleboard people.” We built the brand for them, and we’re still building it for them.</p><p><em><strong>Tom & Dan, Founders</strong></em></p>",
+            "text": "<p>A Wave SUP Centre is where great water, great boards and great people come together. We partner with independent, passionate paddleboarding operators across the country and give them the backing of the Wave SUPs brand — so you<br/>get a warm, local welcome wherever you launch. Whether you're stepping onto a<br/>board for the very first time or you're a seasoned paddler chasing your next<br/>adventure, there's a Wave SUP Centre ready to get you out on the water.</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -115,24 +115,14 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
-        },
-        "image_PiWgNK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Tom_Dan_signature.png",
-            "image_width": "custom",
-            "image_max_width": 410,
-            "image_max_width_mobile": 180
-          }
         }
       },
       "block_order": [
         "heading",
-        "text",
-        "image_PiWgNK"
+        "text"
       ],
       "settings": {
-        "image": "shopify://shop_images/Wave_GJmr-9149.jpg",
+        "image": "shopify://shop_images/Sup-Centre-Edit-9_a0da67aa-77e4-4230-acb4-3e74c3162789.webp",
         "image_2": "shopify://shop_images/What_The_SUP_Chroma_2.jpg",
         "image_ratio": "portrait",
         "image_width": "medium",
@@ -161,9 +151,9 @@
         "profile-1": {
           "type": "profile",
           "settings": {
-            "image": "shopify://shop_images/Roll_Top_Deck_Bag.jpg",
-            "heading": "Pack it, don’t store it.",
-            "text": "<p>It fits in a bag, in the boot, under the stairs. No garage, no roof rack, no project<br/><br/><br/><br/></p>",
+            "image": "shopify://shop_images/Sup-Centre-Edit-8.webp",
+            "heading": "Second Life Outdoors",
+            "text": "<p>Wave SUP Centre in association with Second Life Outdoors</p><ul><li><strong>Location </strong>Wyresdale Park, Preston · North West<br/></li><li><strong>Description </strong>The Home of Boarding in the North West. Set against the stunning backdrop of Wyresdale Park, this is where adventure meets relaxation - from paddleboard hire and lessons to SUP Yoga, Friday Sunset SUP, PUP SUP and family fun on the water.<br/><br/><br/></li></ul>",
             "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
@@ -173,19 +163,8 @@
           "type": "profile",
           "settings": {
             "image": "shopify://shop_images/What_The_SUP_Chroma_1.jpg",
-            "heading": "The reviews say it all.",
-            "text": "<p>Over 4,000 reviews and counting. When beginners keep saying “easier than I expected,” we’re doing our job.</p>",
-            "pdf_link": "",
-            "color_text": "#ffffff",
-            "color_background": "#000000"
-          }
-        },
-        "profile-3": {
-          "type": "profile",
-          "settings": {
-            "image": "shopify://shop_images/Blog_header_8f8788c3-16b8-4840-b0bf-5913f5b3c9a1.jpg",
-            "heading": "Made to be paddled.",
-            "text": "<p>Tough drop-stitch construction and kit that stands up to the sea, the river and the lake - because a board that lives in the bag is a board that never gets used.</p>",
+            "heading": "Drift SUP",
+            "text": "<p>Wave SUP Centre in association with Drift SUP</p><ul><li><strong>Location </strong>Wyresdale Park, Preston · North West<br/></li><li><strong>Description </strong>The Home of Boarding in the North West. Set against the stunning backdrop of Wyresdale Park, this is where adventure meets relaxation - from paddleboard hire and lessons to SUP Yoga, Friday Sunset SUP, PUP SUP and family fun on the water.</li></ul>",
             "pdf_link": "",
             "color_text": "#ffffff",
             "color_background": "#000000"
@@ -194,8 +173,7 @@
       },
       "block_order": [
         "profile-1",
-        "profile-2",
-        "profile-3"
+        "profile-2"
       ],
       "settings": {
         "columns": 4,
@@ -205,12 +183,12 @@
         "image_ratio_mobile": "portrait",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "heading": "What we believe",
+        "heading": "<strong>Our Centres</strong>",
         "heading_size": "title-md",
         "heading_alignment": "text-left justify-start",
         "heading_tag": "h2",
-        "subheading": "On the water, effortlessly",
-        "description": "<p>Everything we make is built around one idea - that getting on the water should be effortless. These three convictions are how we get there.</p>",
+        "subheading": "",
+        "description": "<p>Each centre has its own character, its own water and its own story - but every one shares the same Wave promise of quality boards and friendly, welcoming coaching.</p><p>Second Life Outdoors - <a href=\"https://wavesupboards.com/en-gb/pages/wave-sup-centre-in-association-with-second-life-outdoors\" title=\"https://wavesupboards.com/en-gb/pages/wave-sup-centre-in-association-with-second-life-outdoors\">Explore</a></p><p>Drift SUP - </p>",
         "button_label": "",
         "button_link": "",
         "button_external": false,
@@ -239,7 +217,7 @@
         "subheading_xDhJdb": {
           "type": "subheading",
           "settings": {
-            "subheading": "For the Rest of us",
+            "subheading": "",
             "subheading_size": "subtitle-md",
             "secondary_color": true
           }
@@ -247,8 +225,8 @@
         "heading_EKNzRP": {
           "type": "heading",
           "settings": {
-            "heading": "Who we're for?",
-            "heading_size": "title-lg tracking-heading",
+            "heading": "<strong>Interested in Becoming a Wave SUP Centre?</strong>",
+            "heading_size": "title-md",
             "heading_tag": "h2",
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
@@ -257,7 +235,7 @@
         "text_pVakyP": {
           "type": "text",
           "settings": {
-            "text": "<p>Many of our customers are first-timers, couples after a new thing to do together, or families chasing a proper day out. Most are learning on a normal weekend, at a normal beach or river, on a normal budget. None of them needed a roof rack, a lesson, or a garage full of gear.</p>",
+            "text": "<p>Do you run a great stretch of water and share our passion for getting people paddling? Partner with Wave SUPs and join the programme - we'll bring the boards and the brand, you bring the local magic.</p><p></p>",
             "text_size": "subtext-md",
             "text_max_size": 32,
             "text_font": "body",
@@ -265,12 +243,24 @@
             "highlighted_text": "none",
             "highlighted_scribble": "circle"
           }
+        },
+        "button_LFVFQk": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "mailto:marketing@waveglobal.com",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": true,
+            "button_icon": true
+          }
         }
       },
       "block_order": [
         "subheading_xDhJdb",
         "heading_EKNzRP",
-        "text_pVakyP"
+        "text_pVakyP",
+        "button_LFVFQk"
       ],
       "name": "t:sections.images-with-text-overlay.presets.name",
       "settings": {
@@ -302,408 +292,6 @@
         "rounded": false,
         "enable_parallax": true
       }
-    },
-    "testimonials": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial": {
-          "type": "testimonial",
-          "settings": {
-            "icon": "quote",
-            "text": "<p><em>First time out today, Crummock Water in the Lake District. Family loved it - I can tell we’re going to get lots of great memories from days out with it. Easy to set up, handles perfectly, even my 13-year-old daughter can manage the 11-foot SUP fine</em></p>",
-            "author": "Anthony, Lancaster.  ★★★★★",
-            "author_info": "",
-            "author_url": "",
-            "image_ratio": "rounded",
-            "image_height": 30,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial"
-      ],
-      "settings": {
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 84,
-        "padding_bottom": 120,
-        "divider": false,
-        "rounded": false
-      }
-    },
-    "timeline": {
-      "type": "timeline",
-      "blocks": {
-        "content-1": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Wave_GJmr-9058.jpg",
-            "subheading": "2021",
-            "heading": "<strong>The first boards go out - and the reviews start coming in.</strong>",
-            "heading_tag": "h2",
-            "text": "<p>Wave Watersports launches off the back of Wave Spas, built on the same conviction: the things putting people off getting on the water - storage, roof racks, big up-front cost - were the wrong problem to be solving. The first customer reviews land in the spring.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "content-2": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Pro_In_the_box_New26.jpg",
-            "subheading": "2022",
-            "heading": "<strong>The range grows beyond the board.  </strong>",
-            "heading_tag": "h2",
-            "text": "<p>Paddleboards are joined by inflatable kayaks, canoes and a full kit list — pumps, paddles, bags, robes and safety gear -so a first-timer can buy everything for a day on the water in a single order.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "content-3": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/PHOTO-2023-07-28-11-52-28_1_c347105e-4353-4f87-9f34-f24699121c43.jpg",
-            "subheading": "2024",
-            "heading": "<strong>The 2.0 generation arrives.</strong>",
-            "heading_tag": "h2",
-            "text": "<p>The core boards are refreshed as a new generation - Cruiser 2.0, Woody 2.0, Tourer 2.0 and the Pro - tuned for stability first, so beginners feel steady from the very first paddle.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "content-4": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/Product_Hero_2_d4c58736-9524-4709-bd42-ded0f111bda1.png",
-            "subheading": "2024",
-            "heading": "<strong>Four thousand reviews, and counting.</strong>",
-            "heading_tag": "h2",
-            "text": "<p>Wave Watersports passes 4,000 customer reviews at a 4.6-star average, with more than eight in ten customers leaving five stars. The customers, as ever, get the last word.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "content-5": {
-          "type": "content",
-          "settings": {
-            "image": "shopify://shop_images/SUP_3.0_launch.png",
-            "subheading": "2025",
-            "heading": "<strong>The all-new Wave 3.0 range arrives.</strong>",
-            "heading_tag": "h2",
-            "text": "<p>Our biggest step forward yet. The 3.0 range rebuilds the board from the ground up — stiffer drop-stitch construction for a rigid, hard-board feel that still packs into a bag, refined shapes for better glide and tracking, and upgraded kit throughout. The same easy-in, easy-out promise, made noticeably better on the water.</p>",
-            "button_label": "",
-            "button_link": "",
-            "button_style": "primary",
-            "button_external": false,
-            "button_icon": true,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        }
-      },
-      "block_order": [
-        "content-1",
-        "content-2",
-        "content-3",
-        "content-4",
-        "content-5"
-      ],
-      "settings": {
-        "show_navigation": true,
-        "layout": "image_first",
-        "image_ratio": "portrait",
-        "image_ratio_mobile": "wide",
-        "heading": "Wave Journey",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "#ffffff",
-        "color_background": "#171717",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "#171717",
-        "color_button_background": "#ffffff",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": true
-      }
-    },
-    "images_with_text_qeGX4K": {
-      "type": "images-with-text",
-      "blocks": {
-        "heading_t3kKrF": {
-          "type": "heading",
-          "settings": {
-            "heading": "One more thing",
-            "heading_size": "title-md",
-            "heading_tag": "h2",
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle",
-            "highlighted_reveal": false
-          }
-        },
-        "text_qcT6qJ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We also make the UK’s highest-rated portable hot tubs under <strong>Wave Spas</strong> — our sister brand, run by the same two founders. Different kit, same principle: enjoy it without making a project of it.</p>",
-            "text_font": "body",
-            "text_size": "subtext-md",
-            "text_max_size": 32,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "text_capitalize": false,
-            "secondary_color": false,
-            "highlighted_text": "none",
-            "highlighted_scribble": "circle"
-          }
-        },
-        "button_GkMqKz": {
-          "type": "button",
-          "settings": {
-            "button_label": "Wave Spas",
-            "button_link": "https://wavespas.com/",
-            "button_style": "primary",
-            "button_size": "md",
-            "button_external": true,
-            "button_icon": true
-          }
-        }
-      },
-      "block_order": [
-        "heading_t3kKrF",
-        "text_qcT6qJ",
-        "button_GkMqKz"
-      ],
-      "name": "t:sections.images-with-text.name",
-      "settings": {
-        "image": "shopify://shop_images/Como_Lifestyle_1.webp",
-        "image_2": "shopify://shop_images/imgi_50_Gym_Carousel_1_email.png",
-        "image_ratio": "portrait",
-        "image_width": "medium",
-        "layout": "image_first",
-        "text_alignment": "left",
-        "text_alignment_mobile": "left",
-        "color_text": "",
-        "color_background": "",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 72,
-        "padding_bottom": 72,
-        "divider": false,
-        "full_width": false,
-        "rounded": false,
-        "enable_parallax": true
-      }
-    },
-    "rich-text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Trusted by",
-            "heading_size": "title-md",
-            "heading_tag": "h2",
-            "highlighted_text": "scribble",
-            "highlighted_scribble": "squiggle-underline",
-            "highlighted_reveal": false
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "text_alignment": "center",
-        "text_alignment_mobile": "center",
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_width": "small",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "#fafafa",
-        "gradient_background": "",
-        "color_highlight": "#c5e8b8",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 120,
-        "padding_bottom": 20,
-        "divider": false,
-        "narrow": true,
-        "rounded": true
-      }
-    },
-    "logo-list": {
-      "type": "logo-list",
-      "blocks": {
-        "logo-1": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/debenhams-1-1.webp",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-2": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/decathlon-logo-png_seeklogo-524860.png",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-3": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/Tesco_logo.png",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-4": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/independent-logo-eagle.avif",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-5": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/times_1_1.png",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-6": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/T3.png",
-            "height": 60,
-            "link": ""
-          }
-        },
-        "logo-7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/amazon_1_1.png",
-            "height": 60,
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "logo-1",
-        "logo-2",
-        "logo-3",
-        "logo-4",
-        "logo-5",
-        "logo-6",
-        "logo-7"
-      ],
-      "settings": {
-        "layout": "marquee",
-        "grid_horizontal": 120,
-        "direction": "right",
-        "speed": 10,
-        "heading": "",
-        "heading_size": "title-md",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "button_label": "",
-        "button_link": "",
-        "button_external": false,
-        "button_icon": true,
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "color_text": "",
-        "color_background": "#fafafa",
-        "gradient_background": "",
-        "color_highlight": "",
-        "gradient_highlight": "",
-        "color_button_text": "",
-        "color_button_background": "",
-        "color_button_gradient": "",
-        "padding_top": 60,
-        "padding_bottom": 120,
-        "divider": false,
-        "full_width": true,
-        "rounded": true
-      }
     }
   },
   "order": [
@@ -711,11 +299,6 @@
     "image-with-text-overlay",
     "images-with-text",
     "portfolio",
-    "images_with_text_overlay_Rt8XzP",
-    "testimonials",
-    "timeline",
-    "images_with_text_qeGX4K",
-    "rich-text",
-    "logo-list"
+    "images_with_text_overlay_Rt8XzP"
   ]
 }
