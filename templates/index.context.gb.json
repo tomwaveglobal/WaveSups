@@ -36,11 +36,12 @@
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_Surf-Back-in-Stock_Aug26-2.png",
+            "image": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-1.jpg",
+            "image_mobile": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-3.jpg",
             "heading": "‎",
             "button_label": "Buy Now",
-            "button_link": "shopify://products/surf-3"
+            "button_link": "shopify://products/surf-3",
+            "image_tablet": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-2.jpg"
           }
         },
         "image_bAHz74": {
@@ -65,9 +66,9 @@
         }
       },
       "block_order": [
+        "image_e6Nny7",
         "slide-2",
         "image_UPWkm3",
-        "image_e6Nny7",
         "image_bAHz74",
         "image_rC3mcC"
       ]
