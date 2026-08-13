@@ -11,6 +11,7 @@
   "sections": {
     "main-page": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "heading_size": "title-lg tracking-heading",
         "heading_alignment": "text-left",
@@ -23,170 +24,229 @@
         "rounded": false
       }
     },
-    "comparison_Mr94Vq": {
-      "type": "comparison",
+    "images_with_text_overlay_WJYnhW": {
+      "type": "images-with-text-overlay",
       "blocks": {
-        "product_3LWYPB": {
-          "type": "product",
+        "subheading_B9Jc9N": {
+          "type": "subheading",
           "settings": {
-            "product": "como-hot-tub-ukca",
-            "custom_title": "",
-            "review_rating": "0",
-            "review_count": "0",
-            "dimensions": "",
-            "shape": "",
-            "material": "",
-            "massage_system": "",
-            "split_payment": "",
-            "heater_filter": "",
-            "flow_rate": "",
-            "certification": "",
-            "power_cable": "",
-            "accessories": ""
+            "subheading": "Drift SUP",
+            "subheading_size": "subtitle-md",
+            "secondary_color": true
           }
         },
-        "product_d8aDmn": {
-          "type": "product",
+        "heading_hgAH8z": {
+          "type": "heading",
           "settings": {
-            "product": "garda-hot-tub-ukca",
-            "custom_title": "",
-            "review_rating": "0",
-            "review_count": "0",
-            "dimensions": "",
-            "shape": "",
-            "material": "",
-            "massage_system": "",
-            "split_payment": "",
-            "heater_filter": "",
-            "flow_rate": "",
-            "certification": "",
-            "power_cable": "",
-            "accessories": ""
+            "heading": "<strong>Come and DRIFT with Sam & Kate </strong>",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         },
-        "product_bmqExx": {
-          "type": "product",
+        "text_PYXAXJ": {
+          "type": "text",
           "settings": {
-            "product": "tahoe-hot-tub-ukca",
-            "custom_title": "",
-            "review_rating": "0",
-            "review_count": "0",
-            "dimensions": "",
-            "shape": "",
-            "material": "",
-            "massage_system": "",
-            "split_payment": "",
-            "heater_filter": "",
-            "flow_rate": "",
-            "certification": "",
-            "power_cable": "",
-            "accessories": ""
+            "text": "<p>Paddleboard journeys on sheltered water in Burton and Derby -  for all abilities.</p>",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_font": "body",
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
           }
         }
       },
       "block_order": [
-        "product_3LWYPB",
-        "product_d8aDmn",
-        "product_bmqExx"
+        "subheading_B9Jc9N",
+        "heading_hgAH8z",
+        "text_PYXAXJ"
       ],
-      "disabled": true,
-      "name": "Product Comparison Table",
+      "name": "t:sections.images-with-text-overlay.presets.name",
       "settings": {
-        "heading": "Compare Products",
-        "heading_size": "title-lg tracking-heading",
-        "heading_alignment": "text-center md:items-center",
-        "heading_tag": "h2",
-        "subheading": "",
-        "description": "",
-        "product_image_background": "#f8f8f8",
-        "product_image_backdrop": "#f8f8f8",
-        "product_image_padding": 12,
-        "product_image_border_radius": 6,
-        "product_image_size_desktop": 140,
-        "product_image_size_mobile": 120,
-        "product_card_padding": 20,
-        "image_title_spacing": 16,
-        "title_price_spacing": 12,
-        "price_content_spacing": 12,
-        "initial_rows": 5,
-        "show_more_text": "Show more",
-        "show_less_text": "Show less",
-        "show_variant_thumbnails": true,
-        "variant_display_type": "images",
-        "swatch_shape": "circle",
-        "swatch_size": 24,
-        "swatch_border_radius": 4,
-        "swatch_border_width": 2,
-        "swatch_border_color": "#dddddd",
-        "swatch_gap": 4,
-        "show_buy_buttons": true,
-        "buy_button_text": "Buy Now",
-        "buy_button_alignment": "center",
-        "table_background": "#fafafa",
-        "border_color": "#ffffff",
-        "header_background": "#f8f9fa",
-        "product_card_background": "#ffffff",
-        "spec_label_background": "#f8f9fa",
-        "spec_value_background": "#ffffff",
-        "footer_background": "#f8f9fa",
-        "product_title_color": "#333333",
-        "product_title_size": 14,
-        "price_color": "#333333",
-        "price_from_color": "#666666",
-        "original_price_color": "#999999",
-        "price_size": 18,
-        "review_text_color": "#666666",
-        "star_filled_color": "#171717",
-        "star_empty_color": "#dddddd",
-        "spec_label_color": "#333333",
-        "spec_label_size": 14,
-        "spec_value_color": "#555555",
-        "spec_value_size": 13,
-        "button_color": "#171717",
-        "buy_button_background": "#000000",
-        "buy_button_text_color": "#ffffff",
-        "buy_button_hover_background": "#333333",
-        "buy_button_hover_text_color": "#ffffff",
-        "buy_button_radius": 25,
-        "buy_button_padding_vertical": 12,
-        "buy_button_padding_horizontal": 20,
-        "buy_button_font_size": 14,
-        "buy_button_font_weight": "600",
-        "buy_button_width": "auto",
-        "buy_button_text_transform": "none",
-        "buy_button_letter_spacing": 0,
-        "buy_button_border_width": 0,
-        "buy_button_border_color": "rgba(0,0,0,0)",
-        "buy_button_hover_border_color": "rgba(0,0,0,0)",
-        "buy_button_transition_duration": 0.2,
-        "buy_button_shadow": "none",
-        "buy_button_hover_shadow": "none",
-        "buy_button_hover_transform": "none",
-        "buy_button_active_transform": "scale(0.98)",
-        "variant_border_color": "#dddddd",
-        "placeholder_background": "#f9f9f9",
-        "placeholder_border": "#dddddd",
-        "placeholder_text_color": "#999999",
-        "dimensions_label": "Dimensions",
-        "shape_label": "Shape",
-        "material_label": "Material",
-        "massage_system_label": "Massage System",
-        "split_payment_label": "Split the Payment",
-        "heater_filter_label": "Heater/Filter",
-        "flow_rate_label": "Flow Rate",
-        "certification_label": "Certification",
-        "power_cable_label": "Power Cable",
-        "accessories_label": "Accessories",
+        "transparent_header": false,
+        "image_height": "650px",
+        "content_width": "small",
+        "content_position": "md:items-end md:justify-start",
+        "text_alignment": "left",
+        "image_height_mobile": "auto",
+        "content_position_mobile": "items-end justify-start",
+        "text_alignment_mobile": "left",
+        "color_text": "#ffffff",
+        "color_highlight": "#e0a580",
+        "gradient_highlight": "",
+        "color_button_text": "#171717",
+        "color_button_background": "#ffffff",
+        "color_button_gradient": "",
+        "color_overlay": "#171717",
+        "overlay_opacity": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "divider": false,
+        "full_width": true,
+        "rounded": false,
+        "enable_parallax": true
+      }
+    },
+    "image_with_text_4JNrgU": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pydBTd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Meet Sam & Kate</strong>",
+            "heading_size": "title-md",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_dX7kqy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sam & Kate are the heart of DRIFT -  two passionate paddlers who believe the water should be calm, welcoming and open to everyone. Their sessions are relaxed and unhurried, built around the simple joy of drifting along sheltered water in good company. Expect patient guidance, plenty of encouragement, and a genuinely friendly welcome every time you paddle with them.</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_AKRY49": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_pydBTd",
+        "text_dX7kqy",
+        "button_AKRY49"
+      ],
+      "name": "t:sections.image-with-text.name",
+      "settings": {
+        "image_height": "650px",
+        "image_width": "medium",
+        "layout": "image_first",
+        "text_alignment": "left",
+        "content_position": "align-self-center",
+        "image_height_mobile": "auto",
+        "text_alignment_mobile": "left",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_background_2": "",
+        "gradient_background_2": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
         "padding_top": 72,
         "padding_bottom": 72,
         "divider": false,
         "full_width": false,
+        "rounded": false,
+        "enable_parallax": true,
+        "parallax_direction": "vertical"
+      }
+    },
+    "rich_text_zYaGVP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_WVANXe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rich text",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h2",
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle",
+            "highlighted_reveal": false
+          }
+        },
+        "text_EjHncn": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Brought to you by Sam & Kate<br/>in association with Wave SUPs, DRIFT is your invitation to slow down and get<br/>out on the water. Set on the calm, sheltered waterways around Burton and Derby,<br/>this is paddleboarding at its most peaceful — gentle journeys that let you<br/>explore, unwind and take it all in at your own pace. Whether you've never stood<br/>on a board before or you're a confident paddler looking for a beautiful new<br/>stretch of water, Sam & Kate will make you feel right at home. And if<br/>you're thinking about getting your own board, this is the perfect place to try<br/>the latest Wave SUPs in person and find the one that's right for you.</p>",
+            "text_font": "body",
+            "text_size": "subtext-md",
+            "text_max_size": 32,
+            "text_line_height": 1.6,
+            "text_letter_spacing": 0,
+            "text_capitalize": false,
+            "secondary_color": false,
+            "highlighted_text": "none",
+            "highlighted_scribble": "circle"
+          }
+        },
+        "button_GAJhTC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_size": "md",
+            "button_external": false,
+            "button_icon": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_WVANXe",
+        "text_EjHncn",
+        "button_GAJhTC"
+      ],
+      "name": "t:sections.rich-text.name",
+      "settings": {
+        "text_alignment": "left",
+        "text_alignment_mobile": "left",
+        "heading": "",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_width": "small",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "button_label": "",
+        "button_link": "",
+        "button_external": false,
+        "button_icon": true,
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 100,
+        "divider": false,
+        "narrow": true,
         "rounded": false
       }
     }
   },
   "order": [
     "main-page",
-    "comparison_Mr94Vq"
+    "images_with_text_overlay_WJYnhW",
+    "image_with_text_4JNrgU",
+    "rich_text_zYaGVP"
   ]
 }
