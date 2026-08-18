@@ -1196,10 +1196,9 @@
         },
         "heading_cgV4md": {
           "type": "heading",
-          "disabled": true,
           "settings": {
             "heading": "Our reviews speak for themselves",
-            "heading_size": "title-sm",
+            "heading_size": "title-md",
             "heading_tag": "h6",
             "highlighted_text": "none",
             "highlighted_scribble": "circle",
@@ -1208,9 +1207,8 @@
         },
         "text_8WLft8": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "text": "<p>Rated <em>4.8 / 5</em> Based on <em>3449 Reviews</em> with Reviews.io</p>",
+            "text": "<p>Rated <em>4.9</em> Based on <em>4366 Reviews</em> with Reviews.io</p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -1246,9 +1244,9 @@
         "text_alignment": "center",
         "text_alignment_mobile": "center",
         "heading": "",
-        "heading_size": "title-sm",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_width": "small",
+        "heading_size": "title-md",
+        "heading_alignment": "text-center md:items-center",
+        "heading_width": "medium",
         "heading_tag": "h2",
         "subheading": "",
         "description": "",
@@ -1271,6 +1269,24 @@
         "padding_bottom": 0,
         "divider": false,
         "narrow": true,
+        "rounded": false
+      }
+    },
+    "custom_liquid_f8eiip": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "<script src=\"https://widget.reviews.co.uk/carousel-inline-iframeless/dist.js?_t=2026081808\"></script>\n<link rel=\"stylesheet\" href=\"https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2026081808\">\n<link rel=\"stylesheet\" href=\"https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2026081808\">\n<div id=\"reviewsio-carousel-widget\"></div>\n<script>\n\nnew carouselInlineWidget('reviewsio-carousel-widget',{\n      /*Your REVIEWS.io account ID:*/\n      store: 'wavesupboards',\n      sku: '',\n      lang: 'en',\n      carousel_type: 'default',\n      styles_carousel: 'CarouselWidget--sideHeader--withcards',\n\n      /*Widget settings:*/\n      options:{\n        general:{\n          /*What reviews should the widget display? Available options: company, product, third_party. You can choose one type or multiple separated by comma.*/\n          review_type: 'product',\n          /*Minimum number of reviews required for widget to be displayed*/\n          min_reviews: '1',\n          /*Maximum number of reviews to include in the carousel widget.*/\n          max_reviews: '20',\n          address_format: 'CITY, COUNTRY',\n          /*Carousel auto-scrolling speed. 3000 = 3 seconds. If you want to disable auto-scroll, set this value to false.*/\n          enable_auto_scroll: 10000,\n          /*Enable pause button for auto-scrolling carousel. Only works when auto-scroll is enabled.*/\n          enable_pause_button: true,\n          enable_sorting: false,\n        },\n        header:{\n          /*Show overall rating stars*/\n          enable_overall_stars: true,\n          rating_decimal_places: 1,\n        },\n        reviews: {\n          /*Show customer name*/\n          enable_customer_name: true,\n          /*Show customer location*/\n          enable_customer_location: true,\n          /*Show \"verified review\" badge*/\n          enable_verified_badge: true,\n          /*Show \"verified subscriber\" badge*/\n          enable_subscriber_badge: true,\n          /*Show \"I recommend this product\" badge (Only for product reviews)*/\n          enable_recommends_badge: true,\n          /*Show photos attached to reviews*/\n          enable_photos: true,\n          /*Show videos attached to reviews*/\n          enable_videos: true,\n          /*Show when review was written*/\n          enable_review_date: true,\n          /*Hide reviews written by the same customer (This may occur when customer reviews multiple products)*/\n          disable_same_customer: true,\n          /*Minimum star rating*/\n          min_review_percent: 4,\n          /*Show 3rd party review source*/\n          third_party_source: true,\n          /*Hide reviews without comments (still shows if review has a photo)*/\n          hide_empty_reviews: true,\n          /*Show product name*/\n          enable_product_name: true,\n          /*Show only reviews which have specific tags (multiple semicolon separated tags allowed i.e tag1;tag2)*/\n          tags: \"\",\n          /*Show branch, only one input*/\n          branch: \"\",\n          enable_branch_name: false,\n        },\n        popups: {\n          /*Make review items clickable (When they are clicked, a popup appears with more information about a customer and review)*/\n          enable_review_popups:  true,\n          /*Show \"was this review helpful\" buttons*/\n          enable_helpful_buttons: true,\n          /*Show how many times review was upvoted as helpful*/\n          enable_helpful_count: true,\n          /*Show share buttons*/\n          enable_share_buttons: false,\n        },\n    },\n    translations: {\n      verified_customer:  \"Verified Customer\",\n    },\n    styles:{\n      /*Base font size is a reference size for all text elements. When base value gets changed, all TextHeading and TexBody elements get proportionally adjusted.*/\n      '--base-font-size': '16px',\n      '--base-maxwidth':'100%',\n\n      /*Logo styles:*/\n      '--reviewsio-logo-style':'var(--logo-inverted)',\n\n      /*Star styles:*/\n      '--common-star-color':'#ED9212',\n      '--common-star-disabled-color':' rgba(0,0,0,0.25)',\n      '--medium-star-size':' 22px',\n      '--small-star-size':'19px', /*Modal*/\n      '--x-small-star-size':'16px',\n      '--x-small-star-display':'inline-flex',\n\n      /*Header styles:*/\n      '--header-order':'1',\n      '--header-width':'280px',\n      '--header-bg-start-color':'#0E1311',\n      '--header-bg-end-color':'#0E1311',\n      '--header-gradient-direction':'135deg',\n      '--header-padding':'1.5em',\n      '--header-border-width':'0px',\n      '--header-border-color':'rgba(0,0,0,0.1)',\n      '--header-border-radius':'0px',\n      '--header-shadow-size':'10px',\n      '--header-shadow-color':'rgba(0, 0, 0, 0.05)',\n\n      /*Header content styles:*/\n      '--header-star-color':'#ED9D1E',\n      '--header-disabled-star-color':'inherit',\n      '--header-heading-text-color':'#ffffff',\n      '--header-heading-font-size':'inherit',\n      '--header-heading-font-weight':'inherit',\n      '--header-heading-line-height':'inherit',\n      '--header-heading-text-transform':'inherit',\n      '--header-subheading-text-color':'#ffffff',\n      '--header-subheading-font-size':'inherit',\n      '--header-subheading-font-weight':'300',\n      '--header-subheading-line-height':'inherit',\n      '--header-subheading-text-transform':'inherit',\n\n      /*Review item styles:*/\n      '--item-maximum-columns':'5',/*Must be 3 or larger*/\n      '--item-background-start-color':'#ffffff',\n      '--item-background-end-color':'#ffffff',\n      '--item-gradient-direction':'135deg',\n      '--item-padding':'1.5em',\n      '--item-border-width':'0px',\n      '--item-border-color':'rgba(0,0,0,0.1)',\n      '--item-border-radius':'0px',\n      '--item-shadow-size':'10px',\n      '--item-shadow-color':'rgba(0,0,0,0.05)',\n\n      /*Heading styles:*/\n      '--heading-text-color':' #0E1311',\n      '--heading-text-font-weight':' 600',\n      '--heading-text-font-family':' inherit',\n      '--heading-text-line-height':' 1.4',\n      '--heading-text-letter-spacing':'0',\n      '--heading-text-transform':'none',\n\n      /*Body text styles:*/\n      '--body-text-color':' #0E1311',\n      '--body-text-font-weight':'400',\n      '--body-text-font-family':' inherit',\n      '--body-text-line-height':' 1.4',\n      '--body-text-letter-spacing':'0',\n      '--body-text-transform':'none',\n\n      /*Scroll button styles:*/\n      '--scroll-button-icon-color':'#0E1311',\n      '--scroll-button-icon-size':'24px',\n      '--scroll-button-bg-color':'transparent',\n\n      '--scroll-button-border-width':'0px',\n      '--scroll-button-border-color':'rgba(0,0,0,0.1)',\n\n      '--scroll-button-border-radius':'60px',\n      '--scroll-button-shadow-size':'0px',\n      '--scroll-button-shadow-color':'rgba(0,0,0,0.1)',\n      '--scroll-button-horizontal-position':'3px',\n      '--scroll-button-vertical-position':'0px',\n\n      /*Badge styles:*/\n      '--badge-icon-color':'#0E1311',\n      '--badge-icon-font-size':'15px',\n      '--badge-text-color':'#0E1311',\n      '--badge-text-font-size':'inherit',\n      '--badge-text-letter-spacing':'inherit',\n      '--badge-text-transform':'inherit',\n\n      /*Author styles:*/\n      '--author-font-size':'inherit',\n      '--author-font-weight':'inherit',\n      '--author-text-transform':'inherit',\n\n      /*Product photo or review photo styles:*/\n      '--photo-video-thumbnail-size':'60px',\n      '--photo-video-thumbnail-border-radius':'0px',\n\n      /*Popup styles:*/\n      '--popup-backdrop-color':'rgba(0,0,0,0.75)',\n      '--popup-color':'#ffffff',\n      '--popup-star-color':'inherit',\n      '--popup-disabled-star-color':'inherit',\n      '--popup-heading-text-color':'inherit',\n      '--popup-body-text-color':'inherit',\n      '--popup-badge-icon-color':'inherit',\n      '--popup-badge-icon-font-size':'19px',\n      '--popup-badge-text-color':'inherit',\n      '--popup-badge-text-font-size':'14px',\n      '--popup-border-width':'0px',\n      '--popup-border-color':'rgba(0,0,0,0.1)',\n      '--popup-border-radius':'0px',\n      '--popup-shadow-size':'0px',\n      '--popup-shadow-color':'rgba(0,0,0,0.1)',\n      '--popup-icon-color':'#0E1311',\n\n      /*Tooltip styles:*/\n      '--tooltip-bg-color':'#0E1311',\n      '--tooltip-text-color':'#ffffff',\n    },\n});\n\n</script>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "divider": false,
+        "narrow": false,
         "rounded": false
       }
     },
@@ -1307,6 +1323,7 @@
       "block_order": [
         "reviews_io_reviewsio_card_carousel_nJMANE"
       ],
+      "disabled": true,
       "settings": {
         "color_text": "",
         "color_background": "",
@@ -1341,6 +1358,7 @@
     "scrolling-text-2",
     "blog-posts-collage",
     "rich_text_PLVJHh",
+    "custom_liquid_f8eiip",
     "1752500797e295154e"
   ]
 }
