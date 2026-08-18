@@ -1522,13 +1522,31 @@
         "rounded": false
       }
     },
+    "custom_liquid_wQhxcp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.name",
+      "settings": {
+        "liquid": "<a href=\"https://www.reviews.co.uk/company-reviews/store/wavesupboards\" target=\"_blank\">\n  <picture>\n    <source type=\"image/png\" srcset=\"https://s3-eu-west-1.amazonaws.com/reviews-global/images/trust-badges/reviews-trust-logo-2.png 1x, https://s3-eu-west-1.amazonaws.com/reviews-global/images/trust-badges/reviews-trust-logo-2@2x.png 2x\">\n    <img src=\"https://s3-eu-west-1.amazonaws.com/reviews-global/images/trust-badges/reviews-trust-logo-2.png\">\n  </picture>\n</a>",
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 12,
+        "divider": false,
+        "narrow": false,
+        "rounded": false
+      }
+    },
     "1746539419d28b4d16": {
       "type": "apps",
       "blocks": {
         "reviews_io_reviewsio_polaris_gEgAjd": {
           "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
           "settings": {
-            "star": "#00b67b",
+            "star": "#FFB300",
             "review_type": "product_review",
             "per_page": 8,
             "primary_btn_bg_color": "#000000",
@@ -1692,6 +1710,7 @@
     "faq",
     "comparison_table_MEGPEA",
     "rich_text_BTKhxX",
+    "custom_liquid_wQhxcp",
     "1746539419d28b4d16",
     "featured_collection_PAxgDN",
     "product-recommendations",
