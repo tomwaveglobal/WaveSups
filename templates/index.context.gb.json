@@ -66,12 +66,18 @@
         }
       },
       "block_order": [
-        "slide-2",
         "image_e6Nny7",
+        "slide-2",
         "image_UPWkm3",
         "image_bAHz74",
         "image_rC3mcC"
       ]
+    },
+    "featured-product": {
+      "settings": {
+        "product": "woody-3"
+      },
+      "blocks": {}
     }
   }
 }
