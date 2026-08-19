@@ -16,14 +16,6 @@
     "slideshow": {
       "settings": {},
       "blocks": {
-        "slide-2": {
-          "settings": {
-            "image": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-1.jpg",
-            "image_tablet": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-2.jpg",
-            "image_mobile": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-3.jpg",
-            "heading": ""
-          }
-        },
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
@@ -33,6 +25,15 @@
             "heading": "‎",
             "button_label": "Buy Now",
             "button_link": "shopify://products/woody-3"
+          }
+        },
+        "slide-2": {
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-1.jpg",
+            "image_tablet": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-2.jpg",
+            "image_mobile": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-3.jpg",
+            "heading": ""
           }
         },
         "image_UPWkm3": {
