@@ -5345,6 +5345,93 @@ ol {
   height: var(--sp-6);
 }
 
+/*! header country selector — mobile + tablet only, sits between the menu
+    drawer button and the logo. Desktop keeps the announcement bar selector. */
+@media screen and (max-width: 1023px) {
+  .header__country-button {
+    min-height: 2.75rem;
+    padding-inline: var(--sp-1);
+  }
+
+  /* "Country code" style — stands in for the flag, so it is never hidden. */
+  .header__country-code {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  /* Only room for the flag + chevron on the narrowest phones: the tools grid
+     column leaves ~49px clear of the burger at 360px wide. */
+  .header__country-currency {
+    display: none;
+  }
+
+  /* The panel's padding box covers the whole header (see the snippet), so only
+     the visible container may take pointer events. `[open]` is needed to beat
+     `.dropdown[open] { pointer-events: auto }`, which is defined later. */
+  .header__country .dropdown,
+  .header__country .dropdown[open] {
+    pointer-events: none;
+  }
+
+  .header__country .dropdown__container {
+    pointer-events: auto;
+  }
+
+  /* Tap feedback while the market navigation is in flight. */
+  .header__country .dropdown__nav.is-selecting a {
+    opacity: 0.35;
+    transition: opacity var(--animation-fast);
+  }
+
+  .header__country .dropdown__nav.is-selecting a.is-selected {
+    opacity: 1;
+  }
+
+  .header__country .dropdown__nav a.is-selected::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-inline-start: var(--sp-2);
+    width: var(--sp-3d5);
+    height: var(--sp-3d5);
+    border: 2px solid currentColor;
+    border-block-start-color: transparent;
+    border-radius: var(--rounded-full);
+    animation: spin 0.7s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .header__country .dropdown__nav a.is-selected::after {
+      animation: none;
+    }
+  }
+
+  .header__country .dropdown {
+    inset-inline-start: var(--page-padding);
+    margin-inline-start: 0;
+    max-width: calc(100vw - var(--page-padding) * 2 - var(--scrollbar-width));
+  }
+
+  .header__country .dropdown__nav {
+    max-width: none;
+  }
+
+  .header__country .dropdown__nav li > p {
+    padding-inline: var(--sp-5);
+  }
+
+  .header__country .dropdown__container {
+    padding-block-start: var(--sp-5);
+    padding-block-end: var(--sp-6);
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+  .header__country-currency {
+    display: inline-block;
+  }
+}
+
 .header__menu>ul {
   column-gap: var(--header-nav-gap)
 }
