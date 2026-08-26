@@ -87,6 +87,32 @@
     {%- endif -%}
 
     {%- render 'js-variables' -%}
+
+    <!-- BEGIN MerchantWidget Code -->
+
+<script id='merchantWidgetScript'
+
+        src="https://www.gstatic.com/shopping/merchant/merchantwidget.js"
+
+        defer>
+
+</script>
+
+<script type="text/javascript">
+
+  merchantWidgetScript.addEventListener('load', function () {
+
+    merchantwidget.start({
+
+     position: 'RIGHT_BOTTOM'
+
+   });
+
+  });
+
+</script>
+
+<!-- END MerchantWidget Code -->
   </head>
 
   <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-rounded-button="{{ settings.rounded_button }}" data-rounded-input="{{ settings.rounded_input }}" data-rounded-block="{{ settings.rounded_block }}" data-rounded-card="{{ settings.rounded_card }}" data-button-hover="{{ settings.buttons_hover }}"{% if settings.enable_page_transition %} data-page-transition{% endif %}{% if settings.enable_lazy_image %} data-lazy-image{% endif %}{% unless settings.show_modal_close_button %} data-modal-swipe-only{% endunless %}{% unless settings.show_trustpilot_logo %} data-hide-trustpilot-logo{% endunless %} data-title-animation data-page-rendering>
