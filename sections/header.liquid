@@ -317,6 +317,38 @@
       "label": "t:sections.header.settings.enable_country_selector.label"
     },
     {
+      "type": "checkbox",
+      "id": "enable_country_selector_header_mobile",
+      "default": true,
+      "label": "Show country/region selector in the header bar",
+      "info": "Adds a compact selector between the menu button and the logo. Below 1024px only \u2014 desktop uses the announcement bar selector."
+    },
+    {
+      "visible_if": "{{ section.settings.enable_country_selector_header_mobile == true }}",
+      "type": "select",
+      "id": "header_country_selector_style",
+      "default": "flag",
+      "label": "Header selector style",
+      "options": [
+        {
+          "value": "flag",
+          "label": "Flag"
+        },
+        {
+          "value": "code",
+          "label": "Country code (GB, US)"
+        }
+      ]
+    },
+    {
+      "visible_if": "{{ section.settings.enable_country_selector_header_mobile == true }}",
+      "type": "checkbox",
+      "id": "header_country_selector_show_currency",
+      "default": true,
+      "label": "Show currency next to it",
+      "info": "Hidden below 480px regardless, where there is no room beside the logo."
+    },
+    {
       "type": "header",
       "content": "t:sections.header.settings.header__transparent.content",
       "info": "t:sections.header.settings.header__transparent.info"

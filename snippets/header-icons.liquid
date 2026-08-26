@@ -217,5 +217,14 @@
         {%- endif -%}
       </button>
     {%- endif -%}
+
+    {%- comment -%}
+      Mobile/tablet country selector. Rendered only in the `start` group so it
+      lands between the menu drawer button and the logo, and only once (this
+      snippet is rendered twice per header, as `start` and `end`).
+    {%- endcomment -%}
+    {%- if context == 'start' and section.settings.enable_country_selector_header_mobile -%}
+      {%- render 'header-country-select', section: section -%}
+    {%- endif -%}
   </div>
 </div>

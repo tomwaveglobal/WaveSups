@@ -1,0 +1,133 @@
+{%- doc -%}
+  Renders the compact country/region selector that sits between the menu drawer
+  button and the logo on mobile and tablet (< 1024px).
+
+  Desktop keeps the announcement bar selector, so this snippet hides itself at
+  1024px and above via `lg:hidden`.
+
+  Uses the same market-link rules as the announcement bar and the menu drawer:
+  `localization-countries-ordered` with `render_as: 'market_links'`, so the
+  theme-wide `settings.country_selector_order` and the per-product regional URL
+  overrides are honoured.
+
+  @param {object} section - Section object, used for the dropdown id and for
+    `header_country_selector_style` / `header_country_selector_show_currency`
+
+  @example
+  {% render 'header-country-select', section: section %}
+{%- enddoc -%}
+
+{%- if localization.available_countries.size > 1 -%}
+  {%- liquid
+    comment
+      `flag` shows the country's flag image, `code` shows the ISO code (GB, US).
+      Default to `flag` so the setting can ship without a section JSON value —
+      Shopify drops a section-JSON value whose schema setting is new in the same
+      commit.
+    endcomment
+    assign selector_style = section.settings.header_country_selector_style | default: 'flag'
+    assign show_currency = true
+    if section.settings.header_country_selector_show_currency == false
+      assign show_currency = false
+    endif
+
+    assign uk_override = ''
+    assign eu_override = ''
+    assign us_override = ''
+
+    if product.metafields.custom.uk_override_url != blank or product.metafields.custom.eu_override_url != blank or product.metafields.custom.us_override_url != blank
+      assign uk_override = product.metafields.custom.uk_override_url
+      assign eu_override = product.metafields.custom.eu_override_url
+      assign us_override = product.metafields.custom.us_override_url
+    endif
+  -%}
+
+  <div class="header__country localization flex lg:hidden items-center">
+    <button
+      type="button"
+      class="localization__item header__country-button flex items-center gap-2 z-2 relative cursor-pointer"
+      aria-controls="HeaderCountryLocalization-{{ section.id }}"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="{{ 'localization.country_label' | t | escape }}"
+    >
+      {%- if selector_style == 'code' -%}
+        <span class="header__country-code whitespace-nowrap leading-tight text-sm font-medium">
+          {{- localization.country.iso_code -}}
+        </span>
+      {%- else -%}
+        <span class="country-flag shrink-0 media media--rounded relative overflow-hidden">
+          {{- localization.country | image_url: width: 60, format: 'jpg' | image_tag: loading: 'lazy', class: 'rounded-full', is: 'lazy-image' -}}
+        </span>
+      {%- endif -%}
+      {%- if show_currency -%}
+        <span class="header__country-currency whitespace-nowrap leading-tight text-sm">
+          {{- localization.country.currency.iso_code }} {{ localization.country.currency.symbol -}}
+        </span>
+      {%- endif -%}
+      {%- render 'icon', icon: 'chevron-down', size: 'xs', class: 'shrink-0' -%}
+    </button>
+
+    {%- comment -%}
+      Positioned against `.header` (the nearest positioned ancestor — this
+      wrapper deliberately is not `relative`), so the theme's own
+      `.header .dropdown { padding-block-start: var(--header-height) }` drops it
+      flush under the header, exactly like the desktop nav dropdowns, and the
+      `.header-scrolled` offset follows automatically.
+
+      That padding box spans the whole header, so it would sit over the trigger,
+      the menu button and the logo and swallow their clicks. `pointer-events-none`
+      here (with the container re-enabling it in CSS) keeps only the visible panel
+      clickable — the same idiom the theme's own header dropdowns use.
+    {%- endcomment -%}
+    <dropdown-localization
+      class="dropdown opacity-0 invisible z-30 absolute top-0 pointer-events-none"
+      id="HeaderCountryLocalization-{{ section.id }}"
+    >
+      <div class="dropdown__container">
+        {%- render 'corner', dir: 'top', prefix: 'dropdown' -%}
+        <ul class="dropdown__nav flex flex-col gap-1d5 xl:gap-2" role="list">
+          {%- render 'localization-countries-ordered',
+            render_as: 'market_links',
+            eu_override: eu_override,
+            us_override: us_override,
+            uk_override: uk_override
+          -%}
+        </ul>
+      </div>
+    </dropdown-localization>
+  </div>
+
+  {%- comment -%}
+    Switching market is a real navigation (new URL, currency, prices and catalog
+    are all server-rendered), so there is a pause between the tap and the browser
+    starting the new page. Mark the tapped row immediately so the wait reads as
+    "working" rather than "nothing happened". Deliberately not the theme's
+    `loading-bar`, which is a full-screen curtain and is disabled under reduced
+    motion.
+  {%- endcomment -%}
+  <script>
+    (() => {
+      const nav = document.querySelector('#HeaderCountryLocalization-{{ section.id }} .dropdown__nav');
+      if (!nav) return;
+
+      const clear = () => {
+        nav.classList.remove('is-selecting');
+        nav.querySelectorAll('.is-selected').forEach((el) => el.classList.remove('is-selected'));
+      };
+
+      nav.addEventListener('click', (event) => {
+        const link = event.target.closest('a');
+        if (!link || !nav.contains(link)) return;
+        if (link.classList.contains('active')) return;
+        nav.classList.add('is-selecting');
+        link.classList.add('is-selected');
+      });
+
+      // Restoring from bfcache would otherwise leave the panel stuck dimmed.
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted) clear();
+      });
+    })();
+  </script>
+{%- endif -%}
