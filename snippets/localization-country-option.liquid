@@ -7,15 +7,66 @@
   elsif country.market.metafields.country.code == 'UK'
     assign link_override = uk_override
   endif
+
+  comment
+    Every market uses Shopify's lowercase locale slug (/en-us, /en-de), which is
+    the canonical form and the one the hreflang tags advertise. Uppercase URLs
+    still resolve, so older links keep working.
+  endcomment
+  assign country_slug = country.iso_code | downcase
+
+  comment
+    Keep the visitor on the page they are viewing when they switch market.
+    Without this every market link points at that market's homepage, so
+    switching country from a product, collection, page or blog lost the page.
+
+    Order of preference:
+      1. the market's override metafield, for products listed separately per
+         region (e.g. garda-hot-tub -> garda-hot-tub-etl)
+      2. the current path, which resolves for any product or page published to
+         the target market
+      3. the market root, if we are already at the root
+
+    Products carrying a region-specific listing rely on (1), or on a URL
+    redirect from the shared handle to the regional one. Without one of those a
+    product that is missing from the target market's catalog will bounce.
+  endcomment
+  assign target_path = ''
+  if link_override != blank
+    assign target_path = '/' | append: link_override
+  else
+    assign current_path = request.path
+    assign market_root = routes.root_url
+
+    comment
+      Strip the market root case-insensitively. routes.root_url is the canonical
+      lowercase form (/en-de), but visitors still arrive on the uppercase
+      variant (/en-DE) from links, bookmarks and search results created before
+      this selector was lowercased. A case-sensitive strip leaves the old root
+      in place and stacks the new one on top: /en-us/en-DE/products/...
+    endcomment
+    if market_root != blank and market_root != '/'
+      assign root_size = market_root | size
+      assign root_lower = market_root | downcase
+      assign path_head = current_path | slice: 0, root_size | downcase
+      if path_head == root_lower
+        assign current_path = current_path | slice: root_size, 2000
+      endif
+    endif
+
+    unless current_path == '/' or current_path == blank
+      assign target_path = current_path
+    endunless
+  endif
 -%}
 <li class="opacity-0">
   <p>
     <a
       class="reversed-link"
       {% unless country.market.metafields.default.market == true %}
-        href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country.iso_code }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
+        href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country_slug }}{{ target_path }}"
       {% else %}
-        href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country.iso_code }}{%- if link_override != blank -%}/{{- link_override -}}{%- endif -%}"
+        href="{{ shop.url }}{{ target_path }}"
       {% endunless %}
       title="{{ country.name | escape }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})"
       data-no-instant
