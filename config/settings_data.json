@@ -242,23 +242,6 @@
           "enable_syndication": false
         }
       },
-      "15316669992541710076": {
-        "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
-        "disabled": false,
-        "settings": {
-          "star": "#00b77f",
-          "text_color": "#333333",
-          "snippet_mode": "extended",
-          "text": "Reviews",
-          "line_break": false,
-          "listen_for_changes": true,
-          "rating_without_brackets": true,
-          "format_review_count": false,
-          "show_popup": false,
-          "anchor_to_reviews_widget": true,
-          "show_empty_stars": true
-        }
-      },
       "11945366711752539959": {
         "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
         "disabled": false,
@@ -278,6 +261,23 @@
         "type": "shopify://apps/vex-auto-add-to-cart/blocks/vex-theme-extension/4050c1c7-5b58-4120-af12-e290cb2b28f0",
         "disabled": false,
         "settings": {}
+      },
+      "15316669992541710076": {
+        "type": "shopify://apps/reviews-io/blocks/reviewsio-rating-snippet/92a082e5-b297-4e88-b428-ac96cbc505f9",
+        "disabled": false,
+        "settings": {
+          "star": "#FFB300",
+          "text_color": "#333333",
+          "snippet_mode": "extended",
+          "text": "Reviews",
+          "line_break": false,
+          "listen_for_changes": true,
+          "rating_without_brackets": true,
+          "format_review_count": false,
+          "show_popup": false,
+          "anchor_to_reviews_widget": true,
+          "show_empty_stars": true
+        }
       }
     }
   },
