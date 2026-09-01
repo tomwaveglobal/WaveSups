@@ -23,6 +23,18 @@
             "link": "shopify://collections/sale-uk",
             "text_mobile": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards"
           }
+        },
+        "announcement_mnCMPh": {
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "text": ""
+          }
+        },
+        "announcement-1": {
+          "settings": {
+            "text": "Pay in 3 on all<em><strong> Wave 3.0 </strong></em>"
+          }
         }
       },
       "block_order": [
