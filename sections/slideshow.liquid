@@ -212,12 +212,25 @@
       <div class="slideshow-content">
         <nav is="slideshow-words" class="slideshow-words grid items-center" aria-controls="Slider-{{ section.id }}" aria-labelledby="Slider-{{ section.id }}">
           {%- for block in section.blocks -%}
-            <div class="slideshow-word flex flex-col md:flex-row md:items-end justify-between gap-6" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
-              {%- if block.settings.heading != blank -%}
-                <div class="banner__box banner__box--{{ section.settings.content_width }}">
-                  <{{ block.settings.heading_tag }} class="heading leading-none {{ block.settings.heading_size }}">
-                    <split-words class="split-words js-invisible block" data-animate="fade-up-large" data-animate-delay="250">{{ block.settings.heading }}</split-words>
-                  </{{ block.settings.heading_tag }}>
+            {%- liquid
+              assign word_layout = 'md:flex-row md:items-end justify-between'
+              if block.settings.button_position == 'below'
+                assign word_layout = 'md:items-start'
+              endif
+            -%}
+            <div class="slideshow-word flex flex-col {{ word_layout }} gap-6" data-index="{{ forloop.index0 }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+              {%- if block.settings.heading != blank or block.settings.secondary_heading != blank -%}
+                <div class="banner__box banner__box--{{ section.settings.content_width }}{% if block.settings.heading != blank and block.settings.secondary_heading != blank %} flex flex-col gap-2{% endif %}">
+                  {%- if block.settings.heading != blank -%}
+                    <{{ block.settings.heading_tag }} class="heading leading-none {{ block.settings.heading_size }}">
+                      <split-words class="split-words js-invisible block" data-animate="fade-up-large" data-animate-delay="250">{{ block.settings.heading }}</split-words>
+                    </{{ block.settings.heading_tag }}>
+                  {%- endif -%}
+                  {%- if block.settings.secondary_heading != blank -%}
+                    <div class="heading leading-none {{ block.settings.secondary_heading_size }} {{ block.settings.secondary_heading_weight }}">
+                      <split-words class="split-words js-invisible block" data-animate="fade-up-large" data-animate-delay="400">{{ block.settings.secondary_heading }}</split-words>
+                    </div>
+                  {%- endif -%}
                 </div>
               {%- endif -%}
 
@@ -700,6 +713,48 @@
           "info": "t:sections.global.settings.heading_tag.info"
         },
         {
+          "type": "html",
+          "id": "secondary_heading",
+          "label": "Secondary heading (HTML enabled for colors)",
+          "info": "Sits under the heading. Use HTML tags like <span style='color: #ff0000;'>red text</span> for multi-color text"
+        },
+        {
+          "type": "select",
+          "id": "secondary_heading_size",
+          "options": [
+            { "value": "title-xxs", "label": "XX-Small" },
+            { "value": "title-xs", "label": "X-Small" },
+            { "value": "title-sm", "label": "t:sections.global.settings.heading_size.options__1.label" },
+            { "value": "title-md", "label": "t:sections.global.settings.heading_size.options__2.label" },
+            { "value": "title-lg tracking-heading", "label": "t:sections.global.settings.heading_size.options__3.label" },
+            { "value": "title-xl tracking-heading", "label": "t:sections.global.settings.heading_size.options__4.label" }
+          ],
+          "default": "title-md",
+          "label": "Secondary heading size"
+        },
+        {
+          "type": "select",
+          "id": "secondary_heading_weight",
+          "options": [
+            { "value": "font-normal", "label": "Normal" },
+            { "value": "font-medium", "label": "Medium" },
+            { "value": "font-bold", "label": "Bold" }
+          ],
+          "default": "font-bold",
+          "label": "Secondary heading weight"
+        },
+        {
+          "type": "select",
+          "id": "button_position",
+          "options": [
+            { "value": "beside", "label": "Beside the text" },
+            { "value": "below", "label": "Under the text" }
+          ],
+          "default": "beside",
+          "label": "Button position",
+          "info": "Desktop only. On mobile the button always sits under the text."
+        },
+        {
           "type": "text",
           "id": "button_label",
           "label": "t:sections.global.settings.button_label.label",
@@ -886,6 +941,48 @@
           "default": "h2",
           "label": "t:sections.global.settings.heading_tag.label",
           "info": "t:sections.global.settings.heading_tag.info"
+        },
+        {
+          "type": "html",
+          "id": "secondary_heading",
+          "label": "Secondary heading (HTML enabled for colors)",
+          "info": "Sits under the heading. Use HTML tags like <span style='color: #ff0000;'>red text</span> for multi-color text"
+        },
+        {
+          "type": "select",
+          "id": "secondary_heading_size",
+          "options": [
+            { "value": "title-xxs", "label": "XX-Small" },
+            { "value": "title-xs", "label": "X-Small" },
+            { "value": "title-sm", "label": "t:sections.global.settings.heading_size.options__1.label" },
+            { "value": "title-md", "label": "t:sections.global.settings.heading_size.options__2.label" },
+            { "value": "title-lg tracking-heading", "label": "t:sections.global.settings.heading_size.options__3.label" },
+            { "value": "title-xl tracking-heading", "label": "t:sections.global.settings.heading_size.options__4.label" }
+          ],
+          "default": "title-md",
+          "label": "Secondary heading size"
+        },
+        {
+          "type": "select",
+          "id": "secondary_heading_weight",
+          "options": [
+            { "value": "font-normal", "label": "Normal" },
+            { "value": "font-medium", "label": "Medium" },
+            { "value": "font-bold", "label": "Bold" }
+          ],
+          "default": "font-bold",
+          "label": "Secondary heading weight"
+        },
+        {
+          "type": "select",
+          "id": "button_position",
+          "options": [
+            { "value": "beside", "label": "Beside the text" },
+            { "value": "below", "label": "Under the text" }
+          ],
+          "default": "beside",
+          "label": "Button position",
+          "info": "Desktop only. On mobile the button always sits under the text."
         },
         {
           "type": "text",

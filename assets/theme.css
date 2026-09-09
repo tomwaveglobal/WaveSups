@@ -46,6 +46,8 @@
   --text-h4: var(--sp-4d5);
   --text-h5: var(--sp-4);
   --text-h6: var(--sp-4d5);
+  --title-xxs: clamp(var(--text-base), 1.263vw, var(--text-xl));
+  --title-xs: clamp(var(--text-lg), 1.768vw, var(--text-3xl));
   --title-sm: clamp(var(--text-2xl), 2.526vw, var(--text-5xl));
   --title-md: clamp(var(--sp-8), 3.368vw, var(--sp-16));
   --title-lg: clamp(var(--sp-10), 3.368vw, var(--sp-16));
@@ -3657,6 +3659,14 @@ button.shopify-payment-button__button--unbranded {
   .title-wrapper .description {
     max-width: 56rem;
   }
+}
+
+.title-xxs {
+  font-size: var(--title-xxs);
+}
+
+.title-xs {
+  font-size: var(--title-xs);
 }
 
 .title-sm {
