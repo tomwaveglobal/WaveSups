@@ -16,15 +16,25 @@
     "slideshow": {
       "settings": {},
       "blocks": {
+        "image_UPWkm3": {
+          "settings": {
+            "image": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-1.jpg",
+            "image_tablet": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-3.jpg",
+            "image_mobile": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-2.jpg",
+            "heading": "‎",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/twin"
+          }
+        },
         "image_e6Nny7": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-1.jpg",
-            "image_tablet": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-2.jpg",
-            "image_mobile": "shopify://shop_images/SUP_Woody-Back-in-stock_Aug26-3.jpg",
+            "image": "shopify://shop_images/Hopper_Small-but-mighty_Sept26-1.jpg",
+            "image_tablet": "shopify://shop_images/Hopper_Small-but-mighty_Sept26-2.jpg",
+            "image_mobile": "shopify://shop_images/Hopper_Small-but-mighty_Sept26-3.jpg",
             "heading": "‎",
             "button_label": "Buy Now",
-            "button_link": "shopify://products/woody-3"
+            "button_link": "shopify://products/hopper-3"
           }
         },
         "slide-2": {
@@ -34,16 +44,6 @@
             "image_tablet": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-2.jpg",
             "image_mobile": "shopify://shop_images/SUPs_NO-ORGANGE_Tourer-Back-in-Stock_Aug26-3.jpg",
             "heading": ""
-          }
-        },
-        "image_UPWkm3": {
-          "settings": {
-            "image": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-1.jpg",
-            "image_mobile": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-2.jpg",
-            "heading": "‎",
-            "button_label": "Buy Now",
-            "button_link": "shopify://products/twin",
-            "image_tablet": "shopify://shop_images/SUP_Twin-Back-in-stock_Aug26-3.jpg"
           }
         },
         "image_bAHz74": {
@@ -68,8 +68,8 @@
         }
       },
       "block_order": [
-        "image_UPWkm3",
         "image_e6Nny7",
+        "image_UPWkm3",
         "slide-2",
         "image_bAHz74",
         "image_rC3mcC"
@@ -77,7 +77,7 @@
     },
     "featured-product": {
       "settings": {
-        "product": "woody-3"
+        "product": "twin"
       },
       "blocks": {}
     }
