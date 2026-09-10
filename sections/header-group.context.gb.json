@@ -42,6 +42,17 @@
         "announcement_mnCMPh",
         "announcement-1"
       ]
+    },
+    "header": {
+      "settings": {},
+      "blocks": {
+        "mega_menu_tab_Wn9z4a": {
+          "settings": {
+            "tab_target_2": "Clearance",
+            "tab_target_link_2": "shopify://collections/clearance"
+          }
+        }
+      }
     }
   }
 }
