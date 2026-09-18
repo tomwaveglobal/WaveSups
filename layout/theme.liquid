@@ -22,12 +22,15 @@
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png" />
     {%- endif -%}
 
-    <script
-      src="https://api.contona.ai/js/contona-loader.js"
-      data-api-key="ZtrRpUyoKjp7mgrBN1Z2iaSbHaVRO8Ro"
-      data-base-url="https://api.contona.ai"
-      async
-    ></script> 
+    {%- comment -%}
+      Contona loader disabled: it injected the "Visualise in Garden" button after Add to Cart.
+      <script
+        src="https://api.contona.ai/js/contona-loader.js"
+        data-api-key="ZtrRpUyoKjp7mgrBN1Z2iaSbHaVRO8Ro"
+        data-base-url="https://api.contona.ai"
+        async
+      ></script>
+    {%- endcomment -%}
 
     <title>
       {{- page_title -}}
