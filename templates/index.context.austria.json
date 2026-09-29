@@ -20,6 +20,21 @@
           "settings": {
             "heading": "Get water-ready for less.<p> In Stock: The Roamer <br>for Just €449.95 </p>"
           }
+        },
+        "image_bAHz74": {
+          "disabled": true,
+          "settings": {}
+        },
+        "image_rC3mcC": {
+          "disabled": true,
+          "settings": {}
+        },
+        "slide-2": {
+          "settings": {
+            "heading": "Strength Redefined. <br>Weight Reduced. <br>Adventure Unleashed.",
+            "secondary_heading": "",
+            "button_label": "Shop Tourer 3.0"
+          }
         }
       }
     }
