@@ -278,6 +278,19 @@
           "anchor_to_reviews_widget": true,
           "show_empty_stars": true
         }
+      },
+      "16859463583119579546": {
+        "type": "shopify://apps/everdesk/blocks/chat-widget/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
+        "disabled": false,
+        "settings": {
+          "position": "bottom-right",
+          "offset_side": 20,
+          "offset_bottom": 20,
+          "launcher_label": "",
+          "test_mode": true,
+          "fallback_skin": "classic",
+          "fallback_accent": "#0f172a"
+        }
       }
     }
   },
