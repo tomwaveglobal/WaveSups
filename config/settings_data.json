@@ -284,8 +284,8 @@
         "disabled": false,
         "settings": {
           "position": "bottom-right",
-          "offset_side": 20,
-          "offset_bottom": 20,
+          "offset_side": 40,
+          "offset_bottom": 40,
           "launcher_label": "",
           "test_mode": true,
           "fallback_skin": "classic",
