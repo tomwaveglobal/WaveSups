@@ -286,7 +286,7 @@
           "position": "bottom-right",
           "offset_side": 40,
           "offset_bottom": 40,
-          "launcher_label": "",
+          "launcher_label": "Wave Support",
           "test_mode": true,
           "fallback_skin": "classic",
           "fallback_accent": "#0f172a"
