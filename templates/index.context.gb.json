@@ -19,9 +19,9 @@
         "slide-2": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Home-banner_desktop.jpg",
-            "image_tablet": "shopify://shop_images/Home-banner_tablet.jpg",
-            "image_mobile": "shopify://shop_images/Home-banner_mobile.jpg",
+            "image": "shopify://shop_images/desktop_10Off_SUP-Pre-Order_Oct26_No-Boards-1.jpg",
+            "image_tablet": "shopify://shop_images/tablet_10Off_SUP-Pre-Order_Oct26_No-Boards-2.jpg",
+            "image_mobile": "shopify://shop_images/Mobile_10Off_SUP-Pre-Order_Oct26_No-Boards-3.jpg",
             "heading": "ㅤㅤㅤㅤㅤ",
             "button_label": "Order Now",
             "button_link": "shopify://collections/sup-range"
