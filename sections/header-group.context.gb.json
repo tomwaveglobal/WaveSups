@@ -19,9 +19,9 @@
         "announcement-2": {
           "disabled": false,
           "settings": {
-            "text": "<em><strong>Summer Sale:  15%</strong></em> Off Selected Boards",
-            "link": "shopify://collections/sale-uk",
-            "text_mobile": "<em><strong>SALE ALERT:  15%</strong></em> Off Selected Boards"
+            "text": "<em><strong>&nbsp;10% Off</strong></em> All Pre-Order Boards&nbsp;",
+            "link": "shopify://collections/sup-range",
+            "text_mobile": "&nbsp;<em><strong> 10% Off</strong></em> All Pre-Order Boards &nbsp;"
           }
         },
         "announcement_mnCMPh": {
