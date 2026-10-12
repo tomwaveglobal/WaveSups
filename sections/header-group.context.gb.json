@@ -21,7 +21,8 @@
           "settings": {
             "text": "<em><strong>&nbsp;10% Off</strong></em> All Pre-Order Boards&nbsp;",
             "link": "shopify://collections/sup-range",
-            "text_mobile": "&nbsp;<em><strong> 10% Off</strong></em> All Pre-Order Boards &nbsp;"
+            "text_mobile": "&nbsp;<em><strong> 10% Off</strong></em> All Pre-Order Boards &nbsp;",
+            "icon": "sale"
           }
         },
         "announcement_mnCMPh": {
