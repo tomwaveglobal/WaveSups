@@ -343,6 +343,59 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "1792493037bff2f5dc": {
+      "type": "apps",
+      "blocks": {
+        "everdesk_photo_upload_mxDbn7": {
+          "type": "shopify://apps/everdesk/blocks/photo-upload/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
+          "settings": {
+            "heading": "Send us your photos and videos",
+            "intro": "<p>Already chatting with our team? Share your photos, videos and receipts here and they will go straight onto your enquiry — no new email needed.</p>",
+            "panel_title": "How it works",
+            "step1_title": "Find your ticket number",
+            "step1_text": "It is in the subject line of our emails, in brackets — <strong>[#123456]</strong>",
+            "step2_title": "Add your photos or videos",
+            "step2_text": "Your receipt, your spa's serial plate, your new setup — whatever helps us help you.",
+            "step3_title": "We will take it from here",
+            "step3_text": "Everything lands on your ticket, ready for our team to pick up.",
+            "help_text": "<p><strong>Can't find your ticket number?</strong></p><p>Simply reply to any of our emails with your photos attached — they will land on the same ticket.</p>",
+            "secure_text": "Sent securely, straight to our support team.",
+            "reference_label": "Ticket number",
+            "reference_placeholder": "e.g. 123456",
+            "email_label": "Email address",
+            "email_placeholder": "The one you have been emailing us from",
+            "files_label": "Photos and videos",
+            "drop_title": "Choose photos or videos",
+            "drop_hint": "Up to 10 files · 100 MB each · photos, videos and PDFs",
+            "show_message": true,
+            "message_label": "Anything you would like to add? (optional)",
+            "message_placeholder": "e.g. I would like to register the warranty for my spa from The Range",
+            "button_label": "Send files",
+            "done_title": "Thank you — we have got them!",
+            "again_label": "Send more files",
+            "padding_top": 64
+          }
+        }
+      },
+      "block_order": [
+        "everdesk_photo_upload_mxDbn7"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
     }
   },
   "order": [
@@ -352,6 +405,7 @@
     "rich-text",
     "zendesk_chat_YUjWNa",
     "contact-form",
-    "multicolumn_PUdCbp"
+    "multicolumn_PUdCbp",
+    "1792493037bff2f5dc"
   ]
 }
