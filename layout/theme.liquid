@@ -22,15 +22,12 @@
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png" />
     {%- endif -%}
 
-    {%- comment -%}
-      Contona loader disabled: it injected the "Visualise in Garden" button after Add to Cart.
-      <script
-        src="https://api.contona.ai/js/contona-loader.js"
-        data-api-key="ZtrRpUyoKjp7mgrBN1Z2iaSbHaVRO8Ro"
-        data-base-url="https://api.contona.ai"
-        async
-      ></script>
-    {%- endcomment -%}
+    <script
+      src="https://api.contona.ai/js/contona-loader.js"
+      data-api-key="ZtrRpUyoKjp7mgrBN1Z2iaSbHaVRO8Ro"
+      data-base-url="https://api.contona.ai"
+      async
+    ></script> 
 
     <title>
       {{- page_title -}}
@@ -62,12 +59,12 @@
 
     <link rel="stylesheet" href="{{ 'apps.css' | asset_url }}" media="print" fetchpriority="low" onload="this.media='all'">
 
-{%- comment -%}
-    Zendesk embedded mode: on the contact template, stop the messaging widget
-    from auto-rendering as a floating bubble so the "Zendesk Chat Bot" section
-    can render it inline in the page. Must run before the Zendesk snippet
-    (injected via content_for_header below).
-
+    {%- comment -%}
+      Zendesk embedded mode: on the contact template, stop the messaging widget
+      from auto-rendering as a floating bubble so the "Zendesk Chat Bot" section
+      can render it inline in the page. Must run before the Zendesk snippet
+      (injected via content_for_header below).
+    {%- endcomment -%}
     {%- if template.suffix == 'contact' -%}
       <script>
         window.zEMessenger = window.zEMessenger || {};
@@ -75,7 +72,6 @@
         window.zEMessenger.autorender = false;
       </script>
     {%- endif -%}
-  {%- endcomment -%}
 
     {{ content_for_header }}
 
