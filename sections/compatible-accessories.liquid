@@ -189,7 +189,9 @@
             {%- endif -%}
           </span>
         </span>
-        <span class="compat-tile__count" aria-label="{{ shown }} compatible">{{ shown }}</span>
+        {%- if section.settings.show_specs and group_spec != blank -%}
+          <span class="compat-tile__count" aria-label="{{ shown }} compatible">{{ shown }}</span>
+        {%- endif -%}
       </button>
     {%- endcapture -%}
     {%- assign tabs_html = tabs_html | append: tab -%}
