@@ -131,6 +131,7 @@ if (!customElements.get('predictive-search')) {
         const url = new URL(`${theme.routes.shop_url}${theme.routes.predictive_search_url}`);
 
         url.searchParams.set('q', this.getQuery());
+        url.searchParams.set('resources[type]', 'product');
         url.searchParams.set('resources[limit]', this.hasAttribute('data-limit') ? parseInt(this.getAttribute('data-limit')) : 3);
         url.searchParams.set('resources[limit_scope]', 'each');
         url.searchParams.set('section_id', theme.utils.sectionId(this));

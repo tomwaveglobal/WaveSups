@@ -22,6 +22,7 @@
     data-limit="{{ settings.predictive_search_limit }}"
   {% endif -%}
 >
+  <input type="hidden" name="type" value="product" />
   <input type="hidden" name="options[prefix]" value="last" />
   <label class="sr-only" for="SearchFormInput-{{ section_id }}">{{ 'general.search.title' | t }}</label>
   <div class="search__field field flex items-center gap-4 relative">
