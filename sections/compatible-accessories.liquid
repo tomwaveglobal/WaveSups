@@ -202,6 +202,7 @@
       {%- endfor -%}
     {%- endcapture -%}
 
+    <!-- compat-debug {{ group_title }} size={{ group_products.size }} first={{ group_products.first.handle }} avail={{ group_products.first.available }} shown={{ shown }} raw={% for e in entries %}[{{ e.settings.products.size }}:{{ e.settings.products | map: 'handle' | join: ',' }}]{% endfor %} -->
     {%- capture panel -%}
       <div id="{{ panel_id }}" role="tabpanel"{% unless is_first %} hidden{% endunless %}>
         <div class="compat-panel-intro">
