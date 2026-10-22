@@ -233,7 +233,7 @@
 
         {%- if shown > 0 -%}
           <slider-element id="{{ slider_id }}" class="compat-cards grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card"{% if section.settings.carousel_on_desktop or section.settings.swipe_on_mobile %} tabindex="0"{% endif %}>
-            <motion-list class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
+            <motion-list motion-reduced class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
               {{- cards -}}
             </motion-list>
           </slider-element>
@@ -560,12 +560,12 @@
         {%- endif -%}
       </div>
 
-      <tabs-element id="CompatTabs-{{ section.id }}" class="compat__nav">
+      <div id="CompatTabs-{{ section.id }}" class="compat__nav">
         <div class="compat__tiles" role="tablist" aria-label="{{ 'Accessory types' }}">
           {{- tabs_html -}}
         </div>
         {{- indicators_html -}}
-      </tabs-element>
+      </div>
 
       {{- panels_html -}}
 
@@ -581,16 +581,40 @@
 
 <script>
   (() => {
-    const tabs = document.getElementById('CompatTabs-{{ section.id }}');
-    if (!tabs) return;
-    // TabsElement toggles [disabled] on the active tile; mirror it to aria-selected and keep the
-    // active tile scrolled into view on mobile.
-    new MutationObserver(() => {
-      tabs.querySelectorAll('[role="tab"]').forEach((tile) => {
-        tile.setAttribute('aria-selected', tile.disabled ? 'true' : 'false');
-        if (tile.disabled) tile.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    // Plain show/hide tab switching. The theme's tabs-element slides panels in and staggers the
+    // cards, which read as a bounce on every click.
+    const nav = document.getElementById('CompatTabs-{{ section.id }}');
+    if (!nav) return;
+    const tiles = Array.from(nav.querySelectorAll('[role="tab"]'));
+    const indicators = Array.from(nav.querySelectorAll('.indicators'));
+
+    const select = (index) => {
+      tiles.forEach((tile, i) => {
+        const active = i === index;
+        tile.disabled = active;
+        tile.setAttribute('aria-selected', active ? 'true' : 'false');
+        const panel = document.getElementById(tile.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !active;
+        if (active) tile.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
       });
-    }).observe(tabs, { attributes: true, attributeFilter: ['selected-index'] });
+      indicators.forEach((group, i) => {
+        group.hidden = i !== index;
+        if (i === index) {
+          group.querySelectorAll('button').forEach((button) => {
+            if (typeof button.unload === 'function') button.unload();
+            if (typeof button.load === 'function') button.load();
+          });
+        }
+      });
+    };
+
+    tiles.forEach((tile, i) => tile.addEventListener('click', () => select(i)));
+    if (window.Shopify && Shopify.designMode) {
+      nav.addEventListener('shopify:block:select', (event) => {
+        const i = tiles.indexOf(event.target);
+        if (i > -1) select(i);
+      });
+    }
   })();
 </script>
 {%- elsif request.design_mode -%}
