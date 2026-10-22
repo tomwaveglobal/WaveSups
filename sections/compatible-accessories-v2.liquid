@@ -21,8 +21,8 @@
 
   assign tab_list = '^^'
   assign preferred = section.settings.tab_order | split: ','
-  for wanted in preferred
-    assign wanted = wanted | strip
+  for item in preferred
+    assign wanted = item | strip
     assign tab_key = '^^' | append: wanted | append: '^^'
     if wanted != blank and present contains tab_key
       assign tab_list = tab_list | append: wanted | append: '^^'
