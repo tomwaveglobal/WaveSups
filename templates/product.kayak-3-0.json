@@ -1872,9 +1872,16 @@
         "group_pumps",
         "group_spares_kayak"
       ],
+      "disabled": true,
       "settings": {
+        "style": "soft",
         "show_specs": true,
+        "show_board": true,
+        "board_label": "Showing parts for",
         "fits_label": "Fits the",
+        "card_tag": "Fits",
+        "card_layout": "compact",
+        "quick_add": true,
         "hide_sold_out": false,
         "help_text": "<p>Not sure something fits? <a href=\"/pages/contact\">Ask our team</a> and we'll check for you.</p>",
         "product_limit": 8,
@@ -1882,152 +1889,25 @@
         "carousel_on_desktop": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "heading": "Kit that <em>fits</em>",
-        "heading_tag": "h2",
         "subheading": "Compatible accessories",
+        "heading": "Kit that <em>fits</em>",
+        "heading_scribble": "basic-underline",
+        "heading_tag": "h2",
         "description": "<p>Every fin, seat, paddle and spare here is matched to this kayak or canoe.</p>",
         "padding_top": 32,
         "padding_bottom": 32,
-        "full_width": false,
-        "style": "soft",
-        "show_board": true,
-        "board_label": "Showing parts for",
-        "card_tag": "Fits",
-        "heading_scribble": "basic-underline",
-        "card_layout": "compact",
-        "quick_add": true
-      },
-      "disabled": true
+        "full_width": false
+      }
     },
     "compatible_accessories_v2": {
       "type": "compatible-accessories-v2",
-      "blocks": {
-        "group_fins_kayak": {
-          "type": "group",
-          "settings": {
-            "title": "Fins",
-            "products": [
-              "kayak-fin"
-            ],
-            "boards": [
-              "navigator-3",
-              "voyager-kayak",
-              "roamer-inflatable-kayak",
-              "trailblazer-3",
-              "navigator-kayak"
-            ]
-          }
-        },
-        "group_fins_qr": {
-          "type": "group",
-          "settings": {
-            "title": "Fins",
-            "products": [
-              "quick-release-fin-tourer-recon-navigator-venturer-trailblazer-3"
-            ],
-            "boards": [
-              "navigator-3",
-              "trailblazer-3",
-              "venturer-inflatable-canoe",
-              "navigator-kayak"
-            ]
-          }
-        },
-        "group_seats_kayak": {
-          "type": "group",
-          "settings": {
-            "title": "Seats & footrests",
-            "products": [
-              "kayak-seat-2-0",
-              "foam-kayak-seat",
-              "kayak-footrest-2-0",
-              "kayak-expansion-pack"
-            ],
-            "boards": [
-              "navigator-3",
-              "voyager-kayak",
-              "roamer-inflatable-kayak",
-              "trailblazer-3",
-              "navigator-kayak"
-            ]
-          }
-        },
-        "group_paddles_kayak": {
-          "type": "group",
-          "settings": {
-            "title": "Paddles",
-            "products": [
-              "double-sided-kayak-paddle-3-0",
-              "double-sided-kayak-paddle",
-              "aluminium-kids-kayak-paddle-3"
-            ],
-            "boards": [
-              "navigator-3",
-              "voyager-kayak",
-              "roamer-inflatable-kayak",
-              "trailblazer-3",
-              "navigator-kayak"
-            ]
-          }
-        },
-        "group_paddles_canoe": {
-          "type": "group",
-          "settings": {
-            "title": "Paddles",
-            "products": [
-              "canoe-paddle"
-            ],
-            "boards": [
-              "venturer-inflatable-canoe"
-            ]
-          }
-        },
-        "group_pumps": {
-          "type": "group",
-          "settings": {
-            "title": "Pumps",
-            "products": [
-              "triple-action-hand-pump",
-              "electric-pump-for-sup-kayak-20psi-black-orange",
-              "sup-electric-pump-inflatable-paddle-board-kayak"
-            ],
-            "boards": []
-          }
-        },
-        "group_spares_kayak": {
-          "type": "group",
-          "settings": {
-            "title": "Spares & upgrades",
-            "products": [
-              "kayak-bottle-holder",
-              "kayak-seat-clip",
-              "kayak-metal-clips-set-4-pack",
-              "kayak-repair-kit"
-            ],
-            "boards": [
-              "navigator-3",
-              "voyager-kayak",
-              "roamer-inflatable-kayak",
-              "trailblazer-3",
-              "navigator-kayak"
-            ]
-          }
-        }
-      },
-      "block_order": [
-        "group_fins_kayak",
-        "group_fins_qr",
-        "group_seats_kayak",
-        "group_paddles_kayak",
-        "group_paddles_canoe",
-        "group_pumps",
-        "group_spares_kayak"
-      ],
       "settings": {
         "product_limit": 8,
         "columns": 4,
         "carousel_on_desktop": false,
         "quick_add": true,
+        "show_icons": true,
+        "icon_color": "#f59e0b",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "heading": "What fits this kayak",
@@ -2043,9 +1923,7 @@
         "padding_bottom": 48,
         "divider": false,
         "full_width": false,
-        "rounded": false,
-        "show_icons": true,
-        "icon_color": "#f59e0b"
+        "rounded": false
       }
     }
   },
