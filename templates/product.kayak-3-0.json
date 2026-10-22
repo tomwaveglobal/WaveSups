@@ -1747,10 +1747,11 @@
               "kayak-fin"
             ],
             "boards": [
-              "navigator-kayak",
+              "navigator-3",
               "voyager-kayak",
               "roamer-inflatable-kayak",
-              "trailblazer-3"
+              "trailblazer-3",
+              "navigator-kayak"
             ]
           }
         },
@@ -1764,9 +1765,10 @@
               "quick-release-fin-tourer-recon-navigator-venturer-trailblazer-3"
             ],
             "boards": [
-              "navigator-kayak",
+              "navigator-3",
               "trailblazer-3",
-              "venturer-inflatable-canoe"
+              "venturer-inflatable-canoe",
+              "navigator-kayak"
             ]
           }
         },
@@ -1783,24 +1785,11 @@
               "kayak-expansion-pack"
             ],
             "boards": [
-              "navigator-kayak",
+              "navigator-3",
               "voyager-kayak",
               "roamer-inflatable-kayak",
-              "trailblazer-3"
-            ]
-          }
-        },
-        "group_seats_canoe": {
-          "type": "group",
-          "settings": {
-            "title": "Seats & footrests",
-            "spec": "Wooden bench seats",
-            "note": "",
-            "products": [
-              "wooden-canoe-seat-venturer"
-            ],
-            "boards": [
-              "venturer-inflatable-canoe"
+              "trailblazer-3",
+              "navigator-kayak"
             ]
           }
         },
@@ -1816,10 +1805,11 @@
               "aluminium-kids-kayak-paddle-3"
             ],
             "boards": [
-              "navigator-kayak",
+              "navigator-3",
               "voyager-kayak",
               "roamer-inflatable-kayak",
-              "trailblazer-3"
+              "trailblazer-3",
+              "navigator-kayak"
             ]
           }
         },
@@ -1864,10 +1854,11 @@
               "kayak-repair-kit"
             ],
             "boards": [
-              "navigator-kayak",
+              "navigator-3",
               "voyager-kayak",
               "roamer-inflatable-kayak",
-              "trailblazer-3"
+              "trailblazer-3",
+              "navigator-kayak"
             ]
           }
         },
@@ -1881,8 +1872,9 @@
               "kayak-bungee-cord"
             ],
             "boards": [
-              "navigator-kayak",
-              "roamer-inflatable-kayak"
+              "navigator-3",
+              "roamer-inflatable-kayak",
+              "navigator-kayak"
             ]
           }
         }
@@ -1891,7 +1883,6 @@
         "group_fins_kayak",
         "group_fins_qr",
         "group_seats_kayak",
-        "group_seats_canoe",
         "group_paddles_kayak",
         "group_paddles_canoe",
         "group_pumps",
@@ -1908,10 +1899,10 @@
         "carousel_on_desktop": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "heading": "What <em>fits</em> this kayak",
+        "heading": "Kit that <em>fits</em>",
         "heading_tag": "h2",
         "subheading": "Compatible accessories",
-        "description": "<p>Every fin, seat, paddle and spare here is matched to this kayak.</p>",
+        "description": "<p>Every fin, seat, paddle and spare here is matched to this kayak or canoe.</p>",
         "padding_top": 32,
         "padding_bottom": 32,
         "full_width": false,
