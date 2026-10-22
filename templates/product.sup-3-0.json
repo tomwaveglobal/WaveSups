@@ -682,7 +682,7 @@
           "type": "nav_item",
           "settings": {
             "title": "What Fits",
-            "target_id": "shopify-section-template--28923902755203__compatible_accessories"
+            "target_id": "shopify-section-template--28923902755203__compatible_accessories_v2"
           }
         }
       },
@@ -1993,6 +1993,200 @@
         "heading_scribble": "basic-underline",
         "card_layout": "compact",
         "quick_add": true
+      },
+      "disabled": true
+    },
+    "compatible_accessories_v2": {
+      "type": "compatible-accessories-v2",
+      "blocks": {
+        "group_fins_tourer": {
+          "type": "group",
+          "settings": {
+            "title": "Fins",
+            "products": [
+              "quick-release-fin-tourer-recon-navigator-venturer-trailblazer-3"
+            ],
+            "boards": [
+              "tourer-3",
+              "recon-3",
+              "navigator-3",
+              "trailblazer-3",
+              "venturer-inflatable-canoe"
+            ]
+          }
+        },
+        "group_fins_woody": {
+          "type": "group",
+          "settings": {
+            "title": "Fins",
+            "products": [
+              "quick-release-fin-3"
+            ],
+            "boards": [
+              "woody-3",
+              "surf-3",
+              "pro-3"
+            ]
+          }
+        },
+        "group_fins_pro": {
+          "type": "group",
+          "settings": {
+            "title": "Fins",
+            "products": [
+              "small-quick-release-fin"
+            ],
+            "boards": [
+              "pro-3"
+            ]
+          }
+        },
+        "group_leashes": {
+          "type": "group",
+          "settings": {
+            "title": "Leashes",
+            "products": [
+              "quick-release-coiled-ankle-leash",
+              "quick-release-waist-belt-leash",
+              "quick-release-waist-belt-3",
+              "non-coiled-ankle-leash"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "cruiser-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
+        },
+        "group_paddles_sup": {
+          "type": "group",
+          "settings": {
+            "title": "Paddles",
+            "products": [
+              "basic-paddle",
+              "premium-paddle",
+              "pro-paddle"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "cruiser-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
+        },
+        "group_paddles_kayak": {
+          "type": "group",
+          "settings": {
+            "title": "Paddles",
+            "products": [
+              "double-sided-kayak-paddle-3-0"
+            ],
+            "boards": [
+              "navigator-3",
+              "trailblazer-3"
+            ]
+          }
+        },
+        "group_pumps": {
+          "type": "group",
+          "settings": {
+            "title": "Pumps",
+            "products": [
+              "triple-action-hand-pump",
+              "electric-pump-for-sup-kayak-20psi-black-orange",
+              "sup-electric-pump-inflatable-paddle-board-kayak"
+            ],
+            "boards": []
+          }
+        },
+        "group_spares": {
+          "type": "group",
+          "settings": {
+            "title": "Spares & upgrades",
+            "products": [
+              "air-valve",
+              "sup-repair-kit-3",
+              "carry-case-3",
+              "sup-3-0-bungee-kit"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "cruiser-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
+        },
+        "group_kayak_conversion": {
+          "type": "group",
+          "settings": {
+            "title": "Kayak conversion",
+            "products": [
+              "kayak-conversion-kit",
+              "kayak-conversion-seat"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "group_fins_tourer",
+        "group_fins_woody",
+        "group_fins_pro",
+        "group_leashes",
+        "group_paddles_sup",
+        "group_paddles_kayak",
+        "group_pumps",
+        "group_kayak_conversion",
+        "group_spares"
+      ],
+      "settings": {
+        "product_limit": 8,
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "What fits this board",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
       }
     }
   },
@@ -2009,6 +2203,7 @@
     "image-with-text-2",
     "product-details",
     "compatible_accessories",
+    "compatible_accessories_v2",
     "comparison_table_rB8zXC",
     "faq",
     "rich_text_ePnQft",
