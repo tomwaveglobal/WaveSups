@@ -1402,7 +1402,7 @@
         "board_label": "Showing parts for",
         "fits_label": "Fits the",
         "card_tag": "Fits",
-        "card_layout": "compact",
+        "card_layout": "full",
         "quick_add": true,
         "hide_sold_out": false,
         "help_text": "<p>Not sure something fits? <a href=\"/pages/contact\">Ask our team</a> and we'll check for you.</p>",
