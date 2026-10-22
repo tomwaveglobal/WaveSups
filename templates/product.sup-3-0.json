@@ -1949,7 +1949,7 @@
       "settings": {
         "show_specs": true,
         "fits_label": "Fits the",
-        "hide_sold_out": true,
+        "hide_sold_out": false,
         "help_text": "<p>Not sure something fits? <a href=\"/pages/contact\">Ask our team</a> and we'll check for you.</p>",
         "product_limit": 8,
         "columns": 4,
