@@ -323,7 +323,6 @@
         },
         "icon_list_4pRH6W": {
           "type": "icon_list",
-          "disabled": true,
           "repeater": "{{ product.metafields.custom.product_icons.value }}",
           "settings": {
             "heading": "Product Highlights",
