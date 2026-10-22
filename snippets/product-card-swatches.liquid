@@ -32,6 +32,21 @@
       break
     endif
   endfor
+
+  comment
+    Colour names the swatch snippet can draw: swatch_config entries plus common CSS colour words.
+    A value made only of these (e.g. "Navy", "Black/Navy") is a colour; anything else
+    (e.g. "Premium", "Tourer 2.0") is treated as a model and shows its variant image.
+  endcomment
+  assign known_colours = 'black,white,grey,gray,navy,blue,aqua,teal,green,red,orange,pink,purple,yellow,brown,khaki,beige,silver,gold'
+  if settings.swatch_config != blank
+    assign swatch_config_lines = settings.swatch_config | newline_to_br | split: '<br />'
+    for line in swatch_config_lines
+      assign config_name = line | strip | split: ':' | first | downcase | strip
+      assign known_colours = known_colours | append: ',' | append: config_name
+    endfor
+  endif
+  assign known_colours = known_colours | split: ','
 -%}
 {%- for option in product.options_with_values -%}
   {%- liquid
@@ -83,7 +98,18 @@
                 assign swatch = value.swatch
               endif
 
+              assign value_is_colour = true
+              assign value_parts = value | downcase | replace: ' & ', '/' | replace: '&', '/' | split: '/'
+              for value_part in value_parts
+                assign value_part = value_part | strip
+                unless known_colours contains value_part
+                  assign value_is_colour = false
+                endunless
+              endfor
+
               if use_variant_image and variant.image
+                assign swatch = variant
+              elsif value_is_colour == false and variant.image
                 assign swatch = variant
               elsif settings.product_color_swatch_type == 'variant' and variant.image
                 assign swatch = variant
