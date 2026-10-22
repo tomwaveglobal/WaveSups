@@ -2177,7 +2177,7 @@
         "heading_size": "title-md",
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
-        "subheading": "",
+        "subheading": "Compatible Accessories",
         "description": "",
         "highlighted_text": "none",
         "highlighted_scribble": "circle",
@@ -2186,7 +2186,9 @@
         "padding_bottom": 48,
         "divider": false,
         "full_width": false,
-        "rounded": false
+        "rounded": false,
+        "show_icons": true,
+        "icon_color": "#f59e0b"
       }
     }
   },
