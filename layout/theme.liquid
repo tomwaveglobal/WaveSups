@@ -104,13 +104,26 @@
 
     merchantwidget.start({
 
-     position: 'RIGHT_BOTTOM'
+     position: 'RIGHT_BOTTOM',
+
+     sideMargin: 20,
+
+     bottomMargin: 80,
+
+     mobileSideMargin: 20,
+
+     mobileBottomMargin: 80
 
    });
 
   });
 
 </script>
+
+<style>
+  /* Keep the Google badge below the Everdesk launcher, nudge and chat panel (z-index 2147482999+) */
+  #google-merchantwidget-iframe-wrapper { z-index: 2147482990 !important; }
+</style>
 
 <!-- END MerchantWidget Code -->
   </head>
