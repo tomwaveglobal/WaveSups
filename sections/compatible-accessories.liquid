@@ -25,7 +25,6 @@
     assign entries = section.blocks
   endif
 
-  assign empty_array = '' | split: ','
   assign product_key = '|' | append: product.id | append: '|'
 
   comment
@@ -57,7 +56,7 @@
 -%}
 
 {%- if categories.size > 0 -%}
-  {%- comment -%} Pass 2: build the chip row, tab buttons and panels for each tab. {%- endcomment -%}
+  {%- comment -%} Pass 2: build the chip row, tab buttons and panels for each tab. Products are looped per entry rather than merged with concat, which doesn't accept product_list settings. {%- endcomment -%}
   {%- capture chips_html -%}{%- endcapture -%}
   {%- capture tabs_html -%}{%- endcapture -%}
   {%- capture indicators_html -%}{%- endcapture -%}
@@ -70,7 +69,6 @@
       assign group_spec = ''
       assign group_note = ''
       assign group_attrs = ''
-      assign group_products = empty_array
 
       for entry in entries
         assign ok_key = '|' | append: forloop.index0 | append: '|'
@@ -82,12 +80,10 @@
           assign e_title = entry.category.value | default: entry.name.value | default: 'Accessories' | strip
           assign e_spec = entry.spec.value
           assign e_note = entry.note.value
-          assign e_products = entry.accessories.value
         else
           assign e_title = entry.settings.title | default: 'Accessories' | strip
           assign e_spec = entry.settings.spec
           assign e_note = entry.settings.note
-          assign e_products = entry.settings.products
         endif
 
         if e_title != group_title
@@ -104,9 +100,6 @@
         endif
         if e_note != blank
           assign group_note = group_note | append: ' ' | append: e_note
-        endif
-        if e_products != blank
-          assign group_products = group_products | concat: e_products
         endif
         if group_attrs == blank and use_metafield == false
           assign group_attrs = entry.shopify_attributes
@@ -161,7 +154,24 @@
       assign shown = 0
     -%}
     {%- capture cards -%}
-      {%- for accessory in group_products -%}
+      {%- for entry in entries -%}
+        {%- liquid
+          assign ok_key = '|' | append: forloop.index0 | append: '|'
+          unless ok_list contains ok_key
+            continue
+          endunless
+          if use_metafield
+            assign e_title = entry.category.value | default: entry.name.value | default: 'Accessories' | strip
+            assign e_products = entry.accessories.value
+          else
+            assign e_title = entry.settings.title | default: 'Accessories' | strip
+            assign e_products = entry.settings.products
+          endif
+          if e_title != group_title or e_products == blank
+            continue
+          endif
+        -%}
+      {%- for accessory in e_products -%}
         {%- liquid
           assign seen_key = '|' | append: accessory.id | append: '|'
           if accessory == blank or accessory.id == product.id or seen contains seen_key
@@ -200,9 +210,9 @@
           show_icon_list: settings.product_icon_list
         -%}
       {%- endfor -%}
+      {%- endfor -%}
     {%- endcapture -%}
 
-    <!-- compat-debug {{ group_title }} size={{ group_products.size }} first={{ group_products.first.handle }} avail={{ group_products.first.available }} shown={{ shown }} raw={% for e in entries %}[{{ e.settings.products.size }}:{{ e.settings.products | map: 'handle' | join: ',' }}]{% endfor %} -->
     {%- capture panel -%}
       <div id="{{ panel_id }}" role="tabpanel"{% unless is_first %} hidden{% endunless %}>
         <div class="compat-panel-intro">
