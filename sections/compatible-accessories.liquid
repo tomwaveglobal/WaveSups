@@ -267,6 +267,11 @@
     --c-radius: var(--rounded-block, 20px);
     --c-radius-card: var(--rounded-card, 16px);
     --c-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    /* own stacking layer: the product-videos app leaves a fixed modal over the page
+       that hides unpositioned content */
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
     color: var(--c-ink);
     background: var(--c-panel);
     border-radius: var(--c-radius);
