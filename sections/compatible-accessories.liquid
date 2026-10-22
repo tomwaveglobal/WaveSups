@@ -250,49 +250,41 @@
     --section-padding-top: {{ section.settings.padding_top }}px;
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
   }
+  /* Wave brand tokens — same palette as the FY27 sections on Wave Spas (wave-fy27.css):
+     black / white, soft grey panels, amber accent. */
   #shopify-section-{{ section.id }} .compat {
-    --c-ink: 255 255 255;
-    --c-muted: 255 255 255 / 0.72;
-    --c-accent: 168 232 226;
-    --c-accent-ink: 8 57 64;
-    --c-glass: 255 255 255 / 0.07;
-    --c-glass-hover: 255 255 255 / 0.12;
-    --c-line: 255 255 255 / 0.14;
-    --c-bg: radial-gradient(120% 90% at 100% 0%, rgba(87, 196, 186, 0.35) 0%, rgba(87, 196, 186, 0) 55%),
-            linear-gradient(160deg, #052a30 0%, #083940 45%, #05606e 100%);
-    --c-wave: rgba(168, 232, 226, 0.14);
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    color: rgb(var(--c-ink));
-    background: var(--c-bg);
-    border-radius: clamp(20px, 2.4vw, 32px);
-    padding: clamp(28px, 4.5vw, 64px) clamp(18px, 4vw, 56px) clamp(32px, 5vw, 72px);
+    --c-ink: #000;
+    --c-ink-2: #3f3f46;
+    --c-muted: #71717a;
+    --c-line: rgba(0, 0, 0, 0.1);
+    --c-panel: #fafafa;
+    --c-surface: #fff;
+    --c-accent: #f59e0b;
+    --c-accent-ink: #b45309;
+    --c-active-bg: #000;
+    --c-active-ink: #fff;
+    --color-highlight: 245 158 11;
+    --c-radius: var(--rounded-block, 20px);
+    --c-radius-card: var(--rounded-card, 16px);
+    --c-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    color: var(--c-ink);
+    background: var(--c-panel);
+    border-radius: var(--c-radius);
+    padding: clamp(28px, 4.5vw, 64px) clamp(16px, 4vw, 56px);
   }
-  #shopify-section-{{ section.id }} .compat--light {
-    --c-ink: 8 57 64;
-    --c-muted: 8 57 64 / 0.72;
-    --c-accent: 5 123 142;
-    --c-accent-ink: 255 255 255;
-    --c-glass: 255 255 255 / 0.7;
-    --c-glass-hover: 255 255 255 / 0.95;
-    --c-line: 8 57 64 / 0.12;
-    --c-bg: radial-gradient(120% 90% at 100% 0%, rgba(168, 232, 226, 0.7) 0%, rgba(168, 232, 226, 0) 55%),
-            linear-gradient(160deg, #f2fbfa 0%, #e6f6f4 100%);
-    --c-wave: rgba(5, 123, 142, 0.08);
+  #shopify-section-{{ section.id }} .compat--white { --c-panel: #fff; --c-surface: #fafafa; }
+  #shopify-section-{{ section.id }} .compat--dark {
+    --c-ink: #fff;
+    --c-ink-2: rgba(255, 255, 255, 0.82);
+    --c-muted: rgba(255, 255, 255, 0.6);
+    --c-line: rgba(255, 255, 255, 0.16);
+    --c-panel: #000;
+    --c-surface: rgba(255, 255, 255, 0.06);
+    --c-accent-ink: #f59e0b;
+    --c-active-bg: #fff;
+    --c-active-ink: #000;
   }
   #shopify-section-{{ section.id }} .page-width--full .compat { border-radius: 0; }
-
-  /* Decorative waves along the bottom edge */
-  #shopify-section-{{ section.id }} .compat__waves {
-    position: absolute;
-    inset: auto 0 0 0;
-    height: clamp(90px, 14vw, 180px);
-    z-index: -1;
-    pointer-events: none;
-    color: var(--c-wave);
-  }
-  #shopify-section-{{ section.id }} .compat__waves svg { width: 100%; height: 100%; display: block; }
 
   /* Header */
   #shopify-section-{{ section.id }} .compat__head {
@@ -301,39 +293,34 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 24px 40px;
-    margin-block-end: clamp(24px, 3vw, 40px);
+    margin-block-end: clamp(28px, 3.5vw, 44px);
   }
-  #shopify-section-{{ section.id }} .compat__intro { max-width: 40rem; display: grid; gap: 14px; }
+  #shopify-section-{{ section.id }} .compat__intro { max-width: 44rem; }
   #shopify-section-{{ section.id }} .compat__eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.75rem;
+    margin: 0 0 16px;
+    font-size: var(--text-sm);
     font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgb(var(--c-accent));
-  }
-  #shopify-section-{{ section.id }} .compat__eyebrow::before {
-    content: '';
-    width: 28px;
-    height: 2px;
-    border-radius: 2px;
-    background: currentColor;
+    line-height: 1.3;
+    color: var(--c-accent-ink);
   }
   #shopify-section-{{ section.id }} .compat__title {
     margin: 0;
-    color: rgb(var(--c-ink));
-    font-size: clamp(2rem, 4.4vw, 3.5rem);
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    font-weight: 700;
+    font-family: var(--font-heading-family);
+    font-style: var(--font-heading-style);
+    font-weight: var(--font-heading-weight);
+    letter-spacing: var(--font-heading-letter-spacing);
+    font-size: var(--title-md);
+    line-height: 1.05;
+    color: inherit;
   }
-  #shopify-section-{{ section.id }} .compat__title em {
-    font-style: normal;
-    color: rgb(var(--c-accent));
+  #shopify-section-{{ section.id }} .compat__title em { font-style: normal; }
+  #shopify-section-{{ section.id }} .compat__desc {
+    max-width: 44ch;
+    margin-top: 20px;
+    font-size: var(--text-lg);
+    line-height: 1.5;
+    color: var(--c-ink-2);
   }
-  #shopify-section-{{ section.id }} .compat__desc { color: rgb(var(--c-muted)); font-size: 1.0625rem; line-height: 1.5; }
   #shopify-section-{{ section.id }} .compat__desc p { margin: 0; }
 
   /* "Showing parts for" board badge */
@@ -341,12 +328,10 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 8px 20px 8px 8px;
+    padding: 8px 22px 8px 8px;
     border-radius: 999px;
-    background: rgb(var(--c-glass));
-    border: 1px solid rgb(var(--c-line));
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
   }
   #shopify-section-{{ section.id }} .compat__board img {
     width: 52px;
@@ -356,26 +341,17 @@
     background: #fff;
     padding: 4px;
   }
-  #shopify-section-{{ section.id }} .compat__board-text { display: grid; gap: 3px; line-height: 1.15; }
-  #shopify-section-{{ section.id }} .compat__board-text small {
-    font-size: 0.6875rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgb(var(--c-muted));
-  }
-  #shopify-section-{{ section.id }} .compat__board-text strong { font-size: 1rem; font-weight: 600; }
+  #shopify-section-{{ section.id }} .compat__board-text { display: grid; gap: 4px; line-height: 1.15; }
+  #shopify-section-{{ section.id }} .compat__board-text small { font-size: var(--text-sm); color: var(--c-muted); }
+  #shopify-section-{{ section.id }} .compat__board-text strong { font-size: 1rem; font-weight: 700; }
 
   /* Category tiles (these are the tabs) */
-  #shopify-section-{{ section.id }} .compat__nav {
-    display: flex;
-    align-items: stretch;
-    gap: 16px;
-  }
+  #shopify-section-{{ section.id }} .compat__nav { display: flex; align-items: stretch; gap: 16px; }
   #shopify-section-{{ section.id }} .compat__tiles {
     flex: 1;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(200px, 1fr);
+    grid-auto-columns: minmax(190px, 1fr);
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -390,58 +366,38 @@
     align-items: center;
     gap: 14px;
     min-width: 0;
-    padding: 16px 18px;
+    padding: 18px;
     text-align: start;
-    color: rgb(var(--c-ink));
-    background: rgb(var(--c-glass));
-    border: 1px solid rgb(var(--c-line));
-    border-radius: 18px;
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    color: var(--c-ink);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: var(--c-radius-card);
     scroll-snap-align: start;
     cursor: pointer;
     opacity: 1;
-    transition: transform 0.25s cubic-bezier(.2,.8,.2,1), background-color 0.25s, border-color 0.25s, box-shadow 0.25s, color 0.25s;
+    backdrop-filter: none;
+    transition: transform 0.4s var(--c-ease), background-color 0.25s, border-color 0.25s, color 0.25s;
   }
-  #shopify-section-{{ section.id }} .compat-tile:hover {
-    transform: translateY(-3px);
-    background: rgb(var(--c-glass-hover));
-    border-color: rgb(var(--c-accent) / 0.6);
-  }
-  #shopify-section-{{ section.id }} .compat-tile:focus-visible { outline: 2px solid rgb(var(--c-accent)); outline-offset: 3px; }
+  #shopify-section-{{ section.id }} .compat-tile:hover { transform: translateY(-2px); border-color: var(--c-ink); }
+  #shopify-section-{{ section.id }} .compat-tile:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; }
   #shopify-section-{{ section.id }} .compat-tile[disabled] {
     cursor: default;
     opacity: 1;
-    transform: translateY(-3px);
-    color: rgb(var(--c-accent-ink));
-    background: rgb(var(--c-accent));
-    border-color: rgb(var(--c-accent));
-    box-shadow: 0 18px 40px -18px rgb(var(--c-accent) / 0.9);
+    transform: none;
+    color: var(--c-active-ink);
+    background: var(--c-active-bg);
+    border-color: var(--c-active-bg);
   }
-  #shopify-section-{{ section.id }} .compat-tile__icon {
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: rgb(var(--c-ink) / 0.1);
-    transition: background-color 0.25s;
-  }
-  #shopify-section-{{ section.id }} .compat-tile[disabled] .compat-tile__icon { background: rgb(var(--c-accent-ink) / 0.12); }
-  #shopify-section-{{ section.id }} .compat-icon { width: 26px; height: 26px; }
+  #shopify-section-{{ section.id }} .compat-tile__icon { flex-shrink: 0; color: var(--c-accent); line-height: 0; }
+  #shopify-section-{{ section.id }} .compat-icon { width: 34px; height: 34px; }
   #shopify-section-{{ section.id }} .compat-tile__text { display: grid; gap: 4px; min-width: 0; }
-  #shopify-section-{{ section.id }} .compat-tile__label {
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.75;
-  }
+  #shopify-section-{{ section.id }} .compat-tile__label { font-size: var(--text-sm); font-weight: 500; line-height: 1.2; color: var(--c-muted); }
+  #shopify-section-{{ section.id }} .compat-tile[disabled] .compat-tile__label { color: inherit; opacity: 0.7; }
   #shopify-section-{{ section.id }} .compat-tile__value {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.0625rem;
+    font-weight: 700;
     line-height: 1.2;
+    letter-spacing: -0.01em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -449,7 +405,7 @@
   #shopify-section-{{ section.id }} .compat-tile__count {
     position: absolute;
     top: 10px;
-    inset-inline-end: 12px;
+    inset-inline-end: 10px;
     min-width: 22px;
     height: 22px;
     padding: 0 6px;
@@ -458,19 +414,13 @@
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 700;
-    background: rgb(var(--c-ink) / 0.12);
+    color: var(--c-ink);
+    background: var(--c-line);
   }
-  #shopify-section-{{ section.id }} .compat-tile[disabled] .compat-tile__count { background: rgb(var(--c-accent-ink)); color: rgb(var(--c-accent)); }
+  #shopify-section-{{ section.id }} .compat-tile[disabled] .compat-tile__count { color: #000; background: var(--c-accent); }
 
   #shopify-section-{{ section.id }} .compat-arrows { align-items: center; }
-  #shopify-section-{{ section.id }} .compat-arrows .button {
-    --color-button-background: var(--c-ink);
-    --color-button-text: var(--c-accent-ink);
-    --color-button-border: var(--c-ink);
-    --border-opacity: 0.3;
-    --buttons-border-width: 1px;
-    padding: 14px;
-  }
+  #shopify-section-{{ section.id }} .compat-arrows .button { padding: 14px; }
 
   /* Panels */
   #shopify-section-{{ section.id }} .compat-panel__intro {
@@ -486,119 +436,96 @@
     gap: 8px;
     padding: 8px 16px 8px 10px;
     border-radius: 999px;
-    font-size: 0.9375rem;
-    background: rgb(var(--c-accent) / 0.16);
-    color: rgb(var(--c-accent));
-    border: 1px solid rgb(var(--c-accent) / 0.35);
+    font-size: var(--text-sm);
+    color: var(--c-active-ink);
+    background: var(--c-active-bg);
   }
-  #shopify-section-{{ section.id }} .compat--light .compat-fits { color: rgb(var(--c-ink)); }
-  #shopify-section-{{ section.id }} .compat-fits .icon { width: 20px; height: 20px; }
+  #shopify-section-{{ section.id }} .compat-fits .icon { width: 20px; height: 20px; color: var(--c-accent); }
   #shopify-section-{{ section.id }} .compat-fits strong { font-weight: 700; }
-  #shopify-section-{{ section.id }} .compat-panel__spec { color: rgb(var(--c-muted)); font-size: 0.9375rem; }
+  #shopify-section-{{ section.id }} .compat-panel__spec { font-size: var(--text-sm); color: var(--c-muted); }
   #shopify-section-{{ section.id }} .compat-panel__note {
     flex-basis: 100%;
     display: flex;
     gap: 10px;
     align-items: flex-start;
     margin: 0;
-    color: rgb(var(--c-muted));
-    font-size: 0.9375rem;
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--c-ink-2);
   }
-  #shopify-section-{{ section.id }} .compat-panel__note .icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
-  #shopify-section-{{ section.id }} .compat-panel__empty { color: rgb(var(--c-muted)); }
+  #shopify-section-{{ section.id }} .compat-panel__note .icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; color: var(--c-accent); }
+  #shopify-section-{{ section.id }} .compat-panel__empty { color: var(--c-muted); }
 
-  /* Product cards: white, lifted, with a "Fits" tag */
+  /* Product cards: theme cards on white, with a "Fits" tag */
   #shopify-section-{{ section.id }} .compat-cards {
-    --color-foreground: 23 23 23;
+    --color-foreground: 0 0 0;
     --color-background: 255 255 255;
-    --color-border: 23 23 23 / 0.1;
-    --color-border-light: 23 23 23 / 0.06;
     --color-placeholder: 255 255 255;
-    color: rgb(23 23 23);
+    color: #000;
   }
   #shopify-section-{{ section.id }} .compat-cards .product-card {
-    border-radius: 20px;
-    overflow: hidden;
     background: #fff;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 24px 48px -28px rgba(0, 20, 24, 0.55);
-    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--c-radius-card);
+    overflow: hidden;
+    transition: transform 0.5s var(--c-ease), box-shadow 0.5s var(--c-ease);
   }
   #shopify-section-{{ section.id }} .compat-cards .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 36px 60px -28px rgba(0, 20, 24, 0.7);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px -24px rgba(0, 0, 0, 0.35);
   }
-  #shopify-section-{{ section.id }} .compat-cards .product-card__media { background: #f1f7f6; }
   #shopify-section-{{ section.id }} .compat-cards .product-card__media::after {
     content: '✓ {{ section.settings.card_tag | default: 'Fits' | escape }}';
     position: absolute;
     bottom: 12px;
     inset-inline-start: 12px;
     z-index: 2;
-    padding: 5px 10px;
+    padding: 5px 11px;
     border-radius: 999px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    color: #083940;
-    background: #a8e8e2;
+    color: #000;
+    background: var(--c-accent);
     pointer-events: none;
   }
-  #shopify-section-{{ section.id }} .compat-cards .product-card__title { font-weight: 600; }
 
   /* Help strip */
   #shopify-section-{{ section.id }} .compat__help {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px 24px;
-    margin-block-start: clamp(28px, 3.5vw, 44px);
-    padding: 16px 20px;
-    border-radius: 18px;
-    background: rgb(var(--c-glass));
-    border: 1px solid rgb(var(--c-line));
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-  }
-  #shopify-section-{{ section.id }} .compat__help-text {
-    display: flex;
     align-items: center;
     gap: 12px;
-    color: rgb(var(--c-ink));
+    margin-block-start: clamp(28px, 3.5vw, 44px);
+    padding: 16px 20px;
+    border-radius: var(--c-radius-card);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
   }
-  #shopify-section-{{ section.id }} .compat__help-text .icon { width: 22px; height: 22px; color: rgb(var(--c-accent)); flex-shrink: 0; }
-  #shopify-section-{{ section.id }} .compat__help-text p { margin: 0; }
+  #shopify-section-{{ section.id }} .compat__help .icon { width: 22px; height: 22px; color: var(--c-accent); flex-shrink: 0; }
+  #shopify-section-{{ section.id }} .compat__help p { margin: 0; color: var(--c-ink-2); }
   #shopify-section-{{ section.id }} .compat__help a {
-    color: rgb(var(--c-accent));
     font-weight: 600;
+    color: var(--c-ink);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
   @media screen and (max-width: 767px) {
     #shopify-section-{{ section.id }} .compat__board { width: 100%; }
-    #shopify-section-{{ section.id }} .compat__tiles { grid-auto-columns: 72%; }
+    #shopify-section-{{ section.id }} .compat__tiles { grid-auto-columns: 70%; }
     #shopify-section-{{ section.id }} .compat-tile { padding: 14px; }
-    #shopify-section-{{ section.id }} .compat-tile__icon { width: 40px; height: 40px; border-radius: 12px; }
+    #shopify-section-{{ section.id }} .compat-icon { width: 28px; height: 28px; }
   }
   @media (prefers-reduced-motion: reduce) {
     #shopify-section-{{ section.id }} .compat-tile,
     #shopify-section-{{ section.id }} .compat-cards .product-card { transition: none; }
     #shopify-section-{{ section.id }} .compat-tile:hover,
-    #shopify-section-{{ section.id }} .compat-tile[disabled],
     #shopify-section-{{ section.id }} .compat-cards .product-card:hover { transform: none; }
   }
 </style>
 
 <div class="section section--padding">
   <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %}">
-    <div class="compat{% if section.settings.style == 'light' %} compat--light{% endif %}">
-      <div class="compat__waves" aria-hidden="true">
-        <svg viewBox="0 0 1440 180" preserveAspectRatio="none" fill="currentColor">
-          <path d="M0 96c120-34 240-34 360 0s240 34 360 0 240-34 360 0 240 34 360 0v84H0z"/>
-          <path opacity=".6" d="M0 128c160-30 320-30 480 0s320 30 480 0 320-30 480 0v52H0z"/>
-        </svg>
-      </div>
+    <div class="compat compat--{{ section.settings.style | default: 'soft' }}">
 
       <div class="compat__head">
         <div class="compat__intro">
@@ -606,7 +533,9 @@
             <p class="compat__eyebrow">{{ section.settings.subheading | escape }}</p>
           {%- endif -%}
           {%- if section.settings.heading != blank -%}
-            <{{ section.settings.heading_tag }} class="compat__title">{{ section.settings.heading }}</{{ section.settings.heading_tag }}>
+            <{{ section.settings.heading_tag }} class="compat__title">
+              {%- render 'highlighted-text', content: section.settings.heading, style: 'scribble', scribble: section.settings.heading_scribble -%}
+            </{{ section.settings.heading_tag }}>
           {%- endif -%}
           {%- if section.settings.description != blank -%}
             <div class="compat__desc">{{ section.settings.description }}</div>
@@ -637,10 +566,8 @@
 
       {%- if section.settings.help_text != blank -%}
         <div class="compat__help">
-          <div class="compat__help-text">
-            {%- render 'icon', icon: 'comment' -%}
-            <div class="rte">{{ section.settings.help_text }}</div>
-          </div>
+          {%- render 'icon', icon: 'comment' -%}
+          <div class="rte">{{ section.settings.help_text }}</div>
         </div>
       {%- endif -%}
     </div>
@@ -685,10 +612,11 @@
       "id": "style",
       "label": "Style",
       "options": [
-        { "value": "deep", "label": "Deep water (dark)" },
-        { "value": "light", "label": "Shallows (light)" }
+        { "value": "soft", "label": "Soft grey panel" },
+        { "value": "white", "label": "White" },
+        { "value": "dark", "label": "Black" }
       ],
-      "default": "deep"
+      "default": "soft"
     },
     {
       "type": "checkbox",
@@ -793,8 +721,20 @@
       "type": "inline_richtext",
       "id": "heading",
       "label": "t:sections.global.settings.heading.label",
-      "info": "Wrap a word in italics to colour it with the accent.",
+      "info": "Put a word in italics to underline it with the amber swoosh.",
       "default": "What <em>fits</em> this board"
+    },
+    {
+      "type": "select",
+      "id": "heading_scribble",
+      "label": "Underline style",
+      "options": [
+        { "value": "basic-underline", "label": "Swoosh" },
+        { "value": "sketch-underline", "label": "Sketch" },
+        { "value": "squiggle-underline", "label": "Squiggle" },
+        { "value": "circle", "label": "Circle" }
+      ],
+      "default": "basic-underline"
     },
     {
       "type": "select",
