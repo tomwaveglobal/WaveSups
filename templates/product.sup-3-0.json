@@ -1963,10 +1963,11 @@
         "padding_top": 48,
         "padding_bottom": 48,
         "full_width": false,
-        "style": "deep",
+        "style": "soft",
         "show_board": true,
         "board_label": "Showing parts for",
-        "card_tag": "Fits"
+        "card_tag": "Fits",
+          "heading_scribble": "basic-underline"
       }
     }
   },
