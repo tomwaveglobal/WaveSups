@@ -274,6 +274,11 @@
           "show_empty_stars": true
         }
       },
+      "11945366711752539959": {
+        "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
+        "disabled": true,
+        "settings": {}
+      },
       "16859463583119579546": {
         "type": "shopify://apps/everdesk/blocks/chat-widget/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
         "disabled": false,
@@ -287,9 +292,9 @@
           "fallback_accent": "#0f172a"
         }
       },
-      "11945366711752539959": {
-        "type": "shopify://apps/zendesk/blocks/zendesk_web_widget/c0b417b1-b90b-4754-baaf-f55627e6acd4",
-        "disabled": true,
+      "14645377256865492079": {
+        "type": "shopify://apps/everdesk/blocks/landing-attribution/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
+        "disabled": false,
         "settings": {}
       }
     }
