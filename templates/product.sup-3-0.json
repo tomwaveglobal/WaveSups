@@ -1968,7 +1968,8 @@
         "board_label": "Showing parts for",
         "card_tag": "Fits",
           "heading_scribble": "basic-underline",
-          "card_layout": "compact"
+          "card_layout": "compact",
+          "quick_add": true
       }
     }
   },

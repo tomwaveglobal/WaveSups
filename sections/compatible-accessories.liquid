@@ -165,8 +165,8 @@
             show_rating: settings.product_rating,
             show_color_swatches: settings.product_color_swatches,
             show_countdown: false,
-            show_quick_add: settings.product_quick_add,
-            show_quick_view: settings.product_quick_view,
+            show_quick_add: section.settings.quick_add,
+            show_quick_view: section.settings.quick_add,
             vertical_badges: settings.product_vertical_badges,
             show_sold_out: settings.product_sold_out,
             show_save_amount: settings.product_save_amount,
@@ -184,8 +184,8 @@
                 image_fill: false,
                 show_vendor: false,
                 show_price: true,
-                show_quick_add: settings.product_quick_add,
-                show_quick_view: settings.product_quick_view,
+                show_quick_add: section.settings.quick_add,
+                show_quick_view: section.settings.quick_add,
                 accessibility: true
               -%}
             </div>
@@ -564,6 +564,8 @@
     color: #000;
     background: var(--c-accent);
   }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product__details { min-width: 0; }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product__quantity .button { white-space: nowrap; }
   #shopify-section-{{ section.id }} .compat-mini .horizontal-product__title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -768,6 +770,13 @@
         { "value": "full", "label": "Full cards" }
       ],
       "default": "compact"
+    },
+    {
+      "type": "checkbox",
+      "id": "quick_add",
+      "label": "Show add to basket buttons",
+      "info": "Only affects this section. Products with options open a quick view to pick one.",
+      "default": true
     },
     {
       "type": "checkbox",
