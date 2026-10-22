@@ -167,7 +167,7 @@
             assign e_title = entry.settings.title | default: 'Accessories' | strip
             assign e_products = entry.settings.products
           endif
-          if e_title != group_title or e_products == blank
+          if e_title != group_title
             continue
           endif
         -%}
