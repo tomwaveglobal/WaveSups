@@ -9,6 +9,16 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 {{ 'search.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'collection.js' | asset_url }}" defer></script>
+{%- assign search_types = search.types | join: "," -%}
+{%- if search.performed and search_types != "product" -%}
+  <script>
+    (function () {
+      var url = new URL(window.location.href);
+      url.searchParams.set("type", "product");
+      window.location.replace(url.toString());
+    })();
+  </script>
+{%- endif -%}
 <script src="{{ 'search.js' | asset_url }}" defer></script>
 
 {%- liquid
