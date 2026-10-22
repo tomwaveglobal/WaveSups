@@ -38,6 +38,12 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
   }
+  #shopify-section-{{ section.id }} .tab__item .compat-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: {{ section.settings.icon_color | default: '#f59e0b' }};
+  }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
@@ -59,9 +65,12 @@
                   endif
                 endfor
               -%}
-              <button class="tab__item button{% if forloop.first %} button--primary{% else %} button--secondary{% endif %} whitespace-nowrap"{% if forloop.first %} disabled{% endif %} type="button" is="hover-button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="CompatV2Panel-{{ section.id }}-{{ forloop.index0 }}" {{ tab_attrs }}>
+              <button class="tab__item button icon-with-text{% if forloop.first %} button--primary{% else %} button--secondary{% endif %} whitespace-nowrap"{% if forloop.first %} disabled{% endif %} type="button" is="hover-button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="CompatV2Panel-{{ section.id }}-{{ forloop.index0 }}" {{ tab_attrs }}>
                 <span class="btn-fill" data-fill></span>
-                <span class="btn-text">{{ tab_title | escape }}</span>
+                <span class="btn-text">
+                  {%- if section.settings.show_icons -%}{%- render 'compat-icon', name: tab_title -%}{%- endif -%}
+                  {{- tab_title | escape -}}
+                </span>
               </button>
             {%- endfor -%}
           </div>
@@ -256,6 +265,19 @@
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "show_icons",
+      "label": "Show icons on tabs",
+      "info": "Icon is picked from the tab title: fin, leash, paddle, pump, seat, kayak, otherwise a spanner.",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon colour",
+      "default": "#f59e0b"
+    },
+    {
       "type": "header",
       "content": "t:sections.global.settings.header__mobile.content"
     },
@@ -383,7 +405,8 @@
     {
       "type": "text",
       "id": "subheading",
-      "label": "t:sections.global.settings.subheading.label"
+      "label": "t:sections.global.settings.subheading.label",
+      "default": "Compatible Accessories"
     },
     {
       "type": "richtext",
