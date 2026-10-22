@@ -1210,9 +1210,9 @@
     "compatible_accessories_v2": {
       "type": "compatible-accessories-v2",
       "settings": {
-        "product_limit": 8,
+        "product_limit": 12,
         "columns": 4,
-        "carousel_on_desktop": false,
+        "carousel_on_desktop": true,
         "tab_order": "Pumps, Leashes, Paddles, Fins, Seats & footrests, Kayak conversion, Spares & upgrades",
         "quick_add": true,
         "columns_mobile": "1",
