@@ -283,11 +283,11 @@
         "type": "shopify://apps/everdesk/blocks/chat-widget/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
         "disabled": false,
         "settings": {
-          "position": "bottom-right",
+          "position": "bottom-left",
           "offset_side": 80,
-          "offset_bottom": 120,
+          "offset_bottom": 80,
           "launcher_label": "",
-          "test_mode": true,
+          "test_mode": false,
           "fallback_skin": "classic",
           "fallback_accent": "#0f172a"
         }
