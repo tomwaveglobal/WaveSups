@@ -1,0 +1,612 @@
+{%- comment -%}
+  "What fits this board" — tabbed strip of accessories that are compatible with the current product,
+  with a row of fit-spec chips (e.g. "Fins · Quick-release fin") above the tabs.
+
+  Data, in order of preference:
+  1. product.metafields.custom.fitting_standards — a list of `fitting_standard` metaobjects, each with:
+       category    (single line text, e.g. "Fins")       — becomes the tab
+       spec        (single line text, e.g. "US fin box") — shown in the chip row and the tab panel
+       note        (multi-line text, optional)           — fitting advice shown under the spec
+       accessories (list of products)                    — the compatible products
+  2. Otherwise, the "Accessory group" blocks set in the theme editor. A block with "Only show on"
+     products set is skipped on every other product.
+
+  Entries sharing a category / tab title merge into one tab, in the order first seen.
+  Renders nothing on the storefront when there is nothing to show.
+{%- endcomment -%}
+
+{%- liquid
+  assign standards = product.metafields.custom.fitting_standards.value
+  assign use_metafield = false
+  if standards != blank and standards.size > 0
+    assign use_metafield = true
+    assign entries = standards
+  else
+    assign entries = section.blocks
+  endif
+
+  assign product_key = '|' | append: product.id | append: '|'
+
+  comment
+    Pass 1: which entries apply to this product, and the ordered list of tab titles.
+  endcomment
+  assign ok_list = '|'
+  assign cat_list = '^^'
+  for entry in entries
+    if use_metafield
+      assign e_title = entry.category.value | default: entry.name.value
+    else
+      assign e_title = entry.settings.title
+      if entry.settings.boards != blank
+        assign board_ids = entry.settings.boards | map: 'id' | join: '|'
+        assign board_ids = '|' | append: board_ids | append: '|'
+        unless board_ids contains product_key
+          continue
+        endunless
+      endif
+    endif
+    assign e_title = e_title | default: 'Accessories' | strip
+    assign ok_list = ok_list | append: forloop.index0 | append: '|'
+    assign cat_key = '^^' | append: e_title | append: '^^'
+    unless cat_list contains cat_key
+      assign cat_list = cat_list | append: e_title | append: '^^'
+    endunless
+  endfor
+  assign categories = cat_list | remove_first: '^^' | split: '^^'
+-%}
+
+{%- if categories.size > 0 -%}
+  {%- comment -%} Pass 2: build the chip row, tab buttons and panels for each tab. Products are looped per entry rather than merged with concat, which doesn't accept product_list settings. {%- endcomment -%}
+  {%- capture chips_html -%}{%- endcapture -%}
+  {%- capture tabs_html -%}{%- endcapture -%}
+  {%- capture indicators_html -%}{%- endcapture -%}
+  {%- capture panels_html -%}{%- endcapture -%}
+
+  {%- for group_title in categories -%}
+    {%- liquid
+      assign idx = forloop.index0
+      assign is_first = forloop.first
+      assign group_spec = ''
+      assign group_note = ''
+      assign group_attrs = ''
+
+      for entry in entries
+        assign ok_key = '|' | append: forloop.index0 | append: '|'
+        unless ok_list contains ok_key
+          continue
+        endunless
+
+        if use_metafield
+          assign e_title = entry.category.value | default: entry.name.value | default: 'Accessories' | strip
+          assign e_spec = entry.spec.value
+          assign e_note = entry.note.value
+        else
+          assign e_title = entry.settings.title | default: 'Accessories' | strip
+          assign e_spec = entry.settings.spec
+          assign e_note = entry.settings.note
+        endif
+
+        if e_title != group_title
+          continue
+        endif
+
+        if e_spec != blank
+          unless group_spec contains e_spec
+            if group_spec != blank
+              assign group_spec = group_spec | append: ' / '
+            endif
+            assign group_spec = group_spec | append: e_spec
+          endunless
+        endif
+        if e_note != blank
+          assign group_note = group_note | append: ' ' | append: e_note
+        endif
+        if group_attrs == blank and use_metafield == false
+          assign group_attrs = entry.shopify_attributes
+        endif
+      endfor
+
+      assign group_note = group_note | strip
+      assign panel_id = 'CompatPanel-' | append: section.id | append: '-' | append: idx
+      assign slider_id = 'CompatSlider-' | append: section.id | append: '-' | append: idx
+    -%}
+
+    {%- if group_spec != blank -%}
+      {%- capture chip -%}
+        <button type="button" class="compat-spec" data-compat-tab="{{ idx }}" aria-controls="{{ panel_id }}">
+          {%- render 'icon', icon: 'check-circle' -%}
+          <span><strong>{{ group_title | escape }}</strong> · {{ group_spec | escape }}</span>
+        </button>
+      {%- endcapture -%}
+      {%- assign chips_html = chips_html | append: chip -%}
+    {%- endif -%}
+
+    {%- capture tab -%}
+      <button class="tab__item button{% if is_first %} button--primary{% else %} button--secondary{% endif %} whitespace-nowrap"{% if is_first %} disabled{% endif %} type="button" is="hover-button" role="tab" aria-controls="{{ panel_id }}" data-index="{{ idx }}" {{ group_attrs }}>
+        <span class="btn-fill" data-fill></span>
+        <span class="btn-text">{{ group_title | escape }}</span>
+      </button>
+    {%- endcapture -%}
+    {%- assign tabs_html = tabs_html | append: tab -%}
+
+    {%- if section.settings.carousel_on_desktop -%}
+      {%- capture indicator -%}
+        <div class="indicators hidden lg:flex gap-2d5"{% unless is_first %} hidden{% endunless %} data-index="{{ idx }}">
+          <button class="button button--secondary" type="button" is="previous-button" aria-controls="{{ slider_id }}" aria-label="{{ 'general.pagination.previous' | t | escape }}" disabled>
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">
+              {%- render 'icon', icon: 'chevron-left', class: 'transform' -%}
+            </span>
+          </button>
+          <button class="button button--secondary" type="button" is="next-button" aria-controls="{{ slider_id }}" aria-label="{{ 'general.pagination.next' | t | escape }}">
+            <span class="btn-fill" data-fill></span>
+            <span class="btn-text">
+              {%- render 'icon', icon: 'chevron-right', class: 'transform' -%}
+            </span>
+          </button>
+        </div>
+      {%- endcapture -%}
+      {%- assign indicators_html = indicators_html | append: indicator -%}
+    {%- endif -%}
+
+    {%- liquid
+      assign seen = '|'
+      assign shown = 0
+    -%}
+    {%- capture cards -%}
+      {%- for entry in entries -%}
+        {%- liquid
+          assign ok_key = '|' | append: forloop.index0 | append: '|'
+          unless ok_list contains ok_key
+            continue
+          endunless
+          if use_metafield
+            assign e_title = entry.category.value | default: entry.name.value | default: 'Accessories' | strip
+            assign e_products = entry.accessories.value
+          else
+            assign e_title = entry.settings.title | default: 'Accessories' | strip
+            assign e_products = entry.settings.products
+          endif
+          if e_title != group_title
+            continue
+          endif
+        -%}
+      {%- for accessory in e_products -%}
+        {%- liquid
+          assign seen_key = '|' | append: accessory.id | append: '|'
+          if accessory == blank or accessory.id == product.id or seen contains seen_key
+            continue
+          endif
+          if section.settings.hide_sold_out and accessory.available == false
+            continue
+          endif
+          if shown >= section.settings.product_limit
+            break
+          endif
+          assign seen = seen | append: accessory.id | append: '|'
+          assign shown = shown | plus: 1
+        -%}
+        {%- render 'product-card',
+          product: accessory,
+          product_id: accessory.id,
+          section_id: section.id,
+          block_id: idx,
+          image_ratio: settings.product_image_ratio,
+          image_fill: settings.product_image_fill,
+          show_secondary_image: settings.product_secondary_image,
+          show_multiple_images: settings.product_multiple_images,
+          show_vendor: settings.product_vendor,
+          title_truncation: settings.product_title_truncation,
+          title_line_limit: settings.product_title_line_limit,
+          show_rating: settings.product_rating,
+          show_color_swatches: settings.product_color_swatches,
+          show_countdown: settings.product_countdown,
+          show_quick_add: settings.product_quick_add,
+          show_quick_view: settings.product_quick_view,
+          vertical_badges: settings.product_vertical_badges,
+          show_sold_out: settings.product_sold_out,
+          show_save_amount: settings.product_save_amount,
+          save_type: settings.product_save_type,
+          show_icon_list: settings.product_icon_list
+        -%}
+      {%- endfor -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {%- capture panel -%}
+      <div id="{{ panel_id }}" role="tabpanel"{% unless is_first %} hidden{% endunless %}>
+        <div class="compat-panel-intro">
+          <span class="compat-fits">
+            {%- render 'icon', icon: 'check-circle-filled' -%}
+            {{- section.settings.fits_label | default: 'Fits the' | escape }} {{ product.title | split: ' | ' | first | escape -}}
+          </span>
+          {%- if group_spec != blank -%}
+            <span>{{ group_title | escape }}: {{ group_spec | escape }}</span>
+          {%- endif -%}
+          {%- if group_note != blank -%}
+            <p class="compat-note">{{ group_note | escape | newline_to_br }}</p>
+          {%- endif -%}
+        </div>
+
+        {%- if shown > 0 -%}
+          <slider-element id="{{ slider_id }}" class="grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card"{% if section.settings.carousel_on_desktop or section.settings.swipe_on_mobile %} tabindex="0"{% endif %}>
+            <motion-list class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
+              {{- cards -}}
+            </motion-list>
+          </slider-element>
+        {%- elsif request.design_mode -%}
+          <p class="compat-help">No products picked for this tab yet. Add them in the block settings, or in the product's fitting standards.</p>
+        {%- endif -%}
+      </div>
+    {%- endcapture -%}
+    {%- assign panels_html = panels_html | append: panel -%}
+  {%- endfor -%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- render 'section-variables', section: section -%}
+  }
+  #shopify-section-{{ section.id }} .compat-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-block-end: var(--sp-6);
+  }
+  #shopify-section-{{ section.id }} .compat-spec {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    padding: var(--sp-2) var(--sp-4);
+    border: 1px solid rgb(var(--color-border));
+    border-radius: 999px;
+    background: rgb(var(--color-background));
+    color: rgb(var(--color-foreground));
+    font-size: var(--fluid-sm, 0.875rem);
+    line-height: 1.2;
+    cursor: pointer;
+    transition: border-color var(--animation-short, 0.2s);
+  }
+  #shopify-section-{{ section.id }} .compat-spec:hover { border-color: rgb(var(--color-foreground)); }
+  #shopify-section-{{ section.id }} .compat-spec strong { font-weight: 600; }
+  #shopify-section-{{ section.id }} .compat-spec .icon { width: 1.125rem; height: 1.125rem; flex-shrink: 0; color: #1a8f4c; }
+  #shopify-section-{{ section.id }} .compat-panel-intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--sp-2) var(--sp-4);
+    margin-block: var(--sp-6) var(--sp-4);
+  }
+  #shopify-section-{{ section.id }} .compat-fits {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-1d5, 0.375rem);
+    font-weight: 600;
+    color: #1a8f4c;
+  }
+  #shopify-section-{{ section.id }} .compat-fits .icon { width: 1.125rem; height: 1.125rem; }
+  #shopify-section-{{ section.id }} .compat-note { opacity: 0.75; flex-basis: 100%; }
+  #shopify-section-{{ section.id }} .compat-help { margin-block-start: var(--sp-6); opacity: 0.8; }
+</style>
+
+
+<div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
+  <div class="page-width{% if section.settings.full_width %} page-width--full{% endif %} relative">
+    {%- render 'section-heading', section: section -%}
+
+    {%- if section.settings.show_specs and chips_html != blank -%}
+      <div class="compat-specs">{{ chips_html }}</div>
+    {%- endif -%}
+
+    <tabs-element id="CompatTabs-{{ section.id }}" class="tab-list flex gap-6 justify-between">
+      <scroll-shadow class="scroll-shadow grid overflow-hidden">
+        <div class="scroll-area grid">
+          <div class="flex gap-4" role="tablist">
+            {{- tabs_html -}}
+          </div>
+        </div>
+        <template>
+          <slot></slot>
+          <s dir="{% render 'direction' %}" style="--t: 0;--b: 0;--l: 0;--r: 0;">
+            <span class="l"></span>
+            <span class="r"></span>
+          </s>
+          <style>
+            :host{display:inline-block;position:relative}:host([hidden]){display:none}
+            s{position:absolute;inset:0;pointer-events:none;{% if settings.card_style == 'card' %}--color-background:var(--color-placeholder){% endif %}}
+            s span{position:absolute;inset-block:0;width:var(--sp-12);opacity:0;transition:opacity var(--animation-short);}
+            s .l{inset-inline-start:0;opacity:var(--l);background:linear-gradient(90deg,rgb(var(--color-background)) 0%,transparent 100%);}
+            s .r{inset-inline-end:0;opacity:var(--r);background:linear-gradient(270deg,rgb(var(--color-background)) 0%,transparent 100%);}
+            s[dir=rtl] :is(.icon-chevron-left,.icon-chevron-right){transform:scaleX(-1);}
+          </style>
+        </template>
+      </scroll-shadow>
+      {{- indicators_html -}}
+    </tabs-element>
+
+    {{- panels_html -}}
+
+    {%- if section.settings.help_text != blank -%}
+      <div class="compat-help rte">{{ section.settings.help_text }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  (() => {
+    const root = document.getElementById('shopify-section-{{ section.id }}');
+    const tabs = document.getElementById('CompatTabs-{{ section.id }}');
+    if (!root || !tabs) return;
+    root.querySelectorAll('[data-compat-tab]').forEach((chip) => {
+      chip.addEventListener('click', () => {
+        tabs.selectedIndex = parseInt(chip.dataset.compatTab, 10);
+        tabs.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+  })();
+</script>
+{%- elsif request.design_mode -%}
+  <div class="page-width" style="padding-block: 2rem; text-align: center; opacity: 0.7;">
+    <p><strong>What fits this board</strong> — nothing to show for this product. Add "Accessory group" blocks, or fill the product's <code>custom.fitting_standards</code> metafield.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "What fits this board",
+  "class": "compatible-accessories",
+  "max_blocks": 8,
+  "enabled_on": {
+    "templates": ["product"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Shows accessories compatible with the current product. If the product has a custom.fitting_standards metafield (list of 'Fitting standard' metaobjects) that is used; otherwise the Accessory group blocks below are used (each can be limited to specific products)."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_specs",
+      "label": "Show fit-spec chips",
+      "info": "e.g. 'Fins · US fin box'. Clicking a chip opens its tab.",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "fits_label",
+      "label": "Compatibility label",
+      "info": "Shown before the product name, e.g. 'Fits the Wave Explorer 10'6'",
+      "default": "Fits the"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_sold_out",
+      "label": "Hide sold-out accessories",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "help_text",
+      "label": "Help text",
+      "default": "<p>Not sure something fits? <a href=\"/pages/contact\">Ask our team</a> and we'll check for you.</p>"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "t:sections.global.settings.product_limit.label",
+      "default": 8,
+      "min": 2,
+      "max": 12,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "t:sections.global.settings.columns.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "carousel_on_desktop",
+      "label": "t:sections.global.settings.carousel_on_desktop.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "columns_mobile",
+      "options": [
+        { "value": "1", "label": "t:sections.global.settings.columns_mobile.options__1.label" },
+        { "value": "2", "label": "t:sections.global.settings.columns_mobile.options__2.label" }
+      ],
+      "default": "2",
+      "label": "t:sections.global.settings.columns_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "swipe_on_mobile",
+      "label": "t:sections.global.settings.swipe_on_mobile.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__heading.content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.global.settings.heading.label",
+      "default": "What fits this board"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "title-sm", "label": "t:sections.global.settings.heading_size.options__1.label" },
+        { "value": "title-md", "label": "t:sections.global.settings.heading_size.options__2.label" },
+        { "value": "title-lg tracking-heading", "label": "t:sections.global.settings.heading_size.options__3.label" },
+        { "value": "title-xl tracking-heading", "label": "t:sections.global.settings.heading_size.options__4.label" }
+      ],
+      "default": "title-md",
+      "label": "t:sections.global.settings.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "t:sections.global.settings.heading_alignment.label",
+      "options": [
+        { "value": "text-left md:items-end md:flex-row", "label": "t:sections.global.settings.heading_alignment.options__1.label" },
+        { "value": "text-center md:items-center", "label": "t:sections.global.settings.heading_alignment.options__2.label" },
+        { "value": "text-right md:items-end md:flex-row-reverse", "label": "t:sections.global.settings.heading_alignment.options__3.label" }
+      ],
+      "default": "text-left md:items-end md:flex-row"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "options": [
+        { "value": "h2", "label": "t:sections.global.settings.heading_tag.options__2.label" },
+        { "value": "h3", "label": "t:sections.global.settings.heading_tag.options__3.label" },
+        { "value": "div", "label": "t:sections.global.settings.heading_tag.options__7.label" }
+      ],
+      "default": "h2",
+      "label": "t:sections.global.settings.heading_tag.label"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.global.settings.subheading.label",
+      "default": "Compatible accessories"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.global.settings.description.label",
+      "default": "<p>Fins, leashes, paddles and spares that fit this board.</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__colors.content",
+      "info": "t:sections.global.settings.header__colors.info"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "t:sections.global.settings.color_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "t:sections.global.settings.color_background.label"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "t:sections.global.settings.gradient_background.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.global.settings.header__section.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_top.label",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.global.settings.padding_bottom.label",
+      "default": 72
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.global.settings.divider.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.global.settings.full_width.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "rounded",
+      "default": false,
+      "label": "t:sections.global.settings.rounded.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Accessory group",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Template-wide default. Ignored on products that have their own custom.fitting_standards metafield."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab title",
+          "default": "Fins"
+        },
+        {
+          "type": "text",
+          "id": "spec",
+          "label": "Fitting spec",
+          "info": "Shown as a chip, e.g. 'Quick-release fin'"
+        },
+        {
+          "type": "textarea",
+          "id": "note",
+          "label": "Fitting note",
+          "info": "Optional advice, e.g. '10ft leash recommended for boards over 10'6\"'"
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Compatible products",
+          "limit": 12
+        },
+        {
+          "type": "product_list",
+          "id": "boards",
+          "label": "Only show on these products",
+          "info": "Leave empty to show on every product using this template. Blocks with the same tab title merge into one tab.",
+          "limit": 50
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "What fits this board",
+      "blocks": [
+        { "type": "group", "settings": { "title": "Fins" } },
+        { "type": "group", "settings": { "title": "Leashes" } },
+        { "type": "group", "settings": { "title": "Paddles" } },
+        { "type": "group", "settings": { "title": "Pumps" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
