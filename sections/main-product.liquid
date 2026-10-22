@@ -57,14 +57,22 @@
 
 {%- if icon_list_block -%}
   {%- capture icon_list_render -%}
-    {%- if settings.product_icon_list_metafield != blank -%}
-      {%- liquid
+    {%- liquid
+      assign metafield = blank
+      if settings.product_icon_list_metafield != blank
         assign metafield_parts = settings.product_icon_list_metafield | split: '.'
         assign metafield_namespace = metafield_parts | first
         assign metafield_key = metafield_parts | last
         assign metafield = product.metafields[metafield_namespace][metafield_key]
-      -%}
-      {%- if metafield.value != blank and metafield.list? -%}
+      endif
+      assign has_metafield_highlights = false
+      if metafield.value != blank and metafield.list?
+        assign has_metafield_highlights = true
+      endif
+    -%}
+    {%- capture theme_highlights -%}{%- render 'product-highlights-data', handle: product.handle -%}{%- endcapture -%}
+    {%- assign theme_highlights = theme_highlights | strip | newline_to_br | split: '<br />' -%}
+    {%- if has_metafield_highlights or theme_highlights.size > 0 -%}
         <div class="product__highlights{% if icon_list_block.settings.heading != blank %} with-heading flex flex-col gap-5 relative{% endif %}{% if icon_list_block.settings.show_below_media %} below-media{% endif %}" {{ icon_list_block.shopify_attributes }}>
           {%- if icon_list_block.settings.heading != blank -%}
             <p class="font-medium leading-tight md:text-lg">{{ icon_list_block.settings.heading | escape }}</p>
@@ -72,6 +80,11 @@
           <scroll-shadow class="product-card__spec block overflow-hidden">
             <div class="product-card__icons flex flex-nowrap{% unless icon_list_block.settings.enable_carousel %} lg:flex-wrap{% endunless %}" is="icons-carousel" tabindex="0">
               {%- for item in metafield.value -%}
+                {%- comment -%} Generic store promises don't sell the product, so they're kept off the highlights row {%- endcomment -%}
+                {%- assign item_title = item.title.value | default: item.title | downcase -%}
+                {%- if item_title contains 'free shipping' or item_title contains 'customer support' -%}
+                  {%- continue -%}
+                {%- endif -%}
                 <div class="product-card__icon shrink-0">
                   <div class="flex flex-col items-center md:flex-row md:items-start gap-2">
                     {%- if item.icon.value != blank -%}
@@ -87,6 +100,23 @@
                       {{- item.title -}}
                       {%- if item.description != blank -%}
                         <p class="text-opacity font-normal text-xs leading-tight">{{ item.description }}</p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </div>
+              {%- endfor -%}
+              {%- for line in theme_highlights -%}
+                {%- assign highlight = line | strip | split: '|' -%}
+                {%- if highlight.size < 2 -%}{%- continue -%}{%- endif -%}
+                <div class="product-card__icon shrink-0">
+                  <div class="flex flex-col items-center md:flex-row md:items-start gap-2">
+                    <figure class="shrink-0 media media--transparent relative inline-block">
+                      {%- render 'product-highlight-icon', name: highlight[0] -%}
+                    </figure>
+                    <div class="flex flex-col items-center md:items-start gap-1 text-center md:text-left text-sm font-medium leading-none">
+                      {{- highlight[1] | escape -}}
+                      {%- if highlight[2] != blank -%}
+                        <p class="text-opacity font-normal text-xs leading-tight">{{ highlight[2] | escape }}</p>
                       {%- endif -%}
                     </div>
                   </div>
@@ -111,7 +141,6 @@
           </scroll-shadow>
         </div>
       {%- endif -%}
-    {%- endif -%}
   {%- endcapture -%}
 {%- endif  -%}
 
