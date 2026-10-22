@@ -657,6 +657,13 @@
             "target_id": "shopify-section-template--28923902755203__product-details"
           }
         },
+        "nav_item_whatfits": {
+          "type": "nav_item",
+          "settings": {
+            "title": "What Fits",
+            "target_id": "shopify-section-template--28923902755203__compatible_accessories_v2"
+          }
+        },
         "nav_item_iYCPyi": {
           "type": "nav_item",
           "settings": {
@@ -676,13 +683,6 @@
           "settings": {
             "title": "Reviews",
             "target_id": "shopify-section-template--28923902755203__rich_text_ePnQft"
-          }
-        },
-        "nav_item_whatfits": {
-          "type": "nav_item",
-          "settings": {
-            "title": "What Fits",
-            "target_id": "shopify-section-template--28923902755203__compatible_accessories_v2"
           }
         }
       },
@@ -1207,6 +1207,40 @@
         "rounded": true
       }
     },
+    "compatible_accessories_v2": {
+      "type": "compatible-accessories-v2",
+      "settings": {
+        "product_limit": 8,
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "tab_order": "Pumps, Leashes, Paddles, Fins, Seats & footrests, Kayak conversion, Spares & upgrades",
+        "quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "What fits this board",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "Compatible Accessories",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "comparison_table_rB8zXC": {
       "type": "comparison-table",
       "blocks": {
@@ -1652,7 +1686,7 @@
         "reviews_io_reviewsio_polaris_gEgAjd": {
           "type": "shopify://apps/reviews-io/blocks/reviewsio-polaris/92a082e5-b297-4e88-b428-ac96cbc505f9",
           "settings": {
-            "star": "#FFB300",
+            "star": "#ffb300",
             "review_type": "product_review",
             "per_page": 5,
             "primary_btn_bg_color": "#000000",
@@ -1799,32 +1833,6 @@
         "divider": false,
         "full_width": false,
         "rounded": false
-      }
-    },
-    "compatible_accessories_v2": {
-      "type": "compatible-accessories-v2",
-      "settings": {
-        "product_limit": 8,
-        "columns": 4,
-        "carousel_on_desktop": false,
-        "quick_add": true,
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "heading": "What fits this board",
-        "heading_size": "title-md",
-        "heading_alignment": "text-left md:items-end md:flex-row",
-        "heading_tag": "h2",
-        "subheading": "Compatible Accessories",
-        "description": "",
-        "highlighted_text": "none",
-        "highlighted_scribble": "circle",
-        "highlighted_reveal": false,
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "divider": false,
-        "full_width": false,
-        "rounded": false,
-        "tab_order": "Fins, Leashes, Paddles, Seats & footrests, Pumps, Kayak conversion, Spares & upgrades"
       }
     }
   },
