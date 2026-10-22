@@ -1934,6 +1934,28 @@
               "twin"
             ]
           }
+        },
+        "group_kayak_conversion": {
+          "type": "group",
+          "settings": {
+            "title": "Kayak conversion",
+            "spec": "Turns it into a sit-on kayak",
+            "note": "",
+            "products": [
+              "kayak-conversion-kit",
+              "kayak-conversion-seat"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
         }
       },
       "block_order": [
@@ -1944,6 +1966,7 @@
         "group_paddles_sup",
         "group_paddles_kayak",
         "group_pumps",
+        "group_kayak_conversion",
         "group_spares"
       ],
       "settings": {
@@ -1967,9 +1990,9 @@
         "show_board": true,
         "board_label": "Showing parts for",
         "card_tag": "Fits",
-          "heading_scribble": "basic-underline",
-          "card_layout": "compact",
-          "quick_add": true
+        "heading_scribble": "basic-underline",
+        "card_layout": "compact",
+        "quick_add": true
       }
     }
   },
