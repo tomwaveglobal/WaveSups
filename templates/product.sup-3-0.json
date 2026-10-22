@@ -1934,6 +1934,28 @@
               "twin"
             ]
           }
+        },
+        "group_kayak_conversion": {
+          "type": "group",
+          "settings": {
+            "title": "Kayak conversion",
+            "spec": "Turns it into a sit-on kayak",
+            "note": "",
+            "products": [
+              "kayak-conversion-kit",
+              "kayak-conversion-seat"
+            ],
+            "boards": [
+              "tourer-3",
+              "tourer-led",
+              "recon-3",
+              "woody-3",
+              "pro-3",
+              "surf-3",
+              "surf-kids-3",
+              "twin"
+            ]
+          }
         }
       },
       "block_order": [
@@ -1944,16 +1966,12 @@
         "group_paddles_sup",
         "group_paddles_kayak",
         "group_pumps",
+        "group_kayak_conversion",
         "group_spares"
       ],
       "settings": {
-        "style": "soft",
         "show_specs": true,
-        "show_board": true,
-        "board_label": "Showing parts for",
         "fits_label": "Fits the",
-        "card_tag": "Fits",
-        "card_layout": "compact",
         "hide_sold_out": false,
         "help_text": "<p>Not sure something fits? <a href=\"/pages/contact\">Ask our team</a> and we'll check for you.</p>",
         "product_limit": 8,
@@ -1961,14 +1979,20 @@
         "carousel_on_desktop": false,
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "subheading": "Compatible accessories",
         "heading": "What <em>fits</em> this board",
-        "heading_scribble": "basic-underline",
         "heading_tag": "h2",
+        "subheading": "Compatible accessories",
         "description": "<p>Every fin, leash, paddle and spare here is matched to this board.</p>",
         "padding_top": 32,
         "padding_bottom": 32,
-        "full_width": false
+        "full_width": false,
+        "style": "soft",
+        "show_board": true,
+        "board_label": "Showing parts for",
+        "card_tag": "Fits",
+        "heading_scribble": "basic-underline",
+        "card_layout": "compact",
+        "quick_add": true
       }
     }
   },
