@@ -1,0 +1,26 @@
+{%- doc -%}
+  Line icon for an accessory category, picked by keyword in the category name
+  (fin, leash, paddle, pump, seat, otherwise a spanner). Used by the compatible-accessories section.
+
+  @param {string} name - Category name, e.g. "Fins" or "Spares & upgrades"
+
+  @example
+  {% render 'compat-icon', name: 'Fins' %}
+{%- enddoc -%}
+
+{%- assign key = name | downcase -%}
+<svg class="compat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  {%- if key contains 'fin' -%}
+    <path d="M3 20h18"/><path d="M6 20c.8-6.5 4.6-12.6 12-16-1.4 5.2-1.2 10.6.8 16"/>
+  {%- elsif key contains 'leash' -%}
+    <circle cx="6" cy="6" r="3"/><path d="M8.2 8.2c1.6 1.6.6 3.6 2.6 4.6s3-1 4.8.8.2 3.6 2 4.6"/><circle cx="19" cy="19" r="1.6"/>
+  {%- elsif key contains 'paddle' -%}
+    <path d="M4 20 14.5 9.5"/><path d="M13.6 4.6c2.2-2.2 6.2-.4 6.2 3.4 0 2.2-2 4.4-4.2 4.2l-3-3c-.6-1.4-.4-3.2 1-4.6Z"/><path d="M3 18.5 5.5 21"/>
+  {%- elsif key contains 'pump' -%}
+    <path d="M8 21h8"/><path d="M12 21v-8"/><path d="M8.5 13h7l-1-8h-5l-1 8Z"/><path d="M10.5 5V3h3v2"/>
+  {%- elsif key contains 'seat' -%}
+    <path d="M7 4v9h10"/><path d="M7 13l-1 7M17 13l1 7"/><path d="M7 9h6"/>
+  {%- else -%}
+    <path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z"/>
+  {%- endif -%}
+</svg>
