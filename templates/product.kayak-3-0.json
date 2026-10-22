@@ -695,12 +695,20 @@
             "title": "Reviews",
             "target_id": "shopify-section-template--28923902722435__rich_text_kbbtYn"
           }
+        },
+        "nav_item_whatfits": {
+          "type": "nav_item",
+          "settings": {
+            "title": "What Fits",
+            "target_id": "shopify-section-template--28923902722435__compatible_accessories_v2"
+          }
         }
       },
       "block_order": [
         "back_to_top_a9jNUA",
         "nav_item_XKNDwP",
         "nav_item_KrVxkG",
+        "nav_item_whatfits",
         "nav_item_mUKW9M",
         "nav_item_k9LzJe",
         "nav_item_FyGbwJ"
@@ -1745,6 +1753,32 @@
         "full_width": false,
         "rounded": false
       }
+    },
+    "compatible_accessories_v2": {
+      "type": "compatible-accessories-v2",
+      "settings": {
+        "product_limit": 8,
+        "columns": 4,
+        "carousel_on_desktop": false,
+        "quick_add": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "heading": "What fits this kayak",
+        "heading_size": "title-md",
+        "heading_alignment": "text-left md:items-end md:flex-row",
+        "heading_tag": "h2",
+        "subheading": "Compatible Accessories",
+        "description": "",
+        "highlighted_text": "none",
+        "highlighted_scribble": "circle",
+        "highlighted_reveal": false,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "divider": false,
+        "full_width": false,
+        "rounded": false,
+        "tab_order": "Fins, Leashes, Paddles, Seats & footrests, Pumps, Kayak conversion, Spares & upgrades"
+      }
     }
   },
   "order": [
@@ -1759,6 +1793,7 @@
     "scrolling-text",
     "image-with-text-2",
     "product-details",
+    "compatible_accessories_v2",
     "comparison_table_rB8zXC",
     "faq",
     "rich_text_kbbtYn",
