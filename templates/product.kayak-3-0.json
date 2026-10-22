@@ -1861,22 +1861,6 @@
               "navigator-kayak"
             ]
           }
-        },
-        "group_spares_bungee": {
-          "type": "group",
-          "settings": {
-            "title": "Spares & upgrades",
-            "spec": "",
-            "note": "Pick the Navigator or Explorer version of the bungee cord to match your kayak.",
-            "products": [
-              "kayak-bungee-cord"
-            ],
-            "boards": [
-              "navigator-3",
-              "roamer-inflatable-kayak",
-              "navigator-kayak"
-            ]
-          }
         }
       },
       "block_order": [
@@ -1886,8 +1870,7 @@
         "group_paddles_kayak",
         "group_paddles_canoe",
         "group_pumps",
-        "group_spares_kayak",
-        "group_spares_bungee"
+        "group_spares_kayak"
       ],
       "settings": {
         "show_specs": true,
