@@ -1962,10 +1962,11 @@
         "swipe_on_mobile": true,
         "subheading": "Compatible accessories",
         "heading": "What <em>fits</em> this board",
+        "heading_scribble": "basic-underline",
         "heading_tag": "h2",
-        "description": "<p>Every fin, leash, paddle and spare here is matched to this board, so you can kit out with confidence.</p>",
-        "padding_top": 48,
-        "padding_bottom": 48,
+        "description": "<p>Every fin, leash, paddle and spare here is matched to this board.</p>",
+        "padding_top": 32,
+        "padding_bottom": 32,
         "full_width": false
       }
     }
