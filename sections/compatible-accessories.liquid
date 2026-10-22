@@ -149,6 +149,7 @@
             assign seen = seen | append: accessory.id | append: '|'
             assign shown = shown | plus: 1
           -%}
+          {%- if section.settings.card_layout == 'full' -%}
           {%- render 'product-card',
             product: accessory,
             product_id: accessory.id,
@@ -172,6 +173,23 @@
             save_type: settings.product_save_type,
             show_icon_list: false
           -%}
+          {%- else -%}
+            <div class="compat-mini">
+              {%- render 'product-card-horizontal',
+                product: accessory,
+                product_id: accessory.id,
+                section_id: section.id,
+                block_id: idx,
+                image_ratio: 'square',
+                image_fill: false,
+                show_vendor: false,
+                show_price: true,
+                show_quick_add: settings.product_quick_add,
+                show_quick_view: settings.product_quick_view,
+                accessibility: true
+              -%}
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       {%- endfor -%}
     {%- endcapture -%}
@@ -231,7 +249,9 @@
           {%- endif -%}
         </div>
 
-        {%- if shown > 0 -%}
+        {%- if shown > 0 and section.settings.card_layout != 'full' -%}
+          <div class="compat-mini-grid">{{- cards -}}</div>
+        {%- elsif shown > 0 -%}
           <slider-element id="{{ slider_id }}" class="compat-cards grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card"{% if section.settings.carousel_on_desktop or section.settings.swipe_on_mobile %} tabindex="0"{% endif %}>
             <motion-list motion-reduced class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
               {{- cards -}}
@@ -275,7 +295,7 @@
     color: var(--c-ink);
     background: var(--c-panel);
     border-radius: var(--c-radius);
-    padding: clamp(28px, 4.5vw, 64px) clamp(16px, 4vw, 56px);
+    padding: clamp(20px, 2.6vw, 36px) clamp(16px, 2.6vw, 36px);
   }
   #shopify-section-{{ section.id }} .compat--white { --c-panel: #fff; --c-surface: #fafafa; }
   #shopify-section-{{ section.id }} .compat--dark {
@@ -297,12 +317,12 @@
     flex-wrap: wrap;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 24px 40px;
-    margin-block-end: clamp(28px, 3.5vw, 44px);
+    gap: 16px 32px;
+    margin-block-end: 20px;
   }
   #shopify-section-{{ section.id }} .compat__intro { max-width: 44rem; }
   #shopify-section-{{ section.id }} .compat__eyebrow {
-    margin: 0 0 16px;
+    margin: 0 0 8px;
     font-size: var(--text-sm);
     font-weight: 600;
     line-height: 1.3;
@@ -314,15 +334,15 @@
     font-style: var(--font-heading-style);
     font-weight: var(--font-heading-weight);
     letter-spacing: var(--font-heading-letter-spacing);
-    font-size: var(--title-md);
+    font-size: var(--title-sm);
     line-height: 1.05;
     color: inherit;
   }
   #shopify-section-{{ section.id }} .compat__title em { font-style: normal; }
   #shopify-section-{{ section.id }} .compat__desc {
-    max-width: 44ch;
-    margin-top: 20px;
-    font-size: var(--text-lg);
+    max-width: 60ch;
+    margin-top: 8px;
+    font-size: var(--text-base);
     line-height: 1.5;
     color: var(--c-ink-2);
   }
@@ -332,23 +352,23 @@
   #shopify-section-{{ section.id }} .compat__board {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 8px 22px 8px 8px;
+    gap: 10px;
+    padding: 6px 18px 6px 6px;
     border-radius: 999px;
     background: var(--c-surface);
     border: 1px solid var(--c-line);
   }
   #shopify-section-{{ section.id }} .compat__board img {
-    width: 52px;
-    height: 52px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     object-fit: contain;
     background: #fff;
     padding: 4px;
   }
-  #shopify-section-{{ section.id }} .compat__board-text { display: grid; gap: 4px; line-height: 1.15; }
-  #shopify-section-{{ section.id }} .compat__board-text small { font-size: var(--text-sm); color: var(--c-muted); }
-  #shopify-section-{{ section.id }} .compat__board-text strong { font-size: 1rem; font-weight: 700; }
+  #shopify-section-{{ section.id }} .compat__board-text { display: grid; gap: 2px; line-height: 1.15; }
+  #shopify-section-{{ section.id }} .compat__board-text small { font-size: var(--text-xs, 0.75rem); color: var(--c-muted); }
+  #shopify-section-{{ section.id }} .compat__board-text strong { font-size: 0.9375rem; font-weight: 700; }
 
   /* Category tiles (these are the tabs) */
   #shopify-section-{{ section.id }} .compat__nav { display: flex; align-items: stretch; gap: 16px; }
@@ -356,8 +376,8 @@
     flex: 1;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(190px, 1fr);
-    gap: 12px;
+    grid-auto-columns: minmax(170px, 1fr);
+    gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -369,9 +389,9 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     min-width: 0;
-    padding: 18px;
+    padding: 12px 14px;
     text-align: start;
     color: var(--c-ink);
     background: var(--c-surface);
@@ -394,12 +414,12 @@
     border-color: var(--c-active-bg);
   }
   #shopify-section-{{ section.id }} .compat-tile__icon { flex-shrink: 0; color: var(--c-accent); line-height: 0; }
-  #shopify-section-{{ section.id }} .compat-icon { width: 34px; height: 34px; }
+  #shopify-section-{{ section.id }} .compat-icon { width: 26px; height: 26px; }
   #shopify-section-{{ section.id }} .compat-tile__text { display: grid; gap: 4px; min-width: 0; }
-  #shopify-section-{{ section.id }} .compat-tile__label { font-size: var(--text-sm); font-weight: 500; line-height: 1.2; color: var(--c-muted); }
+  #shopify-section-{{ section.id }} .compat-tile__label { font-size: 0.8125rem; font-weight: 500; line-height: 1.2; color: var(--c-muted); }
   #shopify-section-{{ section.id }} .compat-tile[disabled] .compat-tile__label { color: inherit; opacity: 0.7; }
   #shopify-section-{{ section.id }} .compat-tile__value {
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.01em;
@@ -409,10 +429,10 @@
   }
   #shopify-section-{{ section.id }} .compat-tile__count {
     position: absolute;
-    top: 10px;
-    inset-inline-end: 10px;
-    min-width: 22px;
-    height: 22px;
+    top: 8px;
+    inset-inline-end: 8px;
+    min-width: 20px;
+    height: 20px;
     padding: 0 6px;
     display: grid;
     place-items: center;
@@ -432,20 +452,20 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px 16px;
-    margin-block: clamp(24px, 3vw, 36px) 20px;
+    gap: 8px 14px;
+    margin-block: 16px 12px;
   }
   #shopify-section-{{ section.id }} .compat-fits {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px 8px 10px;
+    padding: 5px 12px 5px 7px;
     border-radius: 999px;
-    font-size: var(--text-sm);
+    font-size: 0.8125rem;
     color: var(--c-active-ink);
     background: var(--c-active-bg);
   }
-  #shopify-section-{{ section.id }} .compat-fits .icon { width: 20px; height: 20px; color: var(--c-accent); }
+  #shopify-section-{{ section.id }} .compat-fits .icon { width: 18px; height: 18px; color: var(--c-accent); }
   #shopify-section-{{ section.id }} .compat-fits strong { font-weight: 700; }
   #shopify-section-{{ section.id }} .compat-panel__spec { font-size: var(--text-sm); color: var(--c-muted); }
   #shopify-section-{{ section.id }} .compat-panel__note {
@@ -494,19 +514,78 @@
     pointer-events: none;
   }
 
+  /* Compact cards: small white rows, three across */
+  #shopify-section-{{ section.id }} .compat-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+  @media screen and (max-width: 1099px) {
+    #shopify-section-{{ section.id }} .compat-mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media screen and (max-width: 639px) {
+    #shopify-section-{{ section.id }} .compat-mini-grid { grid-template-columns: 1fr; }
+  }
+  #shopify-section-{{ section.id }} .compat-mini {
+    --color-foreground: 0 0 0;
+    --color-background: 255 255 255;
+    padding: 10px 12px 10px 10px;
+    color: #000;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--c-radius-card);
+    transition: border-color 0.25s;
+  }
+  #shopify-section-{{ section.id }} .compat-mini:hover { border-color: #000; }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product {
+    --cart-item-media-width: 72px;
+    gap: 12px;
+    padding: 0;
+    border: 0;
+  }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product__media {
+    width: 72px;
+    border-radius: 10px;
+    background: #fff;
+    overflow: visible;
+  }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product__media::after {
+    content: '✓';
+    position: absolute;
+    top: -4px;
+    inset-inline-start: -4px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    font-weight: 800;
+    color: #000;
+    background: var(--c-accent);
+  }
+  #shopify-section-{{ section.id }} .compat-mini .horizontal-product__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
   /* Help strip */
   #shopify-section-{{ section.id }} .compat__help {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-block-start: clamp(28px, 3.5vw, 44px);
-    padding: 16px 20px;
+    gap: 10px;
+    margin-block-start: 16px;
+    padding: 10px 16px;
     border-radius: var(--c-radius-card);
     background: var(--c-surface);
     border: 1px solid var(--c-line);
   }
-  #shopify-section-{{ section.id }} .compat__help .icon { width: 22px; height: 22px; color: var(--c-accent); flex-shrink: 0; }
-  #shopify-section-{{ section.id }} .compat__help p { margin: 0; color: var(--c-ink-2); }
+  #shopify-section-{{ section.id }} .compat__help .icon { width: 20px; height: 20px; color: var(--c-accent); flex-shrink: 0; }
+  #shopify-section-{{ section.id }} .compat__help p { margin: 0; font-size: var(--text-sm); color: var(--c-ink-2); }
   #shopify-section-{{ section.id }} .compat__help a {
     font-weight: 600;
     color: var(--c-ink);
@@ -679,6 +758,16 @@
       "label": "Card tag",
       "info": "Shown with a tick on every product card",
       "default": "Fits"
+    },
+    {
+      "type": "select",
+      "id": "card_layout",
+      "label": "Product cards",
+      "options": [
+        { "value": "compact", "label": "Compact rows" },
+        { "value": "full", "label": "Full cards" }
+      ],
+      "default": "compact"
     },
     {
       "type": "checkbox",
