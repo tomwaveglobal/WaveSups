@@ -284,10 +284,10 @@
         "disabled": false,
         "settings": {
           "position": "bottom-left",
-          "offset_side": 80,
-          "offset_bottom": 80,
+          "offset_side": 20,
+          "offset_bottom": 20,
           "launcher_label": "",
-          "test_mode": false,
+          "test_mode": true,
           "fallback_skin": "classic",
           "fallback_accent": "#0f172a"
         }
