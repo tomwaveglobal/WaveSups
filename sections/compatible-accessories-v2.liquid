@@ -1,38 +1,30 @@
 {%- comment -%}
   Compatible accessories V2 — the Featured collections layout (heading, pill tabs, product cards)
-  filled from the viewed product's custom.compatible_accessories metafield (list of products).
+  filled with accessories that fit the current product.
 
-  Each accessory goes under the tab named in its own custom.accessory_tab metafield, falling back to
-  its product type. Tabs follow the "Tab order" setting; any others follow in the order first seen.
-  Renders nothing when the product has no compatible accessories.
+  Each "Accessory group" block is a set of products. Blocks with the same tab title share a tab,
+  and a block with "Only show on" products set is skipped on every other product, so one template
+  can serve boards that take different parts. Renders nothing when no group applies.
 {%- endcomment -%}
 
 {%- liquid
-  assign accessories = product.metafields.custom.compatible_accessories.value
-
-  assign present = '^^'
-  for accessory in accessories
-    assign tab = accessory.metafields.custom.accessory_tab.value | default: accessory.type | default: 'Accessories' | strip
-    assign tab_key = '^^' | append: tab | append: '^^'
-    unless present contains tab_key
-      assign present = present | append: tab | append: '^^'
-    endunless
-  endfor
-
+  assign product_key = '|' | append: product.id | append: '|'
+  assign ok_list = '|'
   assign tab_list = '^^'
-  assign preferred = section.settings.tab_order | split: ','
-  for item in preferred
-    assign wanted = item | strip
-    assign tab_key = '^^' | append: wanted | append: '^^'
-    if wanted != blank and present contains tab_key
-      assign tab_list = tab_list | append: wanted | append: '^^'
+
+  for block in section.blocks
+    if block.settings.boards != blank
+      assign board_ids = block.settings.boards | map: 'id' | join: '|'
+      assign board_ids = '|' | append: board_ids | append: '|'
+      unless board_ids contains product_key
+        continue
+      endunless
     endif
-  endfor
-  assign present_tabs = present | remove_first: '^^' | split: '^^'
-  for tab in present_tabs
-    assign tab_key = '^^' | append: tab | append: '^^'
+    assign title = block.settings.title | default: 'Accessories' | strip
+    assign ok_list = ok_list | append: forloop.index0 | append: '|'
+    assign tab_key = '^^' | append: title | append: '^^'
     unless tab_list contains tab_key
-      assign tab_list = tab_list | append: tab | append: '^^'
+      assign tab_list = tab_list | append: title | append: '^^'
     endunless
   endfor
 
@@ -46,12 +38,6 @@
     --section-padding-bottom: {{ section.settings.padding_bottom }}px;
     {%- render 'section-variables', section: section -%}
   }
-  #shopify-section-{{ section.id }} .tab__item .compat-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    color: {{ section.settings.icon_color | default: '#f59e0b' }};
-  }
 </style>
 
 <div class="section section--padding{% if section.settings.divider %} section--divider{% endif %}{% if section.settings.rounded %} section--rounded relative{% endif %}">
@@ -63,12 +49,19 @@
         <div class="scroll-area grid">
           <div class="flex gap-4" role="tablist">
             {%- for tab_title in tabs -%}
-              <button class="tab__item button icon-with-text{% if forloop.first %} button--primary{% else %} button--secondary{% endif %} whitespace-nowrap"{% if forloop.first %} disabled{% endif %} type="button" is="hover-button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="CompatV2Panel-{{ section.id }}-{{ forloop.index0 }}">
+              {%- liquid
+                assign tab_attrs = ''
+                for block in section.blocks
+                  assign title = block.settings.title | default: 'Accessories' | strip
+                  if title == tab_title
+                    assign tab_attrs = block.shopify_attributes
+                    break
+                  endif
+                endfor
+              -%}
+              <button class="tab__item button{% if forloop.first %} button--primary{% else %} button--secondary{% endif %} whitespace-nowrap"{% if forloop.first %} disabled{% endif %} type="button" is="hover-button" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="CompatV2Panel-{{ section.id }}-{{ forloop.index0 }}" {{ tab_attrs }}>
                 <span class="btn-fill" data-fill></span>
-                <span class="btn-text">
-                  {%- if section.settings.show_icons -%}{%- render 'compat-icon', name: tab_title -%}{%- endif -%}
-                  {{- tab_title | escape -}}
-                </span>
+                <span class="btn-text">{{ tab_title | escape }}</span>
               </button>
             {%- endfor -%}
           </div>
@@ -117,12 +110,19 @@
       <div id="CompatV2Panel-{{ section.id }}-{{ tab_index }}" role="tabpanel"{% unless forloop.first %} hidden{% endunless %}>
         <slider-element id="CompatV2Slider-{{ section.id }}-{{ tab_index }}" class="grid slider{% if section.settings.carousel_on_desktop %} slider--desktop{% endif %}{% if section.settings.swipe_on_mobile %} slider--tablet{% endif %}" selector=".card-grid>.card"{% if section.settings.carousel_on_desktop or section.settings.swipe_on_mobile %} tabindex="0"{% endif %}>
           <motion-list motion-reduced class="product-grid card-grid card-grid--{{ section.settings.columns }} mobile:card-grid--{{ section.settings.columns_mobile }} grid">
-              {%- for accessory in accessories -%}
+            {%- for block in section.blocks -%}
+              {%- liquid
+                assign ok_key = '|' | append: forloop.index0 | append: '|'
+                assign title = block.settings.title | default: 'Accessories' | strip
+                unless ok_list contains ok_key
+                  continue
+                endunless
+                if title != tab_title
+                  continue
+                endif
+              -%}
+              {%- for accessory in block.settings.products -%}
                 {%- liquid
-                  assign tab = accessory.metafields.custom.accessory_tab.value | default: accessory.type | default: 'Accessories' | strip
-                  if tab != tab_title
-                    continue
-                  endif
                   assign seen_key = '|' | append: accessory.id | append: '|'
                   if accessory.id == product.id or seen contains seen_key
                     continue
@@ -157,6 +157,7 @@
                   show_icon_list: settings.product_icon_list
                 -%}
               {%- endfor -%}
+            {%- endfor -%}
           </motion-list>
         </slider-element>
       </div>
@@ -194,11 +195,17 @@
     };
 
     tabs.forEach((tab, i) => tab.addEventListener('click', () => select(i)));
+    if (window.Shopify && Shopify.designMode) {
+      nav.addEventListener('shopify:block:select', (event) => {
+        const i = tabs.indexOf(event.target);
+        if (i > -1) select(i);
+      });
+    }
   })();
 </script>
 {%- elsif request.design_mode -%}
   <div class="page-width" style="padding-block: 2rem; text-align: center; opacity: 0.7;">
-    <p><strong>Compatible accessories</strong> — this product has no compatible accessories yet. Add them in Shopify admin under the product's <em>Compatible accessories</em> metafield.</p>
+    <p><strong>Compatible accessories</strong> — no accessory groups apply to this product. Add an "Accessory group" block, or add this product to a group's "Only show on" list.</p>
   </div>
 {%- endif -%}
 
@@ -206,6 +213,7 @@
 {
   "name": "Compatible accessories V2",
   "class": "featured-collections",
+  "max_blocks": 20,
   "enabled_on": {
     "templates": [
       "product"
@@ -214,7 +222,7 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "Shows the accessories in the viewed product's Compatible accessories metafield. Each accessory's Accessory tab metafield (or its product type) decides its tab."
+      "content": "Shows the accessories that fit the product being viewed. Each Accessory group is one set of products; groups with the same tab title share a tab."
     },
     {
       "type": "range",
@@ -241,31 +249,11 @@
       "default": false
     },
     {
-      "type": "text",
-      "id": "tab_order",
-      "label": "Tab order",
-      "info": "Comma-separated tab names. Tabs not listed follow at the end.",
-      "default": "Fins, Leashes, Paddles, Seats & footrests, Pumps, Kayak conversion, Spares & upgrades"
-    },
-    {
       "type": "checkbox",
       "id": "quick_add",
       "label": "Show add to basket buttons",
       "info": "Only affects this section.",
       "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_icons",
-      "label": "Show icons on tabs",
-      "info": "Icon is picked from the tab title: fin, leash, paddle, pump, seat, kayak, otherwise a spanner.",
-      "default": true
-    },
-    {
-      "type": "color",
-      "id": "icon_color",
-      "label": "Icon colour",
-      "default": "#f59e0b"
     },
     {
       "type": "header",
@@ -395,8 +383,7 @@
     {
       "type": "text",
       "id": "subheading",
-      "label": "t:sections.global.settings.subheading.label",
-      "default": "Compatible Accessories"
+      "label": "t:sections.global.settings.subheading.label"
     },
     {
       "type": "richtext",
@@ -573,10 +560,64 @@
       "label": "t:sections.global.settings.rounded.label"
     }
   ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Accessory group",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Tab title",
+          "default": "Fins",
+          "info": "Groups with the same tab title share a tab."
+        },
+        {
+          "type": "product_list",
+          "id": "products",
+          "label": "Compatible products",
+          "limit": 12
+        },
+        {
+          "type": "product_list",
+          "id": "boards",
+          "label": "Only show on these products",
+          "info": "Leave empty to show on every product using this template.",
+          "limit": 50
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Compatible accessories V2",
-      "category": "t:categories.collections"
+      "category": "t:categories.collections",
+      "blocks": [
+        {
+          "type": "group",
+          "settings": {
+            "title": "Fins"
+          }
+        },
+        {
+          "type": "group",
+          "settings": {
+            "title": "Leashes"
+          }
+        },
+        {
+          "type": "group",
+          "settings": {
+            "title": "Paddles"
+          }
+        },
+        {
+          "type": "group",
+          "settings": {
+            "title": "Pumps"
+          }
+        }
+      ]
     }
   ]
 }
