@@ -454,8 +454,45 @@
         "rounded": false
       }
     },
+    "apps_ExzDLM": {
+      "type": "apps",
+      "blocks": {
+        "everdesk_chat_inline_3dFieb": {
+          "type": "shopify://apps/everdesk/blocks/chat-inline/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
+          "settings": {
+            "heading": "Chat with our team",
+            "heading_size": "medium",
+            "alignment": "center",
+            "intro": "<p>Ask us anything about your order or our products, and we will help you straight away.</p>",
+            "frame_height": 640,
+            "start_label": "",
+            "frame_message": "Connecting you to our team…",
+            "test_mode": false
+          }
+        }
+      },
+      "block_order": [
+        "everdesk_chat_inline_3dFieb"
+      ],
+      "settings": {
+        "color_text": "",
+        "color_background": "",
+        "gradient_background": "",
+        "color_highlight": "",
+        "gradient_highlight": "",
+        "color_button_text": "",
+        "color_button_background": "",
+        "color_button_gradient": "",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "divider": false,
+        "full_width": false,
+        "rounded": false
+      }
+    },
     "zendesk_chat_XVYUGz": {
       "type": "zendesk-chat",
+      "disabled": true,
       "name": "Zendesk Chat Bot",
       "settings": {
         "chat_inline_min_height": 640,
@@ -489,6 +526,7 @@
     "1772549226876255a5",
     "main-blog",
     "rich_text_c8pR63",
+    "apps_ExzDLM",
     "zendesk_chat_XVYUGz"
   ]
 }
