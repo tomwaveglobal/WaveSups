@@ -52,8 +52,19 @@
       render 'css-variables'
       echo 'theme.css' | asset_url | stylesheet_tag: preload: true
 
-      if request.page_type == 'policy'
+      assign wave_help = false
+      if request.page_type == 'page'
+        if template.suffix == 'shipping-returns' or template.suffix == 'warranty'
+          assign wave_help = true
+        endif
+      endif
+
+      if request.page_type == 'policy' or wave_help
         echo 'wave-policy.css' | asset_url | stylesheet_tag
+      endif
+      if request.page_type == 'policy'
+        assign wave_doc_js = 'wave-doc.js' | asset_url
+        echo '<script src="' | append: wave_doc_js | append: '" defer="defer"></script>'
       endif
 
       if direction == 'rtl'
@@ -147,7 +158,7 @@
     -%}
 
     <div class="page-container" id="PageContainer">
-      <main class="main-content relative" id="MainContent" role="main">
+      <main class="main-content relative{% if wave_help %} wh--doc{% endif %}" id="MainContent" role="main">
         {%- if request.page_type == 'policy' -%}{%- render 'wave-policy', part: 'start' -%}{%- endif -%}
         {{ content_for_layout }}
         {%- if request.page_type == 'policy' -%}{%- render 'wave-policy', part: 'end' -%}{%- endif -%}
