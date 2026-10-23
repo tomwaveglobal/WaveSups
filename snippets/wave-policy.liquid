@@ -50,7 +50,7 @@
               {%- for policy in shop.policies -%}
                 <li>
                   <a
-                    href="{{ root }}{{ policy.url }}"
+                    href="{{ policy.url }}"
                     {% if request.path contains policy.url %}
                       aria-current="page"
                     {% endif %}
