@@ -161,6 +161,7 @@
     },
     "zendesk_chat_YUjWNa": {
       "type": "zendesk-chat",
+      "disabled": true,
       "name": "Zendesk Chat Bot",
       "settings": {
         "chat_inline_min_height": 640,
