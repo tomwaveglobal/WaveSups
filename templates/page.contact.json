@@ -171,7 +171,7 @@
         "heading_alignment": "text-left md:items-end md:flex-row",
         "heading_tag": "h2",
         "subheading": "",
-        "description": "<p>We'd love to hear from you. Our team is here to help. <br/>The best way to contact us is to use our automated chat below, 'Kai' can answer most questions and raise a support ticket if needed.</p>",
+        "description": "<p>We'd love to hear from you. Our team is here to help.&nbsp;<br/>The best way to contact us is to use our automated chat below, 'Kai' can answer most questions and raise a support ticket if needed.</p>",
         "highlighted_text": "none",
         "color_text": "",
         "color_background": "",
