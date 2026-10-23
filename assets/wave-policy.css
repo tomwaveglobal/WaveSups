@@ -518,6 +518,8 @@
   .wh--faq .accordion .details .details__summary { padding: 22px 22px 22px 28px; }
   .wh--faq .accordion .details .details__content { padding: 0 28px 26px; }
 }
+/* FAQs that already carry the section's own contact form skip the card */
+.wh--faq:has(.contact__sidebar) .wp-help { display: none; }
 .wh-empty {
   margin: 24px 0 0;
   padding: 28px 24px;
