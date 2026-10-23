@@ -1,14 +1,12 @@
 {%- doc -%}
-  Wave FY27 wrapper for long-form pages. Styles: assets/wave-policy.css,
-  contents list + FAQ search: assets/wave-doc.js.
+  Wraps Shopify's own policy markup (/policies/*) in the Wave FY27 look.
+  Styles: assets/wave-policy.css; "On this page" contents: assets/wave-doc.js.
 
-  Policies (/policies/*): rendered twice from layout/theme.liquid around
-  content_for_layout — 'start' adds the hero with the policy title and tabs
-  for every published policy, 'end' closes it and adds the contact card.
-  Help pages (shipping & returns, warranty, FAQ, troubleshooting): 'help'
-  renders the contact card on its own, after the page's sections.
+  Rendered twice from layout/theme.liquid around content_for_layout: 'start'
+  adds the hero with the policy title and tabs for every published policy,
+  'end' closes it and adds the contact card.
 
-  @param {string} part - 'start', 'end' or 'help'
+  @param {string} part - 'start' or 'end'
 {%- enddoc -%}
 
 {%- liquid
@@ -102,6 +100,4 @@
       tabs.scrollLeft = tab.getBoundingClientRect().left - tabs.getBoundingClientRect().left - 16;
     })();
   </script>
-{%- elsif part == 'help' -%}
-  <div class="wp">{{ help_card }}</div>
 {%- endif -%}

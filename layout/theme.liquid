@@ -52,18 +52,17 @@
       render 'css-variables'
       echo 'theme.css' | asset_url | stylesheet_tag: preload: true
 
-      assign wave_help = ''
+      assign wave_help = false
       if request.page_type == 'page'
-        case template.suffix
-          when 'shipping-returns', 'warranty'
-            assign wave_help = 'doc'
-          when 'faq', 'troubleshooting'
-            assign wave_help = 'faq'
-        endcase
+        if template.suffix == 'shipping-returns' or template.suffix == 'warranty'
+          assign wave_help = true
+        endif
       endif
 
-      if request.page_type == 'policy' or wave_help != blank
+      if request.page_type == 'policy' or wave_help
         echo 'wave-policy.css' | asset_url | stylesheet_tag
+      endif
+      if request.page_type == 'policy'
         assign wave_doc_js = 'wave-doc.js' | asset_url
         echo '<script src="' | append: wave_doc_js | append: '" defer="defer"></script>'
       endif
@@ -106,11 +105,10 @@
     -%}
 
     <div class="page-container" id="PageContainer">
-      <main class="main-content relative{% if wave_help != blank %} wh wh--{{ wave_help }}{% endif %}" id="MainContent" role="main">
+      <main class="main-content relative{% if wave_help %} wh--doc{% endif %}" id="MainContent" role="main">
         {%- if request.page_type == 'policy' -%}{%- render 'wave-policy', part: 'start' -%}{%- endif -%}
         {{ content_for_layout }}
         {%- if request.page_type == 'policy' -%}{%- render 'wave-policy', part: 'end' -%}{%- endif -%}
-        {%- if wave_help != blank -%}{%- render 'wave-policy', part: 'help' -%}{%- endif -%}
       </main>
 
       <footer class="footer-group block w-full" is="footer-group">
