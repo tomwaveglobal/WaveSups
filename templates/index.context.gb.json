@@ -19,9 +19,9 @@
         "slide-2": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_new-1.jpg",
-            "image_tablet": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_new-2.jpg",
-            "image_mobile": "shopify://shop_images/Mobile_10Off_SUP-Pre-Order_Oct26_new-3.jpg",
+            "image": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-1.jpg",
+            "image_tablet": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-2.jpg",
+            "image_mobile": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-3.jpg",
             "heading": "ㅤㅤㅤㅤㅤ",
             "button_label": "Order Now",
             "button_link": "shopify://collections/sup-range"
