@@ -51,9 +51,9 @@
           }
         },
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Carousel_Home_page_11.jpg",
+            "image": "shopify://shop_images/SUP.jpg",
             "image_tablet": "shopify://shop_images/Tablet_3.jpg",
             "image_mobile": "shopify://shop_images/Mobile_6_8d108281-11e8-4b3a-a6bc-3f5bc737ddb8.jpg",
             "heading": "Pre-order now. \n<br>\n <span style=\"color: #f59e0b;\">Save 10%</span>",
@@ -70,9 +70,9 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Carousel_Home_page_12.jpg",
+            "image": "shopify://shop_images/SUP2.jpg",
             "image_tablet": "shopify://shop_images/Tablet_4.jpg",
             "image_mobile": "shopify://shop_images/Mobile_7_fdec2517-db47-408f-9e62-3ced46872830.jpg",
             "heading": "A board for every paddler.",
