@@ -17,7 +17,7 @@
       "settings": {},
       "blocks": {
         "slide-2": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-1.jpg",
             "image_tablet": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-2.jpg",
