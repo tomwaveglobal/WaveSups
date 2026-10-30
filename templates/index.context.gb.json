@@ -17,7 +17,7 @@
       "settings": {},
       "blocks": {
         "slide-2": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-1.jpg",
             "image_tablet": "shopify://shop_images/10Off_SUP-Pre-Order_Oct26_V2-2.jpg",
@@ -51,7 +51,7 @@
           }
         },
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_11.jpg",
             "image_tablet": "shopify://shop_images/Tablet_3.jpg",
@@ -61,23 +61,29 @@
             "heading_tag": "h1",
             "secondary_heading": "Get first pick of next season's boards - 10% off when you pre-order.",
             "secondary_heading_size": "title-xs",
-            "secondary_heading_weight": "font-medium",
+            "secondary_heading_weight": "font-normal",
             "button_position": "below",
             "button_label": "Shop Pre-order",
             "button_link": "shopify://products/surf-3",
-            "button_style": "primary"
+            "button_style": "primary",
+            "button_icon": false
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_12.jpg",
             "image_tablet": "shopify://shop_images/Tablet_4.jpg",
             "image_mobile": "shopify://shop_images/Mobile_7_fdec2517-db47-408f-9e62-3ced46872830.jpg",
             "heading": "A board for every paddler.",
-            "button_label": "Shop Paddleboards",
+            "heading_size": "title-lg tracking-heading",
+            "heading_tag": "h1",
+            "secondary_heading": "From first floats to full-day adventures - discover the board for you.",
+            "button_label": "Discover Now",
             "button_link": "shopify://collections/sup-range",
-            "heading_size": "title-lg tracking-heading"
+            "secondary_heading_size": "title-xxs",
+            "secondary_heading_weight": "font-normal",
+            "button_position": "below"
           }
         }
       },
