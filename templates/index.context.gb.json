@@ -51,7 +51,7 @@
           }
         },
         "image_bAHz74": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_11.jpg",
             "image_tablet": "shopify://shop_images/Tablet_3.jpg",
@@ -70,7 +70,7 @@
           }
         },
         "image_rC3mcC": {
-          "disabled": true,
+          "disabled": false,
           "settings": {
             "image": "shopify://shop_images/Carousel_Home_page_12.jpg",
             "image_tablet": "shopify://shop_images/Tablet_4.jpg",
