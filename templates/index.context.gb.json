@@ -60,7 +60,7 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h1",
             "secondary_heading": "Get first pick of next season's boards - 10% off when you pre-order.",
-            "secondary_heading_size": "title-xs",
+            "secondary_heading_size": "title-xxs",
             "secondary_heading_weight": "font-normal",
             "button_position": "below",
             "button_label": "Shop Pre-order",
@@ -79,11 +79,11 @@
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h1",
             "secondary_heading": "From first floats to full-day adventures - discover the board for you.",
-            "button_label": "Discover Now",
-            "button_link": "shopify://collections/sup-range",
             "secondary_heading_size": "title-xxs",
             "secondary_heading_weight": "font-normal",
-            "button_position": "below"
+            "button_position": "below",
+            "button_label": "Discover Now",
+            "button_link": "shopify://collections/sup-range"
           }
         }
       },
