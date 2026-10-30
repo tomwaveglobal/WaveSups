@@ -64,7 +64,7 @@
             "secondary_heading_weight": "font-medium",
             "button_position": "below",
             "button_label": "Shop Pre-order",
-            "button_link": "shopify://products/surf-3",
+            "button_link": "shopify://collections/sup-range",
             "button_style": "primary",
             "button_icon": false
           }
