@@ -56,7 +56,7 @@
             "image": "shopify://shop_images/SUP.jpg",
             "image_tablet": "shopify://shop_images/Tablet_3.jpg",
             "image_mobile": "shopify://shop_images/Mobile_6_8d108281-11e8-4b3a-a6bc-3f5bc737ddb8.jpg",
-            "heading": "Pre-order now. \n<br>\n <span style=\"color: #f59e0b;\">Save 10%</span>",
+            "heading": "Pre-order now. \n<br>\n <span style=\"color: #171717;\">Save 10%</span>Save 10%",
             "heading_size": "title-lg tracking-heading",
             "heading_tag": "h1",
             "secondary_heading": "Beat the rush - secure your board today and save.",
