@@ -40,7 +40,7 @@
           }
         },
         "image_e6Nny7": {
-          "disabled": false,
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Hopper_Small-but-mighty_Sept26-1.jpg",
             "image_tablet": "shopify://shop_images/Hopper_Small-but-mighty_Sept26-2.jpg",
