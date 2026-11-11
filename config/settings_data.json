@@ -296,6 +296,11 @@
         "type": "shopify://apps/everdesk/blocks/landing-attribution/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
         "disabled": false,
         "settings": {}
+      },
+      "14614293069653150715": {
+        "type": "shopify://apps/awin-affiliate-marketing/blocks/awin-tracking-embed/01a0d37a-d839-76c7-b7a0-3e69c49eab8b",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
