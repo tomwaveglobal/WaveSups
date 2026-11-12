@@ -404,7 +404,7 @@
         "text_gMrEL9": {
           "type": "text",
           "settings": {
-            "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning products, we'll get you back on the water in no time.</p>",
+            "text": "<p>Get instant guidance 24/7 through our virtual assistant, or reach out to our team of experts for more tailored support. Whether it's a quick fix or a deep dive into our award winning products, we'll get you back on the water in no time.<br/>Or email us: <a href=\"mailto:support@wavesupboards.com\" title=\"mailto:support@wavesupboards.com\">support@wavesupboards.com</a></p>",
             "text_font": "body",
             "text_size": "subtext-md",
             "text_max_size": 32,
@@ -458,7 +458,7 @@
       "type": "apps",
       "blocks": {
         "everdesk_chat_inline_3dFieb": {
-          "type": "shopify://apps/everdesk/blocks/chat-inline/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
+          "type": "shopify://apps/wave-chat/blocks/chat-inline/01a0c4c4-9f31-7b67-bd31-11ed1aee6bd2",
           "settings": {
             "heading": "Chat with our team",
             "heading_size": "medium",
