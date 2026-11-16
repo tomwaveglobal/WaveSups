@@ -63,11 +63,13 @@
   <p>
     <a
       class="reversed-link"
-      {% unless country.market.metafields.default.market == true %}
-        href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country_slug }}{{ target_path }}"
-      {% else %}
-        href="{{ shop.url }}{{ target_path }}"
-      {% endunless %}
+      {%- comment -%}
+        Always link to the market's own subfolder. The default market (UK) used
+        to link to the bare domain, but no market lives on the root: Shopify
+        redirects / to the visitor's last market, so US visitors clicking
+        "United Kingdom" were sent straight back to /en-us.
+      {%- endcomment -%}
+      href="{{ shop.url }}/{{ localization.language.iso_code }}-{{ country_slug }}{{ target_path }}"
       title="{{ country.name | escape }} ({{ country.currency.iso_code }} {{ country.currency.symbol }})"
       data-no-instant
     >
