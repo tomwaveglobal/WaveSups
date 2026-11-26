@@ -14,16 +14,20 @@
   "parent": "index.json",
   "sections": {
     "slideshow": {
-      "settings": {},
+      "settings": {
+        "color_button_background": "#f59e0b"
+      },
       "blocks": {
         "image_bAHz74": {
           "disabled": false,
           "settings": {
-            "image": "shopify://shop_images/Pro_Crystal_Promo_Carousel_3.gif",
-            "image_mobile": "shopify://shop_images/Pro_Crystal_Promo_Mobile-2.gif",
+            "image": "shopify://shop_images/Home-Banner_-1_1.jpg",
+            "image_tablet": "shopify://shop_images/Home-Banner_-3_1.jpg",
+            "image_mobile": "shopify://shop_images/Home-Banner_-2_1.jpg",
             "heading": "",
-            "button_label": "Shop PRO 3.0",
-            "button_link": "shopify://products/pro-3"
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/sup-range",
+            "button_icon": false
           }
         },
         "image_rC3mcC": {
