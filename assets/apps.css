@@ -2114,3 +2114,11 @@ div[id*=AirReviews-CarouselWrapper] .AirReviews-Carousel .AirReviews-Carousel__C
 [dir=rtl] #AirReviews-Modal .AirReviews-Modal__Variant .AirReviews-Select__Input .AirReviews-Blocks--Expand>svg {
   transform: scaleX(-1);
 }
+
+/* STOQ pre-order button hover — orange text on black background */
+@media screen and (pointer: fine) {
+  .restock-rocket-preorder-offer-style-712931148163:hover {
+    background-color: #1F1F1F !important;
+    color: #FFA300 !important;
+  }
+}
